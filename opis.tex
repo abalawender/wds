@@ -7,6 +7,9 @@
 %\usepackage{graphicx}
 %\usepackage{inconsolata}
 \usepackage{geometry}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{parskip}
 \setlength{\parskip}{1ex}
 \usepackage[T1]{fontenc}
@@ -52,12 +55,15 @@
 
 \end{titlepage}
 
-\section{Wstępny opis}
+\section{Opis projektu}
+\subsection{Opis szczegółowy}
 Zgodnie z tematem projektu zajmiemy się komputerową symulacją ruchu cieczy oraz wizualizacją rozkładu ciśnienia w zbiorniku z płynem.
 Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia.  Umożliwione będzie "wlewanie" płynu. Ciecz zostanie przedstawiona jako zbiór cząsteczek. Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego, dlatego też zrealizowane zostanie falowanie płynu.
 Dodatkowo obserwowane będzie ciśnienie cieczy i zostanie ono zwizualizowane.
 
-\section{Cele}
+[TODO] Rozszerzyc opis projektu.
+
+\subsection{Cele}
 Cele projektu są następujące:
 \begin{itemize}
   \item symulacja zachowania cieczy jako zbioru oddziaływujących ze sobą cząsteczek,
@@ -65,25 +71,49 @@ Cele projektu są następujące:
   \item wizualizacja rozkładu ciśnień w zbiorniku.
 \end{itemize}
 
-\section{Kamienie milowe}
-\begin{itemize}
-  \item Przeanalizowanie artykułów na temat SPH i zapoznanie się z metodą,
-  \item Implementacja modelu cieczy, struktur danych i relacji między cząstkami,
-  \item Wizualizacja symulowanego stanu cieczy w Qt,
-  \item Wizualizacja ciśnienia w poszczególnych punktach zbiornika w Qt.
-\end{itemize}
 
-\section{Harmonogram}
-\begin{itemize}
-  \item zapoznanie się z biblioteką Qt
-  \item zapoznanie się z metodą SPH (Smoothed Particle Hydrodynamics)
-  \item ustalenie struktur danych
-  \item implementacja klas cząsteczeki cieczy oraz zbiornika, uaktualnianie położenia cząstek
-  \item ...
-  \item analiza błędów kompilacji
-  \item marudzenie
-  \item strajk głodowy
-  \item wizualizacja losowych wartości jako ciśnień cieczy w punktach
-\end{itemize}
+[TODO] Uszczegolowic opis przewidywanych efektow koncowych.
+
+
+[TODO] W przypadku aplikacji nalezy wymienic (w punktach) najistotniejsze funkcjonalnosci.
+
+\section{Plan pracy}
+\subsection{Harmonogram}
+
+[TODO] Daty, tygodnie. Dokladnosc do jedego tyg. lub wieksza!
+
+\begin{enumerate}[label=Z\arabic*{.}]
+  \item Opis projektu
+  \item Zapoznanie się z biblioteką Qt
+  \item Zapoznanie się z metodą SPH (Smoothed Particle Hydrodynamics)
+  \item Ustalenie struktur danych
+  \item Implementacja klas zbiornika oraz cząsteczek cieczy 
+  \item Implementacja metod uaktualniania położenia cząsteczek
+  \item Analiza błędów programistycznych
+  \item Poprawianie błędów
+  \item Wizualizacja ciśnienia cieczy
+  \item Weryfikacja projektu z założeniami
+  \item Odpowiednie modyfikacje programu
+  \item Napisanie raportu końcowego
+\end{enumerate}
+
+\subsection{Kamienie milowe}
+\begin{enumerate}[label=K\arabic*{.}]
+  \item Przeanalizowanie artykułów na temat SPH i zapoznanie się z tą metodą
+  \item Zaimplementowanie struktur danych, modelu cieczy i relacji między cząsteczkami
+  \item Wizualizacja symulowanego stanu cieczy
+  \item Wizualizacja ciśnienia w poszczególnych punktach zbiornika
+  \item Skończona dokumentacja
+\end{enumerate}
+
+\subsection{Diagram Gantta}
+\begin{figure}[h] % rysunek pływający (początek) z deklaracją 
+                  % umieszczenia go na górze strony (opcja h)
+  \begin{center}  % deklaracja o wycentrowaniu importowanego wykresu
+    %\includegraphics[width=\textwidth]{./gantt/gantt.png} % import wykresu
+  \end{center}
+  \caption{Wykres Gantta}
+  \label{fig:gantt} % etykieta rysunku
+\end{figure}       % koniec rysunku
 
 \end{document}
