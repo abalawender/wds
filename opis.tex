@@ -7,6 +7,7 @@
 %\usepackage{graphicx}
 %\usepackage{inconsolata}
 \usepackage{geometry}
+\usepackage{graphicx} 
 \usepackage{array}
 \usepackage{enumerate}
 \usepackage{enumitem}
@@ -59,29 +60,37 @@
 \subsection{Opis szczegółowy}
 Zgodnie z tematem projektu zajmiemy się komputerową symulacją ruchu cieczy oraz wizualizacją rozkładu ciśnienia w zbiorniku z płynem.
 Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia.  Umożliwione będzie "wlewanie" płynu. Ciecz zostanie przedstawiona jako zbiór cząsteczek. Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego, dlatego też zrealizowane zostanie falowanie płynu.
-Dodatkowo obserwowane będzie ciśnienie cieczy i zostanie ono zwizualizowane.
+Dodatkowo mierzone będzie ciśnienie cieczy i zostanie ono zwizualizowane.
 
 [TODO] Rozszerzyc opis projektu.
 
 \subsection{Cele}
 Cele projektu są następujące:
 \begin{itemize}
-  \item symulacja zachowania cieczy jako zbioru oddziaływujących ze sobą cząsteczek,
-  \item modelowanie właściwości fizycznych wody (gęstość i lepkość),
-  \item wizualizacja rozkładu ciśnień w zbiorniku.
+  \item Zapoznanie się z biblioteką Qt poprzez jej praktyczne wykorzystanie przy tworzeniu ciekawego projektu.
+  \item Symulacja zachowania cieczy jako zbioru oddziaływujących ze sobą cząsteczek.
+  \item Modelowanie właściwości fizycznych cieczy (gęstość i lepkość). 
+        Ruch płynu zostanie zamodelowany metodą numeryczną SPH (\textit{smoothed-particle aerodynamics}, \textit{wygładzona hydrodynamika cząstek}).
+        Pozwoli to na dobre odwzorowanie zachowanie cieczy.
+  \item Wizualizacja rozkładu ciśnień w zbiorniku. 
+        Ciśnienie zostanie odwzorowane jako odcień koloru cieczy.
+        Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.
 \end{itemize}
 
-
+% Trochę uszczegółowiłem :)
 [TODO] Uszczegolowic opis przewidywanych efektow koncowych.
 
-
+\subsection{Funkcjonalności}
 [TODO] W przypadku aplikacji nalezy wymienic (w punktach) najistotniejsze funkcjonalnosci.
+
+Najistotniejsze funkcjonalności aplikacji:
+\begin{itemize}
+  \item TODO
+  \item ???
+\end{itemize}
 
 \section{Plan pracy}
 \subsection{Harmonogram}
-
-[TODO] Daty, tygodnie. Dokladnosc do jedego tyg. lub wieksza!
-
 \begin{enumerate}[label=Z\arabic*{.}]
   \item Opis projektu
   \item Zapoznanie się z biblioteką Qt
@@ -108,12 +117,11 @@ Cele projektu są następujące:
 
 \subsection{Diagram Gantta}
 \begin{figure}[h] % rysunek pływający (początek) z deklaracją 
-                  % umieszczenia go na górze strony (opcja h)
-  \begin{center}  % deklaracja o wycentrowaniu importowanego wykresu
-    %\includegraphics[width=\textwidth]{./gantt/gantt.png} % import wykresu
+  \begin{center}  
+    \includegraphics[width=\textwidth]{./rysunki/gantt.png} 
   \end{center}
   \caption{Wykres Gantta}
-  \label{fig:gantt} % etykieta rysunku
-\end{figure}       % koniec rysunku
+  \label{fig:gantt} 
+\end{figure}       
 
 \end{document}
