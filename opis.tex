@@ -57,37 +57,21 @@
 \end{titlepage}
 
 \section{Opis projektu}
-\subsection{Opis szczegółowy}
-Zgodnie z tematem projektu zajmiemy się komputerową symulacją zachowania cieczy oraz wizualizacją jej stanu i~rozkładu ciśnienia w zbiorniku z płynem.
-Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia. Ciecz zostanie przedstawiona jako zbiór cząsteczek na płaszczyźnie. Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego.
-Dodatkowo mierzone będzie ciśnienie cieczy i zostanie ono zwizualizowane.
+Zgodnie z tematem projektu zajmiemy się komputerową symulacją zachowania cieczy oraz wizualizacją jej stanu i~rozkładu ciśnienia w zbiorniku z płynem. 
 
-[TODO] Rozszerzyc opis projektu.
+Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia. Ciecz zostanie przedstawiona na płaszczyźnie jako zbiór oddziaływujących ze sobą cząsteczek. 
+Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego.
+Ruch płynu zostanie zamodelowany metodą numeryczną SPH (\textit{smoothed particle hydrodynamics - wygładzona hydrodynamika cząstek}).
+Pozwoli to na realistyczne odwzorowanie zachowania cieczy.
+Możliwe będzie badanie cieczy o różnych parametrach, dlatego też modelowane będą jej właściwości fizyczne: gęstość i~lepkość. 
+Dodatkowo mierzone będzie ciśnienie cieczy i zostanie ono zwizualizowane jako odcień koloru płynu.
+Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.
 
-\subsection{Cele}
-Cele projektu są następujące:
+Najistotniejszymi funkcjonalnościami aplikacji będą:
 \begin{itemize}
-  \item Zapoznanie się z biblioteką Qt poprzez jej praktyczne wykorzystanie przy tworzeniu ciekawego projektu.
-  \item Symulacja zachowania cieczy jako zbioru oddziaływujących ze sobą cząsteczek.
-  \item Modelowanie właściwości fizycznych cieczy (gęstość i lepkość). 
-        Ruch płynu zostanie zamodelowany metodą numeryczną SPH (\textit{smoothed particle hydrodynamics - wygładzona hydrodynamika cząstek}).
-        Pozwoli to na realistyczne odwzorowanie zachowania cieczy.
-  \item Wizualizacja rozkładu ciśnień w zbiorniku. 
-        Ciśnienie zostanie odwzorowane jako odcień koloru cieczy.
-        Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.
-\end{itemize}
-
-% Trochę uszczegółowiłem :)
-% [TODO] Uszczegolowic opis przewidywanych efektow koncowych.
-
-\subsection{Funkcjonalności}
-% [TODO] W przypadku aplikacji nalezy wymienic (w punktach) najistotniejsze funkcjonalnosci.
-
-Najistotniejsze funkcjonalności aplikacji:
-\begin{itemize}
-  \item Symulacja zachowania cieczy od zadanych warunków początkowych.
-  \item Możliwość przedefiniowania parametrów cieczy (gęstości, lepkości).
-  \item Możliwość obserwacji wyniku symulacji (położenia cząstek i~rozkładu ciśnień).
+  \item symulacja zachowania cieczy od zadanych warunków początkowych,
+  \item możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),
+  \item możliwość obserwacji wyniku symulacji (położenia cząstek i~rozkładu ciśnień).
 \end{itemize}
 
 \section{Plan pracy}
