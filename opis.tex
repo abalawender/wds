@@ -11,8 +11,8 @@
 \usepackage{array}
 \usepackage{enumerate}
 \usepackage{enumitem}
-\usepackage{parskip}
-\setlength{\parskip}{1ex}
+%\usepackage{parskip}
+%\setlength{\parskip}{1ex}
 \usepackage[T1]{fontenc}
 \usepackage{color}
 \definecolor{bluekeywords}{rgb}{0.13,0.13,1}
@@ -69,27 +69,30 @@ Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.
 
 Najistotniejszymi funkcjonalnościami aplikacji będą:
 \begin{itemize}
-  \item symulacja zachowania cieczy od zadanych warunków początkowych,
+  \item symulacja zachowania cieczy w zależności od zadanych warunków początkowych,
   \item możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),
-  \item możliwość obserwacji wyniku symulacji (położenia cząstek i~rozkładu ciśnień).
+  \item możliwość obserwacji wyniku symulacji (położenia cząsteczek i~rozkładu ciśnień).
 \end{itemize}
 
 \section{Plan pracy}
 \subsection{Harmonogram}
 \begin{enumerate}[label=Z\arabic*{.}]
   \item Opis projektu
-  \item Zapoznanie się z biblioteką Qt
+  \item Przegląd bibliotek Qt pod kątem elementów, które mogą być wykorzystane w tworzonej aplikacji
   \item Zapoznanie się z metodą SPH (Smoothed Particle Hydrodynamics)
   \item Ustalenie struktur danych
   \item Implementacja klas zbiornika oraz cząsteczek cieczy 
   \item Implementacja metod uaktualniania położenia cząsteczek
-  \item Analiza błędów programistycznych
-  \item Poprawianie błędów
+  \item Analiza błędów działania programu
+  \item Skorygowanie działania programu
   \item Wizualizacja ciśnienia cieczy
   \item Weryfikacja projektu z założeniami
   \item Odpowiednie modyfikacje programu
   \item Napisanie raportu końcowego
 \end{enumerate}
+ 
+\begin{Huge} TODO \end{Huge}
+Programowanie ekstremalne ? ok : szczegółowo podzielić zadania
 
 \subsection{Kamienie milowe}
 \begin{enumerate}[label=K\arabic*{.}]
