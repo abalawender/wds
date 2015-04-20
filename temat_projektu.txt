@@ -1,1 +1,0 @@
-Wizualizacja rozkładu ciśnienia cieczy na podstawie symulacji komputerowej
