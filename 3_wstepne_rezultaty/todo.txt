@@ -1,0 +1,11 @@
+1. Wariant programowy:      
++++ temat projektu,  
++++ opis rozwiazywanego problemu,            
+--- zaktualizowany harmonogram wraz z wymienieniem  
+    tych elementow poprzedniego harmonogramu, ktore
+    udalo sie zrealizowac,
+--- opis najwazniejszych funkcjonalnosci aplikacji
+    (zrealizowanych i planowanych),      
+-++ szkic planowanego interfejsu graficznego aplikacji,
+-++ diagram klas w jezyku UML,
+--- diagram przeplywu sterowania lub schemat blokowy. 
