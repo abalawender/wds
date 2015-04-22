@@ -32,6 +32,7 @@ typedef struct sim_state_t {
 
 sim_state_t* alloc_state(int n) {
     sim_state_t *ret = (sim_state_t*)malloc( sizeof(sim_state_t) );
+    ret->n = n;
     ret->rho = malloc( n * sizeof(float) );
     ret->x = malloc( n * sizeof(float) );
     ret->vh = malloc( n * sizeof(float) );
@@ -269,6 +270,7 @@ void check_state(sim_state_t* s)
 
 uint32_t htonf(void* data)
 {
+    //printf( "%s GOT %u RET %u\n", __FUNCTION__, *(uint32_t*)data, htonl(*(uint32_t*)data));
     return htonl(*(uint32_t*) data);
 }
 
@@ -285,12 +287,15 @@ void write_header(FILE* fp, int n)
 void write_frame_data(FILE* fp, int n, float* x, int* c)
 {
     for (int i = 0; i < n; ++i) {
+        //printf( " ADAM!! PARAMS: %d, %f \n", n, *x );
         uint32_t xi = htonf(x++);
         uint32_t yi = htonf(x++);
         fwrite(&xi, sizeof(xi), 1, fp);
         fwrite(&yi, sizeof(yi), 1, fp);
+        //printf( " ADAM!! xi=%u yi=%u\n", xi, yi );
         uint32_t ci0 = c ? *c++ : 0;
         uint32_t ci = htonl(ci0);
+        //printf( " ADAM!! ci=%u \n", ci );
         fwrite(&ci, sizeof(ci), 1, fp);
     }
 }
@@ -300,7 +305,8 @@ int main(int argc, char** argv)
     if (get_params(argc, argv, &params) != 0)
         exit(-1);
     sim_state_t* state = init_particles(&params);
-    FILE* fp= fopen(params.fname, "w");
+    //FILE* fp= fopen(params.fname, "wb");
+    FILE* fp= stdout;
     int nframes = params.nframes;
     int npframe = params.npframe;
     float dt= params.dt;
@@ -312,6 +318,7 @@ int main(int argc, char** argv)
 
     leapfrog_start(state, dt);
     check_state(state);
+    printf( " ADAM: %d %d \n" , nframes, n );
     for (int frame = 1; frame < nframes; ++frame) {
         for (int i = 0; i < npframe; ++i) {
             compute_accel(state, &params);
