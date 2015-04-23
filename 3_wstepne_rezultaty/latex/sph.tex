@@ -1,0 +1,9 @@
+\section{SPH}
+Korzystając z wyprowadzeń opisanych w artykule \cite{website:derive} przyjęliśmy wzór na gęstość w pozycji $i$:
+\[ \rho_i = \frac{4m}{\pi h^8} \sum\limits_{j\in N_i} (h^2-r^2)^3.\]
+Przyspieszenie będziemy natomiast wyznaczać ze wzoru:
+\[ a_i = \frac{1}{\rho_i} \sum\limits_{j\in N_i } f_{ij}^{interact} + g ,\]
+gdzie
+\[ f_{ij}^{interact} = \frac{m_j}{\pi h^4 \rho_j} (1-q_{ij})\left[15k(\rho_i+\rho_j-2\rho_0) 
+\frac{1-q_{ij}}{q_{ij}} r_{ij} - 40\mu v_{ij} \right] ,\]
+gdzie $r_{ij} = r_i - r_j$, $v_{ij} = v_i - v_j$ i $q_{ij} = || r_{ij} || /h$, $\rho_0$ - wyjściowa gęstość, k - współczynnik sprężystości objętościowej, $\mu$ - lepkość, g - wektor grawitacji
