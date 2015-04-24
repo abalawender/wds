@@ -1,11 +1,31 @@
 var NAVTREE =
 [
-  [ "SymulacjaZbiornika", "index.html", ]
+  [ "SymulacjaZbiornika", "index.html", [
+    [ "Klasy", null, [
+      [ "Lista klas", "annotated.html", "annotated" ],
+      [ "Indeks klas", "classes.html", null ],
+      [ "Hierarchia klas", "hierarchy.html", "hierarchy" ],
+      [ "Składowe klas", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Funkcje", "functions_func.html", null ],
+        [ "Zmienne", "functions_vars.html", null ],
+        [ "Funkcje powiązane", "functions_rela.html", null ]
+      ] ]
+    ] ],
+    [ "Pliki", null, [
+      [ "Lista plików", "files.html", "files" ],
+      [ "Składowe plików", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Funkcje", "globals_func.html", null ],
+        [ "Definicje", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
