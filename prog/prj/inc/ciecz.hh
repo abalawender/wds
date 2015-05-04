@@ -11,14 +11,9 @@
 #include <QTimer>
 #include <QPainter>
 
-class Kolor
-{
-  public:
-    Kolor(int r, int g, int b) { _r = r; _g = g; _b = b; };
-    int _r;
-    int _g;
-    int _b;
-};
+#include <list>
+#include "kolor.hh"
+#include "czasteczka.hh"
 
 //////////////////////////////////////////////////////////
 /*!
@@ -70,6 +65,9 @@ class Zbiornik: public QWidget
   
   signals:  
     void ZglosNapis(const QString &);
+    
+  public:
+    std::list<Czasteczka> Czasteczki;
     
   private:
     QTimer _Stoper;

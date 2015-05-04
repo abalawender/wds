@@ -13,6 +13,7 @@
 #include <QSpinBox>
 #include <QProgressBar>
 #include <QLCDNumber>
+#include <QPushButton>
 
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
@@ -90,6 +91,13 @@ void Zbiornik::paintEvent( QPaintEvent * )
   QPainter Rysownik(this);
   
   RysujZbiornikZCzasteczkami(Rysownik);
+  
+  // TODO funkcja rysuj czasteczki
+  for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
+                               it != Czasteczki.end(); it++)
+  {
+    RysujCzasteczke(Rysownik,(*it)._Promien, (*it)._RGB, (*it)._x, (*it)._y);
+  }
 }
 
 void Zbiornik::GdyOdpowiedniCzas()
@@ -101,6 +109,12 @@ void Zbiornik::GdyOdpowiedniCzas()
   
   NapisDaty = Lokalizacja.toString(Data);
   emit ZglosNapis(NapisDaty);
+  
+  // TODO Tutaj to ma byc?
+  Czasteczki.push_back(Czasteczka(rand()%width(), rand()%height(),
+                       PROMIEN, Kolor(rand()%255,
+                                      rand()%255,
+                                      rand()%255)));
 }
 
 /////////////////////////////////////////////////////////////////
@@ -111,6 +125,16 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   setStatusBar(new QStatusBar());
   connect(wOkno, SIGNAL(ZglosNapis(const QString &)),
           this, SLOT(GdyNapis(const QString &)));
+          
+  //TODO Zmienic na obrazki.
+  QPushButton *wPlay = new QPushButton(tr("Play"), this);
+  QPushButton *wPause = new QPushButton(tr("Pause"), this);
+  QPushButton *wStop = new QPushButton(tr("Stop"), this);
+  // TODO Jak zmienic?
+  wPause->move(width()/2, height()/2+WYSOKOSC/2+10);
+  wPlay->move(width()/2-20, height()/2+WYSOKOSC/2+10);
+  wStop->move(width()/2+20, height()/2+WYSOKOSC/2+10); 
+  
   resize(1.5*PODSTAWA, 1.5*WYSOKOSC);
 }
 
