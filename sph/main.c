@@ -6,6 +6,10 @@
 #include <assert.h>
 #define M_PI 3.141592654
 
+float GX = 0;
+float GY = -9.8;
+
+typedef unsigned uint32_t;
 typedef struct sim_param_t {
     char* fname;/* File name*/
     int nframes; /* Number of frames*/
@@ -95,8 +99,10 @@ void compute_accel(sim_state_t* state, sim_param_t* params)
     compute_density(state, params);
     // Start with gravity and surface forces
     for (int i = 0; i < n; ++i) {
-        a[2*i+0] = 0;
-        a[2*i+1] = -g;
+        //a[2*i+0] = 0;
+        //a[2*i+1] = -g;
+        a[2*i+0] = GX;
+        a[2*i+1] = GY;
     }
     // Constants for interaction term
     float C0 = mass / M_PI / ( (h2)*(h2) );
@@ -249,8 +255,8 @@ void normalize_mass(sim_state_t* s, sim_param_t* param)
 }
 sim_state_t* init_particles(sim_param_t* param)
 {
-    //sim_state_t* s = place_particles(param, box_indicator);
-    sim_state_t* s = place_particles(param, circ_indicator);
+    sim_state_t* s = place_particles(param, box_indicator);
+    //sim_state_t* s = place_particles(param, circ_indicator);
     normalize_mass(s, param);
     return s;
 }
@@ -307,6 +313,8 @@ int main(int argc, char** argv)
     check_state(state);
     printf( " ADAM: %d %d \n" , nframes, n );
     for (int frame = 1; frame < nframes; ++frame) {
+        if( frame == 200 ) GX = 6;
+        if( frame == 400 ) GX = 0;
         for (int i = 0; i < npframe; ++i) {
             compute_accel(state, &params);
             leapfrog_step(state, dt);
@@ -322,7 +330,7 @@ int main(int argc, char** argv)
 static void default_params(sim_param_t* params)
 {
     params->fname= "run.out";
-    params->nframes = 400;
+    params->nframes = 600;
     params->npframe = 100;
     params->dt= 1e-4;
     params->h= 5e-2;

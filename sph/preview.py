@@ -31,7 +31,7 @@ def run(data):
     return line,
 
 fig, ax = plt.subplots()
-line, = ax.plot([], [], 'ro', lw=2)
+line, = ax.plot([], [], 'ro', lw=2, markersize=15)
 ax.set_ylim(0, 1)
 ax.set_xlim(0, 1)
 ax.grid()
