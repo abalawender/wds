@@ -4,7 +4,6 @@
 #include <math.h>
 #include <getopt.h>
 #include <assert.h>
-#include <arpa/inet.h>
 #define M_PI 3.141592654
 
 typedef struct sim_param_t {
@@ -250,7 +249,8 @@ void normalize_mass(sim_state_t* s, sim_param_t* param)
 }
 sim_state_t* init_particles(sim_param_t* param)
 {
-    sim_state_t* s = place_particles(param, box_indicator);
+    //sim_state_t* s = place_particles(param, box_indicator);
+    sim_state_t* s = place_particles(param, circ_indicator);
     normalize_mass(s, param);
     return s;
 }
@@ -266,7 +266,7 @@ void check_state(sim_state_t* s)
     }
 }
 
-#define VERSION_TAG "SPHView01"
+#define VERSION_TAG "what comes next is binary data"
 
 void write_header(FILE* fp, int n)
 {
@@ -279,8 +279,8 @@ void write_header(FILE* fp, int n)
 void write_frame_data(FILE* fp, int n, float* x, int* c)
 {
     for (int i = 0; i < n; ++i) {
-        uint32_t xi = x++;
-        uint32_t yi = x++;
+        uint32_t xi = *(uint32_t*)(x++);
+        uint32_t yi = *(uint32_t*)(x++);
         fwrite(&xi, sizeof(xi), 1, fp);
         fwrite(&yi, sizeof(yi), 1, fp);
         uint32_t ci = c ? *c++ : 0;
