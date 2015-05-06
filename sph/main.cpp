@@ -1,23 +1,29 @@
 #include <iostream>
+#include <iomanip>
 #include <cstring>
 #include <cmath>
+#include <cassert>
 //#define M_PI (3.141592654)
 #define DAMP 0.75
-#define XMAX 1
-#define YMAX 1
+#define XMAX 1.5
+#define YMAX 1.5
+
+#define LOG( MSG) do { std::cerr << "\e[32m" << __FILE__ << "\e[31m:\e[33m" << __LINE__ \
+    << "\e[35m:\e[34m" << std::setw(16) << __FUNCTION__ << "\e[36m : \e[37m" << MSG << "\e[0m\n"; } while( false )
 
 class Vector {
     public:
         float x, y;
-        Vector( float _x=1.1, float _y=1.2 ) : x(_x), y(_y) { }
+        Vector( float _x=0, float _y=0 ) : x(_x), y(_y) { }
         Vector& operator+= (const Vector& _v) { x += _v.x; y += _v.y; return *this; }
         Vector& operator-= (const Vector& _v) { x -= _v.x; y -= _v.y; return *this; }
         Vector& operator*= (const float& _c) { x *= _c; y *= _c; return *this;}
-        Vector operator+ (const Vector& _v) const { return Vector( x*_v.x,  y*_v.y); }
+        Vector operator+ (const Vector& _v) const { return Vector( x+_v.x,  y+_v.y); }
         Vector operator- (const Vector& _v) const { return Vector( x-_v.x,  y-_v.y); }
         Vector operator* (const float& _c) const { return Vector( x*_c,  y*_c); }
         Vector& operator= (const Vector& _v) { x = _v.x; y = _v.y; return *this; }
         float normSquared() { return x*x+y*y; }
+        friend std::ostream& operator<<( std::ostream& _os, const Vector& _s );
 };
 
 struct state_t {
@@ -30,8 +36,11 @@ struct state_t {
     friend std::ostream& operator<<( std::ostream& _os, const state_t* _s );
 };
 
+std::ostream& operator<<( std::ostream& _os, const Vector& _s )  {
+    return _os << "( " << _s.x << ", " << _s.y << " )";
+}
 std::ostream& operator<<( std::ostream& _os, const state_t* _s )  {
-    _os.write( (char*)_s->v, sizeof( Vector )*_s->n );
+    _os.write( (char*)_s->p, sizeof( Vector )*_s->n );
     return _os;
 }
 
@@ -108,7 +117,7 @@ void compute_accel(state_t* state, params_t* params)
     }
     // Constants for interaction term
     float C0 = mass / M_PI / ( (h2)*(h2) );
-    float Cp =15*k;
+    float Cp = 15*k;
     float Cv = -40*mu;
     // Now compute interaction forces
     for (int i = 0; i < n; ++i) {
@@ -124,7 +133,7 @@ void compute_accel(state_t* state, params_t* params)
                 float wp = w0 * Cp * (rhoi+rhoj-2*rho0) * u/q;
                 float wv = w0 * Cv;
 
-                Vector dv = v[i] -v [j];
+                Vector dv = v[i] - v[j];
                 a[i] += dp*wp + dv*wv;
                 a[j] -= dp*wp + dv*wv;
             }
@@ -188,18 +197,68 @@ void leapfrog_step( state_t* _s, float dt ) {
 
 void check_state( state_t* s)
 {
-    //for (int i = 0; i < s->n; ++i) {
-    //    float xi = s->x[2*i+0];
-    //    float yi = s->x[2*i+1];
-    //    assert( xi >= 0 || xi <= 1 );
-    //    assert( yi >= 0 || yi <= 1 );
-    //}
+    for (int i = 0; i < s->n; ++i) {
+        if( !( s->p[i].x >= 0 || s->p[i].x <= XMAX ) ) LOG( "MAJOR FUCKUP " << i
+                << ": " << s->p[i].x << ", " << s->p[i].y );
+        if( !( s->p[i].y >= 0 || s->p[i].y <= YMAX ) ) LOG( "MAJOR FUCKUP " << i
+                << ": " << s->p[i].x << ", " << s->p[i].y );
+    }
+    for (int i = 0; i < s->n; ++i) {
+        assert( s->p[i].x >= 0 || s->p[i].x <= XMAX );
+        assert( s->p[i].y >= 0 || s->p[i].y <= YMAX );
+    }
 }
 
+typedef bool (*indicate_fun_t)(float, float);
+
+bool box_indicator( float x, float y ) {
+    return ( x < XMAX/2 ) && ( y > YMAX/2 );
+}
+
+state_t* place_particles( params_t* params, indicate_fun_t indicate_fun ) {
+    unsigned n = 0;
+    float hh = params->h/1.3; // [TODO] why 1.3 ??
+    // count how many particles would fit in the region
+    for( float x = 0; x < XMAX; x += hh )
+        for( float y = 0; y < YMAX; y += hh )
+            if( indicate_fun( x, y ) ) ++n;
+    state_t* state = alloc( n );
+    for( float x = 0; x < XMAX; x += hh )
+        for( float y = 0; y < YMAX; y += hh )
+            if( indicate_fun( x, y ) ) state->p[--n] = Vector( x, y );
+
+    params->mass = 1;
+    compute_density( state, params );
+    float rhos = 0, rho2s = 0;
+    for( int i = 0; i < state->n; ++i ) {
+        rho2s += (state->rho[i]) * (state->rho[i]);
+        rhos += state->rho[i];
+    }
+    params->mass *= params->rho0 * rhos / rho2s;
+    return state;
+}
+
+void setup( params_t *params ) {
+    params->nframes	= 400;      // Number of frames
+    params->npframe	= 100;      // Steps per frame
+    params->h	    = 0.05;     // Particle size
+    params->dt	    = 0.0001;   // Time step
+    params->rho0	= 1000;     // Reference density
+    params->k	    = 1000;     // Bulk modulus
+    params->mu	    = 0.1;      // Viscosity
+    params->gx	    = 0.0;        // Gravity on X-axis
+    params->gy	    = -9.8;     // Gravity on Y-axis
+    params->mass	= 1;        // Particle mass
+}
 
 int main() {
-    state_t* state = alloc( 200 );
-    params_t* params;
+    params_t* params = new params_t;
+    LOG( "INIT" );
+    setup (params);
+    state_t* state = place_particles( params, box_indicator );
+    LOG( "Simulating movement of " << state->n << " fluid particles" );
+    std::cout << "what comes next is binary data\n";
+    std::cout.write( (char*)&state->n, sizeof(state->n) );
 
     compute_accel( state, params );
     leapfrog_start( state, params->dt );
@@ -214,5 +273,6 @@ int main() {
         }
         std::cout << state;
     }
+    LOG( "DONE" );
     return 0;
 }

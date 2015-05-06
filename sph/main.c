@@ -313,8 +313,8 @@ int main(int argc, char** argv)
     check_state(state);
     printf( " ADAM: %d %d \n" , nframes, n );
     for (int frame = 1; frame < nframes; ++frame) {
-        if( frame == 200 ) GX = 6;
-        if( frame == 400 ) GX = 0;
+        if( frame == 200 ) GY = 0;
+        if( frame == 400 ) GY = -3;
         for (int i = 0; i < npframe; ++i) {
             compute_accel(state, &params);
             leapfrog_step(state, dt);

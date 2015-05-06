@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
 
-f = open("run.out", "rb")
+f = open("run2.out", "rb")
 h = f.readline()
 n = struct.unpack( 'I', f.read(4) )[0]
 print( "HEADER: ", h, " N: ", n )
@@ -15,7 +15,7 @@ def data_gen():
         ydata.clear()
         for i in range(n):
             x, y = struct.unpack( 'f', f.read(4) )[0], struct.unpack( 'f', f.read(4) )[0]
-            _ = f.read(4)
+            #_ = f.read(4)
             xdata.append(x)
             ydata.append(y)
             print( "( ", x, ", ", y, " )" )
@@ -32,10 +32,10 @@ def run(data):
 
 fig, ax = plt.subplots()
 line, = ax.plot([], [], 'ro', lw=2, markersize=15)
-ax.set_ylim(0, 1)
-ax.set_xlim(0, 1)
+ax.set_ylim(0, 3)
+ax.set_xlim(0, 3)
 ax.grid()
 xdata, ydata = [], []
 
-ani = animation.FuncAnimation( fig, run, data_gen, blit=False, interval=10, repeat=False)
+ani = animation.FuncAnimation( fig, run, data_gen, blit=False, interval=0, repeat=False)
 plt.show()
