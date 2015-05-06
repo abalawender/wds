@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>SymulacjaZbiornika: Plik źródłowy ciecz.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SymulacjaZbiornika
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ciecz_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ciecz.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ciecz_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QStatusBar&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QTime&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QLocale&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QSlider&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QSpinBox&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QLCDNumber&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef __GNUG__</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma interface</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma implementation</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ciecz_8hh.html">ciecz.hh</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="ciecz_8cpp.html#a724df1fefe77c95e343dbf7bd36c779d">   26</a></span>&#160;<span class="preprocessor">#define PODSTAWA        40</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="ciecz_8cpp.html#a771583e9e87d083150a9a329f44c5f7e">   27</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define WYSOKOSC        50</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="ciecz_8cpp.html#af32bc1aae78786d4de58fb5fef677232">   28</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GRUBOSC         3</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_zbiornik.html#aa432f548eb9dfd62bb7312a745a70cc7">   32</a></span>&#160;<a class="code" href="class_zbiornik.html#aa432f548eb9dfd62bb7312a745a70cc7">Zbiornik::Zbiornik</a>(QWidget *wRodzic):  QWidget(wRodzic)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  setAutoFillBackground(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  setPalette(QPalette(Qt::white));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_zbiornik.html#ae8bda443a783485029083b039e1019e8">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#ae8bda443a783485029083b039e1019e8">Zbiornik::RysujZbiornik</a>( QPainter&amp; Rysownik, </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                 <span class="keywordtype">int</span>       Podstawa,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                 <span class="keywordtype">int</span>       Wysokosc,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                 <span class="keywordtype">int</span>       Grubosc)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  QPen Piorko(Rysownik.pen());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  Piorko.setWidth(Grubosc);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  Rysownik.setPen(Piorko);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  Rysownik.drawLine(-Podstawa/2,Wysokosc,Podstawa/2,Wysokosc); <span class="comment">// Podstawa</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  Rysownik.drawLine(-Podstawa/2,0,-Podstawa/2,Wysokosc); <span class="comment">// Lewa</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  Rysownik.drawLine(Podstawa/2,0,Podstawa/2,Wysokosc); <span class="comment">// Prawa</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765">Zbiornik::paintEvent</a>( QPaintEvent * )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  QPainter Rysownik(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  Rysownik.translate(width()/2,height()/2);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> Podstawa = <a class="code" href="ciecz_8cpp.html#a724df1fefe77c95e343dbf7bd36c779d">PODSTAWA</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">int</span> Wysokosc = <a class="code" href="ciecz_8cpp.html#a771583e9e87d083150a9a329f44c5f7e">WYSOKOSC</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">int</span> Grubosc = <a class="code" href="ciecz_8cpp.html#af32bc1aae78786d4de58fb5fef677232">GRUBOSC</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="class_zbiornik.html#ae8bda443a783485029083b039e1019e8">RysujZbiornik</a>(Rysownik,Podstawa,Wysokosc,Grubosc);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">//RysujCzasteczki(...);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_kanwa.html#a6a634418b76abed84199abe8d2680c91">   68</a></span>&#160;<a class="code" href="class_kanwa.html#a6a634418b76abed84199abe8d2680c91">Kanwa::Kanwa</a>(QWidget *wRodzic):  QWidget(wRodzic)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  setAutoFillBackground(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  setPalette(QPalette(Qt::white));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="class_zbiornik.html">Zbiornik</a> *wZbiornik = <span class="keyword">new</span> <a class="code" href="class_zbiornik.html">Zbiornik</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  wZbiornik-&gt;setGeometry(0,0,200,200);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a5a6ee46921444828600e6ec825f31153">   79</a></span>&#160;<a class="code" href="class_okno_glowne.html#a5a6ee46921444828600e6ec825f31153">OknoGlowne::OknoGlowne</a>(QWidget *wRodzic): QMainWindow(wRodzic)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="class_kanwa.html">Kanwa</a> *wOknoKanwa = <span class="keyword">new</span> <a class="code" href="class_kanwa.html">Kanwa</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  resize(220,180);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  setCentralWidget(wOknoKanwa);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="ciecz_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   87</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="ciecz_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[] ) </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  QApplication App(argc,argv);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="class_okno_glowne.html">OknoGlowne</a>   Okno;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  Okno.show();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> App.exec();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="class_zbiornik_html_ae8bda443a783485029083b039e1019e8"><div class="ttname"><a href="class_zbiornik.html#ae8bda443a783485029083b039e1019e8">Zbiornik::RysujZbiornik</a></div><div class="ttdeci">void RysujZbiornik(QPainter &amp;Rysownik, int Podstawa, int Wysokosc, int Grubosc)</div><div class="ttdoc">Wyrysowuje zbiornik. </div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00038">ciecz.cpp:38</a></div></div>
+<div class="ttc" id="ciecz_8cpp_html_a771583e9e87d083150a9a329f44c5f7e"><div class="ttname"><a href="ciecz_8cpp.html#a771583e9e87d083150a9a329f44c5f7e">WYSOKOSC</a></div><div class="ttdeci">#define WYSOKOSC</div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00027">ciecz.cpp:27</a></div></div>
+<div class="ttc" id="class_okno_glowne_html"><div class="ttname"><a href="class_okno_glowne.html">OknoGlowne</a></div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8hh_source.html#l00036">ciecz.hh:36</a></div></div>
+<div class="ttc" id="ciecz_8hh_html"><div class="ttname"><a href="ciecz_8hh.html">ciecz.hh</a></div><div class="ttdoc">Kanwa dla pozostalych widgetow. Jest miejscem dla umieszczania innych widgetow. </div></div>
+<div class="ttc" id="class_zbiornik_html_aa432f548eb9dfd62bb7312a745a70cc7"><div class="ttname"><a href="class_zbiornik.html#aa432f548eb9dfd62bb7312a745a70cc7">Zbiornik::Zbiornik</a></div><div class="ttdeci">Zbiornik(QWidget *wRodzic=0L)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00032">ciecz.cpp:32</a></div></div>
+<div class="ttc" id="ciecz_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="ciecz_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00087">ciecz.cpp:87</a></div></div>
+<div class="ttc" id="class_zbiornik_html_af7a9c185e95b92de342c6dc69f020765"><div class="ttname"><a href="class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765">Zbiornik::paintEvent</a></div><div class="ttdeci">virtual void paintEvent(QPaintEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00053">ciecz.cpp:53</a></div></div>
+<div class="ttc" id="ciecz_8cpp_html_af32bc1aae78786d4de58fb5fef677232"><div class="ttname"><a href="ciecz_8cpp.html#af32bc1aae78786d4de58fb5fef677232">GRUBOSC</a></div><div class="ttdeci">#define GRUBOSC</div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00028">ciecz.cpp:28</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a5a6ee46921444828600e6ec825f31153"><div class="ttname"><a href="class_okno_glowne.html#a5a6ee46921444828600e6ec825f31153">OknoGlowne::OknoGlowne</a></div><div class="ttdeci">OknoGlowne(QWidget *wRodzic=0L)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00079">ciecz.cpp:79</a></div></div>
+<div class="ttc" id="class_zbiornik_html"><div class="ttname"><a href="class_zbiornik.html">Zbiornik</a></div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8hh_source.html#l00054">ciecz.hh:54</a></div></div>
+<div class="ttc" id="ciecz_8cpp_html_a724df1fefe77c95e343dbf7bd36c779d"><div class="ttname"><a href="ciecz_8cpp.html#a724df1fefe77c95e343dbf7bd36c779d">PODSTAWA</a></div><div class="ttdeci">#define PODSTAWA</div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00026">ciecz.cpp:26</a></div></div>
+<div class="ttc" id="class_kanwa_html_a6a634418b76abed84199abe8d2680c91"><div class="ttname"><a href="class_kanwa.html#a6a634418b76abed84199abe8d2680c91">Kanwa::Kanwa</a></div><div class="ttdeci">Kanwa(QWidget *wRodzic=0L)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8cpp_source.html#l00068">ciecz.cpp:68</a></div></div>
+<div class="ttc" id="class_kanwa_html"><div class="ttname"><a href="class_kanwa.html">Kanwa</a></div><div class="ttdef"><b>Definition:</b> <a href="ciecz_8hh_source.html#l00022">ciecz.hh:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="ciecz_8cpp.html">ciecz.cpp</a></li>
+    <li class="footer">Wygenerowano Pt, 24 kwi 2015 04:35:47 dla SymulacjaZbiornika programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

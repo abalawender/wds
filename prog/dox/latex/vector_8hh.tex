@@ -1,0 +1,70 @@
+\hypertarget{vector_8hh}{\section{Dokumentacja pliku vector.\-hh}
+\label{vector_8hh}\index{vector.\-hh@{vector.\-hh}}
+}
+
+
+Klasa przechowująca wektor Zawiera podstawowe metody pozwalające stworzyć odpowiedni obiekt, odczytywać i zapisywać dane do niego, wczytać i wydrukować na standardowych strumieniach, a także odjąć od niego inny wektor.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+Wykres zależności załączania dla vector.\-hh\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{vector_8hh__incl}
+\end{center}
+\end{figure}
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_vector}{Vector$<$ T\-Y\-P\-E $>$}
+\item 
+class \hyperlink{class_vector}{Vector$<$ T\-Y\-P\-E $>$}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-Y\-P\-E $>$ }\\std\-::istream \& \hyperlink{vector_8hh_af9f1d76a42b7800e17a6da47fce9e179}{operator$>$$>$} (std\-::istream \&, \hyperlink{class_vector}{Vector}$<$ T\-Y\-P\-E $>$ \&)
+\item 
+{\footnotesize template$<$typename T\-Y\-P\-E $>$ }\\std\-::ostream \& \hyperlink{vector_8hh_aebb7c04457be6d2378fa43ce22cfb408}{operator$<$$<$} (std\-::ostream \&, const \hyperlink{class_vector}{Vector}$<$ T\-Y\-P\-E $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{vector_8hh_aebb7c04457be6d2378fa43ce22cfb408}{\index{vector.\-hh@{vector.\-hh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vector.hh@{vector.\-hh}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{, }
+\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{}
+\end{DoxyParamCaption}
+)}}\label{vector_8hh_aebb7c04457be6d2378fa43ce22cfb408}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em out} & -\/ strumień wyjściowy \\
+\hline
+\mbox{\tt in}  & {\em vect} & -\/ wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencję do zmodyfikowanego strumienia. 
+\end{DoxyReturn}
+\hypertarget{vector_8hh_af9f1d76a42b7800e17a6da47fce9e179}{\index{vector.\-hh@{vector.\-hh}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!vector.hh@{vector.\-hh}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{, }
+\item[{{\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{}
+\end{DoxyParamCaption}
+)}}\label{vector_8hh_af9f1d76a42b7800e17a6da47fce9e179}
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em inp} & -\/ strumień wejściowy \\
+\hline
+\mbox{\tt out}  & {\em vect} & -\/ wektor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca referencję do zmodyfikowanego strumienia. 
+\end{DoxyReturn}
