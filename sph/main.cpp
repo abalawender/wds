@@ -40,7 +40,10 @@ std::ostream& operator<<( std::ostream& _os, const Vector& _s )  {
     return _os << "( " << _s.x << ", " << _s.y << " )";
 }
 std::ostream& operator<<( std::ostream& _os, const state_t* _s )  {
-    _os.write( (char*)_s->p, sizeof( Vector )*_s->n );
+    for( unsigned i = 0; i < _s->n; ++i ) {
+        _os.write( (char*)&_s->p[i], sizeof( Vector ) );
+        _os.write( (char*)&_s->rho[i], sizeof( float ) );
+    }
     return _os;
 }
 

@@ -15,10 +15,11 @@ def data_gen():
         ydata.clear()
         for i in range(n):
             x, y = struct.unpack( 'f', f.read(4) )[0], struct.unpack( 'f', f.read(4) )[0]
+            rho = struct.unpack( 'f', f.read(4) )[0]
             #_ = f.read(4)
             xdata.append(x)
             ydata.append(y)
-            print( "( ", x, ", ", y, " )" )
+            print( "( ", x, ", ", y, " ) rho=", rho )
             #_ = f.read( 12 * (n-1) ) # skip n-1 particles
         yield xdata, ydata
 
