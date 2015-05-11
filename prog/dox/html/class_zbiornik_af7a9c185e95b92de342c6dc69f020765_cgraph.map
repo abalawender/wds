@@ -1,3 +1,5 @@
 <map id="Zbiornik::paintEvent" name="Zbiornik::paintEvent">
-<area shape="rect" id="node2" href="$class_zbiornik.html#ae8bda443a783485029083b039e1019e8" title="Wyrysowuje zbiornik. " alt="" coords="193,5,349,32"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="192,5,440,32"/>
+<area shape="rect" id="node4" href="$class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc" title="Metoda rysujaca czasteczke. " alt="" coords="489,56,669,83"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="501,5,657,32"/>
 </map>

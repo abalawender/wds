@@ -1,6 +1,12 @@
 var class_zbiornik =
 [
-    [ "Zbiornik", "class_zbiornik.html#aa432f548eb9dfd62bb7312a745a70cc7", null ],
+    [ "Zbiornik", "class_zbiornik.html#aa71a4d405b5d2c72d2a9e5cf9c5becfa", null ],
+    [ "GdyOdpowiedniCzas", "class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e", null ],
     [ "paintEvent", "class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765", null ],
-    [ "RysujZbiornik", "class_zbiornik.html#ae8bda443a783485029083b039e1019e8", null ]
+    [ "RysujCzasteczke", "class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc", null ],
+    [ "RysujZbiornik", "class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906", null ],
+    [ "RysujZbiornikZCzasteczkami", "class_zbiornik.html#af831a2751191eab54fb6438392ac6edb", null ],
+    [ "ZglosNapis", "class_zbiornik.html#a2d92e4a46f9a5dda37ddd9948046580b", null ],
+    [ "_Stoper", "class_zbiornik.html#a5ca8ac1357ef59110d4a9e12aae2bd99", null ],
+    [ "Czasteczki", "class_zbiornik.html#a751209f2f02a7eaf3b7a3283d8fcd3ad", null ]
 ];

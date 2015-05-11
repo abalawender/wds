@@ -3,12 +3,16 @@
 }
 
 
+Klasa modelujaca głowne okno aplikacji.  
+
+
+
+
 {\ttfamily \#include $<$ciecz.\-hh$>$}
 
 
 
-Diagram dziedziczenia dla Okno\-Glowne
-\nopagebreak
+Diagram dziedziczenia dla Okno\-Glowne\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,44 +21,89 @@ Diagram dziedziczenia dla Okno\-Glowne
 \end{figure}
 
 
-Diagram współpracy dla Okno\-Glowne\-:
-\nopagebreak
+Diagram współpracy dla Okno\-Glowne\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=160pt]{class_okno_glowne__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_okno_glowne_a2a59f13292adfead4ac821780220044a}{Gdy\-Napis} (const Q\-String \&)
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_okno_glowne_a5a6ee46921444828600e6ec825f31153}{Okno\-Glowne} (Q\-Widget $\ast$w\-Rodzic=0\-L)
+\hyperlink{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}{Okno\-Glowne} (Q\-Widget $\ast$w\-Rodzic=nullptr)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
+Dzieki tej klasie wyswietlane jest okno glowne aplikacji. 
 
-
-Definicja w linii 36 pliku ciecz.\-hh.
+Definicja w linii 137 pliku ciecz.\-hh.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{class_okno_glowne_a5a6ee46921444828600e6ec825f31153}{\index{Okno\-Glowne@{Okno\-Glowne}!Okno\-Glowne@{Okno\-Glowne}}
+\hypertarget{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}{\index{Okno\-Glowne@{Okno\-Glowne}!Okno\-Glowne@{Okno\-Glowne}}
 \index{Okno\-Glowne@{Okno\-Glowne}!OknoGlowne@{Okno\-Glowne}}
 \subsubsection[{Okno\-Glowne}]{\setlength{\rightskip}{0pt plus 5cm}Okno\-Glowne\-::\-Okno\-Glowne (
 \begin{DoxyParamCaption}
-\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily 0L}}
+\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)}}\label{class_okno_glowne_a5a6ee46921444828600e6ec825f31153}
-
+)}}\label{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}
+Konstruktor parametryczny. 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in,out}  & {\em w\-Rodzic} & -\/ wskaznik na rodzica \\
 \hline
 \end{DoxyParams}
 
 
-Definicja w linii 79 pliku ciecz.\-cpp.
+Definicja w linii 129 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_okno_glowne_a2a59f13292adfead4ac821780220044a}{\index{Okno\-Glowne@{Okno\-Glowne}!Gdy\-Napis@{Gdy\-Napis}}
+\index{Gdy\-Napis@{Gdy\-Napis}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Gdy\-Napis}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Gdy\-Napis (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{Napis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_okno_glowne_a2a59f13292adfead4ac821780220044a}
+Odpowiada za wyswietlenie napisu na belce statusowej. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em Napis} & -\/ napis do wyswietlenia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 149 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph}
+\end{center}
+\end{figure}
+
 
 
 

@@ -1,6 +1,10 @@
 var NAVTREE =
 [
   [ "SymulacjaZbiornika", "index.html", [
+    [ "Wizualizacja rozkładu ciśnienia cieczy na podstawie symulacji komputerowej", "index.html", [
+      [ "Opis projektu", "index.html#etykieta-opis-projektu", null ],
+      [ "Funkcjonalnosci aplikacji", "index.html#etykieta-funkcjonalnosci-aplikacji", null ]
+    ] ],
     [ "Klasy", null, [
       [ "Lista klas", "annotated.html", "annotated" ],
       [ "Indeks klas", "classes.html", null ],
@@ -17,7 +21,7 @@ var NAVTREE =
       [ "Składowe plików", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Funkcje", "globals_func.html", null ],
-        [ "Definicje", "globals_defs.html", null ]
+        [ "Zmienne", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]

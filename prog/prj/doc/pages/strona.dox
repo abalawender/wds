@@ -1,1 +1,19 @@
-Strona tytułowa. I kropka.
+/*!
+   \mainpage Wizualizacja rozkładu ciśnienia cieczy na podstawie symulacji komputerowej
+   \author Adam Balawender, 
+   \author Krzysztof Kwieciński, 
+   \author AiR, ARR, W4
+   \date 11.05.2015
+   \version 0.1
+   
+   Aplikacja dotyczy komputerowej symulacji zachowania cieczy oraz wizualizacji jej stanu i rozkładu ciśnienia w zbiorniku z płynem.
+
+   \section etykieta-opis-projektu Opis projektu
+   Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia. Ciecz zostanie przedstawiona na płaszczyźnie jako zbiór oddziaływujących ze sobą cząsteczek. Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego. Ruch płynu zostanie zamodelowany metodą numeryczną SPH (particle hydrodynamics - wygładzona hydrodynamika cząstek). Pozwoli to na realistyczne odwzorowanie zachowania cieczy. Możliwe będzie badanie cieczy o różnych parametrach, dlatego też modelowane będą jej właściwości fizyczne: gęstość i lepkość. Dodatkowo mierzone będzie ciśnienie cieczy i zostanie ono zwizualizowane jako odcień koloru płynu. Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.
+   
+   \section etykieta-funkcjonalnosci-aplikacji Funkcjonalnosci aplikacji
+   Najistotniejszymi funkcjonalnościami aplikacji będą:
+   - symulacja zachowania cieczy w zależności od zadanych warunków początkowych,
+   - item możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),   
+   - możliwość obserwacji wyniku symulacji (położenia cząsteczek i rozkładu ciśnień).
+ */

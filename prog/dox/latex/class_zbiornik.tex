@@ -3,12 +3,16 @@
 }
 
 
+Klasa modelująca zbiornik.  
+
+
+
+
 {\ttfamily \#include $<$ciecz.\-hh$>$}
 
 
 
-Diagram dziedziczenia dla Zbiornik
-\nopagebreak
+Diagram dziedziczenia dla Zbiornik\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,52 +21,108 @@ Diagram dziedziczenia dla Zbiornik
 \end{figure}
 
 
-Diagram współpracy dla Zbiornik\-:
-\nopagebreak
+Diagram współpracy dla Zbiornik\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=134pt]{class_zbiornik__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_zbiornik_aa07ceb0fcbf307f0aa1eb75c32f3f47e}{Gdy\-Odpowiedni\-Czas} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za aktualizacje danych. . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b}{Zglos\-Napis} (const Q\-String \&)
+\begin{DoxyCompactList}\small\item\em Sygnal zglaszajacy napis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_zbiornik_aa432f548eb9dfd62bb7312a745a70cc7}{Zbiornik} (Q\-Widget $\ast$w\-Rodzic=0\-L)
+\hyperlink{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}{Zbiornik} (Q\-Widget $\ast$w\-Rodzic=nullptr)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_zbiornik_af7a9c185e95b92de342c6dc69f020765}{paint\-Event} (Q\-Paint\-Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Wirtualna metoda paint\-Event wyrysowujaca obiekt na ekranie. \end{DoxyCompactList}\item 
+void \hyperlink{class_zbiornik_ad15f40d418d9ebf261de0eabe8cc2906}{Rysuj\-Zbiornik} (Q\-Painter \&Rysownik, const int Podstawa, const int Wysokosc, const int Grubosc, const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Metoda rysujaca zbiornik. \end{DoxyCompactList}\item 
+void \hyperlink{class_zbiornik_ad93223745351d4d18f64c5c43dfc5fdc}{Rysuj\-Czasteczke} (Q\-Painter \&Rysownik, const int Promien, const \hyperlink{class_kolor}{Kolor} R\-G\-B, const double x, const double y)
+\begin{DoxyCompactList}\small\item\em Metoda rysujaca czasteczke. \end{DoxyCompactList}\item 
+void \hyperlink{class_zbiornik_af831a2751191eab54fb6438392ac6edb}{Rysuj\-Zbiornik\-Z\-Czasteczkami} (Q\-Painter \&Rysownik)
+\begin{DoxyCompactList}\small\item\em Metoda rysujaca zbiornik wraz z czasteczkami. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_zbiornik_ae8bda443a783485029083b039e1019e8}{Rysuj\-Zbiornik} (Q\-Painter \&Rysownik, int Podstawa, int Wysokosc, int Grubosc)
-\begin{DoxyCompactList}\small\item\em Wyrysowuje zbiornik. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\-::list$<$ \hyperlink{class_czasteczka}{Czasteczka} $>$ \hyperlink{class_zbiornik_a751209f2f02a7eaf3b7a3283d8fcd3ad}{Czasteczki}
+\begin{DoxyCompactList}\small\item\em Lista wszystkich czasteczek. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Timer \hyperlink{class_zbiornik_a5ca8ac1357ef59110d4a9e12aae2bd99}{\-\_\-\-Stoper}
+\begin{DoxyCompactList}\small\item\em Miernik czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
+Dzieki tej klasie mozliwe jest wyrysowywanie na ekranie zbiornika. 
 
-
-Definicja w linii 54 pliku ciecz.\-hh.
+Definicja w linii 34 pliku ciecz.\-hh.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{class_zbiornik_aa432f548eb9dfd62bb7312a745a70cc7}{\index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
+\hypertarget{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}{\index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
 \index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
 \subsubsection[{Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}Zbiornik\-::\-Zbiornik (
 \begin{DoxyParamCaption}
-\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily 0L}}
+\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)}}\label{class_zbiornik_aa432f548eb9dfd62bb7312a745a70cc7}
-
+)}}\label{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}
+Konstruktor parametryczny. 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in,out}  & {\em w\-Rodzic} & -\/ wskaznik na rodzica \\
 \hline
 \end{DoxyParams}
 
 
-Definicja w linii 32 pliku ciecz.\-cpp.
+Definicja w linii 46 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa_cgraph}
+\end{center}
+\end{figure}
+
 
 
 
 \subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_zbiornik_aa07ceb0fcbf307f0aa1eb75c32f3f47e}{\index{Zbiornik@{Zbiornik}!Gdy\-Odpowiedni\-Czas@{Gdy\-Odpowiedni\-Czas}}
+\index{Gdy\-Odpowiedni\-Czas@{Gdy\-Odpowiedni\-Czas}!Zbiornik@{Zbiornik}}
+\subsubsection[{Gdy\-Odpowiedni\-Czas}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::\-Gdy\-Odpowiedni\-Czas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_zbiornik_aa07ceb0fcbf307f0aa1eb75c32f3f47e}
+Odpowiada za uaktualnienie okienka w odpowiednich momentach. 
+
+Definicja w linii 111 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_aa07ceb0fcbf307f0aa1eb75c32f3f47e_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_zbiornik_af7a9c185e95b92de342c6dc69f020765}{\index{Zbiornik@{Zbiornik}!paint\-Event@{paint\-Event}}
 \index{paint\-Event@{paint\-Event}!Zbiornik@{Zbiornik}}
 \subsubsection[{paint\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::paint\-Event (
@@ -70,33 +130,78 @@ Definicja w linii 32 pliku ciecz.\-cpp.
 \item[{Q\-Paint\-Event $\ast$}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_zbiornik_af7a9c185e95b92de342c6dc69f020765}
+Odziedziczona wirtualna metoda paint\-Event. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em event} & -\/ wskaznik obiekt klasy Q\-Paint\-Event \\
+\hline
+\end{DoxyParams}
 
 
-Definicja w linii 53 pliku ciecz.\-cpp.
+Definicja w linii 97 pliku ciecz.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:
-\nopagebreak
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{class_zbiornik_af7a9c185e95b92de342c6dc69f020765_cgraph}
+\includegraphics[width=350pt]{class_zbiornik_af7a9c185e95b92de342c6dc69f020765_cgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{class_zbiornik_ae8bda443a783485029083b039e1019e8}{\index{Zbiornik@{Zbiornik}!Rysuj\-Zbiornik@{Rysuj\-Zbiornik}}
+\hypertarget{class_zbiornik_ad93223745351d4d18f64c5c43dfc5fdc}{\index{Zbiornik@{Zbiornik}!Rysuj\-Czasteczke@{Rysuj\-Czasteczke}}
+\index{Rysuj\-Czasteczke@{Rysuj\-Czasteczke}!Zbiornik@{Zbiornik}}
+\subsubsection[{Rysuj\-Czasteczke}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::\-Rysuj\-Czasteczke (
+\begin{DoxyParamCaption}
+\item[{Q\-Painter \&}]{Rysownik, }
+\item[{const int}]{Promien, }
+\item[{const {\bf Kolor}}]{R\-G\-B, }
+\item[{const double}]{x, }
+\item[{const double}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_zbiornik_ad93223745351d4d18f64c5c43dfc5fdc}
+Rysuje czasteczke o zadanych parametrach 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em Rysownik} & -\/ referencja na obiekt klasy Q\-Painter \\
+\hline
+\mbox{\tt in}  & {\em Promien} & -\/ promien czasteczki \\
+\hline
+\mbox{\tt in}  & {\em R\-G\-B} & -\/ kolor czasteczki w formacie R\-G\-B \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ polozenie czasteczki na osi x \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ polozenie czasteczki na osi y \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 74 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_ad93223745351d4d18f64c5c43dfc5fdc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_zbiornik_ad15f40d418d9ebf261de0eabe8cc2906}{\index{Zbiornik@{Zbiornik}!Rysuj\-Zbiornik@{Rysuj\-Zbiornik}}
 \index{Rysuj\-Zbiornik@{Rysuj\-Zbiornik}!Zbiornik@{Zbiornik}}
 \subsubsection[{Rysuj\-Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::\-Rysuj\-Zbiornik (
 \begin{DoxyParamCaption}
 \item[{Q\-Painter \&}]{Rysownik, }
-\item[{int}]{Podstawa, }
-\item[{int}]{Wysokosc, }
-\item[{int}]{Grubosc}
+\item[{const int}]{Podstawa, }
+\item[{const int}]{Wysokosc, }
+\item[{const int}]{Grubosc, }
+\item[{const int}]{x, }
+\item[{const int}]{y}
 \end{DoxyParamCaption}
-)}}\label{class_zbiornik_ae8bda443a783485029083b039e1019e8}
-
+)}}\label{class_zbiornik_ad15f40d418d9ebf261de0eabe8cc2906}
+Rysuje zbiornik o zadanych parametrach. 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in,out}  & {\em Rysownik} & -\/ referencja na obiekt klasy Q\-Painter \\
 \hline
@@ -106,26 +211,112 @@ Oto graf wywołań dla tej funkcji\-:
 \hline
 \mbox{\tt in}  & {\em Grubosc} & -\/ grubosc wyrysowywanego odcinka \\
 \hline
+\mbox{\tt in}  & {\em x} & -\/ polozenie lewego gornego punktu zbiornika na osi x \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ polozenie lewego gornego punktu zbiornika na osi y \\
+\hline
 \end{DoxyParams}
 
 
-Definicja w linii 38 pliku ciecz.\-cpp.
+Definicja w linii 57 pliku ciecz.\-cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:
-\nopagebreak
+Oto graf wywoływań tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{class_zbiornik_ae8bda443a783485029083b039e1019e8_icgraph}
+\includegraphics[width=350pt]{class_zbiornik_ad15f40d418d9ebf261de0eabe8cc2906_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_zbiornik_af831a2751191eab54fb6438392ac6edb}{\index{Zbiornik@{Zbiornik}!Rysuj\-Zbiornik\-Z\-Czasteczkami@{Rysuj\-Zbiornik\-Z\-Czasteczkami}}
+\index{Rysuj\-Zbiornik\-Z\-Czasteczkami@{Rysuj\-Zbiornik\-Z\-Czasteczkami}!Zbiornik@{Zbiornik}}
+\subsubsection[{Rysuj\-Zbiornik\-Z\-Czasteczkami}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::\-Rysuj\-Zbiornik\-Z\-Czasteczkami (
+\begin{DoxyParamCaption}
+\item[{Q\-Painter \&}]{Rysownik}
+\end{DoxyParamCaption}
+)}}\label{class_zbiornik_af831a2751191eab54fb6438392ac6edb}
+Rysuje zbiornik oraz czasteczki. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in,out}  & {\em Rysownik} & -\/ referencja na obiekt klasy Q\-Painter \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 88 pliku ciecz.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_af831a2751191eab54fb6438392ac6edb_cgraph}
 \end{center}
 \end{figure}
 
 
 
 
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_af831a2751191eab54fb6438392ac6edb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b}{\index{Zbiornik@{Zbiornik}!Zglos\-Napis@{Zglos\-Napis}}
+\index{Zglos\-Napis@{Zglos\-Napis}!Zbiornik@{Zbiornik}}
+\subsubsection[{Zglos\-Napis}]{\setlength{\rightskip}{0pt plus 5cm}void Zbiornik\-::\-Zglos\-Napis (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{\-\_\-t1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b}
+Sygnal zglaszajacy napis do odpowiedniego slotu. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-t1} & -\/ napis do zgloszenia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 99 pliku moc\-\_\-ciecz.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_zbiornik_a5ca8ac1357ef59110d4a9e12aae2bd99}{\index{Zbiornik@{Zbiornik}!\-\_\-\-Stoper@{\-\_\-\-Stoper}}
+\index{\-\_\-\-Stoper@{\-\_\-\-Stoper}!Zbiornik@{Zbiornik}}
+\subsubsection[{\-\_\-\-Stoper}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer Zbiornik\-::\-\_\-\-Stoper\hspace{0.3cm}{\ttfamily [private]}}}\label{class_zbiornik_a5ca8ac1357ef59110d4a9e12aae2bd99}
+Miernik czasu. 
+
+Definicja w linii 127 pliku ciecz.\-hh.
+
+\hypertarget{class_zbiornik_a751209f2f02a7eaf3b7a3283d8fcd3ad}{\index{Zbiornik@{Zbiornik}!Czasteczki@{Czasteczki}}
+\index{Czasteczki@{Czasteczki}!Zbiornik@{Zbiornik}}
+\subsubsection[{Czasteczki}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Czasteczka}$>$ Zbiornik\-::\-Czasteczki}}\label{class_zbiornik_a751209f2f02a7eaf3b7a3283d8fcd3ad}
+Lista wszystkich czasteczek. 
+
+Definicja w linii 119 pliku ciecz.\-hh.
+
+
+
 Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{ciecz_8hh}{ciecz.\-hh}\item 
+\hyperlink{moc__ciecz_8cpp}{moc\-\_\-ciecz.\-cpp}\item 
 \hyperlink{ciecz_8cpp}{ciecz.\-cpp}\end{DoxyCompactItemize}

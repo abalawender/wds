@@ -66,6 +66,7 @@ $(document).ready(function(){initNavTree('class_okno_glowne.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Sloty publiczne</a> &#124;
 <a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="class_okno_glowne-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
@@ -73,33 +74,39 @@ $(document).ready(function(){initNavTree('class_okno_glowne.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa modelujaca głowne okno aplikacji.  
+ <a href="class_okno_glowne.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ciecz_8hh_source.html">ciecz.hh</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla OknoGlowne</div>
 <div class="dyncontent">
 <div class="center"><img src="class_okno_glowne__inherit__graph.png" border="0" usemap="#_okno_glowne_inherit__map" alt="Inheritance graph"/></div>
-<map name="_okno_glowne_inherit__map" id="_okno_glowne_inherit__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <div class="dynheader">
 Diagram współpracy dla OknoGlowne:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_okno_glowne__coll__graph.png" border="0" usemap="#_okno_glowne_coll__map" alt="Collaboration graph"/></div>
-<map name="_okno_glowne_coll__map" id="_okno_glowne_coll__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Sloty publiczne</h2></td></tr>
+<tr class="memitem:a2a59f13292adfead4ac821780220044a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a2a59f13292adfead4ac821780220044a">GdyNapis</a> (const QString &amp;)</td></tr>
+<tr class="memdesc:a2a59f13292adfead4ac821780220044a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu.  <a href="#a2a59f13292adfead4ac821780220044a">Więcej...</a><br/></td></tr>
+<tr class="separator:a2a59f13292adfead4ac821780220044a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a5a6ee46921444828600e6ec825f31153"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a5a6ee46921444828600e6ec825f31153">OknoGlowne</a> (QWidget *wRodzic=0L)</td></tr>
-<tr class="memdesc:a5a6ee46921444828600e6ec825f31153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a5a6ee46921444828600e6ec825f31153">Więcej...</a><br/></td></tr>
-<tr class="separator:a5a6ee46921444828600e6ec825f31153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9086a63f1c85bcf82beab771ed699b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#afa9086a63f1c85bcf82beab771ed699b">OknoGlowne</a> (QWidget *wRodzic=nullptr)</td></tr>
+<tr class="memdesc:afa9086a63f1c85bcf82beab771ed699b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#afa9086a63f1c85bcf82beab771ed699b">Więcej...</a><br/></td></tr>
+<tr class="separator:afa9086a63f1c85bcf82beab771ed699b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p>Definicja w linii <a class="el" href="ciecz_8hh_source.html#l00036">36</a> pliku <a class="el" href="ciecz_8hh_source.html">ciecz.hh</a>.</p>
+<div class="textblock"><p>Dzieki tej klasie wyswietlane jest okno glowne aplikacji. </p>
+
+<p>Definicja w linii <a class="el" href="ciecz_8hh_source.html#l00137">137</a> pliku <a class="el" href="ciecz_8hh_source.html">ciecz.hh</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a class="anchor" id="a5a6ee46921444828600e6ec825f31153"></a>
+<a class="anchor" id="afa9086a63f1c85bcf82beab771ed699b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -107,11 +114,12 @@ Metody publiczne</h2></td></tr>
           <td class="memname">OknoGlowne::OknoGlowne </td>
           <td>(</td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>wRodzic</em> = <code>0L</code></td><td>)</td>
+          <td class="paramname"><em>wRodzic</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Konstruktor parametryczny. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">wRodzic</td><td>- wskaznik na rodzica </td></tr>
@@ -119,7 +127,59 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="ciecz_8cpp_source.html#l00079">79</a> pliku <a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ciecz_8cpp_source.html#l00129">129</a> pliku <a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph.png" border="0" usemap="#class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph" alt=""/></div>
+<map name="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph" id="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="235,5,397,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a2a59f13292adfead4ac821780220044a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::GdyNapis </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>Napis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za wyswietlenie napisu na belce statusowej. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Napis</td><td>- napis do wyswietlenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="ciecz_8cpp_source.html#l00149">149</a> pliku <a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph.png" border="0" usemap="#class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph" alt=""/></div>
+<map name="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph" id="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#afa9086a63f1c85bcf82beab771ed699b" title="Konstruktor. " alt="" coords="217,5,397,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -133,7 +193,7 @@ Metody publiczne</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_okno_glowne.html">OknoGlowne</a></li>
-    <li class="footer">Wygenerowano Pt, 24 kwi 2015 04:35:47 dla SymulacjaZbiornika programem
+    <li class="footer">Wygenerowano Pn, 11 maj 2015 13:47:29 dla SymulacjaZbiornika programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

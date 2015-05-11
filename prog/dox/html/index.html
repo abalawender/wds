@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SymulacjaZbiornika: Strona główna</title>
+<title>SymulacjaZbiornika: Wizualizacja rozkładu ciśnienia cieczy na podstawie symulacji komputerowej</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -58,15 +58,34 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">SymulacjaZbiornika Dokumentacja</div>  </div>
+<div class="title">Wizualizacja rozkładu ciśnienia cieczy na podstawie symulacji komputerowej </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Adam Balawender, </dd>
+<dd>
+Krzysztof Kwieciński, </dd>
+<dd>
+AiR, ARR, W4 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>11.05.2015 </dd></dl>
+<dl class="section version"><dt>Wersja</dt><dd>0.1</dd></dl>
+<p>Aplikacja dotyczy komputerowej symulacji zachowania cieczy oraz wizualizacji jej stanu i rozkładu ciśnienia w zbiorniku z płynem.</p>
+<h1><a class="anchor" id="etykieta-opis-projektu"></a>
+Opis projektu</h1>
+<p>Symulacja będzie obejmowała ruch cieczy w przekroju 2D wybranego naczynia. Ciecz zostanie przedstawiona na płaszczyźnie jako zbiór oddziaływujących ze sobą cząsteczek. Postaramy się, żeby jej zachowanie było możliwie zbliżone do rzeczywistego. Ruch płynu zostanie zamodelowany metodą numeryczną SPH (particle hydrodynamics - wygładzona hydrodynamika cząstek). Pozwoli to na realistyczne odwzorowanie zachowania cieczy. Możliwe będzie badanie cieczy o różnych parametrach, dlatego też modelowane będą jej właściwości fizyczne: gęstość i lepkość. Dodatkowo mierzone będzie ciśnienie cieczy i zostanie ono zwizualizowane jako odcień koloru płynu. Im będzie on ciemniejszy, tym wyższe ciśnienie będzie odzwierciedlał.</p>
+<h1><a class="anchor" id="etykieta-funkcjonalnosci-aplikacji"></a>
+Funkcjonalnosci aplikacji</h1>
+<p>Najistotniejszymi funkcjonalnościami aplikacji będą:</p>
+<ul>
+<li>symulacja zachowania cieczy w zależności od zadanych warunków początkowych,</li>
+<li>item możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),</li>
+<li>możliwość obserwacji wyniku symulacji (położenia cząsteczek i rozkładu ciśnień). </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Pt, 24 kwi 2015 04:35:47 dla SymulacjaZbiornika programem
+    <li class="footer">Wygenerowano Pn, 11 maj 2015 13:47:29 dla SymulacjaZbiornika programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

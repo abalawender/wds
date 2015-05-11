@@ -25,6 +25,14 @@
 
 #include "ciecz.hh"
 
+/*! 
+ * \file
+ * \brief Zawiera definicje metod klasy Zbiornik.
+ * 
+ * W pliku znajduja sie: 
+ * - definicje konstruktorow, metod i przeciazen klasy Zbiornik.
+ */
+
 const int PODSTAWA = 200;
 const int WYSOKOSC = 200;
 const int GRUBOSC  = 3;

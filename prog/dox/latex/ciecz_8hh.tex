@@ -3,23 +3,24 @@
 }
 
 
-\hyperlink{class_kanwa}{Kanwa} dla pozostalych widgetow. Jest miejscem dla umieszczania innych widgetow.  
+Zawiera definicje klasy \hyperlink{class_zbiornik}{Zbiornik} i deklaracje jej metod.  
 
 
 {\ttfamily \#include $<$Q\-Widget$>$}\\*
 {\ttfamily \#include $<$Q\-Main\-Window$>$}\\*
 {\ttfamily \#include $<$Q\-Timer$>$}\\*
 {\ttfamily \#include $<$Q\-Painter$>$}\\*
-Wykres zależności załączania dla ciecz.\-hh\-:
-\nopagebreak
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include \char`\"{}kolor.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}czasteczka.\-hh\char`\"{}}\\*
+Wykres zależności załączania dla ciecz.\-hh\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{ciecz_8hh__incl}
 \end{center}
 \end{figure}
-Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:
-\nopagebreak
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,18 +30,18 @@ Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten 
 \subsection*{Komponenty}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_kanwa}{Kanwa}
-\item 
-class \hyperlink{class_okno_glowne}{Okno\-Glowne}
-\item 
 class \hyperlink{class_zbiornik}{Zbiornik}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Klasa modelująca zbiornik. \end{DoxyCompactList}\item 
+class \hyperlink{class_okno_glowne}{Okno\-Glowne}
+\begin{DoxyCompactList}\small\item\em Klasa modelujaca głowne okno aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
-Klasa rysujaca zbiornik. Dzieki tej klasie wyrysowywany jest zbiornik na ekranie.
-
-Główne okno aplikacji. Wyswietlane jest jako okno glowne aplikacji.
+W pliku znajduja sie\-:
+\begin{DoxyItemize}
+\item definicja klasy \hyperlink{class_zbiornik}{Zbiornik} (modeluje pojecie Zbiornika),
+\item deklaracje konstruktorow, metod i przeciazen ww. klasy. 
+\end{DoxyItemize}
 
 Definicja w pliku \hyperlink{ciecz_8hh_source}{ciecz.\-hh}.
 
