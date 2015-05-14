@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>SymulacjaZbiornika: Plik źródłowy zbiornik.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SymulacjaZbiornika
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('zbiornik_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">zbiornik.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="zbiornik_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ZBIORNIK_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ZBIORNIK_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef __GNUG__</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma interface</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma implementation</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QStatusBar&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QTime&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QLocale&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QSlider&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QSpinBox&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QLCDNumber&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="czasteczka_8hh.html">czasteczka.hh</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="zbiornik_8hh.html#acd3c5814c051e565bf7854f6403acf49">   44</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="zbiornik_8hh.html#acd3c5814c051e565bf7854f6403acf49">PODSTAWA</a> = 200;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="zbiornik_8hh.html#a073767f0ac7dbf009a42b00de1092b52">   51</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="zbiornik_8hh.html#a073767f0ac7dbf009a42b00de1092b52">WYSOKOSC</a> = 200;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="zbiornik_8hh.html#a359a95636f17b8e9b7a01389d75b521d">   58</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="zbiornik_8hh.html#a359a95636f17b8e9b7a01389d75b521d">GRUBOSC</a>  = 3;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="zbiornik_8hh.html#a3a09b0fc9bed85242f7783147af182ae">   65</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="zbiornik_8hh.html#a3a09b0fc9bed85242f7783147af182ae">ODPOWIEDNI_CZAS</a> = 100; <span class="comment">// [ms]</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_zbiornik.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_zbiornik.html">Zbiornik</a>: <span class="keyword">public</span> QWidget </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{ </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  Q_OBJECT</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="class_zbiornik.html#a52fb780bf924b89018348be8a65eaf68">Zbiornik</a>(QWidget *wRodzic = NULL<span class="comment">/*nullptr*/</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765">paintEvent</a> ( QPaintEvent * event );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906">RysujZbiornik</a>( QPainter&amp; Rysownik, </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">int</span> Podstawa,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">int</span> Wysokosc,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">int</span> Grubosc,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">int</span> x,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                      <span class="keyword">const</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc">RysujCzasteczke</a>( QPainter&amp;    Rysownik, </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">int</span>    Promien,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        <span class="keyword">const</span> <a class="code" href="class_kolor.html">Kolor</a>  RGB,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">double</span> x,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">double</span> y);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#af831a2751191eab54fb6438392ac6edb">RysujZbiornikZCzasteczkami</a>( QPainter&amp; Rysownik );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e">GdyOdpowiedniCzas</a>(); </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;signals:</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_zbiornik.html#a2d92e4a46f9a5dda37ddd9948046580b">ZglosNapis</a>(<span class="keyword">const</span> QString &amp;);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_zbiornik.html#a751209f2f02a7eaf3b7a3283d8fcd3ad">  158</a></span>&#160;  std::list&lt;Czasteczka&gt; <a class="code" href="class_zbiornik.html#a751209f2f02a7eaf3b7a3283d8fcd3ad">Czasteczki</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_zbiornik.html#a5ca8ac1357ef59110d4a9e12aae2bd99">  166</a></span>&#160;  QTimer <a class="code" href="class_zbiornik.html#a5ca8ac1357ef59110d4a9e12aae2bd99">_Stoper</a>; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_zbiornik_html_ad15f40d418d9ebf261de0eabe8cc2906"><div class="ttname"><a href="class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906">Zbiornik::RysujZbiornik</a></div><div class="ttdeci">void RysujZbiornik(QPainter &amp;Rysownik, const int Podstawa, const int Wysokosc, const int Grubosc, const int x, const int y)</div><div class="ttdoc">Metoda rysujaca zbiornik. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00027">zbiornik.cpp:27</a></div></div>
+<div class="ttc" id="class_zbiornik_html_a5ca8ac1357ef59110d4a9e12aae2bd99"><div class="ttname"><a href="class_zbiornik.html#a5ca8ac1357ef59110d4a9e12aae2bd99">Zbiornik::_Stoper</a></div><div class="ttdeci">QTimer _Stoper</div><div class="ttdoc">Miernik czasu. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00166">zbiornik.hh:166</a></div></div>
+<div class="ttc" id="class_zbiornik_html_a751209f2f02a7eaf3b7a3283d8fcd3ad"><div class="ttname"><a href="class_zbiornik.html#a751209f2f02a7eaf3b7a3283d8fcd3ad">Zbiornik::Czasteczki</a></div><div class="ttdeci">std::list&lt; Czasteczka &gt; Czasteczki</div><div class="ttdoc">Lista wszystkich czasteczek. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00158">zbiornik.hh:158</a></div></div>
+<div class="ttc" id="zbiornik_8hh_html_acd3c5814c051e565bf7854f6403acf49"><div class="ttname"><a href="zbiornik_8hh.html#acd3c5814c051e565bf7854f6403acf49">PODSTAWA</a></div><div class="ttdeci">const int PODSTAWA</div><div class="ttdoc">Dlugosc podstawy zbiornika. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00044">zbiornik.hh:44</a></div></div>
+<div class="ttc" id="class_kolor_html"><div class="ttname"><a href="class_kolor.html">Kolor</a></div><div class="ttdoc">Klasa modelująca kolor. </div><div class="ttdef"><b>Definition:</b> <a href="kolor_8hh_source.html#l00024">kolor.hh:24</a></div></div>
+<div class="ttc" id="czasteczka_8hh_html"><div class="ttname"><a href="czasteczka_8hh.html">czasteczka.hh</a></div><div class="ttdoc">Zawiera definicje klasy Kolor oraz deklaracje jej metod. </div></div>
+<div class="ttc" id="class_zbiornik_html_af7a9c185e95b92de342c6dc69f020765"><div class="ttname"><a href="class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765">Zbiornik::paintEvent</a></div><div class="ttdeci">virtual void paintEvent(QPaintEvent *event)</div><div class="ttdoc">Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00067">zbiornik.cpp:67</a></div></div>
+<div class="ttc" id="zbiornik_8hh_html_a3a09b0fc9bed85242f7783147af182ae"><div class="ttname"><a href="zbiornik_8hh.html#a3a09b0fc9bed85242f7783147af182ae">ODPOWIEDNI_CZAS</a></div><div class="ttdeci">const int ODPOWIEDNI_CZAS</div><div class="ttdoc">Interwal dla timeout&#39;ow z timera [ms]. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00065">zbiornik.hh:65</a></div></div>
+<div class="ttc" id="class_zbiornik_html"><div class="ttname"><a href="class_zbiornik.html">Zbiornik</a></div><div class="ttdoc">Klasa modelująca zbiornik. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00073">zbiornik.hh:73</a></div></div>
+<div class="ttc" id="class_zbiornik_html_aa07ceb0fcbf307f0aa1eb75c32f3f47e"><div class="ttname"><a href="class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e">Zbiornik::GdyOdpowiedniCzas</a></div><div class="ttdeci">void GdyOdpowiedniCzas()</div><div class="ttdoc">Slot odpowiadajacy za aktualizacje danych. . </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00081">zbiornik.cpp:81</a></div></div>
+<div class="ttc" id="class_zbiornik_html_a2d92e4a46f9a5dda37ddd9948046580b"><div class="ttname"><a href="class_zbiornik.html#a2d92e4a46f9a5dda37ddd9948046580b">Zbiornik::ZglosNapis</a></div><div class="ttdeci">void ZglosNapis(const QString &amp;)</div><div class="ttdoc">Sygnal zglaszajacy napis. </div><div class="ttdef"><b>Definition:</b> <a href="moc__zbiornik_8cpp_source.html#l00099">moc_zbiornik.cpp:99</a></div></div>
+<div class="ttc" id="zbiornik_8hh_html_a359a95636f17b8e9b7a01389d75b521d"><div class="ttname"><a href="zbiornik_8hh.html#a359a95636f17b8e9b7a01389d75b521d">GRUBOSC</a></div><div class="ttdeci">const int GRUBOSC</div><div class="ttdoc">Grubosc krawedzi zbiornika. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00058">zbiornik.hh:58</a></div></div>
+<div class="ttc" id="class_zbiornik_html_ad93223745351d4d18f64c5c43dfc5fdc"><div class="ttname"><a href="class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc">Zbiornik::RysujCzasteczke</a></div><div class="ttdeci">void RysujCzasteczke(QPainter &amp;Rysownik, const int Promien, const Kolor RGB, const double x, const double y)</div><div class="ttdoc">Metoda rysujaca czasteczke. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00044">zbiornik.cpp:44</a></div></div>
+<div class="ttc" id="zbiornik_8hh_html_a073767f0ac7dbf009a42b00de1092b52"><div class="ttname"><a href="zbiornik_8hh.html#a073767f0ac7dbf009a42b00de1092b52">WYSOKOSC</a></div><div class="ttdeci">const int WYSOKOSC</div><div class="ttdoc">Wysokosc zbiornika. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8hh_source.html#l00051">zbiornik.hh:51</a></div></div>
+<div class="ttc" id="class_zbiornik_html_a52fb780bf924b89018348be8a65eaf68"><div class="ttname"><a href="class_zbiornik.html#a52fb780bf924b89018348be8a65eaf68">Zbiornik::Zbiornik</a></div><div class="ttdeci">Zbiornik(QWidget *wRodzic=NULL)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00016">zbiornik.cpp:16</a></div></div>
+<div class="ttc" id="class_zbiornik_html_af831a2751191eab54fb6438392ac6edb"><div class="ttname"><a href="class_zbiornik.html#af831a2751191eab54fb6438392ac6edb">Zbiornik::RysujZbiornikZCzasteczkami</a></div><div class="ttdeci">void RysujZbiornikZCzasteczkami(QPainter &amp;Rysownik)</div><div class="ttdoc">Metoda rysujaca zbiornik wraz z czasteczkami. </div><div class="ttdef"><b>Definition:</b> <a href="zbiornik_8cpp_source.html#l00058">zbiornik.cpp:58</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="zbiornik_8hh.html">zbiornik.hh</a></li>
+    <li class="footer">Wygenerowano Pt, 15 maj 2015 00:27:26 dla SymulacjaZbiornika programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

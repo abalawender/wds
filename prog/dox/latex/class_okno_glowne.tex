@@ -8,7 +8,7 @@ Klasa modelujaca głowne okno aplikacji.
 
 
 
-{\ttfamily \#include $<$ciecz.\-hh$>$}
+{\ttfamily \#include $<$okno\-\_\-glowne.\-hh$>$}
 
 
 
@@ -21,40 +21,92 @@ Diagram dziedziczenia dla Okno\-Glowne\nopagebreak
 \end{figure}
 
 
-Diagram współpracy dla Okno\-Glowne\-:\nopagebreak
+Diagram współpracy dla Okno\-Glowne\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=160pt]{class_okno_glowne__coll__graph}
+\includegraphics[width=231pt]{class_okno_glowne__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Sloty publiczne}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{class_okno_glowne_a2a49d3696ef8a42325313842768f2c92}{Gdy\-Odpowiedni\-Czas} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za aktualizacje danych. . \end{DoxyCompactList}\item 
 void \hyperlink{class_okno_glowne_a2a59f13292adfead4ac821780220044a}{Gdy\-Napis} (const Q\-String \&)
-\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. \end{DoxyCompactList}\item 
+void \hyperlink{class_okno_glowne_a8ec594954a3196b17d42ff02be825068}{on\-\_\-play\-Button\-\_\-pressed} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za obsluge stanu play. \end{DoxyCompactList}\item 
+void \hyperlink{class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9}{Gdy\-Pauza} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za obsluge stanu pauzy. \end{DoxyCompactList}\item 
+void \hyperlink{class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17}{Gdy\-Play} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za obsluge stanu play. \end{DoxyCompactList}\item 
+void \hyperlink{class_okno_glowne_a10758539b4c164b19503857625d71222}{Gdy\-Stop} ()
+\begin{DoxyCompactList}\small\item\em Slot odpowiadajacy za obsluge stanu stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d}{Zglos\-Napis} (const Q\-String \&)
+\begin{DoxyCompactList}\small\item\em Sygnal zglaszajacy napis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}{Okno\-Glowne} (Q\-Widget $\ast$w\-Rodzic=nullptr)
+\hyperlink{class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550}{Okno\-Glowne} (Q\-Widget $\ast$w\-Rodzic=N\-U\-L\-L)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_zbiornik}{Zbiornik} $\ast$ \hyperlink{class_okno_glowne_af2d1275209898ebdd5ab9de8ef78dffd}{w\-Zbiornik}
+\begin{DoxyCompactList}\small\item\em Wskaznik na zbiornik. \end{DoxyCompactList}\item 
+Q\-Menu\-Bar $\ast$ \hyperlink{class_okno_glowne_a5a87098d9d4bd868670f5a5e72023a0a}{menu\-Bar}
+\begin{DoxyCompactList}\small\item\em Wskaznik na pasek menu. \end{DoxyCompactList}\item 
+Q\-Action $\ast$ \hyperlink{class_okno_glowne_a2c2d825b6e5e0faa5eb368be4fc73b78}{action\-\_\-\-Save}
+\begin{DoxyCompactList}\small\item\em Wskaznik na akcje przycisku menu Save. \end{DoxyCompactList}\item 
+Q\-Action $\ast$ \hyperlink{class_okno_glowne_a579ef9901f57057368cb522ea5a9a5c3}{action\-\_\-\-Exit}
+\begin{DoxyCompactList}\small\item\em Wskaznik na akcje przycisku menu Exit. \end{DoxyCompactList}\item 
+Q\-Menu $\ast$ \hyperlink{class_okno_glowne_a1ba162db2d0b06b0f8963e61b3806875}{menu\-\_\-\-File}
+\begin{DoxyCompactList}\small\item\em Wskaznik na akcje przycisku menu File. \end{DoxyCompactList}\item 
+Q\-Menu $\ast$ \hyperlink{class_okno_glowne_a93afadd0ec22ce6a7e29acc5dd2423a2}{menu\-\_\-\-Edit}
+\begin{DoxyCompactList}\small\item\em Wskaznik na akcje przycisku menu Edit. \end{DoxyCompactList}\item 
+Q\-Menu $\ast$ \hyperlink{class_okno_glowne_ab17be6714913af0cdf4e7de7cb6210d1}{menu\-\_\-\-Help}
+\begin{DoxyCompactList}\small\item\em Wskaznik na akcje przycisku menu Help. \end{DoxyCompactList}\item 
+Q\-Status\-Bar $\ast$ \hyperlink{class_okno_glowne_a40a10989bc6b318ac24e2457d7adb53b}{status\-Bar}
+\begin{DoxyCompactList}\small\item\em Wskaznik na pasek statusowy. \end{DoxyCompactList}\item 
+Q\-Tool\-Bar $\ast$ \hyperlink{class_okno_glowne_a6a37dd1f32605092fff7feac712bf429}{tool\-Bar}
+\begin{DoxyCompactList}\small\item\em Wskaznik na pasek narzedziowy. \end{DoxyCompactList}\item 
+Q\-H\-Box\-Layout $\ast$ \hyperlink{class_okno_glowne_aacb5ddb6d0eb560a47917cc1b457239a}{horizontal\-Layout}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obszar do horyzontalnego rozmieszczenia przyciskow. \end{DoxyCompactList}\item 
+Q\-Widget $\ast$ \hyperlink{class_okno_glowne_a12ac2d00b9ca186176ccc710a928a723}{horizontal\-Layout\-Widget}
+\begin{DoxyCompactList}\small\item\em Wskaznik na widget odpowiedzialny za horyzontalne wyswietlenie przyciskow. \end{DoxyCompactList}\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_okno_glowne_a50f936486c1bc3b3278823a8eb90841e}{play\-Button}
+\begin{DoxyCompactList}\small\item\em Wskaznik na przycisk play. \end{DoxyCompactList}\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_okno_glowne_a0dde8df8a49b8f47f17f8e748fd15967}{pause\-Button}
+\begin{DoxyCompactList}\small\item\em Wskaznik na przycisk pause. \end{DoxyCompactList}\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_okno_glowne_a3051d73dc0e0a27dc30ada43cc6b63c4}{stop\-Button}
+\begin{DoxyCompactList}\small\item\em Wskaznik na przycisk stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Timer \hyperlink{class_okno_glowne_a5d047f90666212f58e69d11af3285d9b}{\-\_\-\-Stoper}
+\begin{DoxyCompactList}\small\item\em Miernik czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
 Dzieki tej klasie wyswietlane jest okno glowne aplikacji. 
 
-Definicja w linii 137 pliku ciecz.\-hh.
+Definicja w linii 61 pliku okno\-\_\-glowne.\-hh.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}{\index{Okno\-Glowne@{Okno\-Glowne}!Okno\-Glowne@{Okno\-Glowne}}
+\hypertarget{class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550}{\index{Okno\-Glowne@{Okno\-Glowne}!Okno\-Glowne@{Okno\-Glowne}}
 \index{Okno\-Glowne@{Okno\-Glowne}!OknoGlowne@{Okno\-Glowne}}
 \subsubsection[{Okno\-Glowne}]{\setlength{\rightskip}{0pt plus 5cm}Okno\-Glowne\-::\-Okno\-Glowne (
 \begin{DoxyParamCaption}
-\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily nullptr}}
+\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily NULL}}
 \end{DoxyParamCaption}
-)}}\label{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b}
+)}}\label{class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550}
 Konstruktor parametryczny. 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in,out}  & {\em w\-Rodzic} & -\/ wskaznik na rodzica \\
@@ -62,15 +114,16 @@ Konstruktor parametryczny.
 \end{DoxyParams}
 
 
-Definicja w linii 129 pliku ciecz.\-cpp.
+Definicja w linii 16 pliku okno\-\_\-glowne.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph}
+\includegraphics[width=350pt]{class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550_cgraph}
 \end{center}
 \end{figure}
 
@@ -92,11 +145,12 @@ Odpowiada za wyswietlenie napisu na belce statusowej.
 \end{DoxyParams}
 
 
-Definicja w linii 149 pliku ciecz.\-cpp.
+Definicja w linii 124 pliku okno\-\_\-glowne.\-cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -105,9 +159,249 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
+\hypertarget{class_okno_glowne_a2a49d3696ef8a42325313842768f2c92}{\index{Okno\-Glowne@{Okno\-Glowne}!Gdy\-Odpowiedni\-Czas@{Gdy\-Odpowiedni\-Czas}}
+\index{Gdy\-Odpowiedni\-Czas@{Gdy\-Odpowiedni\-Czas}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Gdy\-Odpowiedni\-Czas}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Gdy\-Odpowiedni\-Czas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_okno_glowne_a2a49d3696ef8a42325313842768f2c92}
+Odpowiada za uaktualnienie okienka w odpowiednich momentach. 
+
+Definicja w linii 115 pliku okno\-\_\-glowne.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_a2a49d3696ef8a42325313842768f2c92_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9}{\index{Okno\-Glowne@{Okno\-Glowne}!Gdy\-Pauza@{Gdy\-Pauza}}
+\index{Gdy\-Pauza@{Gdy\-Pauza}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Gdy\-Pauza}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Gdy\-Pauza (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9}
+Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauzy. 
+
+Definicja w linii 105 pliku okno\-\_\-glowne.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17}{\index{Okno\-Glowne@{Okno\-Glowne}!Gdy\-Play@{Gdy\-Play}}
+\index{Gdy\-Play@{Gdy\-Play}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Gdy\-Play}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Gdy\-Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17}
+Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play. 
+
+Definicja w linii 100 pliku okno\-\_\-glowne.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_okno_glowne_a10758539b4c164b19503857625d71222}{\index{Okno\-Glowne@{Okno\-Glowne}!Gdy\-Stop@{Gdy\-Stop}}
+\index{Gdy\-Stop@{Gdy\-Stop}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Gdy\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Gdy\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_okno_glowne_a10758539b4c164b19503857625d71222}
+Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu stop. 
+
+Definicja w linii 110 pliku okno\-\_\-glowne.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_a10758539b4c164b19503857625d71222_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_okno_glowne_a8ec594954a3196b17d42ff02be825068}{\index{Okno\-Glowne@{Okno\-Glowne}!on\-\_\-play\-Button\-\_\-pressed@{on\-\_\-play\-Button\-\_\-pressed}}
+\index{on\-\_\-play\-Button\-\_\-pressed@{on\-\_\-play\-Button\-\_\-pressed}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{on\-\_\-play\-Button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::on\-\_\-play\-Button\-\_\-pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}}\label{class_okno_glowne_a8ec594954a3196b17d42ff02be825068}
+Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play. 
+
+Definicja w linii 95 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d}{\index{Okno\-Glowne@{Okno\-Glowne}!Zglos\-Napis@{Zglos\-Napis}}
+\index{Zglos\-Napis@{Zglos\-Napis}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{Zglos\-Napis}]{\setlength{\rightskip}{0pt plus 5cm}void Okno\-Glowne\-::\-Zglos\-Napis (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{\-\_\-t1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d}
+Sygnal zglaszajacy napis do odpowiedniego slotu. 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \-\_\-t1} & -\/ napis do zgloszenia \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 111 pliku moc\-\_\-okno\-\_\-glowne.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_okno_glowne_a5d047f90666212f58e69d11af3285d9b}{\index{Okno\-Glowne@{Okno\-Glowne}!\-\_\-\-Stoper@{\-\_\-\-Stoper}}
+\index{\-\_\-\-Stoper@{\-\_\-\-Stoper}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{\-\_\-\-Stoper}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer Okno\-Glowne\-::\-\_\-\-Stoper\hspace{0.3cm}{\ttfamily [private]}}}\label{class_okno_glowne_a5d047f90666212f58e69d11af3285d9b}
+Miernik czasu. 
+
+Definicja w linii 232 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a579ef9901f57057368cb522ea5a9a5c3}{\index{Okno\-Glowne@{Okno\-Glowne}!action\-\_\-\-Exit@{action\-\_\-\-Exit}}
+\index{action\-\_\-\-Exit@{action\-\_\-\-Exit}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{action\-\_\-\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Action$\ast$ Okno\-Glowne\-::action\-\_\-\-Exit}}\label{class_okno_glowne_a579ef9901f57057368cb522ea5a9a5c3}
+Wskaznik na akcje przycisku menu Exit. 
+
+Definicja w linii 154 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a2c2d825b6e5e0faa5eb368be4fc73b78}{\index{Okno\-Glowne@{Okno\-Glowne}!action\-\_\-\-Save@{action\-\_\-\-Save}}
+\index{action\-\_\-\-Save@{action\-\_\-\-Save}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{action\-\_\-\-Save}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Action$\ast$ Okno\-Glowne\-::action\-\_\-\-Save}}\label{class_okno_glowne_a2c2d825b6e5e0faa5eb368be4fc73b78}
+Wskaznik na akcje przycisku menu Save. 
+
+Definicja w linii 147 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_aacb5ddb6d0eb560a47917cc1b457239a}{\index{Okno\-Glowne@{Okno\-Glowne}!horizontal\-Layout@{horizontal\-Layout}}
+\index{horizontal\-Layout@{horizontal\-Layout}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{horizontal\-Layout}]{\setlength{\rightskip}{0pt plus 5cm}Q\-H\-Box\-Layout$\ast$ Okno\-Glowne\-::horizontal\-Layout}}\label{class_okno_glowne_aacb5ddb6d0eb560a47917cc1b457239a}
+Wskaznik na obszar do horyzontalnego rozmieszczenia przyciskow. 
+
+Definicja w linii 196 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a12ac2d00b9ca186176ccc710a928a723}{\index{Okno\-Glowne@{Okno\-Glowne}!horizontal\-Layout\-Widget@{horizontal\-Layout\-Widget}}
+\index{horizontal\-Layout\-Widget@{horizontal\-Layout\-Widget}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{horizontal\-Layout\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Widget$\ast$ Okno\-Glowne\-::horizontal\-Layout\-Widget}}\label{class_okno_glowne_a12ac2d00b9ca186176ccc710a928a723}
+Wskaznik na widget odpowiedzialny za horyzontalne wyswietlenie przyciskow. 
+
+Definicja w linii 203 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a93afadd0ec22ce6a7e29acc5dd2423a2}{\index{Okno\-Glowne@{Okno\-Glowne}!menu\-\_\-\-Edit@{menu\-\_\-\-Edit}}
+\index{menu\-\_\-\-Edit@{menu\-\_\-\-Edit}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{menu\-\_\-\-Edit}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Menu$\ast$ Okno\-Glowne\-::menu\-\_\-\-Edit}}\label{class_okno_glowne_a93afadd0ec22ce6a7e29acc5dd2423a2}
+Wskaznik na akcje przycisku menu Edit. 
+
+Definicja w linii 168 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a1ba162db2d0b06b0f8963e61b3806875}{\index{Okno\-Glowne@{Okno\-Glowne}!menu\-\_\-\-File@{menu\-\_\-\-File}}
+\index{menu\-\_\-\-File@{menu\-\_\-\-File}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{menu\-\_\-\-File}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Menu$\ast$ Okno\-Glowne\-::menu\-\_\-\-File}}\label{class_okno_glowne_a1ba162db2d0b06b0f8963e61b3806875}
+Wskaznik na akcje przycisku menu File. 
+
+Definicja w linii 161 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_ab17be6714913af0cdf4e7de7cb6210d1}{\index{Okno\-Glowne@{Okno\-Glowne}!menu\-\_\-\-Help@{menu\-\_\-\-Help}}
+\index{menu\-\_\-\-Help@{menu\-\_\-\-Help}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{menu\-\_\-\-Help}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Menu$\ast$ Okno\-Glowne\-::menu\-\_\-\-Help}}\label{class_okno_glowne_ab17be6714913af0cdf4e7de7cb6210d1}
+Wskaznik na akcje przycisku menu Help. 
+
+Definicja w linii 175 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a5a87098d9d4bd868670f5a5e72023a0a}{\index{Okno\-Glowne@{Okno\-Glowne}!menu\-Bar@{menu\-Bar}}
+\index{menu\-Bar@{menu\-Bar}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{menu\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Menu\-Bar$\ast$ Okno\-Glowne\-::menu\-Bar}}\label{class_okno_glowne_a5a87098d9d4bd868670f5a5e72023a0a}
+Wskaznik na pasek menu. 
+
+Definicja w linii 140 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a0dde8df8a49b8f47f17f8e748fd15967}{\index{Okno\-Glowne@{Okno\-Glowne}!pause\-Button@{pause\-Button}}
+\index{pause\-Button@{pause\-Button}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{pause\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Okno\-Glowne\-::pause\-Button}}\label{class_okno_glowne_a0dde8df8a49b8f47f17f8e748fd15967}
+Wskaznik na przycisk pause. 
+
+Definicja w linii 217 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a50f936486c1bc3b3278823a8eb90841e}{\index{Okno\-Glowne@{Okno\-Glowne}!play\-Button@{play\-Button}}
+\index{play\-Button@{play\-Button}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{play\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Okno\-Glowne\-::play\-Button}}\label{class_okno_glowne_a50f936486c1bc3b3278823a8eb90841e}
+Wskaznik na przycisk play. 
+
+Definicja w linii 210 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a40a10989bc6b318ac24e2457d7adb53b}{\index{Okno\-Glowne@{Okno\-Glowne}!status\-Bar@{status\-Bar}}
+\index{status\-Bar@{status\-Bar}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{status\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Status\-Bar$\ast$ Okno\-Glowne\-::status\-Bar}}\label{class_okno_glowne_a40a10989bc6b318ac24e2457d7adb53b}
+Wskaznik na pasek statusowy. 
+
+Definicja w linii 182 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a3051d73dc0e0a27dc30ada43cc6b63c4}{\index{Okno\-Glowne@{Okno\-Glowne}!stop\-Button@{stop\-Button}}
+\index{stop\-Button@{stop\-Button}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{stop\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Okno\-Glowne\-::stop\-Button}}\label{class_okno_glowne_a3051d73dc0e0a27dc30ada43cc6b63c4}
+Wskaznik na przycisk stop. 
+
+Definicja w linii 224 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_a6a37dd1f32605092fff7feac712bf429}{\index{Okno\-Glowne@{Okno\-Glowne}!tool\-Bar@{tool\-Bar}}
+\index{tool\-Bar@{tool\-Bar}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{tool\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Tool\-Bar$\ast$ Okno\-Glowne\-::tool\-Bar}}\label{class_okno_glowne_a6a37dd1f32605092fff7feac712bf429}
+Wskaznik na pasek narzedziowy. 
+
+Definicja w linii 189 pliku okno\-\_\-glowne.\-hh.
+
+\hypertarget{class_okno_glowne_af2d1275209898ebdd5ab9de8ef78dffd}{\index{Okno\-Glowne@{Okno\-Glowne}!w\-Zbiornik@{w\-Zbiornik}}
+\index{w\-Zbiornik@{w\-Zbiornik}!OknoGlowne@{Okno\-Glowne}}
+\subsubsection[{w\-Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Zbiornik}$\ast$ Okno\-Glowne\-::w\-Zbiornik}}\label{class_okno_glowne_af2d1275209898ebdd5ab9de8ef78dffd}
+Wskaznik na zbiornik. 
+
+Definicja w linii 133 pliku okno\-\_\-glowne.\-hh.
+
 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{ciecz_8hh}{ciecz.\-hh}\item 
-\hyperlink{ciecz_8cpp}{ciecz.\-cpp}\end{DoxyCompactItemize}
+\hyperlink{okno__glowne_8hh}{okno\-\_\-glowne.\-hh}\item 
+\hyperlink{moc__okno__glowne_8cpp}{moc\-\_\-okno\-\_\-glowne.\-cpp}\item 
+\hyperlink{okno__glowne_8cpp}{okno\-\_\-glowne.\-cpp}\end{DoxyCompactItemize}

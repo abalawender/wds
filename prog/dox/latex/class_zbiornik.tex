@@ -8,7 +8,7 @@ Klasa modelująca zbiornik.
 
 
 
-{\ttfamily \#include $<$ciecz.\-hh$>$}
+{\ttfamily \#include $<$zbiornik.\-hh$>$}
 
 
 
@@ -41,7 +41,7 @@ void \hyperlink{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b}{Zglos\-Napis} 
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}{Zbiornik} (Q\-Widget $\ast$w\-Rodzic=nullptr)
+\hyperlink{class_zbiornik_a52fb780bf924b89018348be8a65eaf68}{Zbiornik} (Q\-Widget $\ast$w\-Rodzic=N\-U\-L\-L)
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_zbiornik_af7a9c185e95b92de342c6dc69f020765}{paint\-Event} (Q\-Paint\-Event $\ast$event)
 \begin{DoxyCompactList}\small\item\em Wirtualna metoda paint\-Event wyrysowujaca obiekt na ekranie. \end{DoxyCompactList}\item 
@@ -66,18 +66,18 @@ Q\-Timer \hyperlink{class_zbiornik_a5ca8ac1357ef59110d4a9e12aae2bd99}{\-\_\-\-St
 \subsection{Opis szczegółowy}
 Dzieki tej klasie mozliwe jest wyrysowywanie na ekranie zbiornika. 
 
-Definicja w linii 34 pliku ciecz.\-hh.
+Definicja w linii 73 pliku zbiornik.\-hh.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}{\index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
+\hypertarget{class_zbiornik_a52fb780bf924b89018348be8a65eaf68}{\index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
 \index{Zbiornik@{Zbiornik}!Zbiornik@{Zbiornik}}
 \subsubsection[{Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}Zbiornik\-::\-Zbiornik (
 \begin{DoxyParamCaption}
-\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily nullptr}}
+\item[{Q\-Widget $\ast$}]{w\-Rodzic = {\ttfamily NULL}}
 \end{DoxyParamCaption}
-)}}\label{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa}
+)}}\label{class_zbiornik_a52fb780bf924b89018348be8a65eaf68}
 Konstruktor parametryczny. 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in,out}  & {\em w\-Rodzic} & -\/ wskaznik na rodzica \\
@@ -85,15 +85,16 @@ Konstruktor parametryczny.
 \end{DoxyParams}
 
 
-Definicja w linii 46 pliku ciecz.\-cpp.
+Definicja w linii 16 pliku zbiornik.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_zbiornik_aa71a4d405b5d2c72d2a9e5cf9c5becfa_cgraph}
+\includegraphics[width=350pt]{class_zbiornik_a52fb780bf924b89018348be8a65eaf68_cgraph}
 \end{center}
 \end{figure}
 
@@ -108,13 +109,14 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_zbiornik_aa07ceb0fcbf307f0aa1eb75c32f3f47e}
-Odpowiada za uaktualnienie okienka w odpowiednich momentach. 
+Odpowiada za uaktualnienie zbiornika w odpowiednich momentach. 
 
-Definicja w linii 111 pliku ciecz.\-cpp.
+Definicja w linii 81 pliku zbiornik.\-cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,11 +139,12 @@ Odziedziczona wirtualna metoda paint\-Event.
 \end{DoxyParams}
 
 
-Definicja w linii 97 pliku ciecz.\-cpp.
+Definicja w linii 67 pliku zbiornik.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,11 +179,12 @@ Rysuje czasteczke o zadanych parametrach
 \end{DoxyParams}
 
 
-Definicja w linii 74 pliku ciecz.\-cpp.
+Definicja w linii 44 pliku zbiornik.\-cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,7 +222,7 @@ Rysuje zbiornik o zadanych parametrach.
 \end{DoxyParams}
 
 
-Definicja w linii 57 pliku ciecz.\-cpp.
+Definicja w linii 27 pliku zbiornik.\-cpp.
 
 
 
@@ -245,11 +249,12 @@ Rysuje zbiornik oraz czasteczki.
 \end{DoxyParams}
 
 
-Definicja w linii 88 pliku ciecz.\-cpp.
+Definicja w linii 58 pliku zbiornik.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,18 +288,7 @@ Sygnal zglaszajacy napis do odpowiedniego slotu.
 \end{DoxyParams}
 
 
-Definicja w linii 99 pliku moc\-\_\-ciecz.\-cpp.
-
-
-
-Oto graf wywoływań tej funkcji\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_zbiornik_a2d92e4a46f9a5dda37ddd9948046580b_icgraph}
-\end{center}
-\end{figure}
-
+Definicja w linii 99 pliku moc\-\_\-zbiornik.\-cpp.
 
 
 
@@ -304,19 +298,19 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \subsubsection[{\-\_\-\-Stoper}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer Zbiornik\-::\-\_\-\-Stoper\hspace{0.3cm}{\ttfamily [private]}}}\label{class_zbiornik_a5ca8ac1357ef59110d4a9e12aae2bd99}
 Miernik czasu. 
 
-Definicja w linii 127 pliku ciecz.\-hh.
+Definicja w linii 166 pliku zbiornik.\-hh.
 
 \hypertarget{class_zbiornik_a751209f2f02a7eaf3b7a3283d8fcd3ad}{\index{Zbiornik@{Zbiornik}!Czasteczki@{Czasteczki}}
 \index{Czasteczki@{Czasteczki}!Zbiornik@{Zbiornik}}
 \subsubsection[{Czasteczki}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Czasteczka}$>$ Zbiornik\-::\-Czasteczki}}\label{class_zbiornik_a751209f2f02a7eaf3b7a3283d8fcd3ad}
 Lista wszystkich czasteczek. 
 
-Definicja w linii 119 pliku ciecz.\-hh.
+Definicja w linii 158 pliku zbiornik.\-hh.
 
 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{ciecz_8hh}{ciecz.\-hh}\item 
-\hyperlink{moc__ciecz_8cpp}{moc\-\_\-ciecz.\-cpp}\item 
-\hyperlink{ciecz_8cpp}{ciecz.\-cpp}\end{DoxyCompactItemize}
+\hyperlink{zbiornik_8hh}{zbiornik.\-hh}\item 
+\hyperlink{moc__zbiornik_8cpp}{moc\-\_\-zbiornik.\-cpp}\item 
+\hyperlink{zbiornik_8cpp}{zbiornik.\-cpp}\end{DoxyCompactItemize}

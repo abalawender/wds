@@ -1,6 +1,6 @@
 var class_zbiornik =
 [
-    [ "Zbiornik", "class_zbiornik.html#aa71a4d405b5d2c72d2a9e5cf9c5becfa", null ],
+    [ "Zbiornik", "class_zbiornik.html#a52fb780bf924b89018348be8a65eaf68", null ],
     [ "GdyOdpowiedniCzas", "class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e", null ],
     [ "paintEvent", "class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765", null ],
     [ "RysujCzasteczke", "class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc", null ],

@@ -1,5 +1,26 @@
 var class_okno_glowne =
 [
-    [ "OknoGlowne", "class_okno_glowne.html#afa9086a63f1c85bcf82beab771ed699b", null ],
-    [ "GdyNapis", "class_okno_glowne.html#a2a59f13292adfead4ac821780220044a", null ]
+    [ "OknoGlowne", "class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550", null ],
+    [ "GdyNapis", "class_okno_glowne.html#a2a59f13292adfead4ac821780220044a", null ],
+    [ "GdyOdpowiedniCzas", "class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92", null ],
+    [ "GdyPauza", "class_okno_glowne.html#a04dc59a4b071d2ccdf500b19b9df7bb9", null ],
+    [ "GdyPlay", "class_okno_glowne.html#a0413b5b46bb0941b8f7ee36f92067e17", null ],
+    [ "GdyStop", "class_okno_glowne.html#a10758539b4c164b19503857625d71222", null ],
+    [ "on_playButton_pressed", "class_okno_glowne.html#a8ec594954a3196b17d42ff02be825068", null ],
+    [ "ZglosNapis", "class_okno_glowne.html#aa602a0c5a940f0af4ab7390bfc1a4b9d", null ],
+    [ "_Stoper", "class_okno_glowne.html#a5d047f90666212f58e69d11af3285d9b", null ],
+    [ "action_Exit", "class_okno_glowne.html#a579ef9901f57057368cb522ea5a9a5c3", null ],
+    [ "action_Save", "class_okno_glowne.html#a2c2d825b6e5e0faa5eb368be4fc73b78", null ],
+    [ "horizontalLayout", "class_okno_glowne.html#aacb5ddb6d0eb560a47917cc1b457239a", null ],
+    [ "horizontalLayoutWidget", "class_okno_glowne.html#a12ac2d00b9ca186176ccc710a928a723", null ],
+    [ "menu_Edit", "class_okno_glowne.html#a93afadd0ec22ce6a7e29acc5dd2423a2", null ],
+    [ "menu_File", "class_okno_glowne.html#a1ba162db2d0b06b0f8963e61b3806875", null ],
+    [ "menu_Help", "class_okno_glowne.html#ab17be6714913af0cdf4e7de7cb6210d1", null ],
+    [ "menuBar", "class_okno_glowne.html#a5a87098d9d4bd868670f5a5e72023a0a", null ],
+    [ "pauseButton", "class_okno_glowne.html#a0dde8df8a49b8f47f17f8e748fd15967", null ],
+    [ "playButton", "class_okno_glowne.html#a50f936486c1bc3b3278823a8eb90841e", null ],
+    [ "statusBar", "class_okno_glowne.html#a40a10989bc6b318ac24e2457d7adb53b", null ],
+    [ "stopButton", "class_okno_glowne.html#a3051d73dc0e0a27dc30ada43cc6b63c4", null ],
+    [ "toolBar", "class_okno_glowne.html#a6a37dd1f32605092fff7feac712bf429", null ],
+    [ "wZbiornik", "class_okno_glowne.html#af2d1275209898ebdd5ab9de8ef78dffd", null ]
 ];

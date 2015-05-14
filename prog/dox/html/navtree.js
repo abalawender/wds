@@ -5,6 +5,9 @@ var NAVTREE =
       [ "Opis projektu", "index.html#etykieta-opis-projektu", null ],
       [ "Funkcjonalnosci aplikacji", "index.html#etykieta-funkcjonalnosci-aplikacji", null ]
     ] ],
+    [ "Przestrzenie nazw", null, [
+      [ "Lista przestrzeni nazw", "namespaces.html", "namespaces" ]
+    ] ],
     [ "Klasy", null, [
       [ "Lista klas", "annotated.html", "annotated" ],
       [ "Indeks klas", "classes.html", null ],

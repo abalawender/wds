@@ -37,6 +37,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
       <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
     </ul>
@@ -67,7 +68,10 @@ $(document).ready(function(){initNavTree('class_okno_glowne.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Sloty publiczne</a> &#124;
+<a href="#signals">Sygnały</a> &#124;
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="class_okno_glowne-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy OknoGlowne</div>  </div>
@@ -77,7 +81,7 @@ $(document).ready(function(){initNavTree('class_okno_glowne.html','');});
 <p>Klasa modelujaca głowne okno aplikacji.  
  <a href="class_okno_glowne.html#details">Więcej...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ciecz_8hh_source.html">ciecz.hh</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla OknoGlowne</div>
 <div class="dyncontent">
@@ -87,26 +91,100 @@ Diagram dziedziczenia dla OknoGlowne</div>
 Diagram współpracy dla OknoGlowne:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_okno_glowne__coll__graph.png" border="0" usemap="#_okno_glowne_coll__map" alt="Collaboration graph"/></div>
+<map name="_okno_glowne_coll__map" id="_okno_glowne_coll__map">
+<area shape="rect" id="node3" href="class_zbiornik.html" title="Klasa modelująca zbiornik. " alt="" coords="137,83,204,109"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Sloty publiczne</h2></td></tr>
+<tr class="memitem:a2a49d3696ef8a42325313842768f2c92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92">GdyOdpowiedniCzas</a> ()</td></tr>
+<tr class="memdesc:a2a49d3696ef8a42325313842768f2c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za aktualizacje danych. .  <a href="#a2a49d3696ef8a42325313842768f2c92">Więcej...</a><br/></td></tr>
+<tr class="separator:a2a49d3696ef8a42325313842768f2c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a59f13292adfead4ac821780220044a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a2a59f13292adfead4ac821780220044a">GdyNapis</a> (const QString &amp;)</td></tr>
 <tr class="memdesc:a2a59f13292adfead4ac821780220044a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu.  <a href="#a2a59f13292adfead4ac821780220044a">Więcej...</a><br/></td></tr>
 <tr class="separator:a2a59f13292adfead4ac821780220044a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec594954a3196b17d42ff02be825068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a8ec594954a3196b17d42ff02be825068">on_playButton_pressed</a> ()</td></tr>
+<tr class="memdesc:a8ec594954a3196b17d42ff02be825068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za obsluge stanu play.  <a href="#a8ec594954a3196b17d42ff02be825068">Więcej...</a><br/></td></tr>
+<tr class="separator:a8ec594954a3196b17d42ff02be825068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04dc59a4b071d2ccdf500b19b9df7bb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a04dc59a4b071d2ccdf500b19b9df7bb9">GdyPauza</a> ()</td></tr>
+<tr class="memdesc:a04dc59a4b071d2ccdf500b19b9df7bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za obsluge stanu pauzy.  <a href="#a04dc59a4b071d2ccdf500b19b9df7bb9">Więcej...</a><br/></td></tr>
+<tr class="separator:a04dc59a4b071d2ccdf500b19b9df7bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0413b5b46bb0941b8f7ee36f92067e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a0413b5b46bb0941b8f7ee36f92067e17">GdyPlay</a> ()</td></tr>
+<tr class="memdesc:a0413b5b46bb0941b8f7ee36f92067e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za obsluge stanu play.  <a href="#a0413b5b46bb0941b8f7ee36f92067e17">Więcej...</a><br/></td></tr>
+<tr class="separator:a0413b5b46bb0941b8f7ee36f92067e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10758539b4c164b19503857625d71222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a10758539b4c164b19503857625d71222">GdyStop</a> ()</td></tr>
+<tr class="memdesc:a10758539b4c164b19503857625d71222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot odpowiadajacy za obsluge stanu stop.  <a href="#a10758539b4c164b19503857625d71222">Więcej...</a><br/></td></tr>
+<tr class="separator:a10758539b4c164b19503857625d71222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:aa602a0c5a940f0af4ab7390bfc1a4b9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#aa602a0c5a940f0af4ab7390bfc1a4b9d">ZglosNapis</a> (const QString &amp;)</td></tr>
+<tr class="memdesc:aa602a0c5a940f0af4ab7390bfc1a4b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sygnal zglaszajacy napis.  <a href="#aa602a0c5a940f0af4ab7390bfc1a4b9d">Więcej...</a><br/></td></tr>
+<tr class="separator:aa602a0c5a940f0af4ab7390bfc1a4b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:afa9086a63f1c85bcf82beab771ed699b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#afa9086a63f1c85bcf82beab771ed699b">OknoGlowne</a> (QWidget *wRodzic=nullptr)</td></tr>
-<tr class="memdesc:afa9086a63f1c85bcf82beab771ed699b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#afa9086a63f1c85bcf82beab771ed699b">Więcej...</a><br/></td></tr>
-<tr class="separator:afa9086a63f1c85bcf82beab771ed699b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcfe4e0f18dfaf0c535c4549991b550"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550">OknoGlowne</a> (QWidget *wRodzic=NULL)</td></tr>
+<tr class="memdesc:a8dcfe4e0f18dfaf0c535c4549991b550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a8dcfe4e0f18dfaf0c535c4549991b550">Więcej...</a><br/></td></tr>
+<tr class="separator:a8dcfe4e0f18dfaf0c535c4549991b550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:af2d1275209898ebdd5ab9de8ef78dffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_zbiornik.html">Zbiornik</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#af2d1275209898ebdd5ab9de8ef78dffd">wZbiornik</a></td></tr>
+<tr class="memdesc:af2d1275209898ebdd5ab9de8ef78dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na zbiornik.  <a href="#af2d1275209898ebdd5ab9de8ef78dffd">Więcej...</a><br/></td></tr>
+<tr class="separator:af2d1275209898ebdd5ab9de8ef78dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a87098d9d4bd868670f5a5e72023a0a"><td class="memItemLeft" align="right" valign="top">QMenuBar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a5a87098d9d4bd868670f5a5e72023a0a">menuBar</a></td></tr>
+<tr class="memdesc:a5a87098d9d4bd868670f5a5e72023a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na pasek menu.  <a href="#a5a87098d9d4bd868670f5a5e72023a0a">Więcej...</a><br/></td></tr>
+<tr class="separator:a5a87098d9d4bd868670f5a5e72023a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2d825b6e5e0faa5eb368be4fc73b78"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a2c2d825b6e5e0faa5eb368be4fc73b78">action_Save</a></td></tr>
+<tr class="memdesc:a2c2d825b6e5e0faa5eb368be4fc73b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na akcje przycisku menu Save.  <a href="#a2c2d825b6e5e0faa5eb368be4fc73b78">Więcej...</a><br/></td></tr>
+<tr class="separator:a2c2d825b6e5e0faa5eb368be4fc73b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579ef9901f57057368cb522ea5a9a5c3"><td class="memItemLeft" align="right" valign="top">QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a579ef9901f57057368cb522ea5a9a5c3">action_Exit</a></td></tr>
+<tr class="memdesc:a579ef9901f57057368cb522ea5a9a5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na akcje przycisku menu Exit.  <a href="#a579ef9901f57057368cb522ea5a9a5c3">Więcej...</a><br/></td></tr>
+<tr class="separator:a579ef9901f57057368cb522ea5a9a5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba162db2d0b06b0f8963e61b3806875"><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a1ba162db2d0b06b0f8963e61b3806875">menu_File</a></td></tr>
+<tr class="memdesc:a1ba162db2d0b06b0f8963e61b3806875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na akcje przycisku menu File.  <a href="#a1ba162db2d0b06b0f8963e61b3806875">Więcej...</a><br/></td></tr>
+<tr class="separator:a1ba162db2d0b06b0f8963e61b3806875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93afadd0ec22ce6a7e29acc5dd2423a2"><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a93afadd0ec22ce6a7e29acc5dd2423a2">menu_Edit</a></td></tr>
+<tr class="memdesc:a93afadd0ec22ce6a7e29acc5dd2423a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na akcje przycisku menu Edit.  <a href="#a93afadd0ec22ce6a7e29acc5dd2423a2">Więcej...</a><br/></td></tr>
+<tr class="separator:a93afadd0ec22ce6a7e29acc5dd2423a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17be6714913af0cdf4e7de7cb6210d1"><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#ab17be6714913af0cdf4e7de7cb6210d1">menu_Help</a></td></tr>
+<tr class="memdesc:ab17be6714913af0cdf4e7de7cb6210d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na akcje przycisku menu Help.  <a href="#ab17be6714913af0cdf4e7de7cb6210d1">Więcej...</a><br/></td></tr>
+<tr class="separator:ab17be6714913af0cdf4e7de7cb6210d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a10989bc6b318ac24e2457d7adb53b"><td class="memItemLeft" align="right" valign="top">QStatusBar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a40a10989bc6b318ac24e2457d7adb53b">statusBar</a></td></tr>
+<tr class="memdesc:a40a10989bc6b318ac24e2457d7adb53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na pasek statusowy.  <a href="#a40a10989bc6b318ac24e2457d7adb53b">Więcej...</a><br/></td></tr>
+<tr class="separator:a40a10989bc6b318ac24e2457d7adb53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a37dd1f32605092fff7feac712bf429"><td class="memItemLeft" align="right" valign="top">QToolBar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a6a37dd1f32605092fff7feac712bf429">toolBar</a></td></tr>
+<tr class="memdesc:a6a37dd1f32605092fff7feac712bf429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na pasek narzedziowy.  <a href="#a6a37dd1f32605092fff7feac712bf429">Więcej...</a><br/></td></tr>
+<tr class="separator:a6a37dd1f32605092fff7feac712bf429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb5ddb6d0eb560a47917cc1b457239a"><td class="memItemLeft" align="right" valign="top">QHBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#aacb5ddb6d0eb560a47917cc1b457239a">horizontalLayout</a></td></tr>
+<tr class="memdesc:aacb5ddb6d0eb560a47917cc1b457239a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na obszar do horyzontalnego rozmieszczenia przyciskow.  <a href="#aacb5ddb6d0eb560a47917cc1b457239a">Więcej...</a><br/></td></tr>
+<tr class="separator:aacb5ddb6d0eb560a47917cc1b457239a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ac2d00b9ca186176ccc710a928a723"><td class="memItemLeft" align="right" valign="top">QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a12ac2d00b9ca186176ccc710a928a723">horizontalLayoutWidget</a></td></tr>
+<tr class="memdesc:a12ac2d00b9ca186176ccc710a928a723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na widget odpowiedzialny za horyzontalne wyswietlenie przyciskow.  <a href="#a12ac2d00b9ca186176ccc710a928a723">Więcej...</a><br/></td></tr>
+<tr class="separator:a12ac2d00b9ca186176ccc710a928a723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f936486c1bc3b3278823a8eb90841e"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a50f936486c1bc3b3278823a8eb90841e">playButton</a></td></tr>
+<tr class="memdesc:a50f936486c1bc3b3278823a8eb90841e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na przycisk play.  <a href="#a50f936486c1bc3b3278823a8eb90841e">Więcej...</a><br/></td></tr>
+<tr class="separator:a50f936486c1bc3b3278823a8eb90841e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dde8df8a49b8f47f17f8e748fd15967"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a0dde8df8a49b8f47f17f8e748fd15967">pauseButton</a></td></tr>
+<tr class="memdesc:a0dde8df8a49b8f47f17f8e748fd15967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na przycisk pause.  <a href="#a0dde8df8a49b8f47f17f8e748fd15967">Więcej...</a><br/></td></tr>
+<tr class="separator:a0dde8df8a49b8f47f17f8e748fd15967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3051d73dc0e0a27dc30ada43cc6b63c4"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a3051d73dc0e0a27dc30ada43cc6b63c4">stopButton</a></td></tr>
+<tr class="memdesc:a3051d73dc0e0a27dc30ada43cc6b63c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na przycisk stop.  <a href="#a3051d73dc0e0a27dc30ada43cc6b63c4">Więcej...</a><br/></td></tr>
+<tr class="separator:a3051d73dc0e0a27dc30ada43cc6b63c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a5d047f90666212f58e69d11af3285d9b"><td class="memItemLeft" align="right" valign="top">QTimer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_okno_glowne.html#a5d047f90666212f58e69d11af3285d9b">_Stoper</a></td></tr>
+<tr class="memdesc:a5d047f90666212f58e69d11af3285d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Miernik czasu.  <a href="#a5d047f90666212f58e69d11af3285d9b">Więcej...</a><br/></td></tr>
+<tr class="separator:a5d047f90666212f58e69d11af3285d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Dzieki tej klasie wyswietlane jest okno glowne aplikacji. </p>
 
-<p>Definicja w linii <a class="el" href="ciecz_8hh_source.html#l00137">137</a> pliku <a class="el" href="ciecz_8hh_source.html">ciecz.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00061">61</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a class="anchor" id="afa9086a63f1c85bcf82beab771ed699b"></a>
+<a class="anchor" id="a8dcfe4e0f18dfaf0c535c4549991b550"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -114,7 +192,7 @@ Metody publiczne</h2></td></tr>
           <td class="memname">OknoGlowne::OknoGlowne </td>
           <td>(</td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>wRodzic</em> = <code>nullptr</code></td><td>)</td>
+          <td class="paramname"><em>wRodzic</em> = <code>NULL</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -127,14 +205,14 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="ciecz_8cpp_source.html#l00129">129</a> pliku <a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00016">16</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph.png" border="0" usemap="#class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph" alt=""/></div>
-<map name="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph" id="class_okno_glowne_afa9086a63f1c85bcf82beab771ed699b_cgraph">
-<area shape="rect" id="node2" href="class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="235,5,397,32"/></map>
+<div class="center"><img src="class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550_cgraph.png" border="0" usemap="#class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550_cgraph" alt=""/></div>
+<map name="class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550_cgraph" id="class_okno_glowne_a8dcfe4e0f18dfaf0c535c4549991b550_cgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="235,5,463,32"/><area shape="rect" id="node3" href="class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="268,56,431,83"/><area shape="rect" id="node4" href="class_okno_glowne.html#a0413b5b46bb0941b8f7ee36f92067e17" title="Slot odpowiadajacy za obsluge stanu play. " alt="" coords="272,107,427,133"/><area shape="rect" id="node5" href="class_okno_glowne.html#a04dc59a4b071d2ccdf500b19b9df7bb9" title="Slot odpowiadajacy za obsluge stanu pauzy. " alt="" coords="266,157,433,184"/><area shape="rect" id="node6" href="class_okno_glowne.html#a10758539b4c164b19503857625d71222" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="271,208,427,235"/></map>
 </div>
 </p>
 
@@ -170,22 +248,465 @@ Oto graf wywołań dla tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="ciecz_8cpp_source.html#l00149">149</a> pliku <a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00124">124</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph.png" border="0" usemap="#class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph" alt=""/></div>
 <map name="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph" id="class_okno_glowne_a2a59f13292adfead4ac821780220044a_icgraph">
-<area shape="rect" id="node2" href="class_okno_glowne.html#afa9086a63f1c85bcf82beab771ed699b" title="Konstruktor. " alt="" coords="217,5,397,32"/></map>
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="217,5,397,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
+<a class="anchor" id="a2a49d3696ef8a42325313842768f2c92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::GdyOdpowiedniCzas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za uaktualnienie okienka w odpowiednich momentach. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00115">115</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_a2a49d3696ef8a42325313842768f2c92_icgraph.png" border="0" usemap="#class_okno_glowne_a2a49d3696ef8a42325313842768f2c92_icgraph" alt=""/></div>
+<map name="class_okno_glowne_a2a49d3696ef8a42325313842768f2c92_icgraph" id="class_okno_glowne_a2a49d3696ef8a42325313842768f2c92_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="283,5,463,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a04dc59a4b071d2ccdf500b19b9df7bb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::GdyPauza </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauzy. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00105">105</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9_icgraph.png" border="0" usemap="#class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9_icgraph" alt=""/></div>
+<map name="class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9_icgraph" id="class_okno_glowne_a04dc59a4b071d2ccdf500b19b9df7bb9_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="222,5,402,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0413b5b46bb0941b8f7ee36f92067e17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::GdyPlay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00100">100</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17_icgraph.png" border="0" usemap="#class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17_icgraph" alt=""/></div>
+<map name="class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17_icgraph" id="class_okno_glowne_a0413b5b46bb0941b8f7ee36f92067e17_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="209,5,389,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a10758539b4c164b19503857625d71222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::GdyStop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu stop. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8cpp_source.html#l00110">110</a> pliku <a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_a10758539b4c164b19503857625d71222_icgraph.png" border="0" usemap="#class_okno_glowne_a10758539b4c164b19503857625d71222_icgraph" alt=""/></div>
+<map name="class_okno_glowne_a10758539b4c164b19503857625d71222_icgraph" id="class_okno_glowne_a10758539b4c164b19503857625d71222_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="211,5,391,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ec594954a3196b17d42ff02be825068"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::on_playButton_pressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00095">95</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa602a0c5a940f0af4ab7390bfc1a4b9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OknoGlowne::ZglosNapis </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>_t1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sygnal zglaszajacy napis do odpowiedniego slotu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_t1</td><td>- napis do zgloszenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="moc__okno__glowne_8cpp_source.html#l00111">111</a> pliku <a class="el" href="moc__okno__glowne_8cpp_source.html">moc_okno_glowne.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d_icgraph.png" border="0" usemap="#class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d_icgraph" alt=""/></div>
+<map name="class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d_icgraph" id="class_okno_glowne_aa602a0c5a940f0af4ab7390bfc1a4b9d_icgraph">
+<area shape="rect" id="node2" href="class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="502,5,682,32"/><area shape="rect" id="node3" href="class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="225,31,453,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a5d047f90666212f58e69d11af3285d9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer OknoGlowne::_Stoper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Miernik czasu. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00232">232</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a579ef9901f57057368cb522ea5a9a5c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* OknoGlowne::action_Exit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na akcje przycisku menu Exit. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00154">154</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c2d825b6e5e0faa5eb368be4fc73b78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction* OknoGlowne::action_Save</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na akcje przycisku menu Save. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00147">147</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacb5ddb6d0eb560a47917cc1b457239a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHBoxLayout* OknoGlowne::horizontalLayout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na obszar do horyzontalnego rozmieszczenia przyciskow. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00196">196</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12ac2d00b9ca186176ccc710a928a723"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QWidget* OknoGlowne::horizontalLayoutWidget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na widget odpowiedzialny za horyzontalne wyswietlenie przyciskow. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00203">203</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93afadd0ec22ce6a7e29acc5dd2423a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMenu* OknoGlowne::menu_Edit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na akcje przycisku menu Edit. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00168">168</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ba162db2d0b06b0f8963e61b3806875"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMenu* OknoGlowne::menu_File</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na akcje przycisku menu File. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00161">161</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab17be6714913af0cdf4e7de7cb6210d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMenu* OknoGlowne::menu_Help</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na akcje przycisku menu Help. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00175">175</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a87098d9d4bd868670f5a5e72023a0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMenuBar* OknoGlowne::menuBar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na pasek menu. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00140">140</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dde8df8a49b8f47f17f8e748fd15967"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* OknoGlowne::pauseButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na przycisk pause. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00217">217</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50f936486c1bc3b3278823a8eb90841e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* OknoGlowne::playButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na przycisk play. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00210">210</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40a10989bc6b318ac24e2457d7adb53b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStatusBar* OknoGlowne::statusBar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na pasek statusowy. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00182">182</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3051d73dc0e0a27dc30ada43cc6b63c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* OknoGlowne::stopButton</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na przycisk stop. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00224">224</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a37dd1f32605092fff7feac712bf429"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QToolBar* OknoGlowne::toolBar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na pasek narzedziowy. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00189">189</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2d1275209898ebdd5ab9de8ef78dffd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_zbiornik.html">Zbiornik</a>* OknoGlowne::wZbiornik</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wskaznik na zbiornik. </p>
+
+<p>Definicja w linii <a class="el" href="okno__glowne_8hh_source.html#l00133">133</a> pliku <a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a>.</p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li><a class="el" href="ciecz_8hh_source.html">ciecz.hh</a></li>
-<li><a class="el" href="ciecz_8cpp_source.html">ciecz.cpp</a></li>
+<li><a class="el" href="okno__glowne_8hh_source.html">okno_glowne.hh</a></li>
+<li><a class="el" href="moc__okno__glowne_8cpp_source.html">moc_okno_glowne.cpp</a></li>
+<li><a class="el" href="okno__glowne_8cpp_source.html">okno_glowne.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -193,7 +714,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_okno_glowne.html">OknoGlowne</a></li>
-    <li class="footer">Wygenerowano Pn, 11 maj 2015 13:47:29 dla SymulacjaZbiornika programem
+    <li class="footer">Wygenerowano Pt, 15 maj 2015 00:27:26 dla SymulacjaZbiornika programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
