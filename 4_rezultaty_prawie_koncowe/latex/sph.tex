@@ -1,0 +1,10 @@
+\section{SPH}
+Metoda zakłada reprezentację cieczy przez zbiór cząstek $\mathbf{N_i}$ o jednakowej masie $\mathbf{m}$ (charakteryzowanych w momencie $\mathbf{i}$ pozycją $\mathbf{r_i}$, prędkością $\mathbf{v_i}$ oraz gęstością $\mathbf{\rho_i}$ ), które reagują na siebie na odległość $\mathbf{h}$.
+Korzystając z wyprowadzeń opisanych w artykule \cite{website:derive} przyjęliśmy wzór na gęstość w~kroku $\mathbf{i}$:
+\[ \rho_i = \frac{4m}{\pi h^8} \sum\limits_{j\in N_i} (h^2-r^2)^3.\]
+Przyspieszenie będziemy natomiast wyznaczać ze wzoru:
+\[ \mathbf{a_i} = \frac{1}{\rho_i} \sum\limits_{j\in N_i } \mathbf{f}_{ij}^{interact} + \mathbf{g} ,\]
+gdzie
+\[ \mathbf{f}_{ij}^{interact} = \frac{m_j}{\pi h^4 \rho_j} (1-q_{ij})\left[15k(\rho_i+\rho_j-2\rho_0) 
+\frac{1-q_{ij}}{q_{ij}} \mathbf{r}_{ij} - 40\mu \mathbf{v}_{ij} \right] ,\]
+gdzie $\mathbf{r}_{ij} = \mathbf{r}_i - \mathbf{r}_j$, $\mathbf{v}_{ij} = \mathbf{v}_i - \mathbf{v}_j$ i $q_{ij} = || \mathbf{r}_{ij} || /h$, $\rho_0$ - wyjściowa gęstość, k - współczynnik sprężystości objętościowej, $\mu$ - lepkość, g - wektor grawitacji.
