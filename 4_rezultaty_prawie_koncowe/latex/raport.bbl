@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{ABKKWstepne}
+A.~Balawender and K.~Kwieciński.
+\newblock Wizualizacj rozkładu ciśnienia cieczy na podstawie symulacji
+  komputerowej (wstępne rezultaty), kwiecien 2015.
+
+\bibitem{website:derive}
+D.~Bindel.
+\newblock
+  http://www.cs.cornell.edu/~bindel/class/cs5220-f11/code/sph-derive.pdf.
+
+\bibitem{website:harada}
+T.~Harada, S.~Koshizuka, and Y.~Kawaguchi.
+\newblock \url{http://inf.ufrgs.br/cgi2007/cd_cgi/papers/harada.pdf}.
+
+\bibitem{website:qt}
+\mbox{Qt}.
+\newblock \url{http://doc.qt.io/}.
+
+\bibitem{book:qt24h}
+D.~Solin.
+\newblock {\em Poznaj programowanie przy użyciu biblioteki Qt w 24 godziny}.
+\newblock Infoland, Warszawa, 2001.
+
+\bibitem{website:doxygen}
+D.~van Heesch.
+\newblock http://www.doxygen.org/.
+
+\end{thebibliography}
