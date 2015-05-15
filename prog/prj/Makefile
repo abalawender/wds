@@ -1,5 +1,5 @@
-NAZWA_APLIKACJI=ciecz
-URUCHOMIENIE_APLIKACJI=./ciecz
+NAZWA_APLIKACJI=symulacja_cieczy
+URUCHOMIENIE_APLIKACJI=./symulacja_cieczy
 ZRODLA_PROJEKTU=src/*.cpp inc/*.hh ui/*.ui res/*.qrc
 PODSTAWIENIA=OBJECTS_DIR=${KATALOG_OBJ}\
              UI_DIR=ui/inc\
@@ -9,7 +9,6 @@ PODSTAWIENIA=OBJECTS_DIR=${KATALOG_OBJ}\
              MOC_DIR=${KATALOG_MOC}\
              RCC_DIR=./rcc\
              QT+=widgets\
-             #LIBS+=-lqwt\
              QMAKE_CXXFLAGS+=-std=c++11
              
 KATALOG_OBJ=./obj

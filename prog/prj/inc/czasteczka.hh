@@ -19,6 +19,13 @@
  */
 
 /*!
+ * \brief Promien czasteczki.
+ * 
+ * Promien czasteczki.
+ */
+const int PROMIEN  = 10;
+
+/*!
  * \brief Klasa modelująca czasteczke.
  * 
  * Klasa zawierajaca podstawowe atrybuty czasteczki.
