@@ -1,10 +1,10 @@
 <map id="kolor.hh" name="kolor.hh">
-<area shape="rect" id="node2" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="259,80,365,107"/>
-<area shape="rect" id="node3" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="163,229,279,256"/>
-<area shape="rect" id="node7" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="319,155,404,181"/>
-<area shape="rect" id="node4" href="$moc__okno__glowne_8cpp.html" title="moc_okno_glowne.cpp" alt="" coords="5,304,159,331"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="Zawiera ogolna strukture funkcji main. " alt="" coords="184,304,257,331"/>
-<area shape="rect" id="node6" href="$okno__glowne_8cpp.html" title="Zawiera definicje metod klasy OknoGlowne. " alt="" coords="283,304,405,331"/>
-<area shape="rect" id="node8" href="$moc__zbiornik_8cpp.html" title="moc_zbiornik.cpp" alt="" coords="303,229,427,256"/>
-<area shape="rect" id="node9" href="$zbiornik_8cpp.html" title="Zawiera definicje metod klasy Zbiornik. " alt="" coords="451,229,543,256"/>
+<area shape="rect" id="node2" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="273,80,384,107"/>
+<area shape="rect" id="node3" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="173,229,298,256"/>
+<area shape="rect" id="node7" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="337,155,427,181"/>
+<area shape="rect" id="node4" href="$moc__okno__glowne_8cpp.html" title="moc_okno_glowne.cpp" alt="" coords="5,304,172,331"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Zawiera ogolna strukture funkcji main. " alt="" coords="196,304,275,331"/>
+<area shape="rect" id="node6" href="$okno__glowne_8cpp.html" title="Zawiera definicje metod klasy OknoGlowne. " alt="" coords="299,304,431,331"/>
+<area shape="rect" id="node8" href="$moc__zbiornik_8cpp.html" title="moc_zbiornik.cpp" alt="" coords="322,229,453,256"/>
+<area shape="rect" id="node9" href="$zbiornik_8cpp.html" title="Zawiera definicje metod klasy Zbiornik. " alt="" coords="477,229,573,256"/>
 </map>

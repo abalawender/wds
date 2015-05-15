@@ -1,7 +1,7 @@
 <map id="OknoGlowne::OknoGlowne" name="OknoGlowne::OknoGlowne">
-<area shape="rect" id="node2" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="235,5,463,32"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="268,56,431,83"/>
-<area shape="rect" id="node4" href="$class_okno_glowne.html#a0413b5b46bb0941b8f7ee36f92067e17" title="Slot odpowiadajacy za obsluge stanu play. " alt="" coords="272,107,427,133"/>
-<area shape="rect" id="node5" href="$class_okno_glowne.html#a04dc59a4b071d2ccdf500b19b9df7bb9" title="Slot odpowiadajacy za obsluge stanu pauzy. " alt="" coords="266,157,433,184"/>
-<area shape="rect" id="node6" href="$class_okno_glowne.html#a10758539b4c164b19503857625d71222" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="271,208,427,235"/>
+<area shape="rect" id="node2" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="245,5,488,32"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="281,56,453,83"/>
+<area shape="rect" id="node4" href="$class_okno_glowne.html#a0413b5b46bb0941b8f7ee36f92067e17" title="Slot odpowiadajacy za obsluge stanu play. " alt="" coords="285,107,448,133"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#a04dc59a4b071d2ccdf500b19b9df7bb9" title="Slot odpowiadajacy za obsluge stanu pauzy. " alt="" coords="279,157,454,184"/>
+<area shape="rect" id="node6" href="$class_okno_glowne.html#a10758539b4c164b19503857625d71222" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="284,208,449,235"/>
 </map>

@@ -1,263 +1,399 @@
-\hypertarget{class_vector}{\section{Dokumentacja szablonu klasy Vector$<$ T\-Y\-P\-E $>$}
-\label{class_vector}\index{Vector$<$ T\-Y\-P\-E $>$@{Vector$<$ T\-Y\-P\-E $>$}}
-}
+\hypertarget{class_vector}{}\section{Dokumentacja klasy Vector}
+\label{class_vector}\index{Vector@{Vector}}
 
 
-{\ttfamily \#include $<$vector.\-hh$>$}
+klasa \hyperlink{class_vector}{Vector}  
+
 
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_vector_a7abfa78474ee093d38ab61630fff0c69}{Vector} (const int size=0)
-\begin{DoxyCompactList}\small\item\em Konstruktor wektora. \end{DoxyCompactList}\item 
-\hyperlink{class_vector_ab6f9e2ab5a0ef64bde8eab33a5d0790f}{Vector} (const int \&size, const T\-Y\-P\-E $\ast$data)
-\begin{DoxyCompactList}\small\item\em Konstruktor wektora z możliwością inicjowania danymi. \end{DoxyCompactList}\item 
-T\-Y\-P\-E \& \hyperlink{class_vector_a6871e4b685d04c8b940b81b967d62176}{operator\mbox{[}$\,$\mbox{]}} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Operator dostępu do współrzędnych wektora. \end{DoxyCompactList}\item 
-const T\-Y\-P\-E \hyperlink{class_vector_ab93cdf3a0431a7cd7f73ea4a43bc00f5}{operator\mbox{[}$\,$\mbox{]}} (const int \&i) const 
-\begin{DoxyCompactList}\small\item\em Operator dostępu do współrzędnych wektora. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a858ee9def9d396faa190cc7cdc240a69}{operator-\/} (const \hyperlink{class_vector}{Vector} \&vect) const 
-\begin{DoxyCompactList}\small\item\em Operacja odejmowania wektorów. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_a8d2c68cdfbfe73ee0b0ed079cdb3c140}{operator-\/=} (const \hyperlink{class_vector}{Vector} \&vect)
-\begin{DoxyCompactList}\small\item\em Operacja odejmowania wektorów. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a3c0a72f40f890076337794630efd273d}{operator+} (const \hyperlink{class_vector}{Vector} \&vect) const 
-\begin{DoxyCompactList}\small\item\em Operacja dodawania wektorów. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_aefe0eac24f57e27fa0ba334d863e0972}{operator+=} (const \hyperlink{class_vector}{Vector} \&vect)
-\begin{DoxyCompactList}\small\item\em Operacja dodawania wektorów. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a3f16e888bbaca4d21674953f1ac4e7c6}{operator$\ast$} (const long \&scale) const 
-\begin{DoxyCompactList}\small\item\em Operacja mnożenia wektora przez stałą \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_a0165370ffd16bec25040201b7cd646e6}{operator$\ast$=} (const long \&scale)
-\begin{DoxyCompactList}\small\item\em Operacja mnożenia wektora przez stałą \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_ae0e577a62222292e5299b8571ef5bcce}{operator=} (const \hyperlink{class_vector}{Vector} \&vect)
-\begin{DoxyCompactList}\small\item\em Zmienia zawartość wektora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_vector_af3c1b04bfbb10e29433842202365a6c4}{Vector} (float \+\_\+x=0, float \+\_\+y=0)
+\begin{DoxyCompactList}\small\item\em Współrzędne wektora. \end{DoxyCompactList}\item 
+const float \hyperlink{class_vector_a56cbc43a18559f85f4ce7278e98f9aad}{get\+X} () const 
+\begin{DoxyCompactList}\small\item\em zwraga pierwszą współrzędną wektora \end{DoxyCompactList}\item 
+const float \hyperlink{class_vector_a4ad8e8a5fb48ce193177af11340831b6}{get\+Y} () const 
+\begin{DoxyCompactList}\small\item\em pobiera drugą współrzędną wektora \end{DoxyCompactList}\item 
+float \& \hyperlink{class_vector_aeca06c929d4ab3078a828723a88621e6}{get\+X} ()
+\begin{DoxyCompactList}\small\item\em pobiera pierwszą współrzędną wektora \end{DoxyCompactList}\item 
+float \& \hyperlink{class_vector_ab0cc77ce300a60de0ab734555886ad5d}{get\+Y} ()
+\begin{DoxyCompactList}\small\item\em pobiera drugą współrzędną wektora \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_a4eeab5be24ee846de3012e67a4e34820}{operator+=} (const \hyperlink{class_vector}{Vector} \&\+\_\+v)
+\begin{DoxyCompactList}\small\item\em operator dodawania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_aaaf87dbf15cd9492aa0c11874ae5afef}{operator-\/=} (const \hyperlink{class_vector}{Vector} \&\+\_\+v)
+\begin{DoxyCompactList}\small\item\em operator odejmowania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_a91ebac6d502ca1d54645e7c711549867}{operator$\ast$=} (const float \&\+\_\+c)
+\begin{DoxyCompactList}\small\item\em operator skalowania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_aa78eb4c9e5ac236c89f0853eefa347ac}{operator+} (const \hyperlink{class_vector}{Vector} \&\+\_\+v) const 
+\begin{DoxyCompactList}\small\item\em operator dodawania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a94b6fde82bef6532c00358a0af448fc1}{operator-\/} (const \hyperlink{class_vector}{Vector} \&\+\_\+v) const 
+\begin{DoxyCompactList}\small\item\em operator odejmowania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a8f0e64ee9a688803b1efce30fb0b2869}{operator$\ast$} (const float \&\+\_\+c) const 
+\begin{DoxyCompactList}\small\item\em operator skalowania \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \& \hyperlink{class_vector_ad44f6d9721d9584e7f847e449df73e11}{operator=} (const \hyperlink{class_vector}{Vector} \&\+\_\+v)
+\begin{DoxyCompactList}\small\item\em operator przypisania \end{DoxyCompactList}\item 
+float \hyperlink{class_vector_a18d3f2110be751ac3a658016bd3dca69}{norm\+Squared} ()
+\begin{DoxyCompactList}\small\item\em kwadrat normy \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
-T\-Y\-P\-E $\ast$ \hyperlink{class_vector_a7423601b523502c849ad51317178c4d0}{\-\_\-data}
+float \hyperlink{class_vector_aca49165049a1e21ae47afcfc078819ed}{x}
 \item 
-int \hyperlink{class_vector_a327a1cd9125262e7023b39ff6bc2a6c0}{\-\_\-size}
+float \hyperlink{class_vector_a81be9102fca6d9beea3efef522c4c09d}{y}
 \end{DoxyCompactItemize}
 \subsection*{Przyjaciele}
 \begin{DoxyCompactItemize}
 \item 
-std\-::istream \& \hyperlink{class_vector_a03dc35035c4c3337fa3281c02db9c950}{operator$>$$>$} (std\-::istream \&, \hyperlink{class_vector}{Vector}$<$ T\-Y\-P\-E $>$ \&)
-\begin{DoxyCompactList}\small\item\em Przeciążenie standardowego operatora wejściowego dla wektora. Wczytuje wektor. W sumie nie potrzebne, ale skoro przeciążam wyjście, to wejście też przeciążę. A co! \end{DoxyCompactList}\item 
-std\-::ostream \& \hyperlink{class_vector_a300ae32df34b7e58d296252c1413395d}{operator$<$$<$} (std\-::ostream \&, const \hyperlink{class_vector}{Vector}$<$ T\-Y\-P\-E $>$ \&)
-\begin{DoxyCompactList}\small\item\em Przeciążenie standardowego operatora wyjściowego dla wektora. Wyświetla wektor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::ostream \& \hyperlink{class_vector_a7973d0032b0df4c3ab89e1da167b86a9}{operator$<$$<$} (std\+::ostream \&\+\_\+os, const \hyperlink{class_vector}{Vector} \&\+\_\+s)
+\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
-\subsubsection*{template$<$typename T\-Y\-P\-E$>$class Vector$<$ T\-Y\-P\-E $>$}
+Posiada metody do obsługi dwuelementowych wektorów o współrzędnych typu float 
 
-
-
-Definicja w linii 11 pliku vector.\-hh.
+Definicja w linii 35 pliku simulation.\+cpp.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{class_vector_a7abfa78474ee093d38ab61630fff0c69}{\index{Vector@{Vector}!Vector@{Vector}}
+\hypertarget{class_vector_af3c1b04bfbb10e29433842202365a6c4}{}\index{Vector@{Vector}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector@{Vector}}
-\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}$<$ T\-Y\-P\-E $>$\-::{\bf Vector} (
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+::\+Vector (
 \begin{DoxyParamCaption}
-\item[{const int}]{size = {\ttfamily 0}}
+\item[{float}]{\+\_\+x = {\ttfamily 0}, }
+\item[{float}]{\+\_\+y = {\ttfamily 0}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vector_a7abfa78474ee093d38ab61630fff0c69}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_af3c1b04bfbb10e29433842202365a6c4}
+konstruktor wektora
 
+Ustawia współrzędne wektora 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em size} & -\/ rozmiar, domyślnie S\-I\-Z\-E \\
+\mbox{\tt in}  & {\em \+\_\+x} & -\/ pierwsza współrzędna (domyślnie\+: 0) \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+y} & -\/ druga współrzędna (domyślnie\+: 0) \\
 \hline
 \end{DoxyParams}
 
 
-Definicja w linii 41 pliku vector.\-hh.
+Definicja w linii 47 pliku simulation.\+cpp.
 
-\hypertarget{class_vector_ab6f9e2ab5a0ef64bde8eab33a5d0790f}{\index{Vector@{Vector}!Vector@{Vector}}
-\index{Vector@{Vector}!Vector@{Vector}}
-\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}$<$ T\-Y\-P\-E $>$\-::{\bf Vector} (
-\begin{DoxyParamCaption}
-\item[{const int \&}]{size, }
-\item[{const T\-Y\-P\-E $\ast$}]{data}
-\end{DoxyParamCaption}
-)}}\label{class_vector_ab6f9e2ab5a0ef64bde8eab33a5d0790f}
 
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em size} & -\/ rozmiar \\
-\hline
-\mbox{\tt in}  & {\em $\ast$data} & -\/ dane \\
-\hline
-\end{DoxyParams}
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_vector_af3c1b04bfbb10e29433842202365a6c4_icgraph}
+\end{center}
+\end{figure}
+
+
 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{class_vector_a3f16e888bbaca4d21674953f1ac4e7c6}{\index{Vector@{Vector}!operator$\ast$@{operator$\ast$}}
+\hypertarget{class_vector_a56cbc43a18559f85f4ce7278e98f9aad}{}\index{Vector@{Vector}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Vector@{Vector}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}const float Vector\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a56cbc43a18559f85f4ce7278e98f9aad}
+\begin{DoxyReturn}{Zwraca}
+pierwsza współrzędna wektora jako stała 
+\end{DoxyReturn}
+
+
+Definicja w linii 52 pliku simulation.\+cpp.
+
+
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vector_a56cbc43a18559f85f4ce7278e98f9aad_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_aeca06c929d4ab3078a828723a88621e6}{}\index{Vector@{Vector}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Vector@{Vector}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}float\& Vector\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_aeca06c929d4ab3078a828723a88621e6}
+\begin{DoxyReturn}{Zwraca}
+pierwsza współrzędna wektora jako stała 
+\end{DoxyReturn}
+
+
+Definicja w linii 62 pliku simulation.\+cpp.
+
+\hypertarget{class_vector_a4ad8e8a5fb48ce193177af11340831b6}{}\index{Vector@{Vector}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Vector@{Vector}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}const float Vector\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a4ad8e8a5fb48ce193177af11340831b6}
+\begin{DoxyReturn}{Zwraca}
+druga współrzędna wektora jako stała 
+\end{DoxyReturn}
+
+
+Definicja w linii 57 pliku simulation.\+cpp.
+
+
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vector_a4ad8e8a5fb48ce193177af11340831b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_ab0cc77ce300a60de0ab734555886ad5d}{}\index{Vector@{Vector}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Vector@{Vector}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float\& Vector\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_ab0cc77ce300a60de0ab734555886ad5d}
+\begin{DoxyReturn}{Zwraca}
+druga współrzędna wektora jako stała 
+\end{DoxyReturn}
+
+
+Definicja w linii 67 pliku simulation.\+cpp.
+
+\hypertarget{class_vector_a18d3f2110be751ac3a658016bd3dca69}{}\index{Vector@{Vector}!norm\+Squared@{norm\+Squared}}
+\index{norm\+Squared@{norm\+Squared}!Vector@{Vector}}
+\subsubsection[{norm\+Squared}]{\setlength{\rightskip}{0pt plus 5cm}float Vector\+::norm\+Squared (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a18d3f2110be751ac3a658016bd3dca69}
+Zwraca sumę kwadratów współrzędnych wektora \begin{DoxyReturn}{Zwraca}
+wartość kwadratu normy 
+\end{DoxyReturn}
+
+
+Definicja w linii 130 pliku simulation.\+cpp.
+
+
+
+Oto graf wywoływań tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vector_a18d3f2110be751ac3a658016bd3dca69_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_a8f0e64ee9a688803b1efce30fb0b2869}{}\index{Vector@{Vector}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Vector@{Vector}}
-\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector} {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator$\ast$ (
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\+::operator$\ast$ (
 \begin{DoxyParamCaption}
-\item[{const long \&}]{scale}
+\item[{const float \&}]{\+\_\+c}
 \end{DoxyParamCaption}
-) const}}\label{class_vector_a3f16e888bbaca4d21674953f1ac4e7c6}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a8f0e64ee9a688803b1efce30fb0b2869}
+Skaluje wektor 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+c} & -\/ współczynnik skalowania \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+przeskalowany wektor 
 \end{DoxyReturn}
-\hypertarget{class_vector_a0165370ffd16bec25040201b7cd646e6}{\index{Vector@{Vector}!operator$\ast$=@{operator$\ast$=}}
+
+
+Definicja w linii 115 pliku simulation.\+cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{class_vector_a8f0e64ee9a688803b1efce30fb0b2869_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_a91ebac6d502ca1d54645e7c711549867}{}\index{Vector@{Vector}!operator$\ast$=@{operator$\ast$=}}
 \index{operator$\ast$=@{operator$\ast$=}!Vector@{Vector}}
-\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}\& {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator$\ast$= (
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Vector\+::operator$\ast$= (
 \begin{DoxyParamCaption}
-\item[{const long \&}]{scale}
+\item[{const float \&}]{\+\_\+c}
 \end{DoxyParamCaption}
-)}}\label{class_vector_a0165370ffd16bec25040201b7cd646e6}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a91ebac6d502ca1d54645e7c711549867}
+Skaluje wektor 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+c} & -\/ współczynnik \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+referencja na pierwotny obiekt 
 \end{DoxyReturn}
-\hypertarget{class_vector_a3c0a72f40f890076337794630efd273d}{\index{Vector@{Vector}!operator+@{operator+}}
+
+
+Definicja w linii 91 pliku simulation.\+cpp.
+
+\hypertarget{class_vector_aa78eb4c9e5ac236c89f0853eefa347ac}{}\index{Vector@{Vector}!operator+@{operator+}}
 \index{operator+@{operator+}!Vector@{Vector}}
-\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector} {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator+ (
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\+::operator+ (
 \begin{DoxyParamCaption}
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{vect}
+\item[{const {\bf Vector} \&}]{\+\_\+v}
 \end{DoxyParamCaption}
-) const}}\label{class_vector_a3c0a72f40f890076337794630efd273d}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_aa78eb4c9e5ac236c89f0853eefa347ac}
+Dodaje wartość dwóch wektorów 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+v} & -\/ inny wektor \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+wektor będący sumą 
 \end{DoxyReturn}
-\hypertarget{class_vector_aefe0eac24f57e27fa0ba334d863e0972}{\index{Vector@{Vector}!operator+=@{operator+=}}
+
+
+Definicja w linii 99 pliku simulation.\+cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_vector_aa78eb4c9e5ac236c89f0853eefa347ac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_a4eeab5be24ee846de3012e67a4e34820}{}\index{Vector@{Vector}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!Vector@{Vector}}
-\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}\& {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator+= (
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Vector\+::operator+= (
 \begin{DoxyParamCaption}
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{vect}
+\item[{const {\bf Vector} \&}]{\+\_\+v}
 \end{DoxyParamCaption}
-)}}\label{class_vector_aefe0eac24f57e27fa0ba334d863e0972}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a4eeab5be24ee846de3012e67a4e34820}
+Dodaje wartość innego wektora do klasy 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+v} & -\/ inny wektor \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+referencja na pierwotny obiekt 
 \end{DoxyReturn}
-\hypertarget{class_vector_a858ee9def9d396faa190cc7cdc240a69}{\index{Vector@{Vector}!operator-\/@{operator-\/}}
+
+
+Definicja w linii 75 pliku simulation.\+cpp.
+
+\hypertarget{class_vector_a94b6fde82bef6532c00358a0af448fc1}{}\index{Vector@{Vector}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Vector@{Vector}}
-\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector} {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator-\/ (
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector} Vector\+::operator-\/ (
 \begin{DoxyParamCaption}
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{vect}
+\item[{const {\bf Vector} \&}]{\+\_\+v}
 \end{DoxyParamCaption}
-) const}}\label{class_vector_a858ee9def9d396faa190cc7cdc240a69}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_a94b6fde82bef6532c00358a0af448fc1}
+Odejmuje wartość innego wektora od klasy 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+v} & -\/ inny wektor \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+wektor będący różnicą 
 \end{DoxyReturn}
-\hypertarget{class_vector_a8d2c68cdfbfe73ee0b0ed079cdb3c140}{\index{Vector@{Vector}!operator-\/=@{operator-\/=}}
+
+
+Definicja w linii 107 pliku simulation.\+cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_vector_a94b6fde82bef6532c00358a0af448fc1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_vector_aaaf87dbf15cd9492aa0c11874ae5afef}{}\index{Vector@{Vector}!operator-\/=@{operator-\/=}}
 \index{operator-\/=@{operator-\/=}!Vector@{Vector}}
-\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}\& {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator-\/= (
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Vector\+::operator-\/= (
 \begin{DoxyParamCaption}
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{vect}
+\item[{const {\bf Vector} \&}]{\+\_\+v}
 \end{DoxyParamCaption}
-)}}\label{class_vector_a8d2c68cdfbfe73ee0b0ed079cdb3c140}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_aaaf87dbf15cd9492aa0c11874ae5afef}
+Odejmuje wartość innego wektora od klasy 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+v} & -\/ inny wektor \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Zwraca wynik w postaci wektora 
+referencja na pierwotny obiekt 
 \end{DoxyReturn}
-\hypertarget{class_vector_ae0e577a62222292e5299b8571ef5bcce}{\index{Vector@{Vector}!operator=@{operator=}}
+
+
+Definicja w linii 83 pliku simulation.\+cpp.
+
+\hypertarget{class_vector_ad44f6d9721d9584e7f847e449df73e11}{}\index{Vector@{Vector}!operator=@{operator=}}
 \index{operator=@{operator=}!Vector@{Vector}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ {\bf Vector}\& {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator= (
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}\& Vector\+::operator= (
 \begin{DoxyParamCaption}
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{vect}
+\item[{const {\bf Vector} \&}]{\+\_\+v}
 \end{DoxyParamCaption}
-)}}\label{class_vector_ae0e577a62222292e5299b8571ef5bcce}
-
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_ad44f6d9721d9584e7f847e449df73e11}
+Przypisuje współrzędne innego wektora do klasy 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em \hyperlink{class_vector}{Vector}} & -\/ nowa zawartość wektora \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_vector_a6871e4b685d04c8b940b81b967d62176}{\index{Vector@{Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
-\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Vector@{Vector}}
-\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ T\-Y\-P\-E\& {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator\mbox{[}$\,$\mbox{]} (
-\begin{DoxyParamCaption}
-\item[{const int \&}]{i}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vector_a6871e4b685d04c8b940b81b967d62176}
-
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em i} & -\/ numer danej \\
+\mbox{\tt in}  & {\em \+\_\+v} & -\/ inny wektor \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-Referencja do odpowiedniego elementu 
+referencja na pierwotny obiekt 
 \end{DoxyReturn}
 
 
-Definicja w linii 53 pliku vector.\-hh.
-
-\hypertarget{class_vector_ab93cdf3a0431a7cd7f73ea4a43bc00f5}{\index{Vector@{Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
-\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Vector@{Vector}}
-\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ const T\-Y\-P\-E {\bf Vector}$<$ T\-Y\-P\-E $>$\-::operator\mbox{[}$\,$\mbox{]} (
-\begin{DoxyParamCaption}
-\item[{const int \&}]{i}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vector_ab93cdf3a0431a7cd7f73ea4a43bc00f5}
-
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em i} & -\/ numer danej \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Zwraca}
-Referencja do odpowiedniego elementu 
-\end{DoxyReturn}
-
-
-Definicja w linii 59 pliku vector.\-hh.
+Definicja w linii 123 pliku simulation.\+cpp.
 
 
 
 \subsection{Dokumentacja przyjaciół i funkcji związanych}
-\hypertarget{class_vector_a300ae32df34b7e58d296252c1413395d}{\index{Vector@{Vector}!operator$<$$<$@{operator$<$$<$}}
+\hypertarget{class_vector_a7973d0032b0df4c3ab89e1da167b86a9}{}\index{Vector@{Vector}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Vector@{Vector}}
-\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ std\-::ostream\& operator$<$$<$ (
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
 \begin{DoxyParamCaption}
-\item[{std\-::ostream \&}]{, }
-\item[{const {\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{}
+\item[{std\+::ostream \&}]{\+\_\+os, }
+\item[{const {\bf Vector} \&}]{\+\_\+s}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_vector_a300ae32df34b7e58d296252c1413395d}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_vector_a7973d0032b0df4c3ab89e1da167b86a9}
 
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in,out}  & {\em out} & -\/ strumień wyjściowy \\
-\hline
-\mbox{\tt in}  & {\em vect} & -\/ wektor \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Zwraca}
-Zwraca referencję do zmodyfikowanego strumienia. 
-\end{DoxyReturn}
-\hypertarget{class_vector_a03dc35035c4c3337fa3281c02db9c950}{\index{Vector@{Vector}!operator$>$$>$@{operator$>$$>$}}
-\index{operator$>$$>$@{operator$>$$>$}!Vector@{Vector}}
-\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ std\-::istream\& operator$>$$>$ (
-\begin{DoxyParamCaption}
-\item[{std\-::istream \&}]{, }
-\item[{{\bf Vector}$<$ T\-Y\-P\-E $>$ \&}]{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_vector_a03dc35035c4c3337fa3281c02db9c950}
 
-\begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in,out}  & {\em inp} & -\/ strumień wejściowy \\
-\hline
-\mbox{\tt out}  & {\em vect} & -\/ wektor \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Zwraca}
-Zwraca referencję do zmodyfikowanego strumienia. 
-\end{DoxyReturn}
+Definicja w linii 133 pliku simulation.\+cpp.
+
 
 
 \subsection{Dokumentacja atrybutów składowych}
-\hypertarget{class_vector_a7423601b523502c849ad51317178c4d0}{\index{Vector@{Vector}!\-\_\-data@{\-\_\-data}}
-\index{\-\_\-data@{\-\_\-data}!Vector@{Vector}}
-\subsubsection[{\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ T\-Y\-P\-E$\ast$ {\bf Vector}$<$ T\-Y\-P\-E $>$\-::\-\_\-data\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vector_a7423601b523502c849ad51317178c4d0}
+\hypertarget{class_vector_aca49165049a1e21ae47afcfc078819ed}{}\index{Vector@{Vector}!x@{x}}
+\index{x@{x}!Vector@{Vector}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float Vector\+::x\hspace{0.3cm}{\ttfamily [private]}}\label{class_vector_aca49165049a1e21ae47afcfc078819ed}
 
 
-Definicja w linii 34 pliku vector.\-hh.
+Definicja w linii 37 pliku simulation.\+cpp.
 
-\hypertarget{class_vector_a327a1cd9125262e7023b39ff6bc2a6c0}{\index{Vector@{Vector}!\-\_\-size@{\-\_\-size}}
-\index{\-\_\-size@{\-\_\-size}!Vector@{Vector}}
-\subsubsection[{\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\-Y\-P\-E $>$ int {\bf Vector}$<$ T\-Y\-P\-E $>$\-::\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vector_a327a1cd9125262e7023b39ff6bc2a6c0}
-
-
-Definicja w linii 35 pliku vector.\-hh.
+\hypertarget{class_vector_a81be9102fca6d9beea3efef522c4c09d}{}\index{Vector@{Vector}!y@{y}}
+\index{y@{y}!Vector@{Vector}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float Vector\+::y\hspace{0.3cm}{\ttfamily [private]}}\label{class_vector_a81be9102fca6d9beea3efef522c4c09d}
 
 
+Definicja w linii 37 pliku simulation.\+cpp.
 
-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{vector_8hh}{vector.\-hh}\end{DoxyCompactItemize}
+\hyperlink{simulation_8cpp}{simulation.\+cpp}\end{DoxyCompactItemize}

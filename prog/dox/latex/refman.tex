@@ -1,14 +1,18 @@
 \documentclass[twoside]{book}
 
 % Packages required by doxygen
+\usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
 
 % NLS support packages
@@ -17,7 +21,6 @@
 
 % Font selection
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
@@ -31,6 +34,7 @@
   \fontseries{bc}\selectfont%
   \color{darkgray}%
 }
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
 
 % Page & text layout
 \usepackage{geometry}
@@ -71,8 +75,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 15 maj 2015 00\-:27\-:27 dla Symulacja\-Zbiornika programem Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 15 maj 2015 00\-:27\-:27 dla Symulacja\-Zbiornika programem Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 15 maj 2015 20\+:03\+:04 dla Symulacja\+Zbiornika programem Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 15 maj 2015 20\+:03\+:04 dla Symulacja\+Zbiornika programem Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -115,16 +119,20 @@
 \begin{document}
 
 % Titlepage & ToC
-\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
 \pagenumbering{roman}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large Symulacja\-Zbiornika \\[1ex]\large 0.\-1 }\\
+{\Large Symulacja\+Zbiornika \\[1ex]\large 0.\+1 }\\
 \vspace*{1cm}
-{\large Wygenerowano przez Doxygen 1.8.6}\\
+{\large Wygenerowano przez Doxygen 1.8.9.1}\\
 \vspace*{0.5cm}
-{\small Pt, 15 maj 2015 00:27:27}\\
+{\small Pt, 15 maj 2015 20:03:04}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -152,6 +160,8 @@
 \input{class_ui_1_1_d_main_window}
 \input{class_kolor}
 \input{class_okno_glowne}
+\input{structparams__t}
+\input{classsimulation}
 \input{class_ui___d_main_window}
 \input{class_vector}
 \input{class_zbiornik}
@@ -159,6 +169,7 @@
 \input{czasteczka_8hh}
 \input{dmainwindow_8cpp}
 \input{dmainwindow_8h}
+\input{flagi_8hh}
 \input{kolor_8hh}
 \input{main_8cpp}
 \input{moc__dmainwindow_8cpp}
@@ -166,16 +177,18 @@
 \input{moc__zbiornik_8cpp}
 \input{okno__glowne_8cpp}
 \input{okno__glowne_8hh}
+\input{simulation_8cpp}
 \input{strona_8dox}
 \input{ui__dmainwindow_8h}
-\input{vector_8hh}
 \input{zbiornik_8cpp}
 \input{zbiornik_8hh}
 %--- End generated contents ---
 
 % Index
+\backmatter
 \newpage
 \phantomsection
+\clearemptydoublepage
 \addcontentsline{toc}{chapter}{Indeks}
 \printindex
 

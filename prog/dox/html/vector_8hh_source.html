@@ -3,13 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
 <title>SymulacjaZbiornika: Plik źródłowy vector.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
@@ -33,11 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
-      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
       <li><a href="annotated.html"><span>Klasy</span></a></li>
       <li class="current"><a href="files.html"><span>Pliki</span></a></li>
     </ul>
@@ -69,8 +69,8 @@ $(document).ready(function(){initNavTree('vector_8hh_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="vector_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VECTOR_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define VECTOR_HH</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VECTOR_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_vector.html">   11</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TYPE&gt; <span class="keyword">class </span><a class="code" href="class_vector.html">Vector</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TYPE&gt; std::istream &amp; <a class="code" href="vector_8hh.html#af9f1d76a42b7800e17a6da47fce9e179">operator&gt;&gt; </a>(std::istream &amp;, <a class="code" href="class_vector.html">Vector&lt;TYPE&gt;</a> &amp;);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TYPE&gt; std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const Vector&lt;TYPE&gt; &amp;);</div>
@@ -82,10 +82,10 @@ $(document).ready(function(){initNavTree('vector_8hh_source.html','');});
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_vector.html#a7423601b523502c849ad51317178c4d0">   34</a></span>&#160;        TYPE *<a class="code" href="class_vector.html#a7423601b523502c849ad51317178c4d0">_data</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">   35</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">_size</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_vector.html#a7abfa78474ee093d38ab61630fff0c69">   41</a></span>&#160;        <a class="code" href="class_vector.html#a7abfa78474ee093d38ab61630fff0c69">Vector</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> size=0) {<a class="code" href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">_size</a>=size; <a class="code" href="class_vector.html#a7423601b523502c849ad51317178c4d0">_data</a>=<span class="keyword">new</span> TYPE [<a class="code" href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">_size</a>];}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_vector.html#a7abfa78474ee093d38ab61630fff0c69">   41</a></span>&#160;        <a class="code" href="class_vector.html#a7abfa78474ee093d38ab61630fff0c69">Vector</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> size=0) {_size=size; _data=<span class="keyword">new</span> TYPE [<a class="code" href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">_size</a>];}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_vector.html#a7abfa78474ee093d38ab61630fff0c69">Vector</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; size, <span class="keyword">const</span> TYPE *data);</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_vector.html#a6871e4b685d04c8b940b81b967d62176">   53</a></span>&#160;        TYPE&amp; <a class="code" href="class_vector.html#a6871e4b685d04c8b940b81b967d62176">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i) {<span class="keywordflow">return</span> <a class="code" href="class_vector.html#a7423601b523502c849ad51317178c4d0">_data</a>[i];}</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_vector.html#ab93cdf3a0431a7cd7f73ea4a43bc00f5">   59</a></span>&#160;        <span class="keyword">const</span> TYPE <a class="code" href="class_vector.html#ab93cdf3a0431a7cd7f73ea4a43bc00f5">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="class_vector.html#a7423601b523502c849ad51317178c4d0">_data</a>[i];}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_vector.html#a6871e4b685d04c8b940b81b967d62176">   53</a></span>&#160;        TYPE&amp; <a class="code" href="class_vector.html#a6871e4b685d04c8b940b81b967d62176">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i) {<span class="keywordflow">return</span> _data[i];}</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_vector.html#ab93cdf3a0431a7cd7f73ea4a43bc00f5">   59</a></span>&#160;        <span class="keyword">const</span> TYPE <a class="code" href="class_vector.html#ab93cdf3a0431a7cd7f73ea4a43bc00f5">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> _data[i];}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a858ee9def9d396faa190cc7cdc240a69">operator-</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; vect) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_vector.html#a8d2c68cdfbfe73ee0b0ed079cdb3c140">operator-=</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; vect);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_vector.html#a3c0a72f40f890076337794630efd273d">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; vect) <span class="keyword">const</span>;</div>
@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('vector_8hh_source.html','');});
 <div class="ttc" id="class_vector_html_a8d2c68cdfbfe73ee0b0ed079cdb3c140"><div class="ttname"><a href="class_vector.html#a8d2c68cdfbfe73ee0b0ed079cdb3c140">Vector::operator-=</a></div><div class="ttdeci">Vector &amp; operator-=(const Vector &amp;vect)</div><div class="ttdoc">Operacja odejmowania wektorów. </div></div>
 <div class="ttc" id="class_vector_html_a3f16e888bbaca4d21674953f1ac4e7c6"><div class="ttname"><a href="class_vector.html#a3f16e888bbaca4d21674953f1ac4e7c6">Vector::operator*</a></div><div class="ttdeci">Vector operator*(const long &amp;scale) const </div><div class="ttdoc">Operacja mnożenia wektora przez stałą </div></div>
 <div class="ttc" id="vector_8hh_html_af9f1d76a42b7800e17a6da47fce9e179"><div class="ttname"><a href="vector_8hh.html#af9f1d76a42b7800e17a6da47fce9e179">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;, Vector&lt; TYPE &gt; &amp;)</div></div>
-<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00011">vector.hh:11</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00011">vector.hh:11</a></div></div>
 <div class="ttc" id="class_vector_html_a6871e4b685d04c8b940b81b967d62176"><div class="ttname"><a href="class_vector.html#a6871e4b685d04c8b940b81b967d62176">Vector::operator[]</a></div><div class="ttdeci">TYPE &amp; operator[](const int &amp;i)</div><div class="ttdoc">Operator dostępu do współrzędnych wektora. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00053">vector.hh:53</a></div></div>
 <div class="ttc" id="class_vector_html_a327a1cd9125262e7023b39ff6bc2a6c0"><div class="ttname"><a href="class_vector.html#a327a1cd9125262e7023b39ff6bc2a6c0">Vector::_size</a></div><div class="ttdeci">int _size</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00035">vector.hh:35</a></div></div>
 <div class="ttc" id="class_vector_html_a0165370ffd16bec25040201b7cd646e6"><div class="ttname"><a href="class_vector.html#a0165370ffd16bec25040201b7cd646e6">Vector::operator*=</a></div><div class="ttdeci">Vector &amp; operator*=(const long &amp;scale)</div><div class="ttdoc">Operacja mnożenia wektora przez stałą </div></div>
@@ -152,9 +152,9 @@ $(document).ready(function(){initNavTree('vector_8hh_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="vector_8hh.html">vector.hh</a></li>
-    <li class="footer">Wygenerowano Pt, 15 maj 2015 00:27:26 dla SymulacjaZbiornika programem
+    <li class="footer">Wygenerowano Pt, 15 maj 2015 02:44:42 dla SymulacjaZbiornika programem
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
 </div>
 </body>

@@ -1,6 +1,7 @@
 <map id="okno_glowne.hh" name="okno_glowne.hh">
-<area shape="rect" id="node27" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1841,229,1908,256"/>
-<area shape="rect" id="node28" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1776,155,1883,181"/>
-<area shape="rect" id="node29" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="945,80,1031,107"/>
-<area shape="rect" id="node31" href="$dmainwindow_8h.html" title="dmainwindow.h" alt="" coords="353,80,464,107"/>
+<area shape="rect" id="node29" href="$flagi_8hh.html" title="flagi.hh" alt="" coords="1853,155,1920,181"/>
+<area shape="rect" id="node30" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="2011,229,2083,256"/>
+<area shape="rect" id="node31" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1945,155,2055,181"/>
+<area shape="rect" id="node32" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="1018,80,1107,107"/>
+<area shape="rect" id="node34" href="$dmainwindow_8h.html" title="dmainwindow.h" alt="" coords="469,80,587,107"/>
 </map>

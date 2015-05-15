@@ -5,6 +5,7 @@ var files =
     [ "dmainwindow.h", "dmainwindow_8h.html", [
       [ "DMainWindow", "class_d_main_window.html", "class_d_main_window" ]
     ] ],
+    [ "flagi.hh", "flagi_8hh.html", "flagi_8hh" ],
     [ "kolor.hh", "kolor_8hh.html", [
       [ "Kolor", "class_kolor.html", "class_kolor" ]
     ] ],
@@ -16,11 +17,11 @@ var files =
     [ "okno_glowne.hh", "okno__glowne_8hh.html", [
       [ "OknoGlowne", "class_okno_glowne.html", "class_okno_glowne" ]
     ] ],
+    [ "simulation.cpp", "simulation_8cpp.html", "simulation_8cpp" ],
     [ "ui_dmainwindow.h", "ui__dmainwindow_8h.html", [
       [ "Ui_DMainWindow", "class_ui___d_main_window.html", "class_ui___d_main_window" ],
       [ "DMainWindow", "class_ui_1_1_d_main_window.html", null ]
     ] ],
-    [ "vector.hh", "vector_8hh.html", "vector_8hh" ],
-    [ "zbiornik.cpp", "zbiornik_8cpp.html", null ],
+    [ "zbiornik.cpp", "zbiornik_8cpp.html", "zbiornik_8cpp" ],
     [ "zbiornik.hh", "zbiornik_8hh.html", "zbiornik_8hh" ]
 ];

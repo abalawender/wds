@@ -4,8 +4,8 @@
 #include <cmath>
 #include <cassert>
 #define DAMP 0.75 //! współczynnik odbicia od ściany naczynia
-#define XMAX 1.0  //! rozmiar naczynia X
-#define YMAX 1.0  //! rozmiar naczynia Y
+#define XMAX 2.0  //! rozmiar naczynia X
+#define YMAX 2.0  //! rozmiar naczynia Y
 
 /*!
  * \brief makro do logowania
@@ -148,7 +148,7 @@ struct params_t {
 };
 
 void setup( params_t *params ) {
-    params->nframes	= 700;      // Number of frames
+    params->nframes	= 600;      // Number of frames
     params->npframe	= 100;      // Steps per frame
     params->h	    = 0.05;     // Particle size
     params->dt	    = 0.0001;   // Time step
@@ -369,7 +369,7 @@ int main() {
     params_t* params = new params_t;
     LOG( "INIT" );
     setup (params);
-    simulation s(200, params);
+    simulation s(400, params);
 
     LOG( "Simulating movement of " << s.getN() << " fluid particles" );
     std::cout << "what comes next is binary data\n";
@@ -379,7 +379,7 @@ int main() {
     std::cout << s;
 
     for( unsigned i = 0; i < params->nframes; ++i ) {
-    //    //if( i == 300 ) params->gy = 0; // becuz fuck the gravity
+        if( i == 300 ) params->gy = 0; // becuz fuck the gravity
     //    for( unsigned j = 0; j < params->npframe; ++j ) {
     //        compute_accel( state, params );
     //        leapfrog_step( state, params->dt );
