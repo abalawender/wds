@@ -13,9 +13,9 @@
  * - definicje konstruktorow, metod i przeciazen klasy Zbiornik.
  */
 
-bool PLAY = true;
+int STAN = ePLAY;
 
-Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic)
+Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic)//, lewa_gora_x(width()/2-PODSTAWA/2), lewa_gora_y(height()/2-WYSOKOSC/2)
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -24,6 +24,17 @@ Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic)
   _Stoper.setInterval(ODPOWIEDNI_CZAS);
   _Stoper.setSingleShot(false);
   _Stoper.start();
+  
+  czas_sym = 0.0;
+  
+  //TODO przekazywac przez parametry
+  // TODO zmienic to!
+  //lewa_gora_x = width()/2-PODSTAWA/2;
+  //lewa_gora_y = height()/2-WYSOKOSC/2;
+  podstawa = PODSTAWA;
+  wysokosc = WYSOKOSC;
+  
+  //QMetaObject::connectSlotsByName(this);
 }
 
 void Zbiornik::RysujZbiornik( QPainter& Rysownik, 
@@ -33,6 +44,11 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
                               int       x,
                               int       y)
 {
+  //std::cout << x << " " << y << std::endl;
+  // TODO nie tutaj!
+  lewa_gora_x = width()/2-PODSTAWA/2;
+  lewa_gora_y = height()/2-WYSOKOSC/2;
+  
   QPen Piorko(Rysownik.pen());
   Piorko.setWidth(Grubosc);
   Rysownik.setPen(Piorko);
@@ -51,7 +67,7 @@ void Zbiornik::RysujCzasteczke( QPainter&    Rysownik,
 {
   QPen Piorko(Rysownik.pen());
   
-  Rysownik.setPen(QColor(RGB._r, RGB._g, RGB._b));
+  Rysownik.setPen(QColor(RGB.r(), RGB.g(), RGB.b()));
   
   // Draws the ellipse defined by the rectangle beginning at (x, y) with the given width and height.
   Rysownik.drawEllipse(x+Promien/2, y+Promien/2, Promien/2, Promien/2); // Center in [x, y].  
@@ -66,6 +82,15 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   //                rand()%width(), rand()%height());
 }
 
+bool Zbiornik::CzyWewnatrzZbiornika(const int x, const int y) const 
+{
+  if ( ((x>lewa_gora_x) && (x<lewa_gora_x+podstawa)) && 
+       ((y>lewa_gora_y) && (y<lewa_gora_y+wysokosc)) ) {
+    return true;
+  }
+  return false;
+}
+
 void Zbiornik::paintEvent( QPaintEvent * )
 {
   QPainter Rysownik(this);
@@ -77,30 +102,37 @@ void Zbiornik::paintEvent( QPaintEvent * )
   for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
                                       it != Czasteczki.end(); it++)
   {
-    RysujCzasteczke(Rysownik,(*it)._Promien, (*it)._RGB, (*it)._x, (*it)._y);
+    //std::cout << (*it).x() << " " << (*it).y() << " " << lewa_gora_x << " " << lewa_gora_y << std::endl;
+    if (CzyWewnatrzZbiornika((*it).x()+((*it).Promien())/2, 
+                             (*it).y()+((*it).Promien())/2)) {
+      RysujCzasteczke(Rysownik,(*it).Promien(), (*it).RGB(), (*it).x(), (*it).y());
+    }
   }
 }
 
 void Zbiornik::GdyOdpowiedniCzas()
 {
-  if(PLAY)
-  //if(true)
+  czas_sym += ODPOWIEDNI_CZAS*1.0/1000;
+  if(STAN == ePLAY)
   {
     update(); // -> paintEvent
-  }
   
-  // TODO
-  for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
-       it != Czasteczki.end(); it++)
-       {
-         (*it)._x += rand()%7-3;
-         (*it)._y += rand()%7-3;
-       }
-       
-       // TODO przesunac uklad wspolrzednych
-  Czasteczki.push_back(Czasteczka(
-                                  1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2, 
-                                  2*WYSOKOSC-rand()%(WYSOKOSC/2),
-                                  PROMIEN, 
-                                  Kolor(rand()%255, rand()%255, rand()%255)));
+    // TODO SPH
+    for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
+        it != Czasteczki.end(); it++)
+        {
+          (*it).x() += rand()%7-3;
+          (*it).y() += rand()%7-3;
+        }
+        
+        // TODO przesunac uklad wspolrzednych
+    Czasteczki.push_back(Czasteczka(
+                                    1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2, 
+                                    2*WYSOKOSC-rand()%(WYSOKOSC/2),
+                                    PROMIEN, 
+                                    Kolor(rand()%255, rand()%255, rand()%255)));
+  }
+  //TODO
+  emit ZglosLiczbeCzasteczek(Czasteczki.size());
+  emit ZglosCzasSymulacji(czas_sym);
 }

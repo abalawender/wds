@@ -45,8 +45,17 @@ class Czasteczka
     Czasteczka(int x, int y, int r, const Kolor& rgb):
     _x(x), _y(y), _Promien(r), _RGB(rgb) { } ;
     
-    //TODO
-    //private:
+  
+    int x() const { return _x; };
+    int& x() { return _x; };
+    int y() const { return _y; };
+    int& y() { return _y; };
+    int Promien() const { return _Promien; };
+    int& Promien() { return _Promien; };
+    Kolor RGB() const { return _RGB; };
+    Kolor& RGB() { return _RGB; };
+    
+  private:
     //TODO Zmienic x, y na wektor
     /*!
      * \brief Atrybut opisujacy polozenie czasteczki na osi x.

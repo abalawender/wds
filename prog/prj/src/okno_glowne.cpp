@@ -27,12 +27,16 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     
   /* Zbiornik */
   wZbiornik = new Zbiornik(this);
+  wZbiornik->setObjectName("Zbiornik");
   setCentralWidget(wZbiornik);
   
   /* Menu Bar*/
   menuBar = new QMenuBar(this);
   action_Save = new QAction(tr("&Save"), this);
   action_Exit = new QAction(tr("Exit"), this);
+  action_Exit->setObjectName("action_Exit"); // on_action
+  connect(action_Exit, SIGNAL(triggered()),
+          QApplication::instance(), SLOT(quit())); // TODO
   
   menuBar->setGeometry(QRect(0, 0, 516, 25));
   
@@ -89,12 +93,15 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   stopButton = new QPushButton(tr("Stop"), horizontalLayoutWidget);
   stopButton->setObjectName("stopButton"); // on_action
   // 
+  //Mamy on_action
+  /* 
   connect(playButton,SIGNAL(pressed()),
           this,SLOT(GdyPlay()));
   connect(pauseButton,SIGNAL(pressed()),
           this,SLOT(GdyPauza()));
   connect(stopButton,SIGNAL(pressed()),
           this,SLOT(GdyStop()));
+          */
   
   horizontalLayout->addWidget(playButton);
   horizontalLayout->addWidget(pauseButton);
@@ -149,25 +156,52 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
           lcdSzybkoscSym, SLOT(display(int)));
     
   /* */
+  connect(wZbiornik, SIGNAL(ZglosLiczbeCzasteczek(const int)),
+          lcdLiczbaCzasteczek, SLOT(display(int)));
+  connect(wZbiornik, SIGNAL(ZglosCzasSymulacji(const double)),
+          lcdCzasSym, SLOT(display(double)));
+  
   QMetaObject::connectSlotsByName(this);
 }
 
 void OknoGlowne::GdyPlay()
 {
-  PLAY = true;
-  std::cout << "Play " << PLAY << std::endl; 
+  STAN = ePLAY;
 }
 
 void OknoGlowne::GdyPauza()
 {
-  PLAY = false;
-  std::cout << "Pauza " << PLAY << std::endl; 
+  STAN = ePAUSE;
 }
 
 void OknoGlowne::GdyStop()
 {
-  PLAY = false;
-  std::cout << "Stop " << PLAY << std::endl; 
+  STAN = eSTOP;
+}
+
+void OknoGlowne::on_playButton_clicked() { 
+  if (STAN == eSTOP) {
+    //TODO to jest slot!!!
+    //_Stoper.start(0);
+    std::cout << "->" << wZbiornik->Czasteczki.size() << std::endl;
+    wZbiornik->Czasteczki.clear(); // Start od nowa
+    std::cout << "<-" << wZbiornik->Czasteczki.size() << std::endl;
+  }
+  else if (STAN == ePAUSE) {
+    //_Stoper.start();
+  }
+  STAN = ePLAY;
+}
+
+void OknoGlowne::on_pauseButton_clicked() { 
+  STAN = ePAUSE; 
+  //_Stoper.stop();
+}
+
+void OknoGlowne::on_stopButton_clicked() { 
+  STAN = eSTOP; 
+  //wZbiornik->Czasteczki.clear(); // Wyczysczenie
+  //_Stoper.stop();
 }
 
 void OknoGlowne::GdyOdpowiedniCzas()

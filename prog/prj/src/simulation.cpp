@@ -365,7 +365,8 @@ std::ostream& operator<<( std::ostream& _os, const simulation& _s )  {
     return _os;
 }
 
-int main() {
+//int main() {
+int funkcja_main() {
     params_t* params = new params_t;
     LOG( "INIT" );
     setup (params);

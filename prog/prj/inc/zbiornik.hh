@@ -112,6 +112,7 @@ public:
                       const int x,
                       const int y);
   
+  // TODO wywalic do klasy czasteczka
   /*!
    * \brief Metoda rysujaca czasteczke.
    * 
@@ -136,6 +137,9 @@ public:
    */        
   void RysujZbiornikZCzasteczkami( QPainter& Rysownik );
   
+  // TODO doxy
+  bool CzyWewnatrzZbiornika(const int x, const int y) const;
+  
 public slots:
   /*!
    * \brief Slot odpowiadajacy za aktualizacje danych. .
@@ -153,8 +157,9 @@ signals:
    */
   void ZglosNapis(const QString &);
   
+  //TODO
   void ZglosLiczbeCzasteczek(const int);
-  
+  //TODO
   void ZglosCzasSymulacji(const double);
   
 public:
@@ -172,6 +177,14 @@ private:
    * Miernik czasu.
    */
   QTimer _Stoper; 
+  
+  //TODO doxy
+  double lewa_gora_x;
+  double lewa_gora_y;
+  double podstawa;
+  double wysokosc;
+  
+  double czas_sym;
 }; 
 
 #endif

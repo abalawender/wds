@@ -42,8 +42,25 @@ class Kolor
      */
     Kolor(const Kolor& rgb) { _r=rgb._r; _g=rgb._g; _b=rgb._b; };
     
-  // TODO
-  //private:
+    
+    //TODO doxygen TODO
+    /*!
+     * \brief Konstruktor kopiujacy.
+     *
+     * Konstruktor kopiujacy.
+     * \param[in] rgb - obiekt do skopiowania
+     */
+    int r() const { return _r; };
+    int& r() { return _r; };
+    
+    int g() const { return _g; };
+    int& g() { return _g; };
+    
+    int b() const { return _b; };
+    int& b() { return _b; };
+    // TODO doxygen TODO
+    
+  private:
     /*!
      * \brief Atrybut opisujacy wartosc odcieniu czerwonego.
      * 
@@ -64,6 +81,8 @@ class Kolor
      * Atrybut opisujacy wartosc odcieniu niebieskiego.
      */
     int _b;
+    
+    
 };
 
 #endif

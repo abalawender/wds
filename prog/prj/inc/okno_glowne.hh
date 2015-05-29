@@ -55,9 +55,6 @@
  * - deklaracje konstruktorow, metod i przeciazen ww. klasy.
  */
 
-// TODO
-//extern bool PLAY;
-
 //////////////////////////////////////////////////////////
 /*!
  * \brief Klasa modelujaca głowne okno aplikacji.
@@ -92,15 +89,27 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      */
     void GdyNapis(const QString &);
     
-    // TODO
     /*!
      * \brief Slot odpowiadajacy za obsluge stanu play.
      * 
      * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play.
      */
-    void on_playButton_clicked() { PLAY = 1; } ;
-    void on_pauseButton_clicked() { std::cout << "pause" << std::endl; PLAY = 0; } ;
-    void on_stopButton_clicked() { PLAY = 0; } ;
+    void on_playButton_clicked();
+    
+    /*!
+     * \brief Slot odpowiadajacy za obsluge stanu pauza.
+     * 
+     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauza.
+     */
+    void on_pauseButton_clicked();
+    
+    /*!
+     * \brief Slot odpowiadajacy za obsluge stanu stop.
+     * 
+     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu stop.
+     */
+    void on_stopButton_clicked();
+    
     /*!
      * \brief Slot odpowiadajacy za obsluge stanu pauzy.
      * 
@@ -130,6 +139,8 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     * \param[in] _t1 - napis do zgloszenia
     */
     void ZglosNapis(const QString &);
+    
+    void ZglosStop(); //TODO
 
   public:
     /*!
@@ -212,34 +223,76 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     /*!
      * \brief Wskaznik na przycisk play.
      * 
-     * Wskaznik na przycisk play.
+     * Wskaznik na przycisk play. Uruchamia symulacje.
      */
     QPushButton *playButton;
     
     /*!
      * \brief Wskaznik na przycisk pause.
      * 
-     * Wskaznik na przycisk pause.
+     * Wskaznik na przycisk pause. Wstrzymuje symulacje.
      */
     QPushButton *pauseButton;
     
     /*!
      * \brief Wskaznik na przycisk stop.
      * 
-     * Wskaznik na przycisk stop.
+     * Wskaznik na przycisk stop. Zatrzymuje symulacje.
      */
     QPushButton *stopButton; 
     
-    // TODO
+    /*!
+     * \brief Wskaznik na slider.
+     * 
+     * Wskaznik na slider. Steruje szybkoscia symulacji.
+     */
     QSlider *sliderSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na LCD z szybkoscia symulacji.
+     * 
+     * Wskaznik na LCD z szybkoscia symulacji. Wyswietla jej szybkosc.
+     */
     QLCDNumber *lcdSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z szybkoscia symulacji.
+     * 
+     * Etykieta dla szybkosci symulacji.
+     */
     QLabel *labelSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z czasem symulacji.
+     * 
+     * Etykieta dla czasu symulacji.
+     */
     QLabel *labelCzasSym;
+    
+    /*!
+     * \brief Wskaznik na LCD z czasem trwania symulacji.
+     * 
+     * Wskaznik na LCD z szybkoscia symulacji. Wyswietla jej czas trwania.
+     */
     QLCDNumber *lcdCzasSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z liczbe czasteczek.
+     * 
+     * Etykieta dla liczby symulowanych czasteczek.
+     */
     QLabel *labelLiczbaCzasteczek;
+    
+    /*!
+     * \brief Wskaznik na LCD z liczbe czasteczek.
+     * 
+     * Wyswietla liczbe symulowanych czasteczek.
+     */
     QLCDNumber *lcdLiczbaCzasteczek;
 
-  private:
+    //TODO
+  //private:
+public:
     /*!
     * \brief Miernik czasu.
     * 
