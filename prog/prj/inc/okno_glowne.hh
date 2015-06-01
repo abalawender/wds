@@ -111,25 +111,14 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     void on_stopButton_clicked();
     
     /*!
-     * \brief Slot odpowiadajacy za obsluge stanu pauzy.
+     * \brief Slot odpowiadajacy za zmiane wartosci slidera.
      * 
-     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauzy.
+     * Odpowiada za wykonanie odpowiednich czynnosci po zmianie wartosci slidera.
      */
-    void GdyPauza();
+    void on_sliderSzybkoscSym_valueChanged(int a);
     
-    /*!
-     * \brief Slot odpowiadajacy za obsluge stanu play.
-     * 
-     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play.
-     */
-    void GdyPlay();
-    
-    /*!
-     * \brief Slot odpowiadajacy za obsluge stanu stop.
-     * 
-     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu stop.
-     */
-    void GdyStop();
+    //TODO czy jest cos takiego?
+    void on_OknoGlowne_resized();
     
   signals:
     /*!
@@ -139,8 +128,6 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     * \param[in] _t1 - napis do zgloszenia
     */
     void ZglosNapis(const QString &);
-    
-    void ZglosStop(); //TODO
 
   public:
     /*!
@@ -289,9 +276,7 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      * Wyswietla liczbe symulowanych czasteczek.
      */
     QLCDNumber *lcdLiczbaCzasteczek;
-
-    //TODO
-  //private:
+    
 public:
     /*!
     * \brief Miernik czasu.

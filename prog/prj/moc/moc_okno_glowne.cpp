@@ -22,37 +22,36 @@ static const uint qt_meta_data_OknoGlowne[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x05,
-      32,   11,   11,   11, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      44,   11,   11,   11, 0x0a,
-      64,   11,   11,   11, 0x0a,
-      82,   11,   11,   11, 0x0a,
-     106,   11,   11,   11, 0x0a,
-     131,   11,   11,   11, 0x0a,
-     155,   11,   11,   11, 0x0a,
-     166,   11,   11,   11, 0x0a,
-     176,   11,   11,   11, 0x0a,
+      32,   11,   11,   11, 0x0a,
+      52,   11,   11,   11, 0x0a,
+      70,   11,   11,   11, 0x0a,
+      94,   11,   11,   11, 0x0a,
+     119,   11,   11,   11, 0x0a,
+     145,  143,   11,   11, 0x0a,
+     184,   11,   11,   11, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_OknoGlowne[] = {
     "OknoGlowne\0\0ZglosNapis(QString)\0"
-    "ZglosStop()\0GdyOdpowiedniCzas()\0"
-    "GdyNapis(QString)\0on_playButton_clicked()\0"
+    "GdyOdpowiedniCzas()\0GdyNapis(QString)\0"
+    "on_playButton_clicked()\0"
     "on_pauseButton_clicked()\0"
-    "on_stopButton_clicked()\0GdyPauza()\0"
-    "GdyPlay()\0GdyStop()\0"
+    "on_stopButton_clicked()\0a\0"
+    "on_sliderSzybkoscSym_valueChanged(int)\0"
+    "on_OknoGlowne_resized()\0"
 };
 
 void OknoGlowne::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -62,15 +61,13 @@ void OknoGlowne::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         OknoGlowne *_t = static_cast<OknoGlowne *>(_o);
         switch (_id) {
         case 0: _t->ZglosNapis((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->ZglosStop(); break;
-        case 2: _t->GdyOdpowiedniCzas(); break;
-        case 3: _t->GdyNapis((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: _t->on_playButton_clicked(); break;
-        case 5: _t->on_pauseButton_clicked(); break;
-        case 6: _t->on_stopButton_clicked(); break;
-        case 7: _t->GdyPauza(); break;
-        case 8: _t->GdyPlay(); break;
-        case 9: _t->GdyStop(); break;
+        case 1: _t->GdyOdpowiedniCzas(); break;
+        case 2: _t->GdyNapis((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 3: _t->on_playButton_clicked(); break;
+        case 4: _t->on_pauseButton_clicked(); break;
+        case 5: _t->on_stopButton_clicked(); break;
+        case 6: _t->on_sliderSzybkoscSym_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->on_OknoGlowne_resized(); break;
         default: ;
         }
     }
@@ -108,9 +105,9 @@ int OknoGlowne::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 8;
     }
     return _id;
 }
@@ -120,11 +117,5 @@ void OknoGlowne::ZglosNapis(const QString & _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
-}
-
-// SIGNAL 1
-void OknoGlowne::ZglosStop()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, 0);
 }
 QT_END_MOC_NAMESPACE

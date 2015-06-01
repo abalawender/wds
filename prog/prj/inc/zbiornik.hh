@@ -37,38 +37,6 @@
  * - deklaracje konstruktorow, metod i przeciazen ww. klasy.
  */
 
-// TODO
-//extern bool PLAY;
-
-/*!
- * \brief Dlugosc podstawy zbiornika.
- * 
- * Dlugosc podstawy zbiornika.
- */
-const int PODSTAWA = 200;
-
-/*!
- * \brief Wysokosc zbiornika.
- * 
- * Wysokosc zbiornika.
- */
-const int WYSOKOSC = 200;
-
-/*!
- * \brief Grubosc krawedzi zbiornika.
- * 
- * Grubosc krawedzi zbiornika.
- */
-const int GRUBOSC  = 3;
-
-/*!
- * \brief Interwal dla timeout'ow z timera [ms].
- * 
- * Interwal dla timeout'ow z timera [ms].
- */
-const int ODPOWIEDNI_CZAS = 25; // [ms]
-
-//////////////////////////////////////////////////////////
 /*!
  * \brief Klasa modelująca zbiornik.
  * 
@@ -112,22 +80,6 @@ public:
                       const int x,
                       const int y);
   
-  // TODO wywalic do klasy czasteczka
-  /*!
-   * \brief Metoda rysujaca czasteczke.
-   * 
-   * Rysuje czasteczke o zadanych parametrach
-   * \param[in, out] Rysownik - referencja na obiekt klasy QPainter
-   * \param[in] Promien - promien czasteczki 
-   * \param[in] RGB - kolor czasteczki w formacie RGB
-   * \param[in] x - polozenie czasteczki na osi x 
-   * \param[in] y - polozenie czasteczki na osi y 
-   */                    
-  void RysujCzasteczke( QPainter&    Rysownik, 
-                        const int    Promien,
-                        const Kolor  RGB,
-                        const double x,
-                        const double y);
   
   /*!
    * \brief Metoda rysujaca zbiornik wraz z czasteczkami.
@@ -137,8 +89,99 @@ public:
    */        
   void RysujZbiornikZCzasteczkami( QPainter& Rysownik );
   
-  // TODO doxy
-  bool CzyWewnatrzZbiornika(const int x, const int y) const;
+  /*!
+   * \brief Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika.
+   * 
+   * Sprawdza, czy punkt znajduje sie wewnatrz zbiornika.
+   * \param[in] xy - polozenie punktu
+   * \return    true - jesli znajduje sie wewnatrz zbiornika,
+   * \return    false - jesli nie znajduje sie wewnatrz zbiornika.
+   */
+  bool CzyWewnatrzZbiornika(const Vector& xy) const;
+  
+  /*!
+   * \brief Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika.
+   * 
+   * Sprawdza, czy punkt znajduje sie wewnatrz zbiornika.
+   * \param[in] x - polozenie punktu na osi X,
+   * \param[in] y - polozenie punktu na osi Y,
+   * \return    true - jesli znajduje sie wewnatrz zbiornika,
+   * \return    false - jesli nie znajduje sie wewnatrz zbiornika.
+   */
+  bool CzyWewnatrzZbiornika(const double x, const double y) const;
+  
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _lewa_gora_xy - prywatny atrybut opisujacy wektor polozenia lewego gornego punktu zbiornika
+   */
+  Vector lewa_gora_xy() const { return _lewa_gora_xy; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _podstawa - referencja na prywatny atrybut opisujacy wektor polozenia lewego gornego punktu zbiornika
+   */
+  Vector& lewa_gora_xy() { return _lewa_gora_xy; };
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _podstawa - prywatny atrybut opisujacy dlugosc podstaw
+   */
+  double podstawa() const { return _podstawa; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _podstawa - referencja na prywatny atrybut opisujacy dlugosc podstawy
+   */
+  double& podstawa() { return _podstawa; };
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _podstawa - prywatny atrybut opisujacy wysokosc
+   */
+  double wysokosc() const { return _wysokosc; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _podstawa - referencja na prywatny atrybut opisujacy wysokosc
+   */
+  double& wysokosc() { return _wysokosc; };
+  
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _czas_sym - prywatny atrybut opisujacy pomiar czasu
+   */
+  double czas_sym() const { return _czas_sym; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _czas_sym - referencja na prywatny atrybut opisujacy pomiar czasu
+   */
+  double& czas_sym() { return _czas_sym; };
+  
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return odpowiedni_czas - prywatny atrybut opisujacy czas trwania symulacji
+   */
+  int odpowiedni_czas() const { return _odpowiedni_czas; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return odpowiedni_czas - referencja na prywatny atrybut opisujacy czas trwania symulacji
+   */
+  int& odpowiedni_czas() { return _odpowiedni_czas; };
   
 public slots:
   /*!
@@ -157,9 +200,20 @@ signals:
    */
   void ZglosNapis(const QString &);
   
-  //TODO
+  /*!
+   * \brief Sygnal zglaszajacy liczbe czasteczek.
+   * 
+   * Sygnal zglaszajacy liczbe czasteczek do odpowiedniego slotu.
+   * \param[in] _t1 - liczba czasteczek do zgloszenia
+   */
   void ZglosLiczbeCzasteczek(const int);
-  //TODO
+  
+  /*!
+   * \brief Sygnal zglaszajacy czas trwania symulacji.
+   * 
+   * Sygnal zglaszajacy czas trwania symulacji do odpowiedniego slotu.
+   * \param[in] _t1 - czas do zgloszenia
+   */
   void ZglosCzasSymulacji(const double);
   
 public:
@@ -170,21 +224,45 @@ public:
    */
   std::list<Czasteczka> Czasteczki;
   
-private:
   /*!
-   * \brief Miernik czasu.
+   * \brief Miernik czasu dla zbiornika.
    * 
-   * Miernik czasu.
+   * Miernik czasu zbiornika. Sluzy do odswiezania ekranu.
    */
   QTimer _Stoper; 
+
+private:
+  /*!
+   * \brief Wektor polozenia lewego gornego punktu zbiornika.
+   * 
+   * Wektor polozenia lewego gornego punktu zbiornika.
+   */
+  Vector _lewa_gora_xy;
+  /*!
+   * \brief Dlugosc podstawy zbiornika.
+   * 
+   * Dlugosc podstawy zbiornika.
+   */
+  double _podstawa;
+  /*!
+   * \brief Wysokosc zbiornika.
+   * 
+   * Wysokosc zbiornika.
+   */
+  double _wysokosc;
   
-  //TODO doxy
-  double lewa_gora_x;
-  double lewa_gora_y;
-  double podstawa;
-  double wysokosc;
-  
-  double czas_sym;
+  /*!
+   * \brief Miernik czasu dla zbiornika.
+   * 
+   * Miernik czasu zbiornika. Sluzy do mierzenia i wyswietlania czasu.
+   */
+  double _czas_sym;
+  /*!
+   * \brief Interwal dla timeout'ow z timera [ms].
+   * 
+   * Interwal dla timeout'ow z timera [ms].
+   */
+  int _odpowiedni_czas; // [ms]
 }; 
 
 #endif

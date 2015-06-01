@@ -13,26 +13,31 @@
  * - definicje konstruktorow, metod i przeciazen klasy Zbiornik.
  */
 
-int STAN = ePLAY;
+/*!
+ * \brief Poczatkowy stan symulacji.
+ * 
+ * Poczatkowy stan symulacji to Play/Pauza/Stop.
+ */
+int STAN = eSTOP;
 
-Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic)//, lewa_gora_x(width()/2-PODSTAWA/2), lewa_gora_y(height()/2-WYSOKOSC/2)
+Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic), _odpowiedni_czas(25)//, lewa_gora_x(width()/2-PODSTAWA/2), lewa_gora_y(height()/2-WYSOKOSC/2)
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
   connect(&_Stoper,SIGNAL(timeout()),
           this,SLOT(GdyOdpowiedniCzas()));
-  _Stoper.setInterval(ODPOWIEDNI_CZAS);
+  _Stoper.setInterval(_odpowiedni_czas);
   _Stoper.setSingleShot(false);
   _Stoper.start();
   
-  czas_sym = 0.0;
+  _czas_sym = 0.0;
   
   //TODO przekazywac przez parametry
   // TODO zmienic to!
   //lewa_gora_x = width()/2-PODSTAWA/2;
   //lewa_gora_y = height()/2-WYSOKOSC/2;
-  podstawa = PODSTAWA;
-  wysokosc = WYSOKOSC;
+  _podstawa = PODSTAWA;
+  _wysokosc = WYSOKOSC;
   
   //QMetaObject::connectSlotsByName(this);
 }
@@ -46,8 +51,8 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
 {
   //std::cout << x << " " << y << std::endl;
   // TODO nie tutaj!
-  lewa_gora_x = width()/2-PODSTAWA/2;
-  lewa_gora_y = height()/2-WYSOKOSC/2;
+  lewa_gora_xy().getX() = width()/2-PODSTAWA/2;
+  lewa_gora_xy().getY() = height()/2-WYSOKOSC/2;
   
   QPen Piorko(Rysownik.pen());
   Piorko.setWidth(Grubosc);
@@ -56,21 +61,6 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
   Rysownik.drawLine(x, y, x, y+Wysokosc); // Lewa
   Rysownik.drawLine(x+Podstawa, y, x+Podstawa, y+Wysokosc); // Prawa
   Rysownik.drawLine(x, y+Wysokosc, x+Podstawa, y+Wysokosc); // Podstawa
-  }
-
-
-void Zbiornik::RysujCzasteczke( QPainter&    Rysownik, 
-                                  const int    Promien,
-                                  const Kolor  RGB, 
-                                  const double x,
-                                  const double y)
-{
-  QPen Piorko(Rysownik.pen());
-  
-  Rysownik.setPen(QColor(RGB.r(), RGB.g(), RGB.b()));
-  
-  // Draws the ellipse defined by the rectangle beginning at (x, y) with the given width and height.
-  Rysownik.drawEllipse(x+Promien/2, y+Promien/2, Promien/2, Promien/2); // Center in [x, y].  
 }
 
 void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
@@ -78,61 +68,66 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   QTime Czas;
   Czas.start();
   RysujZbiornik(Rysownik, PODSTAWA, WYSOKOSC, GRUBOSC, width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2);
-  //RysujCzasteczke(Rysownik, PROMIEN, Kolor(R, G, B),
-  //                rand()%width(), rand()%height());
+
+  for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
+       it != Czasteczki.end(); it++)
+  {
+    //std::cout << (*it).x() << " " << (*it).y() << " " << lewa_gora_x << " " << lewa_gora_y << std::endl;
+    if ( CzyWewnatrzZbiornika( (*it).xy().getX()+(*it).Promien(), 
+                               (*it).xy().getY()+(*it).Promien() ))
+    {
+      (*it).RysujCzasteczke(Rysownik,(*it).Promien(), (*it).RGB(), (*it).xy().getX(), (*it).xy().getY());
+    }
+  }
 }
 
-bool Zbiornik::CzyWewnatrzZbiornika(const int x, const int y) const 
+bool Zbiornik::CzyWewnatrzZbiornika(const Vector& xy) const 
 {
-  if ( ((x>lewa_gora_x) && (x<lewa_gora_x+podstawa)) && 
-       ((y>lewa_gora_y) && (y<lewa_gora_y+wysokosc)) ) {
+  if ( ((xy.getX()>lewa_gora_xy().getX()) && (xy.getX()<lewa_gora_xy().getX()+podstawa())) && 
+       ((xy.getY()>lewa_gora_xy().getY()) && (xy.getY()<lewa_gora_xy().getY()+wysokosc())) ) {
     return true;
   }
   return false;
 }
 
+bool Zbiornik::CzyWewnatrzZbiornika(const double x, const double y) const 
+{
+  if ( ((x>lewa_gora_xy().getX()) && (x<lewa_gora_xy().getX()+podstawa())) && 
+       ((y>lewa_gora_xy().getY()) && (y<lewa_gora_xy().getY()+wysokosc())) ) {
+    return true;
+    }
+    return false;
+}
+
 void Zbiornik::paintEvent( QPaintEvent * )
 {
   QPainter Rysownik(this);
-  
-  //std::cout << "***paintEvent" << std::endl;
   RysujZbiornikZCzasteczkami(Rysownik);
-  
-  // TODO funkcja rysuj czasteczki
-  for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
-                                      it != Czasteczki.end(); it++)
-  {
-    //std::cout << (*it).x() << " " << (*it).y() << " " << lewa_gora_x << " " << lewa_gora_y << std::endl;
-    if (CzyWewnatrzZbiornika((*it).x()+((*it).Promien())/2, 
-                             (*it).y()+((*it).Promien())/2)) {
-      RysujCzasteczke(Rysownik,(*it).Promien(), (*it).RGB(), (*it).x(), (*it).y());
-    }
-  }
 }
 
 void Zbiornik::GdyOdpowiedniCzas()
 {
-  czas_sym += ODPOWIEDNI_CZAS*1.0/1000;
   if(STAN == ePLAY)
   {
+    _czas_sym += odpowiedni_czas()*1.0/1000;
     update(); // -> paintEvent
-  
+    
     // TODO SPH
     for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
         it != Czasteczki.end(); it++)
         {
-          (*it).x() += rand()%7-3;
-          (*it).y() += rand()%7-3;
+          (*it).xy().getX() += rand()%7-3;
+          (*it).xy().getY() += rand()%7-3;
         }
         
         // TODO przesunac uklad wspolrzednych
     Czasteczki.push_back(Czasteczka(
-                                    1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2, 
-                                    2*WYSOKOSC-rand()%(WYSOKOSC/2),
+                                    Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2, 
+                                           2*WYSOKOSC-rand()%(WYSOKOSC/2)),
                                     PROMIEN, 
                                     Kolor(rand()%255, rand()%255, rand()%255)));
   }
-  //TODO
+
   emit ZglosLiczbeCzasteczek(Czasteczki.size());
-  emit ZglosCzasSymulacji(czas_sym);
+  emit ZglosCzasSymulacji(czas_sym());
 }

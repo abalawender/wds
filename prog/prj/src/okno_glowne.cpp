@@ -13,30 +13,28 @@
  * - definicje konstruktorow, metod i przeciazen klasy OknoGlowne.
  */
 
-//extern bool PLAY;
-
 OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 {
-  // Ui
-  // TODO
-  //setupUi(this);
-
   /* Okno glowne */
   setObjectName("OknoGlowne");
   resize(3*PODSTAWA, 3*WYSOKOSC);
+  setMinimumSize(QSize(PODSTAWA*2.5, WYSOKOSC*2.5));
     
   /* Zbiornik */
   wZbiornik = new Zbiornik(this);
   wZbiornik->setObjectName("Zbiornik");
   setCentralWidget(wZbiornik);
   
+  /* Stoper */
+  _Stoper.setInterval(wZbiornik->odpowiedni_czas());
+  _Stoper.setSingleShot(false);
+  _Stoper.start();
+  
   /* Menu Bar*/
   menuBar = new QMenuBar(this);
   action_Save = new QAction(tr("&Save"), this);
   action_Exit = new QAction(tr("Exit"), this);
   action_Exit->setObjectName("action_Exit"); // on_action
-  connect(action_Exit, SIGNAL(triggered()),
-          QApplication::instance(), SLOT(quit())); // TODO
   
   menuBar->setGeometry(QRect(0, 0, 516, 25));
   
@@ -55,15 +53,6 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   /* Status Bar */
   statusBar = new QStatusBar(this);
   setStatusBar(statusBar);
-
-  connect(&_Stoper, SIGNAL(timeout()),
-          this, SLOT(GdyOdpowiedniCzas()));
-  _Stoper.setInterval(ODPOWIEDNI_CZAS);
-  _Stoper.setSingleShot(false);
-  _Stoper.start();
-  
-  connect(this, SIGNAL(ZglosNapis(const QString &)),
-          this, SLOT(GdyNapis(const QString &)));
   
   /* Tool Bar */
   toolBar = new QToolBar(this);
@@ -85,29 +74,25 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   horizontalLayout->setContentsMargins(0, 0, 0, 0);
   
   /* Przyciski */
-  //TODO Zmienic na obrazki?
-  playButton = new QPushButton(tr("Play"), horizontalLayoutWidget);
+  playButton = new QPushButton(horizontalLayoutWidget);
   playButton->setObjectName("playButton"); // on_action
-  pauseButton = new QPushButton(tr("Pause"), horizontalLayoutWidget);
+  pauseButton = new QPushButton(horizontalLayoutWidget);
   pauseButton->setObjectName("pauseButton"); // on_action
-  stopButton = new QPushButton(tr("Stop"), horizontalLayoutWidget);
+  stopButton = new QPushButton(horizontalLayoutWidget);
   stopButton->setObjectName("stopButton"); // on_action
-  // 
-  //Mamy on_action
-  /* 
-  connect(playButton,SIGNAL(pressed()),
-          this,SLOT(GdyPlay()));
-  connect(pauseButton,SIGNAL(pressed()),
-          this,SLOT(GdyPauza()));
-  connect(stopButton,SIGNAL(pressed()),
-          this,SLOT(GdyStop()));
-          */
+  
+  QIcon icon;
+  icon.addFile(QString::fromUtf8("../../prog/prj/res/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
+  stopButton->setIcon(icon);
+  icon.addFile(QString::fromUtf8("../../prog/prj/res/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
+  pauseButton->setIcon(icon);
+  icon.addFile(QString::fromUtf8("../../prog/prj/res/play.png"), QSize(), QIcon::Normal, QIcon::Off);
+  playButton->setIcon(icon);
   
   horizontalLayout->addWidget(playButton);
   horizontalLayout->addWidget(pauseButton);
   horizontalLayout->addWidget(stopButton);
   
-  // TODO
   /* Czas symulacji */
   labelCzasSym = new QLabel(tr("Czas symulacji [s]"), this);
   labelCzasSym->setObjectName("labelCzasSym");
@@ -116,26 +101,15 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   lcdCzasSym = new QLCDNumber(3, this); 
   lcdCzasSym->setObjectName("lcdCzasSym");
   lcdCzasSym->setGeometry(QRect(200, 20, 64, 25));
-  lcdCzasSym->display(17);
-  
-  //TODO
-  //connect(Zbiornik, SIGNAL(valueChanged(int)),
-  //        lcdSzybkoscSym, SLOT(display(int)));
-  
   
   /* Liczba czasteczek */
   labelLiczbaCzasteczek = new QLabel(tr("Liczba czasteczek"), this);
   labelLiczbaCzasteczek->setObjectName("labelLiczbaCzasteczek");
   labelLiczbaCzasteczek->setGeometry(QRect(20, 20+30, 120, 25));
   
-  lcdLiczbaCzasteczek = new QLCDNumber(3, this);
+  lcdLiczbaCzasteczek = new QLCDNumber(4, this);
   lcdLiczbaCzasteczek->setObjectName(QString::fromUtf8("lcdLiczbaCzasteczek"));
   lcdLiczbaCzasteczek->setGeometry(QRect(200, 20+30, 64, 25));
-  lcdLiczbaCzasteczek->display(200);
-  
-  //TODO
-  //connect(Zbiornik, SIGNAL(valueChanged(int)),
-  //        lcdSzybkoscSym, SLOT(display(int)));
   
   /* Szybkosc symulacji */
   labelSzybkoscSym = new QLabel(tr("Szybkosc symulacji [Hz]"), this);
@@ -145,63 +119,62 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   lcdSzybkoscSym = new QLCDNumber(3, this); // [Hz] 1/ODPOWIEDNI_CZAS
   lcdSzybkoscSym->setObjectName("lcdSzybkoscSym");
   lcdSzybkoscSym->setGeometry(QRect(200, 20+60, 64, 25));
+  lcdSzybkoscSym->display(25);
   
   sliderSzybkoscSym = new QSlider(Qt::Horizontal, this);
   sliderSzybkoscSym->setObjectName("sliderSzybkoscSym");
   sliderSzybkoscSym->setGeometry(320, 80, 160, 25);
-  sliderSzybkoscSym->setMinimum(0);
-  sliderSzybkoscSym->setMaximum(50);
+  sliderSzybkoscSym->setMinimum(1); // [Hz]
+  sliderSzybkoscSym->setMaximum(40);
+  sliderSzybkoscSym->setValue(25);
   
-  connect(sliderSzybkoscSym, SIGNAL(valueChanged(int)),
-          lcdSzybkoscSym, SLOT(display(int)));
+  /* Spacer */
+  //verticalSpacer = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
+  //verticalSpacer->setObjectName("verticalSpacer");
+  //addItem(verticalSpacer);
     
-  /* */
+  /* connect */
   connect(wZbiornik, SIGNAL(ZglosLiczbeCzasteczek(const int)),
           lcdLiczbaCzasteczek, SLOT(display(int)));
   connect(wZbiornik, SIGNAL(ZglosCzasSymulacji(const double)),
           lcdCzasSym, SLOT(display(double)));
+  connect(&_Stoper, SIGNAL(timeout()),
+          this, SLOT(GdyOdpowiedniCzas()));
+  connect(this, SIGNAL(ZglosNapis(const QString &)),
+          this, SLOT(GdyNapis(const QString &)));
+  connect(action_Exit, SIGNAL(triggered()),
+          QApplication::instance(), SLOT(quit())); 
+  connect(sliderSzybkoscSym, SIGNAL(valueChanged(int)),
+          lcdSzybkoscSym, SLOT(display(int)));
   
   QMetaObject::connectSlotsByName(this);
 }
 
-void OknoGlowne::GdyPlay()
-{
-  STAN = ePLAY;
-}
-
-void OknoGlowne::GdyPauza()
-{
-  STAN = ePAUSE;
-}
-
-void OknoGlowne::GdyStop()
-{
-  STAN = eSTOP;
+void OknoGlowne::on_OknoGlowne_resized() {
+  horizontalLayoutWidget->move(width()/2 - 270/2, height()-100);
 }
 
 void OknoGlowne::on_playButton_clicked() { 
-  if (STAN == eSTOP) {
-    //TODO to jest slot!!!
-    //_Stoper.start(0);
-    std::cout << "->" << wZbiornik->Czasteczki.size() << std::endl;
-    wZbiornik->Czasteczki.clear(); // Start od nowa
-    std::cout << "<-" << wZbiornik->Czasteczki.size() << std::endl;
+  if (STAN == eSTOP) { // Start od nowa
+    wZbiornik->czas_sym() = 0.0;
+    wZbiornik->Czasteczki.clear(); 
   }
   else if (STAN == ePAUSE) {
-    //_Stoper.start();
   }
   STAN = ePLAY;
 }
 
 void OknoGlowne::on_pauseButton_clicked() { 
   STAN = ePAUSE; 
-  //_Stoper.stop();
 }
 
 void OknoGlowne::on_stopButton_clicked() { 
   STAN = eSTOP; 
-  //wZbiornik->Czasteczki.clear(); // Wyczysczenie
-  //_Stoper.stop();
+}
+
+void OknoGlowne::on_sliderSzybkoscSym_valueChanged(int a) {
+  wZbiornik->odpowiedni_czas() = 1000.0/a; // Hz -> ms 
+  wZbiornik->_Stoper.setInterval(wZbiornik->odpowiedni_czas());
 }
 
 void OknoGlowne::GdyOdpowiedniCzas()

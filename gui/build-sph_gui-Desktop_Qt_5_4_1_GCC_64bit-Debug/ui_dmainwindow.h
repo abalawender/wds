@@ -15,10 +15,15 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -28,12 +33,25 @@ QT_BEGIN_NAMESPACE
 class Ui_DMainWindow
 {
 public:
+    QAction *action_Save;
+    QAction *action_Exit;
+    QAction *actionExit;
+    QAction *actionPlay;
     QWidget *centralWidget;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *playButton;
+    QSpacerItem *verticalSpacer;
     QPushButton *pauseButton;
     QPushButton *stopButton;
+    QSlider *sliderSzybkoscSym;
+    QLCDNumber *lcdSzybkoscSym;
+    QLineEdit *lineSzybkoscSym;
+    QLineEdit *lineCzasSym;
+    QLCDNumber *lcdCzasSym;
+    QLineEdit *lineLiczbaCzasteczek;
+    QLCDNumber *lcdLiczbaCzasteczek;
+    QLabel *label;
     QMenuBar *menuBar;
     QMenu *menu_File;
     QMenu *menu_Edit;
@@ -46,12 +64,29 @@ public:
     {
         if (DMainWindow->objectName().isEmpty())
             DMainWindow->setObjectName(QStringLiteral("DMainWindow"));
+        DMainWindow->setEnabled(true);
         DMainWindow->resize(516, 341);
+        action_Save = new QAction(DMainWindow);
+        action_Save->setObjectName(QStringLiteral("action_Save"));
+        action_Exit = new QAction(DMainWindow);
+        action_Exit->setObjectName(QStringLiteral("action_Exit"));
+        actionExit = new QAction(DMainWindow);
+        actionExit->setObjectName(QStringLiteral("actionExit"));
+        actionPlay = new QAction(DMainWindow);
+        actionPlay->setObjectName(QStringLiteral("actionPlay"));
         centralWidget = new QWidget(DMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        centralWidget->setEnabled(true);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(centralWidget->sizePolicy().hasHeightForWidth());
+        centralWidget->setSizePolicy(sizePolicy);
+        centralWidget->setMinimumSize(QSize(516, 0));
+        centralWidget->setLayoutDirection(Qt::LeftToRight);
         horizontalLayoutWidget = new QWidget(centralWidget);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(120, 240, 269, 31));
+        horizontalLayoutWidget->setGeometry(QRect(120, 240, 295, 31));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -61,6 +96,10 @@ public:
         playButton->setObjectName(QStringLiteral("playButton"));
 
         horizontalLayout->addWidget(playButton);
+
+        verticalSpacer = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout->addItem(verticalSpacer);
 
         pauseButton = new QPushButton(horizontalLayoutWidget);
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
@@ -72,6 +111,31 @@ public:
 
         horizontalLayout->addWidget(stopButton);
 
+        sliderSzybkoscSym = new QSlider(centralWidget);
+        sliderSzybkoscSym->setObjectName(QStringLiteral("sliderSzybkoscSym"));
+        sliderSzybkoscSym->setGeometry(QRect(320, 80, 160, 29));
+        sliderSzybkoscSym->setOrientation(Qt::Horizontal);
+        lcdSzybkoscSym = new QLCDNumber(centralWidget);
+        lcdSzybkoscSym->setObjectName(QStringLiteral("lcdSzybkoscSym"));
+        lcdSzybkoscSym->setGeometry(QRect(250, 80, 64, 23));
+        lineSzybkoscSym = new QLineEdit(centralWidget);
+        lineSzybkoscSym->setObjectName(QStringLiteral("lineSzybkoscSym"));
+        lineSzybkoscSym->setGeometry(QRect(120, 80, 113, 27));
+        lineCzasSym = new QLineEdit(centralWidget);
+        lineCzasSym->setObjectName(QStringLiteral("lineCzasSym"));
+        lineCzasSym->setGeometry(QRect(120, 120, 113, 27));
+        lcdCzasSym = new QLCDNumber(centralWidget);
+        lcdCzasSym->setObjectName(QStringLiteral("lcdCzasSym"));
+        lcdCzasSym->setGeometry(QRect(250, 120, 64, 23));
+        lineLiczbaCzasteczek = new QLineEdit(centralWidget);
+        lineLiczbaCzasteczek->setObjectName(QStringLiteral("lineLiczbaCzasteczek"));
+        lineLiczbaCzasteczek->setGeometry(QRect(120, 150, 113, 27));
+        lcdLiczbaCzasteczek = new QLCDNumber(centralWidget);
+        lcdLiczbaCzasteczek->setObjectName(QStringLiteral("lcdLiczbaCzasteczek"));
+        lcdLiczbaCzasteczek->setGeometry(QRect(250, 150, 64, 23));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(40, 80, 67, 17));
         DMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -96,6 +160,8 @@ public:
         menuBar->addAction(menu_File->menuAction());
         menuBar->addAction(menu_Edit->menuAction());
         menuBar->addAction(menu_Help->menuAction());
+        menu_File->addAction(action_Save);
+        menu_File->addAction(actionExit);
 
         retranslateUi(DMainWindow);
 
@@ -105,9 +171,17 @@ public:
     void retranslateUi(QMainWindow *DMainWindow)
     {
         DMainWindow->setWindowTitle(QApplication::translate("DMainWindow", "DMainWindow", 0));
+        action_Save->setText(QApplication::translate("DMainWindow", "&Save", 0));
+        action_Exit->setText(QApplication::translate("DMainWindow", "&Exit", 0));
+        actionExit->setText(QApplication::translate("DMainWindow", "Exit", 0));
+        actionPlay->setText(QApplication::translate("DMainWindow", "Play", 0));
         playButton->setText(QApplication::translate("DMainWindow", "Play", 0));
         pauseButton->setText(QApplication::translate("DMainWindow", "Pause", 0));
         stopButton->setText(QApplication::translate("DMainWindow", "Stop", 0));
+        lineSzybkoscSym->setText(QApplication::translate("DMainWindow", "Szybkosc symulacji", 0));
+        lineCzasSym->setText(QApplication::translate("DMainWindow", "Czas symulacji", 0));
+        lineLiczbaCzasteczek->setText(QApplication::translate("DMainWindow", "Liczba cz\304\205steczek", 0));
+        label->setText(QApplication::translate("DMainWindow", "TextLabel", 0));
         menu_File->setTitle(QApplication::translate("DMainWindow", "&File", 0));
         menu_Edit->setTitle(QApplication::translate("DMainWindow", "&Edit", 0));
         menu_Help->setTitle(QApplication::translate("DMainWindow", "&Help", 0));
