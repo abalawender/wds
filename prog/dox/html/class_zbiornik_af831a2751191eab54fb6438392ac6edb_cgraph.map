@@ -1,3 +1,10 @@
 <map id="Zbiornik::RysujZbiornikZCzasteczkami" name="Zbiornik::RysujZbiornikZCzasteczkami">
-<area shape="rect" id="node2" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="312,5,475,32"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="330,5,486,32"/>
+<area shape="rect" id="node3" href="$class_vector.html#a56cbc43a18559f85f4ce7278e98f9aad" title="zwraga pierwszą współrzędną wektora " alt="" coords="361,56,455,83"/>
+<area shape="rect" id="node4" href="$class_vector.html#a4ad8e8a5fb48ce193177af11340831b6" title="pobiera drugą współrzędną wektora " alt="" coords="361,107,455,133"/>
+<area shape="rect" id="node5" href="$class_zbiornik.html#a60fd88e85e8696cfec92cd24609e7410" title="Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika. " alt="" coords="302,157,514,184"/>
+<area shape="rect" id="node6" href="$class_zbiornik.html#a811829ed13289d4fad56ae5fcd92bec8" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="563,81,719,108"/>
+<area shape="rect" id="node7" href="$class_zbiornik.html#a34b0e660d8d6c4d1f45f06f5063b9788" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="580,132,703,159"/>
+<area shape="rect" id="node8" href="$class_zbiornik.html#ac64f411a313024c52dbc1c18897df573" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="575,183,707,209"/>
+<area shape="rect" id="node9" href="$class_zbiornik.html#a72ab0eb9f3562de0ea90e176f515be42" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="574,233,709,260"/>
 </map>

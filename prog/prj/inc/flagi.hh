@@ -15,6 +15,7 @@
  * \brief Stan symulacji.
  * 
  * Stan symulacji to Play/Pause/Stop. Inicjalizacja w pliku zbiornik.cpp.
+ * Wybor poczatkowego stanu w konstruktorze okienka.
  */
 extern int STAN;
 
@@ -33,7 +34,7 @@ enum {eSTOP,  /* Symulacja zatrzymana. */
  * 
  * Promien czasteczki.
  */
-const int PROMIEN  = 10;
+const int PROMIEN  = 5;
 
 /*!
  * \brief Dlugosc podstawy zbiornika.
@@ -53,7 +54,8 @@ const int WYSOKOSC = 200;
  * \brief Grubosc krawedzi zbiornika.
  * 
  * Grubosc krawedzi zbiornika.
+ * Grubosc jest symetryczna wzgledem osi.
  */
-const int GRUBOSC  = 3;
+const int GRUBOSC  = 10;
 
 #endif

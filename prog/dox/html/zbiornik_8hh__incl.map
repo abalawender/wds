@@ -1,5 +1,6 @@
 <map id="zbiornik.hh" name="zbiornik.hh">
-<area shape="rect" id="node19" href="$flagi_8hh.html" title="flagi.hh" alt="" coords="1851,80,1918,107"/>
-<area shape="rect" id="node20" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1943,80,2053,107"/>
-<area shape="rect" id="node21" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1962,155,2034,181"/>
+<area shape="rect" id="node19" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="1729,80,1793,107"/>
+<area shape="rect" id="node20" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="1817,80,1924,107"/>
+<area shape="rect" id="node21" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="1789,155,1856,181"/>
+<area shape="rect" id="node22" href="$vector_8hh.html" title="vector.hh" alt="" coords="1881,155,1956,181"/>
 </map>

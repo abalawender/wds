@@ -22,5 +22,5 @@ void Czasteczka::RysujCzasteczke( QPainter&    Rysownik,
   QPen Piorko(Rysownik.pen());
   Rysownik.setPen(QColor(RGB.r(), RGB.g(), RGB.b()));
   // Draws the ellipse defined by the rectangle beginning at (x, y) with the given width and height.
-  Rysownik.drawEllipse(x+Promien/2, y+Promien/2, Promien/2, Promien/2); // Center in [x, y].  
+  Rysownik.drawEllipse(x, y, 2*Promien, 2*Promien);  
 }

@@ -47,12 +47,17 @@ class Zbiornik: public QWidget
   Q_OBJECT
 public:
   /*!
-   * \brief Konstruktor.
+   * \brief Konstruktor parametryczny.
    * 
    * Konstruktor parametryczny.
    * \param[in, out] wRodzic - wskaznik na rodzica 
+   * \param[in] lewa_gora_xy - polozenie lewego gornego rogu zbiornika
+   * \param[in] podstawa - dlugosc podstawy zbiornika
+   * \param[in] wysokosc - wysokosc zbiornika
+   * \param[in] grubosc - grubosc sciany zbiornika
    */
-  Zbiornik(QWidget *wRodzic = NULL/*nullptr*/); 
+  Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy, 
+           const double podstawa, const double wysokosc, const double grubosc);
   
   /*!
    * \brief Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie.
@@ -93,6 +98,17 @@ public:
    * \brief Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika.
    * 
    * Sprawdza, czy punkt znajduje sie wewnatrz zbiornika.
+   * \param[in] x - polozenie punktu na osi X,
+   * \param[in] y - polozenie punktu na osi Y,
+   * \return    true - jesli znajduje sie wewnatrz zbiornika,
+   * \return    false - jesli nie znajduje sie wewnatrz zbiornika.
+   */
+  bool CzyWewnatrzZbiornika(const double x, const double y) const;
+  
+  /*!
+   * \brief Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika.
+   * 
+   * Sprawdza, czy punkt znajduje sie wewnatrz zbiornika.
    * \param[in] xy - polozenie punktu
    * \return    true - jesli znajduje sie wewnatrz zbiornika,
    * \return    false - jesli nie znajduje sie wewnatrz zbiornika.
@@ -100,15 +116,14 @@ public:
   bool CzyWewnatrzZbiornika(const Vector& xy) const;
   
   /*!
-   * \brief Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika.
+   * \brief Metoda sprawdzająca czy czasteczka znajduje sie wewnatrz zbiornika.
    * 
-   * Sprawdza, czy punkt znajduje sie wewnatrz zbiornika.
-   * \param[in] x - polozenie punktu na osi X,
-   * \param[in] y - polozenie punktu na osi Y,
+   * Sprawdza, czy czasteczka znajduje sie wewnatrz zbiornika.
+   * \param[in] cz - czasteczka do sprawdzenia
    * \return    true - jesli znajduje sie wewnatrz zbiornika,
    * \return    false - jesli nie znajduje sie wewnatrz zbiornika.
    */
-  bool CzyWewnatrzZbiornika(const double x, const double y) const;
+  bool CzyWewnatrzZbiornika(const Czasteczka& cz) const; 
   
   /*!
    * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
@@ -152,6 +167,20 @@ public:
    * \return _podstawa - referencja na prywatny atrybut opisujacy wysokosc
    */
   double& wysokosc() { return _wysokosc; };
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _grubosc - prywatny atrybut opisujacy grubosc sciany
+   */
+  double grubosc() const { return _grubosc; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _grubosc - referencja na prywatny atrybut opisujacy grubosc sciany
+   */
+  double& grubosc() { return _grubosc; };
   
   /*!
    * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
@@ -250,6 +279,12 @@ private:
    * Wysokosc zbiornika.
    */
   double _wysokosc;
+  /*!
+   * \brief Grubosc sciany zbiornika.
+   * 
+   * Grubosc sciany zbiornika.
+   */
+  double _grubosc;
   
   /*!
    * \brief Miernik czasu dla zbiornika.

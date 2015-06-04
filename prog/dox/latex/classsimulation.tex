@@ -1,0 +1,571 @@
+\hypertarget{classsimulation}{\section{Dokumentacja klasy simulation}
+\label{classsimulation}\index{simulation@{simulation}}
+}
+
+
+Diagram współpracy dla simulation\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classsimulation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool(simulation\-::$\ast$ \hyperlink{classsimulation_ab63cd8ab861eb5f0096982628dca37dc}{indicate\-\_\-fun\-\_\-t} )(float, float)
+\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{simulation} (const unsigned \&\-\_\-n, \hyperlink{structparams__t}{params\-\_\-t} $\ast$\-\_\-param)
+\begin{DoxyCompactList}\small\item\em konstruktor klasy \end{DoxyCompactList}\item 
+void \hyperlink{classsimulation_a311b1405c73090e5f82891e35ddee975}{compute\-\_\-density} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\-\_\-p)
+\begin{DoxyCompactList}\small\item\em funkcja \end{DoxyCompactList}\item 
+void \hyperlink{classsimulation_a2ef9f4e969452551babc02a311f4442c}{compute\-\_\-accel} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params})
+\item 
+void \hyperlink{classsimulation_a2668bf704b28e3c0abe405ab12bd10b7}{damp\-\_\-reflect\-\_\-x} (float \-\_\-barrier, unsigned i)
+\item 
+void \hyperlink{classsimulation_a1322c3c317601efbe751747f19f5cafa}{damp\-\_\-reflect\-\_\-y} (float \-\_\-barrier, unsigned i)
+\item 
+void \hyperlink{classsimulation_a6f0b34625a4ef21e7b9c7c960bb91c4b}{reflect\-\_\-bc} ()
+\item 
+void \hyperlink{classsimulation_af9dbe76734d2efdbddc7da64eeb91968}{leapfrog\-\_\-start} (float dt)
+\item 
+void \hyperlink{classsimulation_a8acf4a82697573cb4ae6b1be6a8d30a7}{leapfrog\-\_\-step} (float dt)
+\item 
+void \hyperlink{classsimulation_a6997cb4eeae3330e93916cb05fea5efe}{check\-\_\-state} ()
+\item 
+bool \hyperlink{classsimulation_a98d5516416b67721c545ae7b88d74114}{box\-\_\-indicator} (float x, float y)
+\item 
+\hyperlink{classsimulation}{simulation} \& \hyperlink{classsimulation_a66aa4b9fae7d660028ed8972ebf20a91}{place\-\_\-particles} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}, \hyperlink{classsimulation_ab63cd8ab861eb5f0096982628dca37dc}{indicate\-\_\-fun\-\_\-t} indicate\-\_\-fun)
+\item 
+void \hyperlink{classsimulation_a2e12616e089dd7f9742c25933bf630ef}{init} ()
+\item 
+void \hyperlink{classsimulation_a6d1112d250e89120ac05cf9f42f7d8d7}{go} ()
+\item 
+const unsigned \& \hyperlink{classsimulation_abe09252527aa58fbec8144063be3e950}{get\-N} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{n}
+\item 
+float $\ast$ \hyperlink{classsimulation_a44081d4edd92e17a3e1067b976031a00}{rho}
+\begin{DoxyCompactList}\small\item\em Liczba cząstek. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{p}
+\begin{DoxyCompactList}\small\item\em Gęstości. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_ae6da1f15728f49be7b0793700866ede9}{vh}
+\begin{DoxyCompactList}\small\item\em Pozycje. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{v}
+\begin{DoxyCompactList}\small\item\em Prędkości (half step) \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{a}
+\begin{DoxyCompactList}\small\item\em Prędkości (full step) \end{DoxyCompactList}\item 
+\hyperlink{structparams__t}{params\-\_\-t} $\ast$ \hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}
+\begin{DoxyCompactList}\small\item\em Przyspieszenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{operator$<$$<$} (std\-::ostream \&\-\_\-os, const \hyperlink{classsimulation}{simulation} \&\-\_\-s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 162 pliku simulation.\-cpp.
+
+
+
+\subsection{Dokumentacja składowych definicji typu}
+\hypertarget{classsimulation_ab63cd8ab861eb5f0096982628dca37dc}{\index{simulation@{simulation}!indicate\-\_\-fun\-\_\-t@{indicate\-\_\-fun\-\_\-t}}
+\index{indicate\-\_\-fun\-\_\-t@{indicate\-\_\-fun\-\_\-t}!simulation@{simulation}}
+\subsubsection[{indicate\-\_\-fun\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool(simulation\-::$\ast$ simulation\-::indicate\-\_\-fun\-\_\-t)(float, float)}}\label{classsimulation_ab63cd8ab861eb5f0096982628dca37dc}
+
+
+Definicja w linii 314 pliku simulation.\-cpp.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{\index{simulation@{simulation}!simulation@{simulation}}
+\index{simulation@{simulation}!simulation@{simulation}}
+\subsubsection[{simulation}]{\setlength{\rightskip}{0pt plus 5cm}simulation\-::simulation (
+\begin{DoxyParamCaption}
+\item[{const unsigned \&}]{\-\_\-n, }
+\item[{{\bf params\-\_\-t} $\ast$}]{\-\_\-param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}
+Alokuje pamięć na potrzeby przechowania stanu symulacji 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em rozmiar} & \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 181 pliku simulation.\-cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classsimulation_a98d5516416b67721c545ae7b88d74114}{\index{simulation@{simulation}!box\-\_\-indicator@{box\-\_\-indicator}}
+\index{box\-\_\-indicator@{box\-\_\-indicator}!simulation@{simulation}}
+\subsubsection[{box\-\_\-indicator}]{\setlength{\rightskip}{0pt plus 5cm}bool simulation\-::box\-\_\-indicator (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a98d5516416b67721c545ae7b88d74114}
+
+
+Definicja w linii 316 pliku simulation.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a98d5516416b67721c545ae7b88d74114_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a6997cb4eeae3330e93916cb05fea5efe}{\index{simulation@{simulation}!check\-\_\-state@{check\-\_\-state}}
+\index{check\-\_\-state@{check\-\_\-state}!simulation@{simulation}}
+\subsubsection[{check\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::check\-\_\-state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a6997cb4eeae3330e93916cb05fea5efe}
+
+
+Definicja w linii 306 pliku simulation.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a6997cb4eeae3330e93916cb05fea5efe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a2ef9f4e969452551babc02a311f4442c}{\index{simulation@{simulation}!compute\-\_\-accel@{compute\-\_\-accel}}
+\index{compute\-\_\-accel@{compute\-\_\-accel}!simulation@{simulation}}
+\subsubsection[{compute\-\_\-accel}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::compute\-\_\-accel (
+\begin{DoxyParamCaption}
+\item[{{\bf params\-\_\-t} $\ast$}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a2ef9f4e969452551babc02a311f4442c}
+
+
+Definicja w linii 213 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a2ef9f4e969452551babc02a311f4442c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a2ef9f4e969452551babc02a311f4442c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a311b1405c73090e5f82891e35ddee975}{\index{simulation@{simulation}!compute\-\_\-density@{compute\-\_\-density}}
+\index{compute\-\_\-density@{compute\-\_\-density}!simulation@{simulation}}
+\subsubsection[{compute\-\_\-density}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::compute\-\_\-density (
+\begin{DoxyParamCaption}
+\item[{{\bf params\-\_\-t} $\ast$}]{\-\_\-p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a311b1405c73090e5f82891e35ddee975}
+\[ |I| = \left| \alpha \right| \] 
+
+Definicja w linii 191 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classsimulation_a311b1405c73090e5f82891e35ddee975_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a311b1405c73090e5f82891e35ddee975_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a2668bf704b28e3c0abe405ab12bd10b7}{\index{simulation@{simulation}!damp\-\_\-reflect\-\_\-x@{damp\-\_\-reflect\-\_\-x}}
+\index{damp\-\_\-reflect\-\_\-x@{damp\-\_\-reflect\-\_\-x}!simulation@{simulation}}
+\subsubsection[{damp\-\_\-reflect\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::damp\-\_\-reflect\-\_\-x (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-barrier, }
+\item[{unsigned}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a2668bf704b28e3c0abe405ab12bd10b7}
+
+
+Definicja w linii 252 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classsimulation_a2668bf704b28e3c0abe405ab12bd10b7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a2668bf704b28e3c0abe405ab12bd10b7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a1322c3c317601efbe751747f19f5cafa}{\index{simulation@{simulation}!damp\-\_\-reflect\-\_\-y@{damp\-\_\-reflect\-\_\-y}}
+\index{damp\-\_\-reflect\-\_\-y@{damp\-\_\-reflect\-\_\-y}!simulation@{simulation}}
+\subsubsection[{damp\-\_\-reflect\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::damp\-\_\-reflect\-\_\-y (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-barrier, }
+\item[{unsigned}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a1322c3c317601efbe751747f19f5cafa}
+
+
+Definicja w linii 265 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classsimulation_a1322c3c317601efbe751747f19f5cafa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a1322c3c317601efbe751747f19f5cafa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_abe09252527aa58fbec8144063be3e950}{\index{simulation@{simulation}!get\-N@{get\-N}}
+\index{get\-N@{get\-N}!simulation@{simulation}}
+\subsubsection[{get\-N}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned\& simulation\-::get\-N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_abe09252527aa58fbec8144063be3e950}
+
+
+Definicja w linii 356 pliku simulation.\-cpp.
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classsimulation_abe09252527aa58fbec8144063be3e950_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a6d1112d250e89120ac05cf9f42f7d8d7}{\index{simulation@{simulation}!go@{go}}
+\index{go@{go}!simulation@{simulation}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::go (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a6d1112d250e89120ac05cf9f42f7d8d7}
+
+
+Definicja w linii 349 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a6d1112d250e89120ac05cf9f42f7d8d7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a2e12616e089dd7f9742c25933bf630ef}{\index{simulation@{simulation}!init@{init}}
+\index{init@{init}!simulation@{simulation}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a2e12616e089dd7f9742c25933bf630ef}
+
+
+Definicja w linii 343 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a2e12616e089dd7f9742c25933bf630ef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classsimulation_a2e12616e089dd7f9742c25933bf630ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_af9dbe76734d2efdbddc7da64eeb91968}{\index{simulation@{simulation}!leapfrog\-\_\-start@{leapfrog\-\_\-start}}
+\index{leapfrog\-\_\-start@{leapfrog\-\_\-start}!simulation@{simulation}}
+\subsubsection[{leapfrog\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::leapfrog\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_af9dbe76734d2efdbddc7da64eeb91968}
+
+
+Definicja w linii 289 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_af9dbe76734d2efdbddc7da64eeb91968_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_af9dbe76734d2efdbddc7da64eeb91968_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a8acf4a82697573cb4ae6b1be6a8d30a7}{\index{simulation@{simulation}!leapfrog\-\_\-step@{leapfrog\-\_\-step}}
+\index{leapfrog\-\_\-step@{leapfrog\-\_\-step}!simulation@{simulation}}
+\subsubsection[{leapfrog\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::leapfrog\-\_\-step (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a8acf4a82697573cb4ae6b1be6a8d30a7}
+
+
+Definicja w linii 297 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a8acf4a82697573cb4ae6b1be6a8d30a7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classsimulation_a8acf4a82697573cb4ae6b1be6a8d30a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a66aa4b9fae7d660028ed8972ebf20a91}{\index{simulation@{simulation}!place\-\_\-particles@{place\-\_\-particles}}
+\index{place\-\_\-particles@{place\-\_\-particles}!simulation@{simulation}}
+\subsubsection[{place\-\_\-particles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simulation}\& simulation\-::place\-\_\-particles (
+\begin{DoxyParamCaption}
+\item[{{\bf params\-\_\-t} $\ast$}]{params, }
+\item[{{\bf indicate\-\_\-fun\-\_\-t}}]{indicate\-\_\-fun}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a66aa4b9fae7d660028ed8972ebf20a91}
+
+
+Definicja w linii 320 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a66aa4b9fae7d660028ed8972ebf20a91_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a66aa4b9fae7d660028ed8972ebf20a91_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classsimulation_a6f0b34625a4ef21e7b9c7c960bb91c4b}{\index{simulation@{simulation}!reflect\-\_\-bc@{reflect\-\_\-bc}}
+\index{reflect\-\_\-bc@{reflect\-\_\-bc}!simulation@{simulation}}
+\subsubsection[{reflect\-\_\-bc}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::reflect\-\_\-bc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_a6f0b34625a4ef21e7b9c7c960bb91c4b}
+
+
+Definicja w linii 279 pliku simulation.\-cpp.
+
+
+
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a6f0b34625a4ef21e7b9c7c960bb91c4b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Oto graf wywoływań tej funkcji\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsimulation_a6f0b34625a4ef21e7b9c7c960bb91c4b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{\index{simulation@{simulation}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!simulation@{simulation}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{\-\_\-os, }
+\item[{const {\bf simulation} \&}]{\-\_\-s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}
+
+
+Definicja w linii 360 pliku simulation.\-cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{\index{simulation@{simulation}!a@{a}}
+\index{a@{a}!simulation@{simulation}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::a\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}
+
+
+Definicja w linii 170 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{\index{simulation@{simulation}!n@{n}}
+\index{n@{n}!simulation@{simulation}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}unsigned simulation\-::n\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a22eb97765a5c60adf3d995f7a110da70}
+
+
+Definicja w linii 165 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{\index{simulation@{simulation}!p@{p}}
+\index{p@{p}!simulation@{simulation}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::p\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}
+
+
+Definicja w linii 167 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{\index{simulation@{simulation}!params@{params}}
+\index{params@{params}!simulation@{simulation}}
+\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\-\_\-t}$\ast$ simulation\-::params\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}
+
+
+Definicja w linii 172 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_a44081d4edd92e17a3e1067b976031a00}{\index{simulation@{simulation}!rho@{rho}}
+\index{rho@{rho}!simulation@{simulation}}
+\subsubsection[{rho}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ simulation\-::rho\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a44081d4edd92e17a3e1067b976031a00}
+
+
+Definicja w linii 166 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{\index{simulation@{simulation}!v@{v}}
+\index{v@{v}!simulation@{simulation}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::v\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a39dbad79b1b8667840638a35e839a3f7}
+
+
+Definicja w linii 169 pliku simulation.\-cpp.
+
+\hypertarget{classsimulation_ae6da1f15728f49be7b0793700866ede9}{\index{simulation@{simulation}!vh@{vh}}
+\index{vh@{vh}!simulation@{simulation}}
+\subsubsection[{vh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::vh\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_ae6da1f15728f49be7b0793700866ede9}
+
+
+Definicja w linii 168 pliku simulation.\-cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{simulation_8cpp}{simulation.\-cpp}\end{DoxyCompactItemize}

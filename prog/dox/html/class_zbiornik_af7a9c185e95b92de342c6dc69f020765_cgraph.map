@@ -1,5 +1,11 @@
 <map id="Zbiornik::paintEvent" name="Zbiornik::paintEvent">
-<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="199,5,457,32"/>
-<area shape="rect" id="node4" href="$class_zbiornik.html#ad93223745351d4d18f64c5c43dfc5fdc" title="Metoda rysujaca czasteczke. " alt="" coords="235,56,421,83"/>
-<area shape="rect" id="node3" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="505,5,668,32"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="192,81,440,108"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="517,5,673,32"/>
+<area shape="rect" id="node4" href="$class_vector.html#a56cbc43a18559f85f4ce7278e98f9aad" title="zwraga pierwszą współrzędną wektora " alt="" coords="547,56,642,83"/>
+<area shape="rect" id="node5" href="$class_vector.html#a4ad8e8a5fb48ce193177af11340831b6" title="pobiera drugą współrzędną wektora " alt="" coords="547,107,642,133"/>
+<area shape="rect" id="node6" href="$class_zbiornik.html#a60fd88e85e8696cfec92cd24609e7410" title="Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika. " alt="" coords="489,157,701,184"/>
+<area shape="rect" id="node7" href="$class_zbiornik.html#a811829ed13289d4fad56ae5fcd92bec8" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="750,81,906,108"/>
+<area shape="rect" id="node8" href="$class_zbiornik.html#a34b0e660d8d6c4d1f45f06f5063b9788" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="767,132,889,159"/>
+<area shape="rect" id="node9" href="$class_zbiornik.html#ac64f411a313024c52dbc1c18897df573" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="762,183,894,209"/>
+<area shape="rect" id="node10" href="$class_zbiornik.html#a72ab0eb9f3562de0ea90e176f515be42" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="761,233,895,260"/>
 </map>

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
@@ -26,6 +27,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -52,6 +54,8 @@ public:
     QLineEdit *lineLiczbaCzasteczek;
     QLCDNumber *lcdLiczbaCzasteczek;
     QLabel *label;
+    QCommandLinkButton *commandLinkButton;
+    QToolButton *toolButton;
     QMenuBar *menuBar;
     QMenu *menu_File;
     QMenu *menu_Edit;
@@ -103,11 +107,17 @@ public:
 
         pauseButton = new QPushButton(horizontalLayoutWidget);
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
+        QIcon icon;
+        icon.addFile(QStringLiteral("../../prog/prj/res/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pauseButton->setIcon(icon);
 
         horizontalLayout->addWidget(pauseButton);
 
         stopButton = new QPushButton(horizontalLayoutWidget);
         stopButton->setObjectName(QStringLiteral("stopButton"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("../../prog/prj/res/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        stopButton->setIcon(icon1);
 
         horizontalLayout->addWidget(stopButton);
 
@@ -136,6 +146,12 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(40, 80, 67, 17));
+        commandLinkButton = new QCommandLinkButton(centralWidget);
+        commandLinkButton->setObjectName(QStringLiteral("commandLinkButton"));
+        commandLinkButton->setGeometry(QRect(340, 110, 187, 41));
+        toolButton = new QToolButton(centralWidget);
+        toolButton->setObjectName(QStringLiteral("toolButton"));
+        toolButton->setGeometry(QRect(360, 170, 24, 25));
         DMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -176,12 +192,14 @@ public:
         actionExit->setText(QApplication::translate("DMainWindow", "Exit", 0));
         actionPlay->setText(QApplication::translate("DMainWindow", "Play", 0));
         playButton->setText(QApplication::translate("DMainWindow", "Play", 0));
-        pauseButton->setText(QApplication::translate("DMainWindow", "Pause", 0));
-        stopButton->setText(QApplication::translate("DMainWindow", "Stop", 0));
+        pauseButton->setText(QString());
+        stopButton->setText(QString());
         lineSzybkoscSym->setText(QApplication::translate("DMainWindow", "Szybkosc symulacji", 0));
         lineCzasSym->setText(QApplication::translate("DMainWindow", "Czas symulacji", 0));
         lineLiczbaCzasteczek->setText(QApplication::translate("DMainWindow", "Liczba cz\304\205steczek", 0));
         label->setText(QApplication::translate("DMainWindow", "TextLabel", 0));
+        commandLinkButton->setText(QApplication::translate("DMainWindow", "CommandLinkButton", 0));
+        toolButton->setText(QApplication::translate("DMainWindow", "...", 0));
         menu_File->setTitle(QApplication::translate("DMainWindow", "&File", 0));
         menu_Edit->setTitle(QApplication::translate("DMainWindow", "&Edit", 0));
         menu_Help->setTitle(QApplication::translate("DMainWindow", "&Help", 0));

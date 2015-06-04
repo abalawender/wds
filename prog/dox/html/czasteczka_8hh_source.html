@@ -3,14 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.9.1"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>SymulacjaZbiornika: Plik źródłowy czasteczka.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
@@ -34,7 +33,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
@@ -70,54 +69,74 @@ $(document).ready(function(){initNavTree('czasteczka_8hh_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="czasteczka_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CZASTECZKA_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CZASTECZKA_HH</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CZASTECZKA_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef __GNUG__</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"># pragma interface</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"># pragma implementation</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kolor_8hh.html">kolor.hh</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma interface</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># pragma implementation</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="czasteczka_8hh.html#aa77f856f3142a9e81752665a9bc2e6de">   26</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="czasteczka_8hh.html#aa77f856f3142a9e81752665a9bc2e6de">PROMIEN</a>  = 10;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_czasteczka.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_czasteczka.html">Czasteczka</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a8e8196c934b65fa6a5b37941354ab68d">   45</a></span>&#160;    <a class="code" href="class_czasteczka.html#a8e8196c934b65fa6a5b37941354ab68d">Czasteczka</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> r, <span class="keyword">const</span> <a class="code" href="class_kolor.html">Kolor</a>&amp; rgb):</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_czasteczka.html#af809cd4fb1651ebf4b5980ee38c68e58">   46</a></span>&#160;    <a class="code" href="class_czasteczka.html#af809cd4fb1651ebf4b5980ee38c68e58">_x</a>(x), <a class="code" href="class_czasteczka.html#a285d25465eee101b6af073809e2fee00">_y</a>(y), <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>(r), <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>(rgb) { } ;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//TODO</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//private:</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//TODO Zmienic x, y na wektor</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="class_czasteczka.html#af809cd4fb1651ebf4b5980ee38c68e58">_x</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a285d25465eee101b6af073809e2fee00">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_czasteczka.html#a285d25465eee101b6af073809e2fee00">_y</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">   70</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">   77</a></span>&#160;    <a class="code" href="class_kolor.html">Kolor</a> <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kolor_8hh.html">kolor.hh</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vector_8hh.html">vector.hh</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_czasteczka.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_czasteczka.html">Czasteczka</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a1e73beeb1253fbb91788eabd65bcb0bf">   40</a></span>&#160;    <a class="code" href="class_czasteczka.html#a1e73beeb1253fbb91788eabd65bcb0bf">Czasteczka</a>(<a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_czasteczka.html#a2568977045d9bfe26054029c7657ad17">xy</a>, <span class="keywordtype">int</span> r, <span class="keyword">const</span> <a class="code" href="class_kolor.html">Kolor</a>&amp; rgb):</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_czasteczka.html#a025a3ee895f8ee9c765814cfca1fd5e1">_xy</a>(xy), <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>(r), <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>(rgb) { } ;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_czasteczka.html#a3d143798d7b407fe9dff7b61ab2b8071">RysujCzasteczke</a>( QPainter&amp;    Rysownik, </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">int</span>    <a class="code" href="class_czasteczka.html#a1b550be0425165a213fa1cec985b5478">Promien</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                          <span class="keyword">const</span> <a class="code" href="class_kolor.html">Kolor</a>  <a class="code" href="class_czasteczka.html#a546104013fe302440214f8809d7ec602">RGB</a>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">double</span> x,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">double</span> y);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a2568977045d9bfe26054029c7657ad17">   66</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_czasteczka.html#a2568977045d9bfe26054029c7657ad17">xy</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#a025a3ee895f8ee9c765814cfca1fd5e1">_xy</a>; };</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a103b1c45bfeb9d5fec4acf74cd9d53f0">   73</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_czasteczka.html#a103b1c45bfeb9d5fec4acf74cd9d53f0">xy</a>() { <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#a025a3ee895f8ee9c765814cfca1fd5e1">_xy</a>; };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a1b550be0425165a213fa1cec985b5478">   81</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_czasteczka.html#a1b550be0425165a213fa1cec985b5478">Promien</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>; };</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_czasteczka.html#abd36efdd1f58cdf8a6a8379bfe663f3b">   88</a></span>&#160;    <span class="keywordtype">int</span>&amp; <a class="code" href="class_czasteczka.html#abd36efdd1f58cdf8a6a8379bfe663f3b">Promien</a>() { <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>; };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a546104013fe302440214f8809d7ec602">   96</a></span>&#160;    <a class="code" href="class_kolor.html">Kolor</a> <a class="code" href="class_czasteczka.html#a546104013fe302440214f8809d7ec602">RGB</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>; };</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_czasteczka.html#aa70b19b0f59c5e4b244a9ff203d6de41">  103</a></span>&#160;    <a class="code" href="class_kolor.html">Kolor</a>&amp; <a class="code" href="class_czasteczka.html#aa70b19b0f59c5e4b244a9ff203d6de41">RGB</a>() { <span class="keywordflow">return</span> <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>; };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="class_vector.html">Vector</a> <a class="code" href="class_czasteczka.html#a025a3ee895f8ee9c765814cfca1fd5e1">_xy</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">  118</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">_Promien</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">  125</a></span>&#160;    <a class="code" href="class_kolor.html">Kolor</a> <a class="code" href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">_RGB</a>; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_czasteczka_html_a546104013fe302440214f8809d7ec602"><div class="ttname"><a href="class_czasteczka.html#a546104013fe302440214f8809d7ec602">Czasteczka::RGB</a></div><div class="ttdeci">Kolor RGB() const </div><div class="ttdoc">Interfejs pozwalajacy na odczyt prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00096">czasteczka.hh:96</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a103b1c45bfeb9d5fec4acf74cd9d53f0"><div class="ttname"><a href="class_czasteczka.html#a103b1c45bfeb9d5fec4acf74cd9d53f0">Czasteczka::xy</a></div><div class="ttdeci">Vector &amp; xy()</div><div class="ttdoc">Interfejs pozwalajacy na zmiane prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00073">czasteczka.hh:73</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a2568977045d9bfe26054029c7657ad17"><div class="ttname"><a href="class_czasteczka.html#a2568977045d9bfe26054029c7657ad17">Czasteczka::xy</a></div><div class="ttdeci">Vector xy() const </div><div class="ttdoc">Interfejs pozwalajacy na odczyt prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00066">czasteczka.hh:66</a></div></div>
 <div class="ttc" id="kolor_8hh_html"><div class="ttname"><a href="kolor_8hh.html">kolor.hh</a></div><div class="ttdoc">Zawiera definicje klasy Kolor oraz deklaracje jej metod. </div></div>
+<div class="ttc" id="vector_8hh_html"><div class="ttname"><a href="vector_8hh.html">vector.hh</a></div></div>
 <div class="ttc" id="class_kolor_html"><div class="ttname"><a href="class_kolor.html">Kolor</a></div><div class="ttdoc">Klasa modelująca kolor. </div><div class="ttdef"><b>Definition:</b> <a href="kolor_8hh_source.html#l00024">kolor.hh:24</a></div></div>
-<div class="ttc" id="class_czasteczka_html_a5a1d126d89bd571c79a5691c45e2f469"><div class="ttname"><a href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">Czasteczka::_Promien</a></div><div class="ttdeci">int _Promien</div><div class="ttdoc">Atrybut okreslajacy promien czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00070">czasteczka.hh:70</a></div></div>
-<div class="ttc" id="class_czasteczka_html"><div class="ttname"><a href="class_czasteczka.html">Czasteczka</a></div><div class="ttdoc">Klasa modelująca czasteczke. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00033">czasteczka.hh:33</a></div></div>
-<div class="ttc" id="class_czasteczka_html_a8e8196c934b65fa6a5b37941354ab68d"><div class="ttname"><a href="class_czasteczka.html#a8e8196c934b65fa6a5b37941354ab68d">Czasteczka::Czasteczka</a></div><div class="ttdeci">Czasteczka(int x, int y, int r, const Kolor &amp;rgb)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00045">czasteczka.hh:45</a></div></div>
-<div class="ttc" id="czasteczka_8hh_html_aa77f856f3142a9e81752665a9bc2e6de"><div class="ttname"><a href="czasteczka_8hh.html#aa77f856f3142a9e81752665a9bc2e6de">PROMIEN</a></div><div class="ttdeci">const int PROMIEN</div><div class="ttdoc">Promien czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00026">czasteczka.hh:26</a></div></div>
-<div class="ttc" id="class_czasteczka_html_af809cd4fb1651ebf4b5980ee38c68e58"><div class="ttname"><a href="class_czasteczka.html#af809cd4fb1651ebf4b5980ee38c68e58">Czasteczka::_x</a></div><div class="ttdeci">int _x</div><div class="ttdoc">Atrybut opisujacy polozenie czasteczki na osi x. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00046">czasteczka.hh:46</a></div></div>
-<div class="ttc" id="class_czasteczka_html_a285d25465eee101b6af073809e2fee00"><div class="ttname"><a href="class_czasteczka.html#a285d25465eee101b6af073809e2fee00">Czasteczka::_y</a></div><div class="ttdeci">int _y</div><div class="ttdoc">Atrybut opisujacy polozenie czasteczki na osi y. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00063">czasteczka.hh:63</a></div></div>
-<div class="ttc" id="class_czasteczka_html_ab9c93cfb3cf0360579ad0def2a94178c"><div class="ttname"><a href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">Czasteczka::_RGB</a></div><div class="ttdeci">Kolor _RGB</div><div class="ttdoc">Atrybut opisujacy kolor czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00077">czasteczka.hh:77</a></div></div>
+<div class="ttc" id="class_czasteczka_html_aa70b19b0f59c5e4b244a9ff203d6de41"><div class="ttname"><a href="class_czasteczka.html#aa70b19b0f59c5e4b244a9ff203d6de41">Czasteczka::RGB</a></div><div class="ttdeci">Kolor &amp; RGB()</div><div class="ttdoc">Interfejs pozwalajacy na zmiane prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00103">czasteczka.hh:103</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a5a1d126d89bd571c79a5691c45e2f469"><div class="ttname"><a href="class_czasteczka.html#a5a1d126d89bd571c79a5691c45e2f469">Czasteczka::_Promien</a></div><div class="ttdeci">int _Promien</div><div class="ttdoc">Atrybut okreslajacy promien czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00118">czasteczka.hh:118</a></div></div>
+<div class="ttc" id="class_czasteczka_html"><div class="ttname"><a href="class_czasteczka.html">Czasteczka</a></div><div class="ttdoc">Klasa modelująca czasteczke. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00029">czasteczka.hh:29</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a3d143798d7b407fe9dff7b61ab2b8071"><div class="ttname"><a href="class_czasteczka.html#a3d143798d7b407fe9dff7b61ab2b8071">Czasteczka::RysujCzasteczke</a></div><div class="ttdeci">void RysujCzasteczke(QPainter &amp;Rysownik, const int Promien, const Kolor RGB, const double x, const double y)</div><div class="ttdoc">Metoda rysujaca czasteczke. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8cpp_source.html#l00016">czasteczka.cpp:16</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00009">vector.hh:9</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a1b550be0425165a213fa1cec985b5478"><div class="ttname"><a href="class_czasteczka.html#a1b550be0425165a213fa1cec985b5478">Czasteczka::Promien</a></div><div class="ttdeci">int Promien() const </div><div class="ttdoc">Interfejs pozwalajacy na odczyt prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00081">czasteczka.hh:81</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a025a3ee895f8ee9c765814cfca1fd5e1"><div class="ttname"><a href="class_czasteczka.html#a025a3ee895f8ee9c765814cfca1fd5e1">Czasteczka::_xy</a></div><div class="ttdeci">Vector _xy</div><div class="ttdoc">Atrybut opisujacy polozenie czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00103">czasteczka.hh:103</a></div></div>
+<div class="ttc" id="class_czasteczka_html_abd36efdd1f58cdf8a6a8379bfe663f3b"><div class="ttname"><a href="class_czasteczka.html#abd36efdd1f58cdf8a6a8379bfe663f3b">Czasteczka::Promien</a></div><div class="ttdeci">int &amp; Promien()</div><div class="ttdoc">Interfejs pozwalajacy na zmiane prywatnych danych. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00088">czasteczka.hh:88</a></div></div>
+<div class="ttc" id="class_czasteczka_html_ab9c93cfb3cf0360579ad0def2a94178c"><div class="ttname"><a href="class_czasteczka.html#ab9c93cfb3cf0360579ad0def2a94178c">Czasteczka::_RGB</a></div><div class="ttdeci">Kolor _RGB</div><div class="ttdoc">Atrybut opisujacy kolor czasteczki. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00125">czasteczka.hh:125</a></div></div>
+<div class="ttc" id="class_czasteczka_html_a1e73beeb1253fbb91788eabd65bcb0bf"><div class="ttname"><a href="class_czasteczka.html#a1e73beeb1253fbb91788eabd65bcb0bf">Czasteczka::Czasteczka</a></div><div class="ttdeci">Czasteczka(Vector xy, int r, const Kolor &amp;rgb)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="czasteczka_8hh_source.html#l00040">czasteczka.hh:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="czasteczka_8hh.html">czasteczka.hh</a></li>
-    <li class="footer">Wygenerowano Pt, 15 maj 2015 20:03:04 dla SymulacjaZbiornika programem
+    <li class="footer">Wygenerowano Cz, 4 cze 2015 23:55:51 dla SymulacjaZbiornika programem
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
 </div>
 </body>

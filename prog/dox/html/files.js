@@ -1,6 +1,9 @@
 var files =
 [
-    [ "czasteczka.hh", "czasteczka_8hh.html", "czasteczka_8hh" ],
+    [ "czasteczka.cpp", "czasteczka_8cpp.html", null ],
+    [ "czasteczka.hh", "czasteczka_8hh.html", [
+      [ "Czasteczka", "class_czasteczka.html", "class_czasteczka" ]
+    ] ],
     [ "dmainwindow.cpp", "dmainwindow_8cpp.html", null ],
     [ "dmainwindow.h", "dmainwindow_8h.html", [
       [ "DMainWindow", "class_d_main_window.html", "class_d_main_window" ]
@@ -22,6 +25,11 @@ var files =
       [ "Ui_DMainWindow", "class_ui___d_main_window.html", "class_ui___d_main_window" ],
       [ "DMainWindow", "class_ui_1_1_d_main_window.html", null ]
     ] ],
+    [ "vector.hh", "vector_8hh.html", [
+      [ "Vector", "class_vector.html", "class_vector" ]
+    ] ],
     [ "zbiornik.cpp", "zbiornik_8cpp.html", "zbiornik_8cpp" ],
-    [ "zbiornik.hh", "zbiornik_8hh.html", "zbiornik_8hh" ]
+    [ "zbiornik.hh", "zbiornik_8hh.html", [
+      [ "Zbiornik", "class_zbiornik.html", "class_zbiornik" ]
+    ] ]
 ];

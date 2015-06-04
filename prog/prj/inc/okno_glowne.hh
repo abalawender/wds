@@ -39,7 +39,11 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
+#include <string>
 #include <list>
+#include <stdlib.h>
+
 #include "flagi.hh"
 #include "kolor.hh"
 #include "czasteczka.hh"
@@ -72,6 +76,30 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      * \param[in, out] wRodzic - wskaznik na rodzica 
      */
    OknoGlowne(QWidget *wRodzic = NULL/*nullptr*/);
+   
+   /*!
+    * \brief Wirtualna metoda paintEvent wyrysowujaca obiekty na ekranie.
+    * 
+    * Odziedziczona wirtualna metoda paintEvent. 
+    * Rysuje zbiornik i przyciski w nowym miejscu.
+    * \param[in, out] event - wskaznik obiekt klasy QPaintEvent 
+    */
+   virtual void paintEvent( QPaintEvent * event);
+   
+   /*!
+    * \brief Metoda zapisujaca aktualny stan symulacji do pliku.
+    * 
+    * Zapisuje aktualny stan symulacji (czas, liczba czasteczek, 
+    * dane czasteczek) do pliku. 
+    */
+   void ZapiszSymulacjeDoPliku();
+   
+   /*!
+    * \brief Metoda wczytujaca z pliku stan symulacji.
+    * 
+    * Wczytuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
+    */
+   void WczytajSymulacjeZPliku(const std::string nazwa_pliku);
    
   public slots:
     /*!
@@ -111,14 +139,32 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     void on_stopButton_clicked();
     
     /*!
+     * \brief Slot odpowiadajacy za wczytanie danych z pliku.
+     * 
+     * Odpowiada za wczytanie danych z pliku.
+     */
+    void on_loadButton_clicked();
+    
+    /*!
+     * \brief Slot odpowiadajacy za wczytanie danych z pliku.
+     * 
+     * Odpowiada za wczytanie danych z pliku.
+     */
+    void on_lineEdit_returnPressed();
+    
+    /*!
      * \brief Slot odpowiadajacy za zmiane wartosci slidera.
      * 
      * Odpowiada za wykonanie odpowiednich czynnosci po zmianie wartosci slidera.
      */
     void on_sliderSzybkoscSym_valueChanged(int a);
     
-    //TODO czy jest cos takiego?
-    void on_OknoGlowne_resized();
+    /*!
+    * \brief Slot odpowiadajacy za przycisniecie przycisku Save.
+    * 
+    * Odpowiada za wykonanie odpowiednich czynnosci po przycisnieciu Save.
+    */
+    void on_action_Save_triggered();
     
   signals:
     /*!
@@ -129,7 +175,14 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     */
     void ZglosNapis(const QString &);
 
-  public:
+  private:
+    /*!
+     * \brief Sluzy do generowania unikatowych nazw plikow wyjsciowych.
+     * 
+     * Sluzy do generowania unikatowych nazw plikow wyjsciowych.
+     */
+    int static licznik_plikow;
+    
     /*!
      * \brief Wskaznik na zbiornik.
      * 
@@ -229,6 +282,13 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     QPushButton *stopButton; 
     
     /*!
+     * \brief Wskaznik na przycisk Wczytaj.
+     * 
+     * Wskaznik na przycisk Wczytaj. Wczytuje symulacje.
+     */
+    QPushButton *loadButton; 
+    
+    /*!
      * \brief Wskaznik na slider.
      * 
      * Wskaznik na slider. Steruje szybkoscia symulacji.
@@ -277,6 +337,13 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      */
     QLCDNumber *lcdLiczbaCzasteczek;
     
+    /*!
+     * \brief Wskaznik na linijke do wpisywania tekstu.
+     * 
+     * Wskazuje linijke do wpisywania tekstu.
+     */
+    QLineEdit *lineEdit;
+    
 public:
     /*!
     * \brief Miernik czasu.
@@ -284,6 +351,20 @@ public:
     * Miernik czasu.
     */
     QTimer _Stoper; 
+    
+private:  
+  /*!
+   * \brief Stara szerokosc okienka.
+   * 
+   * Stara szerokosc okienka. 
+   */
+  double _old_width;
+  /*!
+   * \brief Stara wysokosc okienka.
+   * 
+   * Stara wysokosc okienka. 
+   */
+  double _old_height;
 }; 
 
 #endif

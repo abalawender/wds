@@ -9,6 +9,7 @@ var class_ui___d_main_window =
     [ "centralWidget", "class_ui___d_main_window.html#a94cf40cb4e645cfa2e80f36ffbf5018e", null ],
     [ "horizontalLayout", "class_ui___d_main_window.html#a4ab6ff85d8c5edef531b3f2111a04157", null ],
     [ "horizontalLayoutWidget", "class_ui___d_main_window.html#a777a56f3b74aa5b5cd5ff2c62a2968a9", null ],
+    [ "label", "class_ui___d_main_window.html#aa528e417bc72cda19dfcea49f1617b2a", null ],
     [ "lcdCzasSym", "class_ui___d_main_window.html#af49335a21dc17e53674f8b62a640ca2d", null ],
     [ "lcdLiczbaCzasteczek", "class_ui___d_main_window.html#a3d6afe29d882b3a9119b68d79c9b5e0f", null ],
     [ "lcdSzybkoscSym", "class_ui___d_main_window.html#a4eb8e2a87080f4f314eb96c52a82e39d", null ],
@@ -25,5 +26,6 @@ var class_ui___d_main_window =
     [ "sliderSzybkoscSym", "class_ui___d_main_window.html#a8d12f07935a52a597e57eddf50e5c98f", null ],
     [ "statusBar", "class_ui___d_main_window.html#ac9e025e7279839dd7ab1686456d1ae21", null ],
     [ "stopButton", "class_ui___d_main_window.html#a1fe7797fff349a0f0d47d90c8438f386", null ],
-    [ "toolBar", "class_ui___d_main_window.html#abba1dae1dd835c7a7dd39da623cd4580", null ]
+    [ "toolBar", "class_ui___d_main_window.html#abba1dae1dd835c7a7dd39da623cd4580", null ],
+    [ "verticalSpacer", "class_ui___d_main_window.html#a476471e78bf431c7487fa9e0afadb76d", null ]
 ];

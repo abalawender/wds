@@ -15,13 +15,18 @@
 
 OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 {
+  STAN = ePAUSE;
+  
   /* Okno glowne */
   setObjectName("OknoGlowne");
   resize(3*PODSTAWA, 3*WYSOKOSC);
   setMinimumSize(QSize(PODSTAWA*2.5, WYSOKOSC*2.5));
+  _old_width = width();
+  _old_height = height();
     
   /* Zbiornik */
-  wZbiornik = new Zbiornik(this);
+  wZbiornik = new Zbiornik(this, Vector(width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2), 
+                           PODSTAWA, WYSOKOSC, GRUBOSC);
   wZbiornik->setObjectName("Zbiornik");
   setCentralWidget(wZbiornik);
   
@@ -32,23 +37,24 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   
   /* Menu Bar*/
   menuBar = new QMenuBar(this);
-  action_Save = new QAction(tr("&Save"), this);
-  action_Exit = new QAction(tr("Exit"), this);
-  action_Exit->setObjectName("action_Exit"); // on_action
-  
   menuBar->setGeometry(QRect(0, 0, 516, 25));
   
   menu_File = new QMenu(tr("&File"), menuBar);
-  menu_Edit = new QMenu(tr("&Edit"), menuBar);
-  menu_Help = new QMenu(tr("&Help"), menuBar);
-
-  setMenuBar(menuBar);
+  //menu_Edit = new QMenu(tr("&Edit"), menuBar);
+  //menu_Help = new QMenu(tr("&Help"), menuBar);
+  
+  action_Save = new QAction(tr("&Save"), this);
+  action_Save->setObjectName("action_Save"); // on_action
+  action_Exit = new QAction(tr("&Exit"), this);
+  action_Exit->setObjectName("action_Exit"); // on_action
   
   menuBar->addAction(menu_File->menuAction());
   menu_File->addAction(action_Save);
   menu_File->addAction(action_Exit);
-  menuBar->addAction(menu_Edit->menuAction());
-  menuBar->addAction(menu_Help->menuAction());
+  //menuBar->addAction(menu_Edit->menuAction());
+  //menuBar->addAction(menu_Help->menuAction());
+  
+  setMenuBar(menuBar);
   
   /* Status Bar */
   statusBar = new QStatusBar(this);
@@ -63,9 +69,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   horizontalLayoutWidget = new QWidget(this);
   horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
   horizontalLayoutWidget->setGeometry(QRect(120, 240, 270, 30));
-  horizontalLayoutWidget
-    ->move(width()/2 - 270/2, 
-           height()-100);
+  horizontalLayoutWidget->move(width()/2 - 270/2, height()-100);
   
   horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
   horizontalLayout->setSpacing(6);
@@ -132,7 +136,17 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   //verticalSpacer = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
   //verticalSpacer->setObjectName("verticalSpacer");
   //addItem(verticalSpacer);
-    
+  
+  /* Wczytywanie */
+  lineEdit = new QLineEdit(this);
+  lineEdit->setGeometry(QRect(320, 20, 160, 25));
+  lineEdit->setObjectName("lineEdit");
+  lineEdit->setPlaceholderText(QString("Nazwa pliku"));
+  
+  loadButton = new QPushButton(tr("Wczytaj plik"), this);
+  loadButton->setGeometry(QRect(320, 20+30, 160, 25));
+  loadButton->setObjectName("loadButton");
+  
   /* connect */
   connect(wZbiornik, SIGNAL(ZglosLiczbeCzasteczek(const int)),
           lcdLiczbaCzasteczek, SLOT(display(int)));
@@ -148,10 +162,6 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
           lcdSzybkoscSym, SLOT(display(int)));
   
   QMetaObject::connectSlotsByName(this);
-}
-
-void OknoGlowne::on_OknoGlowne_resized() {
-  horizontalLayoutWidget->move(width()/2 - 270/2, height()-100);
 }
 
 void OknoGlowne::on_playButton_clicked() { 
@@ -172,13 +182,37 @@ void OknoGlowne::on_stopButton_clicked() {
   STAN = eSTOP; 
 }
 
+void OknoGlowne::on_loadButton_clicked() {
+  std::string nazwa_pliku = "saved/";
+  nazwa_pliku += lineEdit->text().toUtf8().constData();
+  WczytajSymulacjeZPliku(nazwa_pliku);  
+}
+
+void OknoGlowne::on_lineEdit_returnPressed() {
+  std::string nazwa_pliku = "saved/";
+  nazwa_pliku += lineEdit->text().toUtf8().constData();
+  WczytajSymulacjeZPliku(nazwa_pliku);   
+}
+
 void OknoGlowne::on_sliderSzybkoscSym_valueChanged(int a) {
   wZbiornik->odpowiedni_czas() = 1000.0/a; // Hz -> ms 
   wZbiornik->_Stoper.setInterval(wZbiornik->odpowiedni_czas());
 }
 
-void OknoGlowne::GdyOdpowiedniCzas()
-{
+int OknoGlowne::licznik_plikow;
+
+void OknoGlowne::on_action_Save_triggered() {
+  if (!((STAN == eSTOP) || (STAN == ePAUSE))) { 
+    STAN = ePAUSE; // Zatrzymujemy do zapisu.
+    ZapiszSymulacjeDoPliku();
+    STAN = ePLAY; // Wznawiamy.
+  }
+  else {
+    ZapiszSymulacjeDoPliku();
+  }
+}
+
+void OknoGlowne::GdyOdpowiedniCzas() {
   QDate Data = QDate::currentDate();
   QLocale Lokalizacja(QLocale::Polish);
   QString NapisDaty = Lokalizacja.toString(Data);
@@ -186,7 +220,68 @@ void OknoGlowne::GdyOdpowiedniCzas()
   emit ZglosNapis(NapisDaty);
 }
 
-void OknoGlowne::GdyNapis(const QString &Napis)
-{
+void OknoGlowne::GdyNapis(const QString &Napis) {
   statusBar->showMessage(Napis);
+}
+
+void OknoGlowne::paintEvent( QPaintEvent * ) {
+  horizontalLayoutWidget->move(width()/2 - 270/2, height()-100);
+  wZbiornik->lewa_gora_xy() = Vector(width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2);
+  
+  double diff_w = width() - _old_width;
+  double diff_h = height() - _old_height;
+  _old_width = width();
+  _old_height = height();
+  for (std::list<Czasteczka>::iterator it = wZbiornik->Czasteczki.begin(); 
+       it != wZbiornik->Czasteczki.end(); it++)
+  {
+    (*it).xy().getX() += diff_w/2; // /2, poniewaz szerokosc zmienia sie symetrycznie
+    (*it).xy().getY() += diff_h/2;
+  }
+}
+
+void OknoGlowne::ZapiszSymulacjeDoPliku() {
+  std::fstream plik;
+  std::string nazwa_pliku = static_cast<std::string>("saved/zapis") + 
+                            std::to_string(licznik_plikow) +
+                            static_cast<std::string>(".txt");
+  plik.open(nazwa_pliku.c_str(), std::ios::out);
+  if(plik.good()){
+    licznik_plikow++;
+    plik << wZbiornik->czas_sym() << std::endl;
+    // TODO Co jest potrzebne do sph?
+    plik << wZbiornik->Czasteczki.size() << std::endl;
+    for (std::list<Czasteczka>::iterator it = wZbiornik->Czasteczki.begin(); 
+         it != wZbiornik->Czasteczki.end(); it++)
+    {
+      plik << (*it).xy().getX() << " " << (*it).xy().getY() << std::endl;
+    }
+    plik.close();
+  }
+  else {
+    std::cerr << "Plik nie został utworzony." << std::endl;
+  }
+}
+
+void OknoGlowne::WczytajSymulacjeZPliku(const std::string nazwa_pliku) {
+  std::fstream plik;
+  int liczba_czasteczek;
+  plik.open(nazwa_pliku.c_str(), std::ios::in);
+  if(plik.good()){
+    wZbiornik->Czasteczki.clear();
+    plik >> wZbiornik->czas_sym();
+    plik >> liczba_czasteczek;
+    // TODO Co jest potrzebne do sph?
+    for (int i=0; i<liczba_czasteczek; i++)
+    {
+      double x, y;
+      plik >> x >> y;
+      wZbiornik->Czasteczki.push_back(Czasteczka(
+        Vector(x, y), PROMIEN, Kolor(rand()%255, rand()%255, rand()%255)));
+    }
+    plik.close();
+  }
+  else {
+    std::cerr << "Nie wczytano danych z pliku." << std::endl;
+  }
 }

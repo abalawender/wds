@@ -14,6 +14,6 @@
    \section etykieta-funkcjonalnosci-aplikacji Funkcjonalnosci aplikacji
    Najistotniejszymi funkcjonalnościami aplikacji będą:
    - symulacja zachowania cieczy w zależności od zadanych warunków początkowych,
-   - item możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),   
+   - możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),   
    - możliwość obserwacji wyniku symulacji (położenia cząsteczek i rozkładu ciśnień).
  */

@@ -1,0 +1,12 @@
+<map id="Vector::getX" name="Vector::getX">
+<area shape="rect" id="node2" href="$classsimulation.html#a2668bf704b28e3c0abe405ab12bd10b7" title="simulation::damp_reflect_x" alt="" coords="184,41,363,68"/>
+<area shape="rect" id="node9" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="149,92,397,119"/>
+<area shape="rect" id="node11" href="$class_zbiornik.html#af11180e2f8fdca6269b1f825ad3bceff" title="Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika. " alt="" coords="167,143,379,169"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a6f0b34625a4ef21e7b9c7c960bb91c4b" title="simulation::reflect_bc" alt="" coords="445,41,592,68"/>
+<area shape="rect" id="node4" href="$classsimulation.html#af9dbe76734d2efdbddc7da64eeb91968" title="simulation::leapfrog\l_start" alt="" coords="657,5,791,46"/>
+<area shape="rect" id="node7" href="$classsimulation.html#a8acf4a82697573cb4ae6b1be6a8d30a7" title="simulation::leapfrog_step" alt="" coords="641,71,807,97"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="856,12,963,39"/>
+<area shape="rect" id="node6" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="1011,12,1109,39"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a6d1112d250e89120ac05cf9f42f7d8d7" title="simulation::go" alt="" coords="858,71,961,97"/>
+<area shape="rect" id="node10" href="$class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765" title="Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie. " alt="" coords="449,92,588,119"/>
+</map>

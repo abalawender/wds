@@ -18,9 +18,13 @@
  * 
  * Poczatkowy stan symulacji to Play/Pauza/Stop.
  */
-int STAN = eSTOP;
+int STAN = ePAUSE;
 
-Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic), _odpowiedni_czas(25)//, lewa_gora_x(width()/2-PODSTAWA/2), lewa_gora_y(height()/2-WYSOKOSC/2)
+Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy, 
+                   const double podstawa, const double wysokosc, const double grubosc):  
+  QWidget(wRodzic), _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa), 
+  _wysokosc(wysokosc), _grubosc(grubosc),
+  _czas_sym(0.0), _odpowiedni_czas(25)
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -29,15 +33,6 @@ Zbiornik::Zbiornik(QWidget *wRodzic):  QWidget(wRodzic), _odpowiedni_czas(25)//,
   _Stoper.setInterval(_odpowiedni_czas);
   _Stoper.setSingleShot(false);
   _Stoper.start();
-  
-  _czas_sym = 0.0;
-  
-  //TODO przekazywac przez parametry
-  // TODO zmienic to!
-  //lewa_gora_x = width()/2-PODSTAWA/2;
-  //lewa_gora_y = height()/2-WYSOKOSC/2;
-  _podstawa = PODSTAWA;
-  _wysokosc = WYSOKOSC;
   
   //QMetaObject::connectSlotsByName(this);
 }
@@ -49,11 +44,6 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
                               int       x,
                               int       y)
 {
-  //std::cout << x << " " << y << std::endl;
-  // TODO nie tutaj!
-  lewa_gora_xy().getX() = width()/2-PODSTAWA/2;
-  lewa_gora_xy().getY() = height()/2-WYSOKOSC/2;
-  
   QPen Piorko(Rysownik.pen());
   Piorko.setWidth(Grubosc);
   Rysownik.setPen(Piorko);
@@ -67,33 +57,45 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
 {
   QTime Czas;
   Czas.start();
-  RysujZbiornik(Rysownik, PODSTAWA, WYSOKOSC, GRUBOSC, width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2);
-
+  RysujZbiornik(Rysownik, _podstawa, _wysokosc, GRUBOSC, _lewa_gora_xy.getX(), _lewa_gora_xy.getY());
+  
   for (std::list<Czasteczka>::iterator it = Czasteczki.begin(); 
        it != Czasteczki.end(); it++)
   {
-    //std::cout << (*it).x() << " " << (*it).y() << " " << lewa_gora_x << " " << lewa_gora_y << std::endl;
-    if ( CzyWewnatrzZbiornika( (*it).xy().getX()+(*it).Promien(), 
-                               (*it).xy().getY()+(*it).Promien() ))
-    {
-      (*it).RysujCzasteczke(Rysownik,(*it).Promien(), (*it).RGB(), (*it).xy().getX(), (*it).xy().getY());
+    if (CzyWewnatrzZbiornika((*it))) {
+      (*it).RysujCzasteczke(Rysownik, (*it).Promien(), (*it).RGB(), 
+                            (*it).xy().getX(), (*it).xy().getY());
     }
   }
 }
 
-bool Zbiornik::CzyWewnatrzZbiornika(const Vector& xy) const 
+bool Zbiornik::CzyWewnatrzZbiornika(const double x, const double y) const 
 {
-  if ( ((xy.getX()>lewa_gora_xy().getX()) && (xy.getX()<lewa_gora_xy().getX()+podstawa())) && 
-       ((xy.getY()>lewa_gora_xy().getY()) && (xy.getY()<lewa_gora_xy().getY()+wysokosc())) ) {
+  if ( ((x>lewa_gora_xy().getX()-grubosc()/2) && (x<lewa_gora_xy().getX()+podstawa()-grubosc()/2)) && 
+    ((y>lewa_gora_xy().getY()) && (y<lewa_gora_xy().getY()+wysokosc()-grubosc()/2)) ) {
+    return true;
+    }
+    return false;
+}
+
+bool Zbiornik::CzyWewnatrzZbiornika(const Vector& xy) const 
+{ 
+  if ( CzyWewnatrzZbiornika(xy.getX(), xy.getY()) ) {
     return true;
   }
   return false;
 }
 
-bool Zbiornik::CzyWewnatrzZbiornika(const double x, const double y) const 
+bool Zbiornik::CzyWewnatrzZbiornika(const Czasteczka& cz) const 
 {
-  if ( ((x>lewa_gora_xy().getX()) && (x<lewa_gora_xy().getX()+podstawa())) && 
-       ((y>lewa_gora_xy().getY()) && (y<lewa_gora_xy().getY()+wysokosc())) ) {
+  double cz_x, cz_y, zb_x, zb_y; // Wspolrzedne lewej gory czasteczki i zbiornika.
+  cz_x = cz.xy().getX();
+  cz_y = cz.xy().getY();
+  zb_x = lewa_gora_xy().getX();
+  zb_y = lewa_gora_xy().getY();
+  
+  if ( ((cz_x > zb_x+grubosc()/2) && (cz_x+2*cz.Promien() < zb_x+podstawa()-grubosc()/2)) && 
+       ((cz_y > zb_y) && (cz_y+2*cz.Promien() < zb_y+wysokosc()-grubosc()/2)) ) {
     return true;
     }
     return false;
@@ -119,8 +121,7 @@ void Zbiornik::GdyOdpowiedniCzas()
           (*it).xy().getX() += rand()%7-3;
           (*it).xy().getY() += rand()%7-3;
         }
-        
-        // TODO przesunac uklad wspolrzednych
+
     Czasteczki.push_back(Czasteczka(
                                     Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2, 
                                            2*WYSOKOSC-rand()%(WYSOKOSC/2)),
