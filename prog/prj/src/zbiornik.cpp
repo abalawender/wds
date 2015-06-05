@@ -48,9 +48,15 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
   Piorko.setWidth(Grubosc);
   Rysownik.setPen(Piorko);
   
+  Rysownik.translate(width()/2, height()/2);
+  Rysownik.rotate(45);
+  x=0-Podstawa/2; y=0-Wysokosc/2;
+  
   Rysownik.drawLine(x, y, x, y+Wysokosc); // Lewa
   Rysownik.drawLine(x+Podstawa, y, x+Podstawa, y+Wysokosc); // Prawa
   Rysownik.drawLine(x, y+Wysokosc, x+Podstawa, y+Wysokosc); // Podstawa
+
+  Rysownik.translate(-width()/2, -height()/2);
 }
 
 void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
@@ -95,7 +101,7 @@ bool Zbiornik::CzyWewnatrzZbiornika(const Czasteczka& cz) const
   zb_y = lewa_gora_xy().getY();
   
   if ( ((cz_x > zb_x+grubosc()/2) && (cz_x+2*cz.Promien() < zb_x+podstawa()-grubosc()/2)) && 
-       ((cz_y > zb_y) && (cz_y+2*cz.Promien() < zb_y+wysokosc()-grubosc()/2)) ) {
+    ((cz_y > zb_y-PASKI) && (cz_y+2*cz.Promien() < zb_y+wysokosc()-grubosc()/2-PASKI)) ) {
     return true;
     }
     return false;
