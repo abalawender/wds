@@ -49,7 +49,7 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
   Rysownik.setPen(Piorko);
   
   Rysownik.translate(width()/2, height()/2);
-  Rysownik.rotate(45);
+  Rysownik.rotate(_kat_obrotu);
   x=0-Podstawa/2; y=0-Wysokosc/2;
   
   Rysownik.drawLine(x, y, x, y+Wysokosc); // Lewa

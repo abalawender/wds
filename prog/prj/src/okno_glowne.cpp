@@ -97,6 +97,14 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   horizontalLayout->addWidget(pauseButton);
   horizontalLayout->addWidget(stopButton);
   
+  /* Slider kat obrotu */
+  sliderKatObrotu = new QSlider(Qt::Horizontal, this);
+  sliderKatObrotu->setObjectName("sliderKatObrotu");
+  sliderKatObrotu->setGeometry(QRect(width()/2 - 270/2, height()-130, 270, 25));
+  sliderKatObrotu->setMinimum(-15); // [stopnie]
+  sliderKatObrotu->setMaximum(15);
+  sliderKatObrotu->setValue(0);
+  
   /* Czas symulacji */
   labelCzasSym = new QLabel(tr("Czas symulacji [s]"), this);
   labelCzasSym->setObjectName("labelCzasSym");
