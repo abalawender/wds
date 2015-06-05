@@ -137,15 +137,19 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   //verticalSpacer->setObjectName("verticalSpacer");
   //addItem(verticalSpacer);
   
-  /* Wczytywanie */
+  /* Wczytywanie, Zapis*/
   lineEdit = new QLineEdit(this);
   lineEdit->setGeometry(QRect(320, 20, 160, 25));
   lineEdit->setObjectName("lineEdit");
   lineEdit->setPlaceholderText(QString("Nazwa pliku"));
   
-  loadButton = new QPushButton(tr("Wczytaj plik"), this);
-  loadButton->setGeometry(QRect(320, 20+30, 160, 25));
+  loadButton = new QPushButton(tr("Wczytaj"), this);
+  loadButton->setGeometry(QRect(320+80, 20+30, 80, 25));
   loadButton->setObjectName("loadButton");
+  
+  saveButton = new QPushButton(tr("Zapisz"), this);
+  saveButton->setGeometry(QRect(320, 20+30, 80, 25));
+  saveButton->setObjectName("saveButton");
   
   /* connect */
   connect(wZbiornik, SIGNAL(ZglosLiczbeCzasteczek(const int)),
@@ -191,7 +195,13 @@ void OknoGlowne::on_loadButton_clicked() {
 void OknoGlowne::on_lineEdit_returnPressed() {
   std::string nazwa_pliku = "saved/";
   nazwa_pliku += lineEdit->text().toUtf8().constData();
-  WczytajSymulacjeZPliku(nazwa_pliku);   
+  // TODO
+  // Na razie nie robi nic.
+  //WczytajSymulacjeZPliku(nazwa_pliku);   
+}
+
+void OknoGlowne::on_sliderKatObrotu_valueChanged(int a) {
+  wZbiornik->kat_obrotu() = a;
 }
 
 void OknoGlowne::on_sliderSzybkoscSym_valueChanged(int a) {
@@ -227,6 +237,7 @@ void OknoGlowne::GdyNapis(const QString &Napis) {
 void OknoGlowne::paintEvent( QPaintEvent * ) {
   horizontalLayoutWidget->move(width()/2 - 270/2, height()-100);
   wZbiornik->lewa_gora_xy() = Vector(width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2);
+  sliderKatObrotu->move(width()/2 - 270/2, height()-130);
   
   double diff_w = width() - _old_width;
   double diff_h = height() - _old_height;
@@ -257,6 +268,25 @@ void OknoGlowne::ZapiszSymulacjeDoPliku() {
       plik << (*it).xy().getX() << " " << (*it).xy().getY() << std::endl;
     }
     plik.close();
+  }
+  else {
+    std::cerr << "Plik nie został utworzony." << std::endl;
+  }
+}
+
+void OknoGlowne::ZapiszSymulacjeDoPliku(const std::string nazwa_pliku) {
+  std::fstream plik;
+  plik.open(nazwa_pliku.c_str(), std::ios::out);
+  if(plik.good()){
+    plik << wZbiornik->czas_sym() << std::endl;
+    // TODO Co jest potrzebne do sph?
+    plik << wZbiornik->Czasteczki.size() << std::endl;
+    for (std::list<Czasteczka>::iterator it = wZbiornik->Czasteczki.begin(); 
+         it != wZbiornik->Czasteczki.end(); it++)
+         {
+           plik << (*it).xy().getX() << " " << (*it).xy().getY() << std::endl;
+         }
+         plik.close();
   }
   else {
     std::cerr << "Plik nie został utworzony." << std::endl;

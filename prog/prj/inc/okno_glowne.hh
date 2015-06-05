@@ -87,10 +87,10 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
    virtual void paintEvent( QPaintEvent * event);
    
    /*!
-    * \brief Metoda zapisujaca aktualny stan symulacji do pliku.
+    * \brief Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku.
     * 
     * Zapisuje aktualny stan symulacji (czas, liczba czasteczek, 
-    * dane czasteczek) do pliku. 
+    * dane czasteczek) do automatycznie generowanego pliku. 
     */
    void ZapiszSymulacjeDoPliku();
    
@@ -100,6 +100,13 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     * Wczytuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
     */
    void WczytajSymulacjeZPliku(const std::string nazwa_pliku);
+   
+   /*!
+    * \brief Metoda zapisujaca stan symulacji do pliku.
+    * 
+    * Zapisuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
+    */
+   void ZapiszSymulacjeDoPliku(const std::string nazwa_pliku);
    
   public slots:
     /*!
@@ -155,9 +162,18 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     /*!
      * \brief Slot odpowiadajacy za zmiane wartosci slidera.
      * 
-     * Odpowiada za wykonanie odpowiednich czynnosci po zmianie wartosci slidera.
+     * Odpowiada za wykonanie odpowiednich czynnosci zwiazanych 
+     * z szybkoscia symulacji po zmianie wartosci slidera.
      */
     void on_sliderSzybkoscSym_valueChanged(int a);
+    
+    /*!
+     * \brief Slot odpowiadajacy za zmiane wartosci slidera.
+     * 
+     * Odpowiada za wykonanie odpowiednich czynnosci zwiazanych 
+     * z katem obrotu po zmianie wartosci slidera.
+     */
+    void on_sliderKatObrotu_valueChanged(int a);
     
     /*!
     * \brief Slot odpowiadajacy za przycisniecie przycisku Save.
@@ -287,6 +303,20 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      * Wskaznik na przycisk Wczytaj. Wczytuje symulacje.
      */
     QPushButton *loadButton; 
+    
+    /*!
+     * \brief Wskaznik na przycisk Zapisz.
+     * 
+     * Wskaznik na przycisk Zapisz. Zapisuje symulacje.
+     */
+    QPushButton *saveButton; 
+    
+    /*!
+     * \brief Wskaznik na slider.
+     * 
+     * Wskaznik na slider. Steruje katem obrotu.
+     */
+    QSlider *sliderKatObrotu;
     
     /*!
      * \brief Wskaznik na slider.

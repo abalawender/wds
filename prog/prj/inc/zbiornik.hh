@@ -181,6 +181,20 @@ public:
    * \return _grubosc - referencja na prywatny atrybut opisujacy grubosc sciany
    */
   double& grubosc() { return _grubosc; };
+  /*!
+   * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
+   *
+   * Interfejs pozwalajacy na odczyt prywatnych danych.
+   * \return _kat_obrotu - prywatny atrybut opisujacy kat obrotu zbiornika
+   */
+  int kat_obrotu() const { return _kat_obrotu; };
+  /*!
+   * \brief Interfejs pozwalajacy na zmiane prywatnych danych.
+   *
+   * Interfejs pozwalajacy na zmiane prywatnych danych.
+   * \return _kat_obrotu - referencja na prywatny atrybut opisujacy kat obrotu zbiornika
+   */
+  int& kat_obrotu() { return _kat_obrotu; };
   
   /*!
    * \brief Interfejs pozwalajacy na odczyt prywatnych danych.
@@ -285,6 +299,12 @@ private:
    * Grubosc sciany zbiornika.
    */
   double _grubosc;
+  /*!
+   * \brief Kat obrotu zbiornika.
+   * 
+   * Kat obrotu zbiornika zbiornika.
+   */
+  int _kat_obrotu;
   
   /*!
    * \brief Miernik czasu dla zbiornika.
