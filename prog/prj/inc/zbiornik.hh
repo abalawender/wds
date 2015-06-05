@@ -57,7 +57,7 @@ public:
    * \param[in] grubosc - grubosc sciany zbiornika
    */
   Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy, 
-           const double podstawa, const double wysokosc, const double grubosc);
+           const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu);
   
   /*!
    * \brief Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie.

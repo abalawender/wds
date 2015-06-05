@@ -26,7 +26,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     
   /* Zbiornik */
   wZbiornik = new Zbiornik(this, Vector(width()/2-PODSTAWA/2, height()/2-WYSOKOSC/2), 
-                           PODSTAWA, WYSOKOSC, GRUBOSC);
+                           PODSTAWA, WYSOKOSC, GRUBOSC, 0);
   wZbiornik->setObjectName("Zbiornik");
   setCentralWidget(wZbiornik);
   

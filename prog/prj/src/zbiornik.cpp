@@ -21,9 +21,9 @@
 int STAN = ePAUSE;
 
 Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy, 
-                   const double podstawa, const double wysokosc, const double grubosc):  
+                   const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu):  
   QWidget(wRodzic), _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa), 
-  _wysokosc(wysokosc), _grubosc(grubosc),
+  _wysokosc(wysokosc), _grubosc(grubosc), _kat_obrotu(kat_obrotu),
   _czas_sym(0.0), _odpowiedni_czas(25)
 {
   setAutoFillBackground(true);
