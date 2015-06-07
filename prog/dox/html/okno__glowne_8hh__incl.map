@@ -1,8 +1,0 @@
-<map id="okno_glowne.hh" name="okno_glowne.hh">
-<area shape="rect" id="node32" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="2105,155,2169,181"/>
-<area shape="rect" id="node33" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="579,229,647,256"/>
-<area shape="rect" id="node34" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="925,155,1032,181"/>
-<area shape="rect" id="node36" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="1196,80,1281,107"/>
-<area shape="rect" id="node38" href="$dmainwindow_8h.html" title="dmainwindow.h" alt="" coords="196,80,307,107"/>
-<area shape="rect" id="node35" href="$vector_8hh.html" title="vector.hh" alt="" coords="941,229,1016,256"/>
-</map>

@@ -23,12 +23,12 @@ class Vector {
      * \brief zwraga pierwszą współrzędną wektora
      * \return pierwsza współrzędna wektora jako stała
      */
-    const float  getX() const                   { return x; }
+    float  getX() const       { return x; }
     /*!
      * \brief pobiera drugą współrzędną wektora
      * \return druga współrzędna wektora jako stała
      */
-    const float  getY() const                    { return y; }
+    float  getY() const       { return y; }
     /*!
      * \brief pobiera pierwszą współrzędną wektora
      * \return pierwsza współrzędna wektora jako stała

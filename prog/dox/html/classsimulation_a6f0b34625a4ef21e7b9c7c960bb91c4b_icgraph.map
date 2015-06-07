@@ -1,7 +1,0 @@
-<map id="simulation::reflect_bc" name="simulation::reflect_bc">
-<area shape="rect" id="node2" href="$classsimulation.html#af9dbe76734d2efdbddc7da64eeb91968" title="simulation::leapfrog\l_start" alt="" coords="217,5,351,46"/>
-<area shape="rect" id="node5" href="$classsimulation.html#a8acf4a82697573cb4ae6b1be6a8d30a7" title="simulation::leapfrog_step" alt="" coords="201,71,367,97"/>
-<area shape="rect" id="node3" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="416,12,523,39"/>
-<area shape="rect" id="node4" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="571,12,669,39"/>
-<area shape="rect" id="node6" href="$classsimulation.html#a6d1112d250e89120ac05cf9f42f7d8d7" title="simulation::go" alt="" coords="418,71,521,97"/>
-</map>

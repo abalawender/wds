@@ -1,9 +1,0 @@
-<map id="main.cpp" name="main.cpp">
-<area shape="rect" id="node5" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="1354,80,1469,107"/>
-<area shape="rect" id="node34" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="2172,229,2236,256"/>
-<area shape="rect" id="node35" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="495,304,563,331"/>
-<area shape="rect" id="node36" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="567,229,673,256"/>
-<area shape="rect" id="node38" href="$zbiornik_8hh.html" title="Zawiera definicje klasy Zbiornik i deklaracje jej metod. " alt="" coords="1264,155,1349,181"/>
-<area shape="rect" id="node40" href="$dmainwindow_8h.html" title="dmainwindow.h" alt="" coords="93,155,204,181"/>
-<area shape="rect" id="node37" href="$vector_8hh.html" title="vector.hh" alt="" coords="587,304,663,331"/>
-</map>

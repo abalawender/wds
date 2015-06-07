@@ -1,4 +1,0 @@
-<map id="Zbiornik::RysujZbiornik" name="Zbiornik::RysujZbiornik">
-<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="211,5,459,32"/>
-<area shape="rect" id="node3" href="$class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765" title="Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie. " alt="" coords="507,5,645,32"/>
-</map>

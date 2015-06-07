@@ -1,7 +1,0 @@
-<map id="simulation::leapfrog_start" name="simulation::leapfrog_start">
-<area shape="rect" id="node2" href="$classsimulation.html#a6f0b34625a4ef21e7b9c7c960bb91c4b" title="simulation::reflect_bc" alt="" coords="189,31,336,57"/>
-<area shape="rect" id="node3" href="$classsimulation.html#a2668bf704b28e3c0abe405ab12bd10b7" title="simulation::damp_reflect_x" alt="" coords="384,5,563,32"/>
-<area shape="rect" id="node5" href="$classsimulation.html#a1322c3c317601efbe751747f19f5cafa" title="simulation::damp_reflect_y" alt="" coords="384,56,563,83"/>
-<area shape="rect" id="node4" href="$class_vector.html#a56cbc43a18559f85f4ce7278e98f9aad" title="zwraga pierwszą współrzędną wektora " alt="" coords="611,5,706,32"/>
-<area shape="rect" id="node6" href="$class_vector.html#a4ad8e8a5fb48ce193177af11340831b6" title="pobiera drugą współrzędną wektora " alt="" coords="611,56,706,83"/>
-</map>
