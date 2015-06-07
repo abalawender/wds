@@ -1,0 +1,6 @@
+<map id="simulation::reflect_bc" name="simulation::reflect_bc">
+<area shape="rect" id="node2" href="$classsimulation.html#a2668bf704b28e3c0abe405ab12bd10b7" title="simulation::damp_reflect_x" alt="" coords="200,5,379,32"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a1322c3c317601efbe751747f19f5cafa" title="simulation::damp_reflect_y" alt="" coords="200,56,379,83"/>
+<area shape="rect" id="node3" href="$class_vector.html#a56cbc43a18559f85f4ce7278e98f9aad" title="zwraga pierwszą współrzędną wektora " alt="" coords="427,5,522,32"/>
+<area shape="rect" id="node5" href="$class_vector.html#a4ad8e8a5fb48ce193177af11340831b6" title="pobiera drugą współrzędną wektora " alt="" coords="427,56,522,83"/>
+</map>

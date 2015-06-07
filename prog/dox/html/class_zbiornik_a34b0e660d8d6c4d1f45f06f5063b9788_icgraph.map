@@ -1,0 +1,6 @@
+<map id="Zbiornik::grubosc" name="Zbiornik::grubosc">
+<area shape="rect" id="node2" href="$class_zbiornik.html#a60fd88e85e8696cfec92cd24609e7410" title="Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika. " alt="" coords="177,31,389,57"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="437,5,685,32"/>
+<area shape="rect" id="node5" href="$class_zbiornik.html#af11180e2f8fdca6269b1f825ad3bceff" title="Metoda sprawdzająca czy punkt znajduje sie wewnatrz zbiornika. " alt="" coords="455,56,667,83"/>
+<area shape="rect" id="node4" href="$class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765" title="Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie. " alt="" coords="733,5,872,32"/>
+</map>

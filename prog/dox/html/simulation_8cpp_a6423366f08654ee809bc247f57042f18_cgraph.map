@@ -1,0 +1,17 @@
+<map id="funkcja_main" name="funkcja_main">
+<area shape="rect" id="node2" href="$simulation_8cpp.html#afc3040ee6fc2feb310dd23f1d2c0d165" title="setup" alt="" coords="183,13,238,40"/>
+<area shape="rect" id="node3" href="$classsimulation.html#abe09252527aa58fbec8144063be3e950" title="simulation::getN" alt="" coords="152,64,269,91"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="157,115,264,141"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a66aa4b9fae7d660028ed8972ebf20a91" title="simulation::place_particles" alt="" coords="317,5,493,32"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a98d5516416b67721c545ae7b88d74114" title="simulation::box_indicator" alt="" coords="322,56,489,83"/>
+<area shape="rect" id="node9" href="$classsimulation.html#a2ef9f4e969452551babc02a311f4442c" title="simulation::compute\l_accel" alt="" coords="336,107,475,149"/>
+<area shape="rect" id="node10" href="$classsimulation.html#af9dbe76734d2efdbddc7da64eeb91968" title="simulation::leapfrog\l_start" alt="" coords="338,173,473,214"/>
+<area shape="rect" id="node16" href="$classsimulation.html#a6997cb4eeae3330e93916cb05fea5efe" title="simulation::check_state" alt="" coords="325,239,485,265"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a311b1405c73090e5f82891e35ddee975" title="funkcja " alt="" coords="545,49,684,90"/>
+<area shape="rect" id="node7" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="753,91,898,117"/>
+<area shape="rect" id="node11" href="$classsimulation.html#a6f0b34625a4ef21e7b9c7c960bb91c4b" title="simulation::reflect_bc" alt="" coords="541,180,688,207"/>
+<area shape="rect" id="node12" href="$classsimulation.html#a2668bf704b28e3c0abe405ab12bd10b7" title="simulation::damp_reflect_x" alt="" coords="736,152,915,179"/>
+<area shape="rect" id="node14" href="$classsimulation.html#a1322c3c317601efbe751747f19f5cafa" title="simulation::damp_reflect_y" alt="" coords="736,203,915,229"/>
+<area shape="rect" id="node13" href="$class_vector.html#a56cbc43a18559f85f4ce7278e98f9aad" title="zwraga pierwszą współrzędną wektora " alt="" coords="963,152,1058,179"/>
+<area shape="rect" id="node15" href="$class_vector.html#a4ad8e8a5fb48ce193177af11340831b6" title="pobiera drugą współrzędną wektora " alt="" coords="963,203,1058,229"/>
+</map>

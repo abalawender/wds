@@ -39,7 +39,11 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
+#include <string>
 #include <list>
+#include <stdlib.h>
+
 #include "flagi.hh"
 #include "kolor.hh"
 #include "czasteczka.hh"
@@ -54,9 +58,6 @@
  * - definicja klasy OknoGlowne (modeluje glowne okno aplikacji),
  * - deklaracje konstruktorow, metod i przeciazen ww. klasy.
  */
-
-// TODO
-//extern bool PLAY;
 
 //////////////////////////////////////////////////////////
 /*!
@@ -76,6 +77,37 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      */
    OknoGlowne(QWidget *wRodzic = NULL/*nullptr*/);
    
+   /*!
+    * \brief Wirtualna metoda paintEvent wyrysowujaca obiekty na ekranie.
+    * 
+    * Odziedziczona wirtualna metoda paintEvent. 
+    * Rysuje zbiornik i przyciski w nowym miejscu.
+    * \param[in, out] event - wskaznik obiekt klasy QPaintEvent 
+    */
+   virtual void paintEvent( QPaintEvent * event);
+   
+   /*!
+    * \brief Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku.
+    * 
+    * Zapisuje aktualny stan symulacji (czas, liczba czasteczek, 
+    * dane czasteczek) do automatycznie generowanego pliku. 
+    */
+   void ZapiszSymulacjeDoPliku();
+   
+   /*!
+    * \brief Metoda wczytujaca z pliku stan symulacji.
+    * 
+    * Wczytuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
+    */
+   void WczytajSymulacjeZPliku(const std::string nazwa_pliku);
+   
+   /*!
+    * \brief Metoda zapisujaca stan symulacji do pliku.
+    * 
+    * Zapisuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
+    */
+   void ZapiszSymulacjeDoPliku(const std::string nazwa_pliku);
+   
   public slots:
     /*!
      * \brief Slot odpowiadajacy za aktualizacje danych. .
@@ -92,35 +124,63 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      */
     void GdyNapis(const QString &);
     
-    // TODO
     /*!
      * \brief Slot odpowiadajacy za obsluge stanu play.
      * 
      * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play.
      */
-    void on_playButton_clicked() { PLAY = 1; } ;
-    void on_pauseButton_clicked() { std::cout << "pause" << std::endl; PLAY = 0; } ;
-    void on_stopButton_clicked() { PLAY = 0; } ;
-    /*!
-     * \brief Slot odpowiadajacy za obsluge stanu pauzy.
-     * 
-     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauzy.
-     */
-    void GdyPauza();
+    void on_playButton_clicked();
     
     /*!
-     * \brief Slot odpowiadajacy za obsluge stanu play.
+     * \brief Slot odpowiadajacy za obsluge stanu pauza.
      * 
-     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu play.
+     * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu pauza.
      */
-    void GdyPlay();
+    void on_pauseButton_clicked();
     
     /*!
      * \brief Slot odpowiadajacy za obsluge stanu stop.
      * 
      * Odpowiada za wykonanie odpowiednich czynnosci w trakcie stanu stop.
      */
-    void GdyStop();
+    void on_stopButton_clicked();
+    
+    /*!
+     * \brief Slot odpowiadajacy za wczytanie danych z pliku.
+     * 
+     * Odpowiada za wczytanie danych z pliku.
+     */
+    void on_loadButton_clicked();
+    
+    /*!
+     * \brief Slot odpowiadajacy za wczytanie danych z pliku.
+     * 
+     * Odpowiada za wczytanie danych z pliku.
+     */
+    void on_lineEdit_returnPressed();
+    
+    /*!
+     * \brief Slot odpowiadajacy za zmiane wartosci slidera.
+     * 
+     * Odpowiada za wykonanie odpowiednich czynnosci zwiazanych 
+     * z szybkoscia symulacji po zmianie wartosci slidera.
+     */
+    void on_sliderSzybkoscSym_valueChanged(int a);
+    
+    /*!
+     * \brief Slot odpowiadajacy za zmiane wartosci slidera.
+     * 
+     * Odpowiada za wykonanie odpowiednich czynnosci zwiazanych 
+     * z katem obrotu po zmianie wartosci slidera.
+     */
+    void on_sliderKatObrotu_valueChanged(int a);
+    
+    /*!
+    * \brief Slot odpowiadajacy za przycisniecie przycisku Save.
+    * 
+    * Odpowiada za wykonanie odpowiednich czynnosci po przycisnieciu Save.
+    */
+    void on_action_Save_triggered();
     
   signals:
     /*!
@@ -131,7 +191,14 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     */
     void ZglosNapis(const QString &);
 
-  public:
+  private:
+    /*!
+     * \brief Sluzy do generowania unikatowych nazw plikow wyjsciowych.
+     * 
+     * Sluzy do generowania unikatowych nazw plikow wyjsciowych.
+     */
+    int static licznik_plikow;
+    
     /*!
      * \brief Wskaznik na zbiornik.
      * 
@@ -212,40 +279,122 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
     /*!
      * \brief Wskaznik na przycisk play.
      * 
-     * Wskaznik na przycisk play.
+     * Wskaznik na przycisk play. Uruchamia symulacje.
      */
     QPushButton *playButton;
     
     /*!
      * \brief Wskaznik na przycisk pause.
      * 
-     * Wskaznik na przycisk pause.
+     * Wskaznik na przycisk pause. Wstrzymuje symulacje.
      */
     QPushButton *pauseButton;
     
     /*!
      * \brief Wskaznik na przycisk stop.
      * 
-     * Wskaznik na przycisk stop.
+     * Wskaznik na przycisk stop. Zatrzymuje symulacje.
      */
     QPushButton *stopButton; 
     
-    // TODO
+    /*!
+     * \brief Wskaznik na przycisk Wczytaj.
+     * 
+     * Wskaznik na przycisk Wczytaj. Wczytuje symulacje.
+     */
+    QPushButton *loadButton; 
+    
+    /*!
+     * \brief Wskaznik na przycisk Zapisz.
+     * 
+     * Wskaznik na przycisk Zapisz. Zapisuje symulacje.
+     */
+    QPushButton *saveButton; 
+    
+    /*!
+     * \brief Wskaznik na slider.
+     * 
+     * Wskaznik na slider. Steruje katem obrotu.
+     */
+    QSlider *sliderKatObrotu;
+    
+    /*!
+     * \brief Wskaznik na slider.
+     * 
+     * Wskaznik na slider. Steruje szybkoscia symulacji.
+     */
     QSlider *sliderSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na LCD z szybkoscia symulacji.
+     * 
+     * Wskaznik na LCD z szybkoscia symulacji. Wyswietla jej szybkosc.
+     */
     QLCDNumber *lcdSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z szybkoscia symulacji.
+     * 
+     * Etykieta dla szybkosci symulacji.
+     */
     QLabel *labelSzybkoscSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z czasem symulacji.
+     * 
+     * Etykieta dla czasu symulacji.
+     */
     QLabel *labelCzasSym;
+    
+    /*!
+     * \brief Wskaznik na LCD z czasem trwania symulacji.
+     * 
+     * Wskaznik na LCD z szybkoscia symulacji. Wyswietla jej czas trwania.
+     */
     QLCDNumber *lcdCzasSym;
+    
+    /*!
+     * \brief Wskaznik na etykiete z liczbe czasteczek.
+     * 
+     * Etykieta dla liczby symulowanych czasteczek.
+     */
     QLabel *labelLiczbaCzasteczek;
+    
+    /*!
+     * \brief Wskaznik na LCD z liczbe czasteczek.
+     * 
+     * Wyswietla liczbe symulowanych czasteczek.
+     */
     QLCDNumber *lcdLiczbaCzasteczek;
-
-  private:
+    
+    /*!
+     * \brief Wskaznik na linijke do wpisywania tekstu.
+     * 
+     * Wskazuje linijke do wpisywania tekstu.
+     */
+    QLineEdit *lineEdit;
+    
+public:
     /*!
     * \brief Miernik czasu.
     * 
     * Miernik czasu.
     */
     QTimer _Stoper; 
+    
+private:  
+  /*!
+   * \brief Stara szerokosc okienka.
+   * 
+   * Stara szerokosc okienka. 
+   */
+  double _old_width;
+  /*!
+   * \brief Stara wysokosc okienka.
+   * 
+   * Stara wysokosc okienka. 
+   */
+  double _old_height;
 }; 
 
 #endif
