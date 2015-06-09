@@ -56,6 +56,7 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
   Rysownik.drawLine(x, y, x, y+Wysokosc); // Lewa
   Rysownik.drawLine(x+Podstawa, y, x+Podstawa, y+Wysokosc); // Prawa
   Rysownik.drawLine(x, y+Wysokosc, x+Podstawa, y+Wysokosc); // Podstawa
+  Rysownik.drawLine(x, y, x+Podstawa, y); // Pokrywa
 
   Rysownik.translate(-width()/2, -height()/2);
 }
