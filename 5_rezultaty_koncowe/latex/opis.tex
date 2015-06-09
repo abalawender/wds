@@ -1,0 +1,13 @@
+% opis rozwiazywanego problemu  
+
+\section{Opis projektu}
+Projekt dotyczy komputerowej symulacji zachowania cieczy oraz wizualizacji jej stanu i~rozkładu ciśnienia w zbiorniku z płynem.
+
+Symulacja obejmuje ruch cieczy w przekroju 2D wybranego naczynia. Ciecz jest przedstawiona na płaszczyźnie jako zbiór oddziaływujących ze sobą cząsteczek.
+Jej zachowanie jest możliwie zbliżone do rzeczywistego dzięki
+modelowaniu ruchu płynu przy pomocy metody numerycznej SPH (\textit{smoothed particle hydrodynamics - wygładzona hydrodynamika cząstek}).
+W programie modelowane są właściwości fizyczne cieczy: gęstość i~lepkość. Dlatego też można badać zachowania płynów o różnych parametrach. 
+Dodatkowo prowadzony jest pomiar ciśnienia cieczy. Ciśnienie wizualizowane jest jako odcień koloru płynu.
+Im jest on ciemniejszy, tym wyższe ciśnienie odzwierciedla.
+
+Aplikacja została napisana w języku \textsf{C++}, przy użyciu biblioteki \textsf{Qt}.

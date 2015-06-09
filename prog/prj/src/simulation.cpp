@@ -180,8 +180,8 @@ void simulation::step() {
 
 std::ostream& operator<<( std::ostream& _os, const simulation& _s )  {
     for( unsigned i = 0; i < _s.n; ++i ) {
-        _os.write( (char*)&_s.p[i], sizeof( Vector ) );
-        _os.write( (char*)&_s.rho[i], sizeof( float ) );
+      _os.write( (char*)&_s.p[i], sizeof( Vector ) );
+      _os.write( (char*)&_s.rho[i], sizeof( float ) );
     }
     return _os;
 }

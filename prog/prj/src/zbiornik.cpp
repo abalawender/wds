@@ -95,11 +95,8 @@ bool Zbiornik::CzyWewnatrzZbiornika(const Czasteczka& cz) const
   zb_x = lewa_gora_xy().getX();
   zb_y = lewa_gora_xy().getY();
 
-  if ( ((cz_x > zb_x+grubosc()/2) && (cz_x+2*cz.Promien() < zb_x+podstawa()-grubosc()/2)) &&
-    ((cz_y > zb_y-PASKI) && (cz_y+2*cz.Promien() < zb_y+wysokosc()-grubosc()/2-PASKI)) ) {
-    return true;
-    }
-    return false;
+  return ( ((cz_x > zb_x+grubosc()/2) && (cz_x+2*cz.Promien() < zb_x+podstawa()-grubosc()/2)) &&
+           ((cz_y > zb_y-PASKI)       && (cz_y+2*cz.Promien() < zb_y+wysokosc()-grubosc()/2-PASKI)) );
 }
 
 void Zbiornik::paintEvent( QPaintEvent * )
@@ -112,6 +109,7 @@ void Zbiornik::paintEvent( QPaintEvent * )
 
 void Zbiornik::GdyOdpowiedniCzas()
 {
+  //std::cout << s << std::endl;
   if(STAN == ePLAY)
   {
     _czas_sym += odpowiedni_czas()*1.0/1000;
