@@ -1,0 +1,69 @@
+\documentclass[11pt, a4paper]{article}
+
+%Preambuła dokumentu
+\usepackage{graphicx} 
+\usepackage{rotating}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{epic}
+\usepackage{psfrag}
+\usepackage{epstopdf}
+\usepackage{curves}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{fp}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[polish]{babel}
+\usepackage{polski}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[ampersand]{easylist}
+\usepackage{changepage}
+\usepackage{hyperref}
+\usepackage{url}
+%\usepackage{parskip}
+%\setlength{\parskip}{1ex}
+\usepackage[OT4]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+% Koniec preambuły dokumentu
+
+% Tekst dokumentu
+\begin{document}
+\input{strona_tytulowa}
+\input{spis_tresci}
+\clearpage
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+\input{opis}
+\input{harmonogram}
+\input{sph}
+\newpage
+\input{funkcjonalnosci} %TODO
+\newpage
+\input{interfejs} %TODO
+\newpage
+\input{diagram_klas} %TODO
+\newpage
+\input{diagram_przeplywu}
+\input{aplikacja} %TODO
+%\newpage
+\input{dokumentacja}
+\input{wnioski} %TODO
+
+\newpage
+\bibliographystyle{abbrv}
+\nocite{*}
+\bibliography{bibliografia}
+
+\end{document}

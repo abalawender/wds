@@ -1,0 +1,47 @@
+% zaktualizowany harmonogram wraz z wymienieniem tych elementow poprzedniego harmonogramu, ktore udalo sie zrealizowac
+
+\section{Plan pracy}
+\subsection{Podział obowiązków}
+Projekt zakładał powiązanie symulacji numerycznej (back-end) z aplikacją prezentującą wyniki w~formie graficznej (front-end). Za pierwszą z ww. części odpowiedzialny był Adam
+Balawender, za drugą Krzysztof Kwieciński. Obie części mają możliwość niezależnego uruchomienia, co ułatwiło ich testowanie we wstępnych etapach oraz ocenę w końcowym etapie projektu.
+
+\subsection{Harmonogram}
+Projekt realizowano w okresie 9.03.2015 - 11.06.2015. Oznacza to, że okres prac nad projektem wyniósł w przybliżeniu XIII tygodni.
+
+Cały projekt wykonany został w terminowo. Zrealizowano wszystkie zaplanowane zadania z tygodni I - XIII z założonego wcześniej harmonogramu, \cite{ABKKWstepne}.  
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{l || c | c }
+\hline
+Tydzień & Adam & Krzysztof                                                                                                                            \\\hline \hline
+    I    & \multicolumn{2}{ c }{ Opis projektu                                                                                                      } \\\hline
+    II   & \multicolumn{2}{ c }{ Przegląd bibliotek Qt, szkic GUI                                                                                   } \\\hline
+    III  & \multicolumn{2}{ c }{ Zapoznanie się z metodą SPH (Smoothed Particle Hydrodynamics)                                                      } \\\hline
+    IV, V   & \multicolumn{2}{ c }{ Ustalenie struktur danych oraz API modułów                                                                         } \\\hline
+    VI, VII    & \parbox[c]{6cm}{Implementacja klas zbiornika oraz cząsteczek cieczy }    & \parbox[c]{6cm}{Stworzenie statycznej wizualizacji zbiornika  } \\\hline
+    VIII, IX   & \parbox[c]{6cm}{Dodanie wizualizacji położenia cząstek cieczy} & \parbox[c]{6cm}{Implementacja metod uaktualniania położenia cząsteczek} \\\hline
+    X  & \multicolumn{2}{ c }{ Analiza błędów działania programu i skorygowanie ich                                                                 } \\\hline
+    XI   & Wizualizacja ciśnienia w punktach     &   Wyznaczanie ciśnienia w punkach zbiornika                                                      \\\hline
+    XII    & \multicolumn{2}{ c }{ Weryfikacja projektu z założeniami i odpowiednie modyfikacje programu                                                                                 } \\\hline
+    XIII  & \multicolumn{2}{ c }{ Napisanie raportu końcowego                                                                                        } \\\hline
+\end{tabular}
+
+\subsection{Kamienie milowe}
+\begin{enumerate}[label=K\arabic*{.}]
+    \item Przeanalizowanie artykułów na temat SPH i zapoznanie się z tą metodą
+    \item Zaimplementowanie struktur danych, modelu cieczy i relacji między cząsteczkami
+    \item Wizualizacja symulowanego stanu cieczy
+    \item Wizualizacja ciśnienia w poszczególnych punktach zbiornika
+    \item Skończona dokumentacja
+\end{enumerate}
+
+\newpage
+\subsection{Diagram Gantta}
+\begin{figure}[H] 
+ \begin{center}
+  \includegraphics[width=\textwidth]{../harmonogram/gantt_uaktualniony.png}
+ \end{center}
+ \caption{Diagram Gantta}
+ \label{fig:gantt}
+\end{figure}
+ 
