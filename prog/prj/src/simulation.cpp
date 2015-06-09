@@ -4,9 +4,7 @@
 #include <cmath>
 #include <cassert>
 #include "simulation.hh"
-#define DAMP 0.65 //! współczynnik odbicia od ściany naczynia
-#define XMAX 2.0  //! rozmiar naczynia X
-#define YMAX 2.0  //! rozmiar naczynia Y
+#define DAMP (0.75f) //! współczynnik odbicia od ściany naczynia
 
 /*!
  * \file simulation.cpp
@@ -24,7 +22,7 @@ params_t* setup( params_t *params ) {
     params->nframes	= 600;      // Number of frames
     params->npframe	= 100;      // Steps per frame
     params->h	    = 0.05;     // Particle size
-    params->dt	    = 0.0001;   // Time step
+    params->dt	    = 0.0004;   // Time step
     params->rho0	= 1000;     // Reference density
     params->k	    = 1000;     // Bulk modulus
     params->mu	    = 0.1;      // Viscosity
@@ -100,13 +98,17 @@ void simulation::computeAccel( params_t* params)
 void simulation::dampReflect( float _barrier, unsigned i, float& (Vector::*getter)() ) {
     if( !(v[i].*getter)() ) return;   // ignore static
     float tbounce = ((p[i].*getter)()-_barrier) / (v[i].*getter)();
-    p[i] -= v[i] * (1-DAMP) * tbounce;
+    LOG( "fp: " << (p[i].*getter)()-_barrier);
+    LOG( "tbounce: " << tbounce << ", 1-DAMP " << (1.0-DAMP) );
+    LOG( "v[i] was" << v[i] );
+    p[i] -= v[i] * (1.0-DAMP) * tbounce;
 
     (p[i].*getter)()  = 2*_barrier - (p[i].*getter)(); // reflect the position and velocities
     (v[i].*getter)()  = -(v[i].*getter)();
     (vh[i].*getter)() = -(vh[i].*getter)();
 
     v[i] *= DAMP; // damp the velocities
+    LOG( "v[i] is" << v[i] );
 }
 
 void simulation::reflectParticles( ) {

@@ -30,4 +30,5 @@ SOURCES += src/czasteczka.cpp \
            src/main.cpp \
            src/okno_glowne.cpp \
            src/simulation.cpp \
+           src/vector.cpp \
            src/zbiornik.cpp

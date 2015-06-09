@@ -24,7 +24,7 @@ Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
                    const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu):
   QWidget(wRodzic), _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa),
   _wysokosc(wysokosc), _grubosc(grubosc), _kat_obrotu(kat_obrotu),
-  _czas_sym(0.0), _odpowiedni_czas(25)
+  _czas_sym(0.0), _odpowiedni_czas(25), _Symulacja( 200, setup( new params_t ) )
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -33,6 +33,7 @@ Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
   _Stoper.setInterval(_odpowiedni_czas);
   _Stoper.setSingleShot(false);
   _Stoper.start();
+
 
   //QMetaObject::connectSlotsByName(this);
 }
@@ -65,24 +66,24 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   Czas.start();
   RysujZbiornik(Rysownik, _podstawa, _wysokosc, GRUBOSC, _lewa_gora_xy.getX(), _lewa_gora_xy.getY());
 
-  for (std::list<Czasteczka>::iterator it = Czasteczki.begin();
-       it != Czasteczki.end(); it++)
+  for( auto c : Czasteczki )
   {
-    if (CzyWewnatrzZbiornika((*it))) {
-      (*it).RysujCzasteczke(Rysownik, (*it).Promien(), (*it).RGB(),
-                            (*it).xy().getX(), (*it).xy().getY());
-    }
+    //if (CzyWewnatrzZbiornika(c)) {
+      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), _podstawa+_podstawa*c.xy().getX(), 2*_wysokosc-0.5*_wysokosc*c.xy().getY());
+    //}
   }
 }
 
 bool Zbiornik::CzyWewnatrzZbiornika(const double x, const double y) const
 {
+    LOG( "(x, y)" << x << " " <<  y );
   return ((x>lewa_gora_xy().getX()-grubosc()/2) && (x<lewa_gora_xy().getX()+podstawa()-grubosc()/2)) &&
     ((y>lewa_gora_xy().getY()) && (y<lewa_gora_xy().getY()+wysokosc()-grubosc()/2));
 }
 
 bool Zbiornik::CzyWewnatrzZbiornika(const Vector& xy) const
 {
+    LOG( "(x, y)" << xy );
   return CzyWewnatrzZbiornika(xy.getX(), xy.getY());
 }
 
@@ -108,8 +109,6 @@ void Zbiornik::paintEvent( QPaintEvent * )
 }
 
 
-#include "simulation.hh"
-simulation s( 200, setup( new params_t ) );
 
 void Zbiornik::GdyOdpowiedniCzas()
 {
@@ -118,19 +117,29 @@ void Zbiornik::GdyOdpowiedniCzas()
     _czas_sym += odpowiedni_czas()*1.0/1000;
     update(); // -> paintEvent
 
-    // TODO SPH
-    for ( auto it = Czasteczki.begin();
-        it != Czasteczki.end(); ++it)
-        {
-          (*it).xy().getX() += rand()%7-3;
-          (*it).xy().getY() += rand()%7-3;
-        }
+    //// TODO SPH
+    //for ( auto it = Czasteczki.begin();
+    //    it != Czasteczki.end(); ++it)
+    //    {
+    //      (*it).xy().getX() += rand()%7-3;
+    //      (*it).xy().getY() += rand()%7-3;
+    //    }
 
-    Czasteczki.push_back(Czasteczka(
-                                    Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2,
-                                           2*WYSOKOSC-rand()%(WYSOKOSC/2)),
-                                    PROMIEN,
-                                    Kolor(rand()%255, rand()%255, rand()%255)));
+    //Czasteczki.push_back(Czasteczka(
+    //                                Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2,
+    //                                       2*WYSOKOSC-rand()%(WYSOKOSC/2)),
+    //                                PROMIEN,
+    //                                Kolor(rand()%255, rand()%255, rand()%255)));
+
+    Czasteczki.clear();
+
+    for( unsigned i = 0; i < _Symulacja.getN(); ++i ) {
+        Czasteczki.push_back(Czasteczka( _Symulacja.p[i],
+                    PROMIEN, Kolor(10, 10, 200) ) );
+    }
+
+    LOG( "step! " << _Symulacja.p[0] << " -> " << Czasteczki.front().xy() );
+    _Symulacja.step();
   }
 
   emit ZglosLiczbeCzasteczek(Czasteczki.size());

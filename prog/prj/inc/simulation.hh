@@ -5,9 +5,8 @@
 #include <cmath>
 #include <cassert>
 #include <vector.hh>
-#define DAMP 0.65 //! współczynnik odbicia od ściany naczynia
-#define XMAX 2.0  //! rozmiar naczynia X
-#define YMAX 2.0  //! rozmiar naczynia Y
+#define XMAX 1.0  //! rozmiar naczynia X
+#define YMAX 1.0  //! rozmiar naczynia Y
 
 /*!
  * \brief makro do logowania

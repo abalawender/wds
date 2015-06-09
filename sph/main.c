@@ -313,8 +313,8 @@ int main(int argc, char** argv)
     check_state(state);
     printf( " ADAM: %d %d \n" , nframes, n );
     for (int frame = 1; frame < nframes; ++frame) {
-        if( frame == 200 ) GY = 0;
-        if( frame == 400 ) GY = -3;
+        //if( frame == 200 ) GY = 0;
+        //if( frame == 400 ) GY = -3;
         for (int i = 0; i < npframe; ++i) {
             compute_accel(state, &params);
             leapfrog_step(state, dt);
@@ -330,7 +330,7 @@ int main(int argc, char** argv)
 static void default_params(sim_param_t* params)
 {
     params->fname= "run.out";
-    params->nframes = 600;
+    params->nframes = 300;
     params->npframe = 100;
     params->dt= 1e-4;
     params->h= 5e-2;

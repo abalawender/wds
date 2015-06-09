@@ -1,5 +1,6 @@
 #ifndef VECTOR_HH
 #define VECTOR_HH
+#include <iostream>
 
 /*!
  * \brief klasa Vector
@@ -103,5 +104,4 @@ class Vector {
      */
     float normSquared()                         { return x*x+y*y; }
 };
-
 #endif
