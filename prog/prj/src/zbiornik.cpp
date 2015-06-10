@@ -72,29 +72,16 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
                 GRUBOSC, 
                 _lewa_gora_xy.getX()-PROMIEN/2, 
                 _lewa_gora_xy.getY()-PROMIEN/2 );
-
-  
-  Czasteczka c = *(Czasteczki.begin());
-  double offset=0;
-  for (int r=10; r>0; r--) {
-    c.RysujCzasteczke(Rysownik, r, c.RGB(), 
-                      100+offset, 
-                      200+offset);
-    
-    offset += 1;
-  }
   
   for( auto c : Czasteczki )
   {
-    //if (CzyWewnatrzZbiornika(c)) {
     double offset=0; // sztuczne zakolorowanie czasteczki
-    for (int r=c.Promien(); r>0; r--) {
-      c.RysujCzasteczke(Rysownik, r, c.RGB(), 
+    //for (int r=c.Promien(); r>0; r--) {
+      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), 
                         _lewa_gora_xy.getX()+(_podstawa-2*PROMIEN)*c.xy().getX()+offset, 
                         _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-_wysokosc*c.xy().getY()-PASKI+offset);
     
-      offset += 1;
-    }
+      //offset += 1;
     //}
   }
 }

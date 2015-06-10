@@ -7,6 +7,7 @@
 #endif
 
 #include <QPainter>
+#include <QRectF>
 
 #include "kolor.hh"
 #include "vector.hh"
