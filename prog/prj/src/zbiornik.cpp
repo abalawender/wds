@@ -65,12 +65,20 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
 {
   QTime Czas;
   Czas.start();
-  RysujZbiornik(Rysownik, _podstawa, _wysokosc, GRUBOSC, _lewa_gora_xy.getX(), _lewa_gora_xy.getY());
+  // triki z gruboscia i promieniem, zeby latwiej umieszczac czasteczki w zbiorniku
+  RysujZbiornik(Rysownik, 
+                _podstawa+GRUBOSC, // szerokosc pustej przestrzeni w zbiorniku == _podstawa 
+                _wysokosc+GRUBOSC, 
+                GRUBOSC, 
+                _lewa_gora_xy.getX()-PROMIEN/2, 
+                _lewa_gora_xy.getY()-PROMIEN/2 );
 
   for( auto c : Czasteczki )
   {
     //if (CzyWewnatrzZbiornika(c)) {
-      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), _lewa_gora_xy.getX()+_podstawa*c.xy().getX(), _lewa_gora_xy.getY()+_wysokosc-_wysokosc*c.xy().getY());
+      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), 
+                        _lewa_gora_xy.getX()+(_podstawa-GRUBOSC)*c.xy().getX(), 
+                        _lewa_gora_xy.getY()+_wysokosc-GRUBOSC-_wysokosc*c.xy().getY()-PASKI);
     //}
   }
 }

@@ -62,7 +62,7 @@ const int GRUBOSC  = 10;
  * \brief Suma grubosci paskow statusu itd. okienka.
  * 
  * Suma grubosci paskow statusu itd. okienka.
- * Potrzebne do liczenia pozycji srodka
+ * Potrzebne do liczenia pozycji.
  */
 const int PASKI = 18;
 
