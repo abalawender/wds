@@ -23,7 +23,7 @@ void Czasteczka::RysujCzasteczke( QPainter&    Rysownik,
   //Sets the opacity of the painter to opacity. The value should be in the range 0.0 to 1.0, where 0.0 is fully transparent and 1.0 is fully opaque.
   Rysownik.setOpacity(0.5);
   // Antialiasing
-  Rysownik.setRenderHint(QPainter::HighQualityAntialiasing);
+  //Rysownik.setRenderHint(QPainter::HighQualityAntialiasing);
   //Zamalowanie wnetrza kolorem czasteczki.
   QBrush brush(QColor(RGB.r(), RGB.g(), RGB.b()), Qt::SolidPattern);
   Rysownik.setBrush(brush);

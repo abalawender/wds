@@ -49,7 +49,9 @@ void Zbiornik::RysujZbiornik( QPainter& Rysownik,
   QPen Piorko(Rysownik.pen());
   Piorko.setWidth(Grubosc);
   Rysownik.setPen(Piorko);
-
+  
+  Rysownik.setRenderHint(QPainter::Antialiasing);
+  
   Rysownik.translate(width()/2, height()/2);
   Rysownik.rotate(_kat_obrotu);
   x=0-Podstawa/2; y=0-Wysokosc/2;
@@ -76,14 +78,9 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   
   for( auto c : Czasteczki )
   {
-    double offset=0; // sztuczne zakolorowanie czasteczki
-    //for (int r=c.Promien(); r>0; r--) {
       c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), 
-                        _lewa_gora_xy.getX()+(_podstawa-2*PROMIEN)*c.xy().getX()+offset, 
-                        _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-(_wysokosc-2*PROMIEN)*c.xy().getY()-PASKI+offset);
-    
-      //offset += 1;
-    //}
+                        _lewa_gora_xy.getX()+(_podstawa-2*PROMIEN)*c.xy().getX(), 
+                        _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-(_wysokosc-2*PROMIEN)*c.xy().getY()-PASKI);
   }
 }
 
@@ -114,8 +111,22 @@ bool Zbiornik::CzyWewnatrzZbiornika(const Czasteczka& cz) const
 
 void Zbiornik::paintEvent( QPaintEvent * )
 {
-  QPainter Rysownik(this);
-  RysujZbiornikZCzasteczkami(Rysownik);
+  // Wersja latwiejsza
+  //QPainter Rysownik(this);
+  //Rysownik.setRenderHint(QPainter::HighQualityAntialiasing);
+  //RysujZbiornikZCzasteczkami(Rysownik);
+  
+  // Wersja pod niezalezna sprzetowo
+  QImage image(size(), QImage::Format_ARGB32_Premultiplied);
+  QPainter imagePainter(&image);
+  imagePainter.initFrom(this);
+  imagePainter.setRenderHint(QPainter::HighQualityAntialiasing, true);
+  imagePainter.eraseRect(rect());
+  RysujZbiornikZCzasteczkami(imagePainter);
+  imagePainter.end();
+  
+  QPainter widgetPainter(this);
+  widgetPainter.drawImage(0, 0, image);
 }
 
 

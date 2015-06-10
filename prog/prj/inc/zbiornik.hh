@@ -9,6 +9,7 @@
 #include <QApplication>
 #include <QColor>
 #include <QPainter>
+#include <QImage>
 #include <QStatusBar>
 #include <QTime>
 #include <QTimer>
