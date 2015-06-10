@@ -24,7 +24,7 @@ Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
                    const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu):
   QWidget(wRodzic), _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa),
   _wysokosc(wysokosc), _grubosc(grubosc), _kat_obrotu(kat_obrotu),
-  _czas_sym(0.0), _odpowiedni_czas(25), _Symulacja( 200, setup( new params_t ) )
+  _czas_sym(0.0), _odpowiedni_czas(25), _Symulacja( 400, setup( new params_t ) )
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -144,11 +144,14 @@ void Zbiornik::GdyOdpowiedniCzas()
     Czasteczki.clear();
 
     for( unsigned i = 0; i < _Symulacja.getN(); ++i ) {
+        float blue = (_Symulacja.rho[i]-950)*2; //0-200
+        blue = std::min( 200.0f, std::max( 0.0f, blue ) ); // make sure we don't go beyond
+
         Czasteczki.push_back(Czasteczka( _Symulacja.p[i],
-                    PROMIEN, Kolor(10, 10, 200) ) );
+                    PROMIEN, Kolor(10, 0.5*(255-blue), 255-blue ) ) );
     }
 
-    LOG( "kąt obrotu: " << _kat_obrotu );
+    LOG( "kąt obrotu: " << _kat_obrotu << "\tB[0]: " << Czasteczki.front().RGB().b() );
     //TODO dodac rotate() do klasy vector!!!
     float gx0 = 0, gy0 = -9.8, alpha = -_kat_obrotu * M_PI / 180;
 

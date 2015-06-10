@@ -23,7 +23,7 @@
 params_t* setup( params_t *params ) {
     params->nframes	= 300;      // Number of frames
     params->npframe	= 100;      // Steps per frame
-    params->h	    = 0.05;     // Particle size
+    params->h	    = 0.04;     // Particle size
     params->dt	    = 0.0004;   // Time step
     params->rho0	= 1000;     // Reference density
     params->k	    = 1000;     // Bulk modulus
