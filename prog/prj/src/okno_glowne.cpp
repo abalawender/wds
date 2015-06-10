@@ -101,8 +101,8 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   sliderKatObrotu = new QSlider(Qt::Horizontal, this);
   sliderKatObrotu->setObjectName("sliderKatObrotu");
   sliderKatObrotu->setGeometry(QRect(width()/2 - 270/2, height()-130, 270, 25));
-  sliderKatObrotu->setMinimum(-45); // [stopnie]
-  sliderKatObrotu->setMaximum(45);
+  sliderKatObrotu->setMinimum(-180); // [stopnie]
+  sliderKatObrotu->setMaximum(180);
   sliderKatObrotu->setValue(0);
 
   /* Czas symulacji */

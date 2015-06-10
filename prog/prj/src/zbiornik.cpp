@@ -22,9 +22,10 @@ int STAN = ePAUSE;
 
 Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
                    const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu):
-  QWidget(wRodzic), _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa),
+  QWidget(wRodzic), _Symulacja( 400, setup( new params_t ) ), 
+  _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa),
   _wysokosc(wysokosc), _grubosc(grubosc), _kat_obrotu(kat_obrotu),
-  _czas_sym(0.0), _odpowiedni_czas(25), _Symulacja( 400, setup( new params_t ) )
+  _czas_sym(0.0), _odpowiedni_czas(25)
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -79,7 +80,7 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
     //for (int r=c.Promien(); r>0; r--) {
       c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), 
                         _lewa_gora_xy.getX()+(_podstawa-2*PROMIEN)*c.xy().getX()+offset, 
-                        _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-_wysokosc*c.xy().getY()-PASKI+offset);
+                        _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-(_wysokosc-2*PROMIEN)*c.xy().getY()-PASKI+offset);
     
       //offset += 1;
     //}
