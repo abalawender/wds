@@ -106,6 +106,7 @@ void simulation::dampReflect( float _barrier, unsigned i, float& (Vector::*gette
     (vh[i].*getter)() = -(vh[i].*getter)();
 
     v[i] *= DAMP; // damp the velocities
+    vh[i] *= DAMP; // damp the velocities
 }
 
 void simulation::reflectParticles( ) {
@@ -173,7 +174,6 @@ void simulation::step() {
         computeAccel( params );
         integrate( params->dt );
     }
-    LOG( "sim[0]: v " << v[0] << "\tp " << p[0] << "\ta " << a[0] );
 }
 
 std::ostream& operator<<( std::ostream& _os, const simulation& _s )  {

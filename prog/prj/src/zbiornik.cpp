@@ -70,7 +70,7 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   for( auto c : Czasteczki )
   {
     //if (CzyWewnatrzZbiornika(c)) {
-      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), _podstawa+_podstawa*c.xy().getX(), 2*_wysokosc-0.5*_wysokosc*c.xy().getY());
+      c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), _lewa_gora_xy.getX()+_podstawa*c.xy().getX(), _lewa_gora_xy.getY()+_wysokosc-_wysokosc*c.xy().getY());
     //}
   }
 }
@@ -137,7 +137,12 @@ void Zbiornik::GdyOdpowiedniCzas()
                     PROMIEN, Kolor(10, 10, 200) ) );
     }
 
-    LOG( "step! " << _Symulacja.p[0] << " -> " << Czasteczki.front().xy() );
+    LOG( "kąt obrotu: " << _kat_obrotu );
+    //TODO dodac rotate() do klasy vector!!!
+    float gx0 = 0, gy0 = -9.8, alpha = -_kat_obrotu * M_PI / 180;
+
+    _Symulacja.params->gx = gx0 * cos(alpha) + gy0  * sin(alpha);
+    _Symulacja.params->gy = gx0 * sin(alpha) + gy0  * cos(alpha);
     _Symulacja.step();
   }
 

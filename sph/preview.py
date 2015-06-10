@@ -32,7 +32,7 @@ def run(data):
     #ydata.append(y)
     #line.set_data( xdata, ydata )
     line.set_data( xdata, ydata )
-    dupa = input("%i sane?" % i)
+    #dupa = input("%i sane?" % i)
     i+=1
     return line,
 
