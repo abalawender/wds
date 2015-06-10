@@ -5,8 +5,6 @@
 #include <cmath>
 #include <cassert>
 #include <vector.hh>
-#define XMAX 1.0  //! rozmiar naczynia X
-#define YMAX 1.0  //! rozmiar naczynia Y
 
 /*!
  * \brief makro do logowania

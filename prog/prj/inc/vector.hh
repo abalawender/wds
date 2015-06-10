@@ -102,6 +102,6 @@ class Vector {
      * Zwraca sumę kwadratów współrzędnych wektora
      * \return wartość kwadratu normy
      */
-    float normSquared()                         { return x*x+y*y; }
+    float normSquared()                         { return x*x + y*y; }
 };
 #endif

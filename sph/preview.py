@@ -9,6 +9,8 @@ h = f.readline()
 n = struct.unpack( 'I', f.read(4) )[0]
 print( "HEADER: ", h, " N: ", n )
 
+i = 0
+
 def data_gen():
     while f.tell() != os.fstat(f.fileno()).st_size:
         xdata.clear()
@@ -24,11 +26,14 @@ def data_gen():
         yield xdata, ydata
 
 def run(data):
+    global i
     xdata, ydata = data
     #xdata.append(x)
     #ydata.append(y)
     #line.set_data( xdata, ydata )
     line.set_data( xdata, ydata )
+    dupa = input("%i sane?" % i)
+    i+=1
     return line,
 
 fig, ax = plt.subplots()
