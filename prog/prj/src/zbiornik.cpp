@@ -77,8 +77,8 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   {
     //if (CzyWewnatrzZbiornika(c)) {
       c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(), 
-                        _lewa_gora_xy.getX()+(_podstawa-GRUBOSC)*c.xy().getX(), 
-                        _lewa_gora_xy.getY()+_wysokosc-GRUBOSC-_wysokosc*c.xy().getY()-PASKI);
+                        _lewa_gora_xy.getX()+(_podstawa-2*PROMIEN)*c.xy().getX(), 
+                        _lewa_gora_xy.getY()+_wysokosc-2*PROMIEN-_wysokosc*c.xy().getY()-PASKI);
     //}
   }
 }
