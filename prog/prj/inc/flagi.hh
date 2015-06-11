@@ -58,11 +58,12 @@ const int WYSOKOSC = 280;
  */
 const int GRUBOSC  = 8;
 
-/*! TODO
- * \brief Grubosc krawedzi zbiornika [px].
+/*!
+ * \brief Suma grubosci paskow statusu itd. okienka [px].
  * 
- * Grubosc krawedzi zbiornika [px].
- * Grubosc jest symetryczna wzgledem osi.
+ * Suma grubosci paskow statusu itd. okienka [px].
+ * Potrzebne do liczenia pozycji.
+ * Jest zależna od komputera.
  */
 const int PASKI = 8;
 

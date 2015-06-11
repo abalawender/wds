@@ -22,7 +22,7 @@ static const uint qt_meta_data_OknoGlowne[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,11 +39,9 @@ static const uint qt_meta_data_OknoGlowne[] = {
       94,   11,   11,   11, 0x0a,
      119,   11,   11,   11, 0x0a,
      143,   11,   11,   11, 0x0a,
-     170,   11,   11,   11, 0x0a,
-     194,   11,   11,   11, 0x0a,
-     224,  222,   11,   11, 0x0a,
-     263,  222,   11,   11, 0x0a,
-     300,   11,   11,   11, 0x0a,
+     172,  170,   11,   11, 0x0a,
+     211,  170,   11,   11, 0x0a,
+     248,   11,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -54,9 +52,7 @@ static const char qt_meta_stringdata_OknoGlowne[] = {
     "on_playButton_clicked()\0"
     "on_pauseButton_clicked()\0"
     "on_stopButton_clicked()\0"
-    "on_gravTglButton_clicked()\0"
-    "on_loadButton_clicked()\0"
-    "on_lineEdit_returnPressed()\0a\0"
+    "on_gravTglButton_clicked()\0a\0"
     "on_sliderSzybkoscSym_valueChanged(int)\0"
     "on_sliderKatObrotu_valueChanged(int)\0"
     "on_action_Save_triggered()\0"
@@ -75,11 +71,9 @@ void OknoGlowne::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->on_pauseButton_clicked(); break;
         case 5: _t->on_stopButton_clicked(); break;
         case 6: _t->on_gravTglButton_clicked(); break;
-        case 7: _t->on_loadButton_clicked(); break;
-        case 8: _t->on_lineEdit_returnPressed(); break;
-        case 9: _t->on_sliderSzybkoscSym_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 10: _t->on_sliderKatObrotu_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 11: _t->on_action_Save_triggered(); break;
+        case 7: _t->on_sliderSzybkoscSym_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 8: _t->on_sliderKatObrotu_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->on_action_Save_triggered(); break;
         default: ;
         }
     }
@@ -117,9 +111,9 @@ int OknoGlowne::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 10;
     }
     return _id;
 }

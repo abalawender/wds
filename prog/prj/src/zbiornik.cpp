@@ -22,10 +22,10 @@ int STAN = ePAUSE;
 
 Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
                    const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu):
-  QWidget(wRodzic), _Symulacja( 400, setup( new params_t ) ),
+  QWidget(wRodzic), _Symulacja( 400, setup( new params_t ) ), useGravity(true),
   _lewa_gora_xy(lewa_gora_xy), _podstawa(podstawa),
   _wysokosc(wysokosc), _grubosc(grubosc), _kat_obrotu(kat_obrotu),
-  _czas_sym(0.0), _odpowiedni_czas(25), useGravity(true)
+  _czas_sym(0.0), _odpowiedni_czas(25)
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
@@ -134,12 +134,6 @@ void Zbiornik::GdyOdpowiedniCzas()
   {
     _czas_sym += odpowiedni_czas()*1.0/1000;
     update(); // -> paintEvent
-
-    //Czasteczki.push_back(Czasteczka(
-    //                                Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2,
-    //                                       2*WYSOKOSC-rand()%(WYSOKOSC/2)),
-    //                                PROMIEN,
-    //                                Kolor(rand()%255, rand()%255, rand()%255)));
 
     Czasteczki.clear();
 

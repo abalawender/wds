@@ -205,6 +205,7 @@ void OknoGlowne::on_gravTglButton_clicked() {
     wZbiornik->useGravity = !wZbiornik->useGravity;
 }
 
+/*
 void OknoGlowne::on_loadButton_clicked() {
     std::string nazwa_pliku = "saved/";
     nazwa_pliku += lineEdit->text().toUtf8().constData();
@@ -218,6 +219,7 @@ void OknoGlowne::on_lineEdit_returnPressed() {
     // Na razie nie robi nic.
     //WczytajSymulacjeZPliku(nazwa_pliku);
 }
+*/
 
 void OknoGlowne::on_sliderKatObrotu_valueChanged(int a) {
     wZbiornik->kat_obrotu() = a;
@@ -245,8 +247,17 @@ void OknoGlowne::GdyOdpowiedniCzas() {
     QDate Data = QDate::currentDate();
     QLocale Lokalizacja(QLocale::Polish);
     QString NapisDaty = Lokalizacja.toString(Data);
-
     emit ZglosNapis(NapisDaty);
+    
+    if( wZbiornik->czas_sym() >= 10.0 ) {
+      lcdCzasSym->setDigitCount(4);
+    }
+    else if( wZbiornik->czas_sym() >= 100.0 ) {
+      lcdCzasSym->setDigitCount(5);
+    }
+    else if( wZbiornik->czas_sym() >= 1000.0 ) {
+      lcdCzasSym->setDigitCount(6);
+    }
 }
 
 void OknoGlowne::GdyNapis(const QString &Napis) {

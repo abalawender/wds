@@ -157,14 +157,14 @@ class OknoGlowne: public QMainWindow
      *
      * Odpowiada za wczytanie danych z pliku.
      */
-    void on_loadButton_clicked();
+    //void on_loadButton_clicked();
 
     /*!
      * \brief Slot odpowiadajacy za wczytanie danych z pliku.
      *
      * Odpowiada za wczytanie danych z pliku.
      */
-    void on_lineEdit_returnPressed();
+    //void on_lineEdit_returnPressed();
 
     /*!
      * \brief Slot odpowiadajacy za zmiane wartosci slidera.
