@@ -1,9 +1,9 @@
 <map id="Zbiornik::czas_sym" name="Zbiornik::czas_sym">
 <area shape="rect" id="node2" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="214,5,415,47"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="193,71,436,98"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="193,71,436,98"/>
 <area shape="rect" id="node5" href="$class_okno_glowne.html#a6062f76fdf15ad8bc0543cfd2a2fe150" title="Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku. " alt="" coords="207,123,422,164"/>
 <area shape="rect" id="node7" href="$class_okno_glowne.html#a1b8098c27e9656235bb056aeb79a8ece" title="Metoda wczytujaca z wybranego pliku stan symulacji. " alt="" coords="203,188,426,229"/>
-<area shape="rect" id="node8" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="209,254,420,281"/>
+<area shape="rect" id="node8" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="209,254,420,281"/>
 <area shape="rect" id="node4" href="$class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="484,71,676,98"/>
 <area shape="rect" id="node6" href="$class_okno_glowne.html#a8ed8fc49c9c3d3e187639880ce286c88" title="Slot odpowiadajacy za przycisniecie przycisku Save. " alt="" coords="494,123,666,164"/>
 <area shape="rect" id="node9" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="516,254,644,281"/>

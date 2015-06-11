@@ -4,9 +4,9 @@
 <area shape="rect" id="node7" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="całkuje przyspieszenia i prędkości " alt="" coords="468,122,615,149"/>
 <area shape="rect" id="node4" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="inicjuje symulację " alt="" coords="682,71,790,98"/>
 <area shape="rect" id="node5" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="847,5,1049,47"/>
-<area shape="rect" id="node6" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="Parametry symulacji. " alt="" coords="872,71,1024,98"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="872,71,1024,98"/>
 <area shape="rect" id="node8" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="realizuje krok symulacji " alt="" coords="677,122,795,149"/>
 <area shape="rect" id="node9" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="896,122,1000,149"/>
-<area shape="rect" id="node10" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="843,173,1053,199"/>
+<area shape="rect" id="node10" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="843,173,1053,199"/>
 <area shape="rect" id="node11" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="1101,173,1229,199"/>
 </map>

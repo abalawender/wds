@@ -11,8 +11,7 @@ backend symulacji
 
 
 
-Diagram współpracy dla simulation\+:
-\nopagebreak
+Diagram współpracy dla simulation\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,7 +22,7 @@ Diagram współpracy dla simulation\+:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{simulation} (const unsigned \&\+\_\+n, \hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+param)
-\begin{DoxyCompactList}\small\item\em Parametry symulacji. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em konstruktor klasy \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{compute\+Density} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+p)
 \begin{DoxyCompactList}\small\item\em wylicza przybliżenia gęstości \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a16b945b81e27680a709fffd8663bf856}{compute\+Accel} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params})
@@ -52,19 +51,19 @@ const unsigned \& \hyperlink{classsimulation_abe09252527aa58fbec8144063be3e950}{
 \begin{DoxyCompactItemize}
 \item 
 unsigned \hyperlink{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{n}
-\item 
-float $\ast$ \hyperlink{classsimulation_a44081d4edd92e17a3e1067b976031a00}{rho}
 \begin{DoxyCompactList}\small\item\em Liczba cząstek. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{p}
+float $\ast$ \hyperlink{classsimulation_a44081d4edd92e17a3e1067b976031a00}{rho}
 \begin{DoxyCompactList}\small\item\em Gęstości. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_ae6da1f15728f49be7b0793700866ede9}{vh}
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{p}
 \begin{DoxyCompactList}\small\item\em Pozycje. \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{v}
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_ae6da1f15728f49be7b0793700866ede9}{vh}
 \begin{DoxyCompactList}\small\item\em Prędkości (half step) \end{DoxyCompactList}\item 
-\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{a}
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{v}
 \begin{DoxyCompactList}\small\item\em Prędkości (full step) \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{a}
+\begin{DoxyCompactList}\small\item\em Przyspieszenia. \end{DoxyCompactList}\item 
 \hyperlink{structparams__t}{params\+\_\+t} $\ast$ \hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}
-\begin{DoxyCompactList}\small\item\em Przyspieszenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parametry symulacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Przyjaciele}
 \begin{DoxyCompactItemize}
 \item 
@@ -90,8 +89,6 @@ Definicja w linii 61 pliku simulation.\+hh.
 \item[{{\bf params\+\_\+t} $\ast$}]{\+\_\+param}
 \end{DoxyParamCaption}
 )}\label{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}
-konstruktor klasy
-
 Alokuje pamięć na potrzeby przechowania stanu symulacji 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in}  & {\em \+\_\+n} & -\/ maksymalna liczba cząstek \\

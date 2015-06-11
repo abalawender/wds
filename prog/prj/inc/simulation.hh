@@ -32,16 +32,16 @@
  * Struktura przechowuje parametry symulacji
  */
 struct params_t {
-    unsigned nframes;       // Liczba ramek (tylko w trybie stand-alone)
-    unsigned npframe;       // Liczba kroków na ramkę
-    float h;                // Rozmiar cząstki
-    float dt;               // Najmniejsza różnica czasu
-    float rho0;             // Gęstość cieczy
-    float k;                // Współczynnik K
-    float mu;               // Lepkość
-    float gx;               // Grawitacja w poziomie
-    float gy;               // Grawitacja w pionie
-    float mass;             // Masa cząstki
+    unsigned nframes;       //!< Liczba ramek - tylko w trybie standalone
+    unsigned npframe;       //!< Liczba kroków na ramkę
+    float h;                //!< Rozmiar cząstki
+    float dt;               //!< Najmniejsza różnica czasu
+    float rho0;             //!< Gęstość cieczy
+    float k;                //!< Współczynnik K
+    float mu;               //!< Lepkość
+    float gx;               //!< Grawitacja w poziomie
+    float gy;               //!< Grawitacja w pionie
+    float mass;             //!< Masa cząstki
 };
 
 /*!
@@ -63,14 +63,14 @@ class simulation {
 
     friend class Zbiornik;
 
-    unsigned n;     //! Liczba cząstek
-    float* rho;     //! Gęstości
-    Vector* p;      //! Pozycje
-    Vector* vh;     //! Prędkości (half step)
-    Vector* v;      //! Prędkości (full step)
-    Vector* a;      //! Przyspieszenia
+    unsigned n;     //!< Liczba cząstek
+    float* rho;     //!< Gęstości
+    Vector* p;      //!< Pozycje
+    Vector* vh;     //!< Prędkości (half step)
+    Vector* v;      //!< Prędkości (full step)
+    Vector* a;      //!< Przyspieszenia
 
-    params_t* params; //! Parametry symulacji
+    params_t* params; //!< Parametry symulacji
 
     public:
 
