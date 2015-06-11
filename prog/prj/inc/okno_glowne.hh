@@ -56,16 +56,15 @@
  * 
  * W pliku znajduja sie: 
  * - definicja klasy OknoGlowne (modeluje glowne okno aplikacji),
- * - deklaracje konstruktorow, metod i przeciazen ww. klasy.
+ * - deklaracje konstruktorow oraz metod ww. klasy.
  */
 
-//////////////////////////////////////////////////////////
 /*!
  * \brief Klasa modelujaca głowne okno aplikacji.
  *
  * Dzieki tej klasie wyswietlane jest okno glowne aplikacji.
  */
-class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
+class OknoGlowne: public QMainWindow
 {
    Q_OBJECT
   public:
@@ -95,14 +94,14 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
    void ZapiszSymulacjeDoPliku();
    
    /*!
-    * \brief Metoda wczytujaca z pliku stan symulacji.
+    * \brief Metoda wczytujaca z wybranego pliku stan symulacji.
     * 
     * Wczytuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
     */
    void WczytajSymulacjeZPliku(const std::string nazwa_pliku);
    
    /*!
-    * \brief Metoda zapisujaca stan symulacji do pliku.
+    * \brief Metoda zapisujaca stan symulacji do wybranego pliku.
     * 
     * Zapisuje stan symulacji (czas, liczba czasteczek, dane czasteczek). 
     */
@@ -374,7 +373,7 @@ class OknoGlowne: public QMainWindow//, private Ui::DMainWindow
      */
     QLineEdit *lineEdit;
     
-public:
+private:
     /*!
     * \brief Miernik czasu.
     * 
@@ -387,12 +386,14 @@ private:
    * \brief Stara szerokosc okienka.
    * 
    * Stara szerokosc okienka. 
+   * Potrzebne do umieszczania elementów w odpowiednich miejscach po zmianie wymiarów okienka. 
    */
   double _old_width;
   /*!
    * \brief Stara wysokosc okienka.
    * 
    * Stara wysokosc okienka. 
+   * Potrzebna do umieszczania elementów w odpowiednich miejscach po zmianie wymiarów okienka. 
    */
   double _old_height;
 }; 

@@ -10,7 +10,7 @@
  * \brief Zawiera definicje metod klasy OknoGlowne.
  *
  * W pliku znajduja sie:
- * - definicje konstruktorow, metod i przeciazen klasy OknoGlowne.
+ * - definicje konstruktorow oraz metod klasy OknoGlowne.
  */
 
 OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
@@ -203,7 +203,7 @@ void OknoGlowne::on_loadButton_clicked() {
 void OknoGlowne::on_lineEdit_returnPressed() {
   std::string nazwa_pliku = "saved/";
   nazwa_pliku += lineEdit->text().toUtf8().constData();
-  // TODO
+  
   // Na razie nie robi nic.
   //WczytajSymulacjeZPliku(nazwa_pliku);
 }
@@ -267,12 +267,12 @@ void OknoGlowne::ZapiszSymulacjeDoPliku() {
   plik.open(nazwa_pliku.c_str(), std::ios::out);
   if(plik.good()){
     licznik_plikow++;
-    plik << wZbiornik->czas_sym() << std::endl;
-    // TODO Co jest potrzebne do sph?
-    plik << wZbiornik->Czasteczki.size() << std::endl;
+    plik << wZbiornik->czas_sym() << " " << wZbiornik->Czasteczki.size() 
+         << wZbiornik->kat_obrotu() << std::endl;
     for (std::list<Czasteczka>::iterator it = wZbiornik->Czasteczki.begin();
          it != wZbiornik->Czasteczki.end(); it++)
     {
+      // TODO Co jest potrzebne do sph?
       plik << (*it).xy().getX() << " " << (*it).xy().getY() << std::endl;
     }
     plik.close();
@@ -286,12 +286,12 @@ void OknoGlowne::ZapiszSymulacjeDoPliku(const std::string nazwa_pliku) {
   std::fstream plik;
   plik.open(nazwa_pliku.c_str(), std::ios::out);
   if(plik.good()){
-    plik << wZbiornik->czas_sym() << std::endl;
-    // TODO Co jest potrzebne do sph?
-    plik << wZbiornik->Czasteczki.size() << std::endl;
+    plik << wZbiornik->czas_sym() << wZbiornik->Czasteczki.size() 
+         << wZbiornik->kat_obrotu() << std::endl;
     for (std::list<Czasteczka>::iterator it = wZbiornik->Czasteczki.begin();
          it != wZbiornik->Czasteczki.end(); it++)
          {
+           // TODO Co jest potrzebne do sph?
            plik << (*it).xy().getX() << " " << (*it).xy().getY() << std::endl;
          }
          plik.close();
@@ -307,11 +307,10 @@ void OknoGlowne::WczytajSymulacjeZPliku(const std::string nazwa_pliku) {
   plik.open(nazwa_pliku.c_str(), std::ios::in);
   if(plik.good()){
     wZbiornik->Czasteczki.clear();
-    plik >> wZbiornik->czas_sym();
-    plik >> liczba_czasteczek;
-    // TODO Co jest potrzebne do sph?
+    plik >> wZbiornik->czas_sym() >> liczba_czasteczek >> wZbiornik->kat_obrotu();
     for (int i=0; i<liczba_czasteczek; i++)
     {
+      // TODO Co jest potrzebne do sph?
       double x, y;
       plik >> x >> y;
       wZbiornik->Czasteczki.push_back(Czasteczka(

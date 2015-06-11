@@ -32,7 +32,7 @@
 
 /*!
  * \file
- * \brief Zawiera definicje klasy Zbiornik i deklaracje jej metod.
+ * \brief Zawiera definicję klasy Zbiornik i deklaracje jej metod.
  *
  * W pliku znajduja sie:
  * - definicja klasy Zbiornik (modeluje pojecie Zbiornika),
@@ -42,7 +42,7 @@
 /*!
  * \brief Klasa modelująca zbiornik.
  *
- * Dzieki tej klasie mozliwe jest wyrysowywanie na ekranie zbiornika.
+ * Dzieki tej klasie mozliwe jest modelowanie i wyrysowywanie na ekranie zbiornika.
  */
 class Zbiornik: public QWidget
 {
@@ -275,6 +275,7 @@ public:
    * Miernik czasu zbiornika. Sluzy do odswiezania ekranu.
    */
   QTimer _Stoper;
+  
   /*!
    * \brief Symulacja cieczy.
    *
@@ -308,16 +309,16 @@ private:
    */
   double _grubosc;
   /*!
-   * \brief Kat obrotu zbiornika.
+   * \brief Kat obrotu zbiornika [stopnie].
    *
-   * Kat obrotu zbiornika zbiornika.
+   * Kat obrotu zbiornika zbiornika [stopnie].
    */
   int _kat_obrotu;
 
   /*!
-   * \brief Miernik czasu dla zbiornika.
+   * \brief Miernik czasu dla zbiornika [s].
    *
-   * Miernik czasu zbiornika. Sluzy do mierzenia i wyswietlania czasu.
+   * Miernik czasu zbiornika [s]. Sluzy do mierzenia i wyswietlania czasu.
    */
   double _czas_sym;
   /*!

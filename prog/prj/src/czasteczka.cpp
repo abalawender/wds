@@ -10,7 +10,7 @@
  * \brief Zawiera definicje metod klasy Czasteczka.
  * 
  * W pliku znajduja sie: 
- * - definicje konstruktorow, metod i przeciazen klasy Czasteczka.
+ * - metoda rysujaca czasteczkę.
  */
 
 void Czasteczka::RysujCzasteczke( QPainter&    Rysownik, 

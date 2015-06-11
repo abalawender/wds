@@ -25,7 +25,7 @@
 /*!
  * \brief Klasa modelująca czasteczke.
  * 
- * Klasa zawierajaca podstawowe atrybuty czasteczki.
+ * Klasa zawierajaca atrybuty o metody czasteczki.
  */
 class Czasteczka
 {

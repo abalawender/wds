@@ -20,6 +20,7 @@
  * \brief Klasa modelująca kolor.
  * 
  * Klasa opisuje kolor w formacie RGB.
+ * Każdy z kolorów przyjmuje wartości z zakresu [0, 255].
  */
 class Kolor
 {

@@ -10,7 +10,7 @@
  * \brief Zawiera definicje metod klasy Zbiornik.
  *
  * W pliku znajduja sie:
- * - definicje konstruktorow, metod i przeciazen klasy Zbiornik.
+ * - definicje konstruktorow oraz metod klasy Zbiornik.
  */
 
 /*!
@@ -133,19 +133,10 @@ void Zbiornik::paintEvent( QPaintEvent * )
 
 void Zbiornik::GdyOdpowiedniCzas()
 {
-  //std::cout << s << std::endl;
   if(STAN == ePLAY)
   {
     _czas_sym += odpowiedni_czas()*1.0/1000;
     update(); // -> paintEvent
-
-    //// TODO SPH
-    //for ( auto it = Czasteczki.begin();
-    //    it != Czasteczki.end(); ++it)
-    //    {
-    //      (*it).xy().getX() += rand()%7-3;
-    //      (*it).xy().getY() += rand()%7-3;
-    //    }
 
     //Czasteczki.push_back(Czasteczka(
     //                                Vector(1.5*PODSTAWA+rand()%PODSTAWA-PODSTAWA/2,
