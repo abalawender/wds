@@ -15,7 +15,7 @@
 
 OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 {
-    STAN = ePAUSE;
+    STAN = eSTOP;
 
     /* Okno glowne */
     setWindowOpacity( 0.9 );
@@ -145,8 +145,8 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     /* CheckBox */
     gravTglButton = new QCheckBox(this);
     gravTglButton->setObjectName("gravTglButton"); // on_action
-    gravTglButton->setText("Grawitacja");
-    gravTglButton->setGeometry(QRect(320, 50, 97, 22));
+    gravTglButton->setText("Pionowa skladowa wektora grawitacji");
+    gravTglButton->setGeometry(QRect(320, 50, 297, 22));
     gravTglButton->setChecked(true);
 
     /* Wczytywanie, Zapis*/
@@ -185,8 +185,6 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 
 void OknoGlowne::on_playButton_clicked() {
     if (STAN == eSTOP) { // Start od nowa
-        wZbiornik->czas_sym() = 0.0;
-        wZbiornik->Czasteczki.clear();
     }
     else if (STAN == ePAUSE) {
     }
@@ -199,6 +197,9 @@ void OknoGlowne::on_pauseButton_clicked() {
 
 void OknoGlowne::on_stopButton_clicked() {
     STAN = eSTOP;
+    wZbiornik->czas_sym() = 0.0;
+    wZbiornik->Czasteczki.clear();
+    wZbiornik->_Symulacja.init();
 }
 
 void OknoGlowne::on_gravTglButton_clicked() {

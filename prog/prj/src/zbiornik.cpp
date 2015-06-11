@@ -29,12 +29,14 @@ Zbiornik::Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
 {
   setAutoFillBackground(true);
   setPalette(QPalette(Qt::white));
+
   connect(&_Stoper,SIGNAL(timeout()),
           this,SLOT(GdyOdpowiedniCzas()));
   _Stoper.setInterval(_odpowiedni_czas);
   _Stoper.setSingleShot(false);
   _Stoper.start();
 
+  GdyOdpowiedniCzas();
   //QMetaObject::connectSlotsByName(this);
 }
 
@@ -151,6 +153,20 @@ void Zbiornik::GdyOdpowiedniCzas()
     _Symulacja.params->gx = gx0 * cos(alpha) + gy0  * sin(alpha);
     _Symulacja.params->gy = (useGravity ? gx0 * sin(alpha) + gy0  * cos(alpha) : 0 );
     _Symulacja.step();
+  }
+  else if(STAN == eSTOP) 
+  {
+    update(); // -> paintEvent
+
+    Czasteczki.clear();
+
+    for( unsigned i = 0; i < _Symulacja.getN(); ++i ) {
+        float blue = (_Symulacja.rho[i]-950)*2; //0-200
+        blue = std::min( 200.0f, std::max( 0.0f, blue ) ); // make sure we don't go beyond
+
+        Czasteczki.push_back(Czasteczka( _Symulacja.p[i],
+                    PROMIEN, Kolor(10, 0.5*(255-blue), 255-blue ) ) );
+    }
   }
 
   emit ZglosLiczbeCzasteczek(Czasteczki.size());
