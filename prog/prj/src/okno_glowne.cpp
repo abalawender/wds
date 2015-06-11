@@ -19,7 +19,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 
   /* Okno glowne */
   setObjectName("OknoGlowne");
-  resize(3*PODSTAWA, 3*WYSOKOSC);
+  resize(2.5*PODSTAWA, 2.5*WYSOKOSC);
   setMinimumSize(QSize(PODSTAWA*2.5, WYSOKOSC*2.5));
   _old_width = width();
   _old_height = height();
@@ -61,8 +61,8 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
   setStatusBar(statusBar);
 
   /* Tool Bar */
-  toolBar = new QToolBar(this);
-  addToolBar(Qt::TopToolBarArea, toolBar);
+  //toolBar = new QToolBar(this);
+  //addToolBar(Qt::TopToolBarArea, toolBar);
 
   /* Przyciski */
   /* Horizontal layout */
@@ -147,16 +147,19 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
 
   /* Wczytywanie, Zapis*/
   lineEdit = new QLineEdit(this);
-  lineEdit->setGeometry(QRect(320, 20, 160, 25));
+  //lineEdit->setGeometry(QRect(320, 20, 160, 25));
+  lineEdit->setGeometry(QRect(-500, -500, 160, 25));
   lineEdit->setObjectName("lineEdit");
   lineEdit->setPlaceholderText(QString("Nazwa pliku"));
 
   loadButton = new QPushButton(tr("Wczytaj"), this);
-  loadButton->setGeometry(QRect(320+80, 20+30, 80, 25));
-  loadButton->setObjectName("loadButton");
+  //loadButton->setGeometry(QRect(320+80, 20+30, 80, 25));
+  loadButton->setGeometry(QRect(-500, -500, 80, 25));
+  //loadButton->setObjectName("loadButton");
 
   saveButton = new QPushButton(tr("Zapisz"), this);
-  saveButton->setGeometry(QRect(320, 20+30, 80, 25));
+  //saveButton->setGeometry(QRect(320, 20+30, 80, 25));
+  saveButton->setGeometry(QRect(-500, -500, 80, 25));
   saveButton->setObjectName("saveButton");
 
   /* connect */
