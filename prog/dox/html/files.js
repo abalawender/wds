@@ -17,6 +17,8 @@ var files =
     ] ],
     [ "simulation.cpp", "simulation_8cpp.html", "simulation_8cpp" ],
     [ "simulation.hh", "simulation_8hh.html", "simulation_8hh" ],
+    [ "simulation_alt.cpp", "simulation__alt_8cpp.html", "simulation__alt_8cpp" ],
+    [ "simulation_alt.hh", "simulation__alt_8hh.html", "simulation__alt_8hh" ],
     [ "ui_dmainwindow.h", "ui__dmainwindow_8h.html", [
       [ "Ui_DMainWindow", "class_ui___d_main_window.html", "class_ui___d_main_window" ],
       [ "DMainWindow", "class_ui_1_1_d_main_window.html", null ]

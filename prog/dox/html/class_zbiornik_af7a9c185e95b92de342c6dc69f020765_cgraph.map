@@ -1,6 +1,6 @@
 <map id="Zbiornik::paintEvent" name="Zbiornik::paintEvent">
-<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="192,56,440,83"/>
-<area shape="rect" id="node3" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="489,5,645,32"/>
-<area shape="rect" id="node4" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="519,56,614,83"/>
-<area shape="rect" id="node5" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="519,107,614,133"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="199,56,457,83"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="505,5,668,32"/>
+<area shape="rect" id="node4" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="537,56,636,83"/>
+<area shape="rect" id="node5" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="537,107,636,133"/>
 </map>

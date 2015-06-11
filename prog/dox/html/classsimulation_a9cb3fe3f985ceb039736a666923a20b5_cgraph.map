@@ -1,5 +1,5 @@
 <map id="simulation::reflectParticles" name="simulation::reflectParticles">
-<area shape="rect" id="node2" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="simulation::dampReflect" alt="" coords="229,5,392,32"/>
-<area shape="rect" id="node3" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="263,56,358,83"/>
-<area shape="rect" id="node4" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="263,107,358,133"/>
+<area shape="rect" id="node2" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="236,5,405,32"/>
+<area shape="rect" id="node3" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="271,56,370,83"/>
+<area shape="rect" id="node4" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="271,107,370,133"/>
 </map>

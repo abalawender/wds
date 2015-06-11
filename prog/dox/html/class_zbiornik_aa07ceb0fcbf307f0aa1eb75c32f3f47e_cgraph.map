@@ -1,14 +1,14 @@
 <map id="Zbiornik::GdyOdpowiedniCzas" name="Zbiornik::GdyOdpowiedniCzas">
-<area shape="rect" id="node2" href="$class_zbiornik.html#ac0899810e0771b37ce815717d98190f7" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="253,5,429,32"/>
-<area shape="rect" id="node3" href="$classsimulation.html#abe09252527aa58fbec8144063be3e950" title="simulation::getN" alt="" coords="283,56,400,83"/>
-<area shape="rect" id="node4" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="simulation::step" alt="" coords="284,107,399,133"/>
-<area shape="rect" id="node13" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="273,157,409,184"/>
-<area shape="rect" id="node5" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="478,81,650,108"/>
-<area shape="rect" id="node8" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="simulation::integrate" alt="" coords="495,132,633,159"/>
-<area shape="rect" id="node6" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="699,31,883,57"/>
-<area shape="rect" id="node7" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="939,31,1085,57"/>
-<area shape="rect" id="node9" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="simulation::reflectParticles" alt="" coords="703,132,879,159"/>
-<area shape="rect" id="node10" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="simulation::dampReflect" alt="" coords="931,81,1093,108"/>
-<area shape="rect" id="node11" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="965,132,1059,159"/>
-<area shape="rect" id="node12" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="965,183,1059,209"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#ac0899810e0771b37ce815717d98190f7" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="264,5,451,32"/>
+<area shape="rect" id="node3" href="$classsimulation.html#abe09252527aa58fbec8144063be3e950" title="zwraca liczbę cząstek użytych do symulacji " alt="" coords="297,56,417,83"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="realizuje krok symulacji " alt="" coords="299,107,416,133"/>
+<area shape="rect" id="node13" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="287,157,427,184"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="499,81,676,108"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="całkuje przyspieszenia i prędkości " alt="" coords="514,132,661,159"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="724,31,915,57"/>
+<area shape="rect" id="node7" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="970,31,1125,57"/>
+<area shape="rect" id="node9" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="728,132,911,159"/>
+<area shape="rect" id="node10" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="963,81,1132,108"/>
+<area shape="rect" id="node11" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="998,132,1097,159"/>
+<area shape="rect" id="node12" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="998,183,1097,209"/>
 </map>

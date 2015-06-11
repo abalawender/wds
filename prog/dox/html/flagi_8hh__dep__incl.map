@@ -1,9 +1,9 @@
 <map id="flagi.hh" name="flagi.hh">
-<area shape="rect" id="node2" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="163,155,279,181"/>
-<area shape="rect" id="node6" href="$zbiornik_8hh.html" title="Zawiera definicję klasy Zbiornik i deklaracje jej metod. " alt="" coords="307,80,392,107"/>
-<area shape="rect" id="node3" href="$moc__okno__glowne_8cpp.html" title="moc_okno_glowne.cpp" alt="" coords="5,229,159,256"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Zawiera ogolna strukture funkcji main. " alt="" coords="184,229,257,256"/>
-<area shape="rect" id="node5" href="$okno__glowne_8cpp.html" title="Zawiera definicje metod klasy OknoGlowne. " alt="" coords="283,229,405,256"/>
-<area shape="rect" id="node7" href="$moc__zbiornik_8cpp.html" title="moc_zbiornik.cpp" alt="" coords="303,155,427,181"/>
-<area shape="rect" id="node8" href="$zbiornik_8cpp.html" title="Zawiera definicje metod klasy Zbiornik. " alt="" coords="451,155,543,181"/>
+<area shape="rect" id="node2" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="173,155,298,181"/>
+<area shape="rect" id="node6" href="$zbiornik_8hh.html" title="Zawiera definicję klasy Zbiornik i deklaracje jej metod. " alt="" coords="325,80,415,107"/>
+<area shape="rect" id="node3" href="$moc__okno__glowne_8cpp.html" title="moc_okno_glowne.cpp" alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Zawiera ogolna strukture funkcji main. " alt="" coords="196,229,275,256"/>
+<area shape="rect" id="node5" href="$okno__glowne_8cpp.html" title="Zawiera definicje metod klasy OknoGlowne. " alt="" coords="299,229,431,256"/>
+<area shape="rect" id="node7" href="$moc__zbiornik_8cpp.html" title="moc_zbiornik.cpp" alt="" coords="322,155,453,181"/>
+<area shape="rect" id="node8" href="$zbiornik_8cpp.html" title="Zawiera definicje metod klasy Zbiornik. " alt="" coords="477,155,573,181"/>
 </map>

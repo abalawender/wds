@@ -1,6 +1,5 @@
-\hypertarget{simulation_8hh}{\section{Dokumentacja pliku simulation.\-hh}
-\label{simulation_8hh}\index{simulation.\-hh@{simulation.\-hh}}
-}
+\hypertarget{simulation_8hh}{}\section{Dokumentacja pliku simulation.\+hh}
+\label{simulation_8hh}\index{simulation.\+hh@{simulation.\+hh}}
 
 
 Plik z definicją klasy symulatora cieczy.  
@@ -11,16 +10,15 @@ Plik z definicją klasy symulatora cieczy.
 {\ttfamily \#include $<$cstring$>$}\\*
 {\ttfamily \#include $<$cmath$>$}\\*
 {\ttfamily \#include $<$cassert$>$}\\*
-{\ttfamily \#include $<$vector.\-hh$>$}\\*
-Wykres zależności załączania dla simulation.\-hh\-:\nopagebreak
+{\ttfamily \#include $<$vector.\+hh$>$}\\*
+Wykres zależności załączania dla simulation.\+hh\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{simulation_8hh__incl}
 \end{center}
 \end{figure}
-Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\-:
-\nopagebreak
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,38 +28,34 @@ Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten 
 \subsection*{Komponenty}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structparams__t}{params\-\_\-t}
+struct \hyperlink{structparams__t}{params\+\_\+t}
 \item 
 class \hyperlink{classsimulation}{simulation}
 \end{DoxyCompactItemize}
 \subsection*{Definicje}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}{L\-O\-G}(M\-S\-G)
+\#define \hyperlink{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}{L\+O\+G}(M\+S\+G)
 \begin{DoxyCompactList}\small\item\em makro do logowania \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structparams__t}{params\-\_\-t} $\ast$ \hyperlink{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{setup} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$params)
+\hyperlink{structparams__t}{params\+\_\+t} $\ast$ \hyperlink{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{setup} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$params)
 \end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
 Zawiera definicję klasy i funkcji pozwalających na przeprowadzenie symulacji zachowania sparametryzowanego modelu cieczy w zadanym środowisku od określonego warunku początkowego. 
 
-Definicja w pliku \hyperlink{simulation_8hh_source}{simulation.\-hh}.
-
-
-
 \subsection{Dokumentacja definicji}
-\hypertarget{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}{\index{simulation.\-hh@{simulation.\-hh}!L\-O\-G@{L\-O\-G}}
-\index{L\-O\-G@{L\-O\-G}!simulation.hh@{simulation.\-hh}}
-\subsubsection[{L\-O\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G(
+\hypertarget{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}{}\index{simulation.\+hh@{simulation.\+hh}!L\+O\+G@{L\+O\+G}}
+\index{L\+O\+G@{L\+O\+G}!simulation.\+hh@{simulation.\+hh}}
+\subsubsection[{L\+O\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+G(
 \begin{DoxyParamCaption}
-\item[{}]{M\-S\-G}
+\item[{}]{M\+S\+G}
 \end{DoxyParamCaption}
-)}}\label{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}
-{\bfseries Wartość\-:}
+)}\label{simulation_8hh_acbd91a8a9a62657e2252a0a1f7c876e1}
+{\bfseries Wartość\+:}
 \begin{DoxyCode}
 \textcolor{keywordflow}{do} \{ std::cerr << \textcolor{stringliteral}{"\(\backslash\)e[32m"} << \_\_FILE\_\_ << \textcolor{stringliteral}{"\(\backslash\)e[31m:\(\backslash\)e[33m"} << \_\_LINE\_\_ \(\backslash\)
     << \textcolor{stringliteral}{"\(\backslash\)e[35m:\(\backslash\)e[34m"} << std::setw(16) << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{"\(\backslash\)e[36m : \(\backslash\)e[37m"} << MSG << \textcolor{stringliteral}{"\(\backslash\)e[0m\(\backslash\)n"}; \} \textcolor{keywordflow}{while}( \textcolor{keyword}{
@@ -69,34 +63,34 @@ Definicja w pliku \hyperlink{simulation_8hh_source}{simulation.\-hh}.
 \end{DoxyCode}
 Łatwe w użyciu makro poprawiające czytelność komunikatów. Pętla do...while zastosowana aby wymusić poprawne użycie średnika po poleceniu. 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em M\-S\-G} & -\/ wiadomość do wyświetlenia \\
+\mbox{\tt in}  & {\em M\+S\+G} & -\/ wiadomość do wyświetlenia \\
 \hline
 \end{DoxyParams}
 
 
-Definicja w linii 17 pliku simulation.\-hh.
+Definicja w linii 17 pliku simulation.\+hh.
 
 
 
 \subsection{Dokumentacja funkcji}
-\hypertarget{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{\index{simulation.\-hh@{simulation.\-hh}!setup@{setup}}
-\index{setup@{setup}!simulation.hh@{simulation.\-hh}}
-\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\-\_\-t}$\ast$ setup (
+\hypertarget{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{}\index{simulation.\+hh@{simulation.\+hh}!setup@{setup}}
+\index{setup@{setup}!simulation.\+hh@{simulation.\+hh}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\+\_\+t}$\ast$ setup (
 \begin{DoxyParamCaption}
-\item[{{\bf params\-\_\-t} $\ast$}]{params}
+\item[{{\bf params\+\_\+t} $\ast$}]{params}
 \end{DoxyParamCaption}
-)}}\label{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}
+)}\label{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}
 
 
-Definicja w linii 23 pliku simulation.\-cpp.
+Definicja w linii 125 pliku simulation\+\_\+alt.\+hh.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=232pt]{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a_icgraph}
+\includegraphics[width=236pt]{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a_icgraph}
 \end{center}
 \end{figure}
 

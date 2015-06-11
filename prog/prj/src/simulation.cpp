@@ -136,15 +136,15 @@ void simulation::integrate( float dt ) {
     reflectParticles( );
 }
 
-bool simulation::box_indicator( float x, float y ) {
+bool simulation::boxIndicator( float x, float y ) {
     return ( x < XMAX/2 ) && ( y > YMAX/2 );
 }
 
-bool simulation::circle_indicator( float x, float y ) {
+bool simulation::circleIndicator( float x, float y ) {
     return ( ( (x-0.25)*(x-0.25)+(y-0.25)*(y-0.25) ) > ( 0.25 * std::min(XMAX, YMAX) * std::min(XMAX,YMAX) ) ) && ( x < XMAX ) && (y < YMAX) ;
 }
 
-simulation& simulation::place_particles( params_t* params, bool (simulation::*containerIndicator)( float x, float y ) ) {
+simulation& simulation::placeParticles( params_t* params, bool (simulation::*containerIndicator)( float x, float y ) ) {
     unsigned counter = -1;
     float hh = params->h/1.3;
     // count how many particles would fit in the region
@@ -171,8 +171,8 @@ float integrationTime;
 void simulation::init() {
     integrationTime = 0;
     LOG( "placing particles" );
-    place_particles( params, &simulation::box_indicator );
-    //place_particles( params, &simulation::circle_indicator );
+    placeParticles( params, &simulation::boxIndicator );
+    //placeParticles( params, &simulation::circleIndicator );
     computeAccel( params );
     integrationInit( params->dt );
 }

@@ -1,10 +1,10 @@
 <map id="simulation::step" name="simulation::step">
-<area shape="rect" id="node2" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="169,56,341,83"/>
-<area shape="rect" id="node5" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="simulation::integrate" alt="" coords="185,107,324,133"/>
-<area shape="rect" id="node3" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="389,5,573,32"/>
-<area shape="rect" id="node4" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="630,5,775,32"/>
-<area shape="rect" id="node6" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="simulation::reflectParticles" alt="" coords="393,107,569,133"/>
-<area shape="rect" id="node7" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="simulation::dampReflect" alt="" coords="621,56,784,83"/>
-<area shape="rect" id="node8" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="655,107,750,133"/>
-<area shape="rect" id="node9" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="655,157,750,184"/>
+<area shape="rect" id="node2" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="171,56,348,83"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="całkuje przyspieszenia i prędkości " alt="" coords="186,107,333,133"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="396,5,587,32"/>
+<area shape="rect" id="node4" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="642,5,797,32"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="400,107,583,133"/>
+<area shape="rect" id="node7" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="635,56,804,83"/>
+<area shape="rect" id="node8" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="670,107,769,133"/>
+<area shape="rect" id="node9" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="670,157,769,184"/>
 </map>

@@ -1,8 +1,8 @@
 var classsimulation =
 [
     [ "simulation", "classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d", null ],
-    [ "box_indicator", "classsimulation.html#a98d5516416b67721c545ae7b88d74114", null ],
-    [ "circle_indicator", "classsimulation.html#a6b58ab0f0426309e421e4f860225d068", null ],
+    [ "boxIndicator", "classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e", null ],
+    [ "circleIndicator", "classsimulation.html#a3c90f4d96f7cfbafc0ef8caf4927ae2d", null ],
     [ "computeAccel", "classsimulation.html#a16b945b81e27680a709fffd8663bf856", null ],
     [ "computeDensity", "classsimulation.html#a7679fcd9a25d6cb5597338d054a30684", null ],
     [ "dampReflect", "classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b", null ],
@@ -10,7 +10,7 @@ var classsimulation =
     [ "init", "classsimulation.html#a2e12616e089dd7f9742c25933bf630ef", null ],
     [ "integrate", "classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459", null ],
     [ "integrationInit", "classsimulation.html#a300e67649652f2ae9337af3d5244e0f7", null ],
-    [ "place_particles", "classsimulation.html#a64eadae8e6523e419af971fc7c7d8690", null ],
+    [ "placeParticles", "classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75", null ],
     [ "reflectParticles", "classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5", null ],
     [ "step", "classsimulation.html#a111e26e535d53ced834dbd52948b5d69", null ],
     [ "operator<<", "classsimulation.html#a1f6414b078a2823f5cea77fc1235e1d9", null ],

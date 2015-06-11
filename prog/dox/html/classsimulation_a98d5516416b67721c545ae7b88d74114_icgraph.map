@@ -1,5 +1,5 @@
 <map id="simulation::box_indicator" name="simulation::box_indicator">
-<area shape="rect" id="node2" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="221,41,328,68"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="376,5,565,46"/>
-<area shape="rect" id="node4" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="397,71,545,97"/>
+<area shape="rect" id="node2" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="228,42,336,69"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="384,5,585,47"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="409,71,561,98"/>
 </map>

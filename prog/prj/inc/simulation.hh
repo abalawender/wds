@@ -61,7 +61,8 @@ class simulation {
      * \brief konstruktor klasy
      *
      * Alokuje pamięć na potrzeby przechowania stanu symulacji
-     * \param[in] rozmiar
+     * \param[in] _n - maksymalna liczba cząstek
+     * \param[in] _param - wskaźnik na strukturę parametrów symulacji
      */
     simulation ( const unsigned& _n, params_t* _param  );
    // : n(_n),
@@ -93,22 +94,86 @@ class simulation {
      */
     void computeAccel( params_t* params);
 
+    /*!
+     * \brief odbija cząstkę od powierzchni
+     *
+     * odpowiednio modyfikuje położenie cząstki oraz zmniejsza wartości prędkości i ich zwroty
+     * \param[in] _barrier - odpowiednia współrzędna krawędzi
+     * \param[in] i - numer cząstki
+     * \param[in] getter - wskaźnik na metodę wybierającą odpowiednią współrzędną z Vectora
+     */
     void dampReflect( float _barrier, unsigned i, float& (Vector::*getter)() );
 
+    /*!
+     * \brief szuka kolizji cząstek ze ścianami naczynia
+     *
+     * po wykryciu kolizji wywołuje dampReflect z odpowiednimi parametrami
+     */
     void reflectParticles( );
 
+    /*!
+     * \brief inicjalizuje integrator
+     *
+     * zadaje początkowe parametry dynamiczne cząstek
+     * \param[in] dt - wartość skoku czasu symulacji
+     */
     void integrationInit( float dt );
+    /*!
+     * \brief całkuje przyspieszenia i prędkości
+     *
+     * odpowiada za realizację ruchu symulowanych cząstek
+     * \param[in] dt - wartość skoku czasu symulacji
+     */
     void integrate( float dt );
 
-    bool box_indicator( float x, float y );
-    bool circle_indicator( float x, float y );
+    /*!
+     * \brief sprawdza przynależność punku do obszaru początkowego
+     *
+     * sprawdza przynależność punku do obszaru początkowego - prostokąta
+     * \param[in] x - pierwsza współrzędna
+     * \param[in] y - druga współrzędna
+     * \return true jeśli warunek spełniony
+     */
+    bool boxIndicator( float x, float y );
+    /*!
+     * \brief sprawdza przynależność punku do obszaru początkowego
+     *
+     * sprawdza przynależność punku do obszaru początkowego - zewnętrza ćwierci okręgu
+     * \param[in] x - pierwsza współrzędna
+     * \param[in] y - druga współrzędna
+     * \return true jeśli warunek spełniony
+     */
+    bool circleIndicator( float x, float y );
 
-    simulation& place_particles( params_t* params, bool (simulation::*containerIndicator)( float x, float y ) );
+    /*!
+     * \brief dodaje cząsteczki do symulacji
+     *
+     * iteruje po siatce punktów wewnątrz zbiornika i dodaje do symulacji te, dla których warunek określony przez funkcję containerIndicator jest spełniony
+     * \param[in] params - parametry symulacji
+     * \param[in] containerIndicator - warunek przynależności do obszaru
+     */
+    simulation& placeParticles( params_t* params, bool (simulation::*containerIndicator)( float x, float y ) );
 
+    /*!
+     * \brief inicjuje symulację
+     *
+     * dodaje cząstki do symulacji i określa ich początkowe parametry dynamiczne
+     */
     void init();
 
+    /*!
+     * \brief realizuje krok symulacji
+     *
+     * odpowiada za realizację ruchu symulowanych cząstek
+     */
     void step();
 
+    /*!
+     * \brief zwraca liczbę cząstek użytych do symulacji
+     *
+     * zwraca liczbę cząstek użytych do symulacji
+     * \return liczba cząstek
+     */
     const unsigned& getN() const { return n; }
 
 };

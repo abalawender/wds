@@ -1,14 +1,18 @@
 \documentclass[twoside]{book}
 
 % Packages required by doxygen
+\usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
 
 % NLS support packages
@@ -17,7 +21,6 @@
 
 % Font selection
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
@@ -31,6 +34,7 @@
   \fontseries{bc}\selectfont%
   \color{darkgray}%
 }
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
 
 % Page & text layout
 \usepackage{geometry}
@@ -71,8 +75,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 18\-:06\-:04 dla Symulacja\-Cieczy programem Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 18\-:06\-:04 dla Symulacja\-Cieczy programem Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 20\+:24\+:20 dla Symulacja\+Cieczy programem Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 20\+:24\+:20 dla Symulacja\+Cieczy programem Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -115,16 +119,20 @@
 \begin{document}
 
 % Titlepage & ToC
-\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
 \pagenumbering{roman}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large Symulacja\-Cieczy \\[1ex]\large 1.\-0 }\\
+{\Large Symulacja\+Cieczy \\[1ex]\large 1.\+0 }\\
 \vspace*{1cm}
-{\large Wygenerowano przez Doxygen 1.8.6}\\
+{\large Wygenerowano przez Doxygen 1.8.9.1}\\
 \vspace*{0.5cm}
-{\small Cz, 11 cze 2015 18:06:04}\\
+{\small Cz, 11 cze 2015 20:24:20}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -153,6 +161,7 @@
 \input{class_okno_glowne}
 \input{structparams__t}
 \input{classsimulation}
+\input{structstate__t}
 \input{class_ui___d_main_window}
 \input{class_vector}
 \input{class_zbiornik}
@@ -168,6 +177,8 @@
 \input{okno__glowne_8hh}
 \input{simulation_8cpp}
 \input{simulation_8hh}
+\input{simulation__alt_8cpp}
+\input{simulation__alt_8hh}
 \input{strona_8dox}
 \input{ui__dmainwindow_8h}
 \input{vector_8cpp}
@@ -177,8 +188,10 @@
 %--- End generated contents ---
 
 % Index
+\backmatter
 \newpage
 \phantomsection
+\clearemptydoublepage
 \addcontentsline{toc}{chapter}{Indeks}
 \printindex
 

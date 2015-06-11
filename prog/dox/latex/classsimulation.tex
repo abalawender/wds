@@ -1,48 +1,47 @@
-\hypertarget{classsimulation}{\section{Dokumentacja klasy simulation}
+\hypertarget{classsimulation}{}\section{Dokumentacja klasy simulation}
 \label{classsimulation}\index{simulation@{simulation}}
-}
 
 
-{\ttfamily \#include $<$simulation.\-hh$>$}
+{\ttfamily \#include $<$simulation.\+hh$>$}
 
 
 
-Diagram współpracy dla simulation\-:\nopagebreak
+Diagram współpracy dla simulation\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=199pt]{classsimulation__coll__graph}
+\includegraphics[width=206pt]{classsimulation__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{simulation} (const unsigned \&\-\_\-n, \hyperlink{structparams__t}{params\-\_\-t} $\ast$\-\_\-param)
+\hyperlink{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{simulation} (const unsigned \&\+\_\+n, \hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+param)
 \begin{DoxyCompactList}\small\item\em konstruktor klasy \end{DoxyCompactList}\item 
-void \hyperlink{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{compute\-Density} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\-\_\-p)
+void \hyperlink{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{compute\+Density} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+p)
 \begin{DoxyCompactList}\small\item\em wylicza przybliżenia gęstości \end{DoxyCompactList}\item 
-void \hyperlink{classsimulation_a16b945b81e27680a709fffd8663bf856}{compute\-Accel} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params})
+void \hyperlink{classsimulation_a16b945b81e27680a709fffd8663bf856}{compute\+Accel} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params})
 \begin{DoxyCompactList}\small\item\em wylicza przyspieszenia cząstek \end{DoxyCompactList}\item 
-void \hyperlink{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}{damp\-Reflect} (float \-\_\-barrier, unsigned i, float \&(Vector\-::$\ast$getter)())
-\item 
-void \hyperlink{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}{reflect\-Particles} ()
-\item 
-void \hyperlink{classsimulation_a300e67649652f2ae9337af3d5244e0f7}{integration\-Init} (float dt)
-\item 
+void \hyperlink{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}{damp\+Reflect} (float \+\_\+barrier, unsigned i, float \&(Vector\+::$\ast$getter)())
+\begin{DoxyCompactList}\small\item\em odbija cząstkę od powierzchni \end{DoxyCompactList}\item 
+void \hyperlink{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}{reflect\+Particles} ()
+\begin{DoxyCompactList}\small\item\em szuka kolizji cząstek ze ścianami naczynia \end{DoxyCompactList}\item 
+void \hyperlink{classsimulation_a300e67649652f2ae9337af3d5244e0f7}{integration\+Init} (float dt)
+\begin{DoxyCompactList}\small\item\em inicjalizuje integrator \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a2b1ca39aee7b85ac2babecfd2784c459}{integrate} (float dt)
-\item 
-bool \hyperlink{classsimulation_a98d5516416b67721c545ae7b88d74114}{box\-\_\-indicator} (float x, float y)
-\item 
-bool \hyperlink{classsimulation_a6b58ab0f0426309e421e4f860225d068}{circle\-\_\-indicator} (float x, float y)
-\item 
-\hyperlink{classsimulation}{simulation} \& \hyperlink{classsimulation_a64eadae8e6523e419af971fc7c7d8690}{place\-\_\-particles} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}, bool(simulation\-::$\ast$container\-Indicator)(float x, float y))
-\item 
+\begin{DoxyCompactList}\small\item\em całkuje przyspieszenia i prędkości \end{DoxyCompactList}\item 
+bool \hyperlink{classsimulation_acd02ace3dc0db98c4c85cba7d75fa46e}{box\+Indicator} (float x, float y)
+\begin{DoxyCompactList}\small\item\em sprawdza przynależność punku do obszaru początkowego \end{DoxyCompactList}\item 
+bool \hyperlink{classsimulation_a3c90f4d96f7cfbafc0ef8caf4927ae2d}{circle\+Indicator} (float x, float y)
+\begin{DoxyCompactList}\small\item\em sprawdza przynależność punku do obszaru początkowego \end{DoxyCompactList}\item 
+\hyperlink{classsimulation}{simulation} \& \hyperlink{classsimulation_a33ce66b2291920bd1ba29889ff7c0c75}{place\+Particles} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}, bool(simulation\+::$\ast$container\+Indicator)(float x, float y))
+\begin{DoxyCompactList}\small\item\em dodaje cząsteczki do symulacji \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a2e12616e089dd7f9742c25933bf630ef}{init} ()
-\item 
+\begin{DoxyCompactList}\small\item\em inicjuje symulację \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a111e26e535d53ced834dbd52948b5d69}{step} ()
-\item 
-const unsigned \& \hyperlink{classsimulation_abe09252527aa58fbec8144063be3e950}{get\-N} () const 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em realizuje krok symulacji \end{DoxyCompactList}\item 
+const unsigned \& \hyperlink{classsimulation_abe09252527aa58fbec8144063be3e950}{get\+N} () const 
+\begin{DoxyCompactList}\small\item\em zwraca liczbę cząstek użytych do symulacji \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,45 +57,47 @@ float $\ast$ \hyperlink{classsimulation_a44081d4edd92e17a3e1067b976031a00}{rho}
 \begin{DoxyCompactList}\small\item\em Prędkości (half step) \end{DoxyCompactList}\item 
 \hyperlink{class_vector}{Vector} $\ast$ \hyperlink{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{a}
 \begin{DoxyCompactList}\small\item\em Prędkości (full step) \end{DoxyCompactList}\item 
-\hyperlink{structparams__t}{params\-\_\-t} $\ast$ \hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}
+\hyperlink{structparams__t}{params\+\_\+t} $\ast$ \hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params}
 \begin{DoxyCompactList}\small\item\em Przyspieszenia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Przyjaciele}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{classsimulation_a444a8643309d19294860a4ae144137fe}{Zbiornik}
 \item 
-std\-::ostream \& \hyperlink{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{operator$<$$<$} (std\-::ostream \&\-\_\-os, const \hyperlink{classsimulation}{simulation} \&\-\_\-s)
+std\+::ostream \& \hyperlink{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{operator$<$$<$} (std\+::ostream \&\+\_\+os, const \hyperlink{classsimulation}{simulation} \&\+\_\+s)
 \end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
 
 
-Definicja w linii 44 pliku simulation.\-hh.
+Definicja w linii 44 pliku simulation.\+hh.
 
 
 
 \subsection{Dokumentacja konstruktora i destruktora}
-\hypertarget{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{\index{simulation@{simulation}!simulation@{simulation}}
+\hypertarget{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{}\index{simulation@{simulation}!simulation@{simulation}}
 \index{simulation@{simulation}!simulation@{simulation}}
-\subsubsection[{simulation}]{\setlength{\rightskip}{0pt plus 5cm}simulation\-::simulation (
+\subsubsection[{simulation}]{\setlength{\rightskip}{0pt plus 5cm}simulation\+::simulation (
 \begin{DoxyParamCaption}
-\item[{const unsigned \&}]{\-\_\-n, }
-\item[{{\bf params\-\_\-t} $\ast$}]{\-\_\-param}
+\item[{const unsigned \&}]{\+\_\+n, }
+\item[{{\bf params\+\_\+t} $\ast$}]{\+\_\+param}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}
+)}\label{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}
 Alokuje pamięć na potrzeby przechowania stanu symulacji 
 \begin{DoxyParams}[1]{Parametry}
-\mbox{\tt in}  & {\em rozmiar} & \\
+\mbox{\tt in}  & {\em \+\_\+n} & -\/ maksymalna liczba cząstek \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+param} & -\/ wskaźnik na strukturę parametrów symulacji \\
 \hline
 \end{DoxyParams}
 
 
-Definicja w linii 37 pliku simulation.\-cpp.
+Definicja w linii 37 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -108,58 +109,78 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{classsimulation_a98d5516416b67721c545ae7b88d74114}{\index{simulation@{simulation}!box\-\_\-indicator@{box\-\_\-indicator}}
-\index{box\-\_\-indicator@{box\-\_\-indicator}!simulation@{simulation}}
-\subsubsection[{box\-\_\-indicator}]{\setlength{\rightskip}{0pt plus 5cm}bool simulation\-::box\-\_\-indicator (
+\hypertarget{classsimulation_acd02ace3dc0db98c4c85cba7d75fa46e}{}\index{simulation@{simulation}!box\+Indicator@{box\+Indicator}}
+\index{box\+Indicator@{box\+Indicator}!simulation@{simulation}}
+\subsubsection[{box\+Indicator}]{\setlength{\rightskip}{0pt plus 5cm}bool simulation\+::box\+Indicator (
 \begin{DoxyParamCaption}
 \item[{float}]{x, }
 \item[{float}]{y}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a98d5516416b67721c545ae7b88d74114}
+)}\label{classsimulation_acd02ace3dc0db98c4c85cba7d75fa46e}
+sprawdza przynależność punku do obszaru początkowego -\/ prostokąta 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em x} & -\/ pierwsza współrzędna \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ druga współrzędna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true jeśli warunek spełniony 
+\end{DoxyReturn}
 
 
-Definicja w linii 139 pliku simulation.\-cpp.
+Definicja w linii 139 pliku simulation.\+cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsimulation_a98d5516416b67721c545ae7b88d74114_icgraph}
+\includegraphics[width=350pt]{classsimulation_acd02ace3dc0db98c4c85cba7d75fa46e_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{classsimulation_a6b58ab0f0426309e421e4f860225d068}{\index{simulation@{simulation}!circle\-\_\-indicator@{circle\-\_\-indicator}}
-\index{circle\-\_\-indicator@{circle\-\_\-indicator}!simulation@{simulation}}
-\subsubsection[{circle\-\_\-indicator}]{\setlength{\rightskip}{0pt plus 5cm}bool simulation\-::circle\-\_\-indicator (
+\hypertarget{classsimulation_a3c90f4d96f7cfbafc0ef8caf4927ae2d}{}\index{simulation@{simulation}!circle\+Indicator@{circle\+Indicator}}
+\index{circle\+Indicator@{circle\+Indicator}!simulation@{simulation}}
+\subsubsection[{circle\+Indicator}]{\setlength{\rightskip}{0pt plus 5cm}bool simulation\+::circle\+Indicator (
 \begin{DoxyParamCaption}
 \item[{float}]{x, }
 \item[{float}]{y}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a6b58ab0f0426309e421e4f860225d068}
+)}\label{classsimulation_a3c90f4d96f7cfbafc0ef8caf4927ae2d}
+sprawdza przynależność punku do obszaru początkowego -\/ zewnętrza ćwierci okręgu 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em x} & -\/ pierwsza współrzędna \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ druga współrzędna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true jeśli warunek spełniony 
+\end{DoxyReturn}
 
 
-Definicja w linii 143 pliku simulation.\-cpp.
+Definicja w linii 143 pliku simulation.\+cpp.
 
-\hypertarget{classsimulation_a16b945b81e27680a709fffd8663bf856}{\index{simulation@{simulation}!compute\-Accel@{compute\-Accel}}
-\index{compute\-Accel@{compute\-Accel}!simulation@{simulation}}
-\subsubsection[{compute\-Accel}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::compute\-Accel (
+\hypertarget{classsimulation_a16b945b81e27680a709fffd8663bf856}{}\index{simulation@{simulation}!compute\+Accel@{compute\+Accel}}
+\index{compute\+Accel@{compute\+Accel}!simulation@{simulation}}
+\subsubsection[{compute\+Accel}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::compute\+Accel (
 \begin{DoxyParamCaption}
-\item[{{\bf params\-\_\-t} $\ast$}]{params}
+\item[{{\bf params\+\_\+t} $\ast$}]{params}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a16b945b81e27680a709fffd8663bf856}
-Implementuje formułę\-: \[ a_i = \frac{1}{\rho_i}\sum_{j\in N_i} f^{interact}_{ij} + g. \] która pozwala przybliżyć wartość przyspieszenia każdej cząstki jako sumę wektorów oddziaływań między wszystkimi cząsteczkami i wektora grawitacji \begin{DoxyNote}{Nota}
+)}\label{classsimulation_a16b945b81e27680a709fffd8663bf856}
+Implementuje formułę\+: \[ a_i = \frac{1}{\rho_i}\sum_{j\in N_i} f^{interact}_{ij} + g. \] która pozwala przybliżyć wartość przyspieszenia każdej cząstki jako sumę wektorów oddziaływań między wszystkimi cząsteczkami i wektora grawitacji \begin{DoxyNote}{Nota}
 wektor grawitacji może ulegać zmianie podczas trwania symulacji 
 \end{DoxyNote}
 
 
-Definicja w linii 61 pliku simulation.\-cpp.
+Definicja w linii 61 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -170,7 +191,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,23 +200,23 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{\index{simulation@{simulation}!compute\-Density@{compute\-Density}}
-\index{compute\-Density@{compute\-Density}!simulation@{simulation}}
-\subsubsection[{compute\-Density}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::compute\-Density (
+\hypertarget{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{}\index{simulation@{simulation}!compute\+Density@{compute\+Density}}
+\index{compute\+Density@{compute\+Density}!simulation@{simulation}}
+\subsubsection[{compute\+Density}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::compute\+Density (
 \begin{DoxyParamCaption}
-\item[{{\bf params\-\_\-t} $\ast$}]{\-\_\-p}
+\item[{{\bf params\+\_\+t} $\ast$}]{\+\_\+p}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a7679fcd9a25d6cb5597338d054a30684}
-Implementuje formułę\-: \[ \rho_i = \frac{4m}{\pi h^8}\sum_{j\in N_i} (h^2-r^2)^3, \] która pozwala przybliżyć wartość gęstości w miejscu i-\/tej cząstki na podstawie jej oddziaływań ze wszystkimi innymi cząstkami w zbiorniku. \begin{DoxyNote}{Nota}
+)}\label{classsimulation_a7679fcd9a25d6cb5597338d054a30684}
+Implementuje formułę\+: \[ \rho_i = \frac{4m}{\pi h^8}\sum_{j\in N_i} (h^2-r^2)^3, \] która pozwala przybliżyć wartość gęstości w miejscu i-\/tej cząstki na podstawie jej oddziaływań ze wszystkimi innymi cząstkami w zbiorniku. \begin{DoxyNote}{Nota}
 wartość ciśnienia zawizualizować można kolorem cząstki. 
 \end{DoxyNote}
 
 
-Definicja w linii 40 pliku simulation.\-cpp.
+Definicja w linii 40 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,7 +227,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -215,22 +236,31 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}{\index{simulation@{simulation}!damp\-Reflect@{damp\-Reflect}}
-\index{damp\-Reflect@{damp\-Reflect}!simulation@{simulation}}
-\subsubsection[{damp\-Reflect}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::damp\-Reflect (
+\hypertarget{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}{}\index{simulation@{simulation}!damp\+Reflect@{damp\+Reflect}}
+\index{damp\+Reflect@{damp\+Reflect}!simulation@{simulation}}
+\subsubsection[{damp\+Reflect}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::damp\+Reflect (
 \begin{DoxyParamCaption}
-\item[{float}]{\-\_\-barrier, }
+\item[{float}]{\+\_\+barrier, }
 \item[{unsigned}]{i, }
-\item[{float \&(Vector\-::$\ast$)()}]{getter}
+\item[{float \&(Vector\+::$\ast$)()}]{getter}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}
+)}\label{classsimulation_a353d4dd3a66197360e882bc29a6fef0b}
+odpowiednio modyfikuje położenie cząstki oraz zmniejsza wartości prędkości i ich zwroty 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em \+\_\+barrier} & -\/ odpowiednia współrzędna krawędzi \\
+\hline
+\mbox{\tt in}  & {\em i} & -\/ numer cząstki \\
+\hline
+\mbox{\tt in}  & {\em getter} & -\/ wskaźnik na metodę wybierającą odpowiednią współrzędną z Vectora \\
+\hline
+\end{DoxyParams}
 
 
-Definicja w linii 100 pliku simulation.\-cpp.
+Definicja w linii 100 pliku simulation.\+cpp.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -239,20 +269,23 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_abe09252527aa58fbec8144063be3e950}{\index{simulation@{simulation}!get\-N@{get\-N}}
-\index{get\-N@{get\-N}!simulation@{simulation}}
-\subsubsection[{get\-N}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned\& simulation\-::get\-N (
+\hypertarget{classsimulation_abe09252527aa58fbec8144063be3e950}{}\index{simulation@{simulation}!get\+N@{get\+N}}
+\index{get\+N@{get\+N}!simulation@{simulation}}
+\subsubsection[{get\+N}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned\& simulation\+::get\+N (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classsimulation_abe09252527aa58fbec8144063be3e950}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classsimulation_abe09252527aa58fbec8144063be3e950}
+zwraca liczbę cząstek użytych do symulacji \begin{DoxyReturn}{Zwraca}
+liczba cząstek 
+\end{DoxyReturn}
 
 
-Definicja w linii 112 pliku simulation.\-hh.
+Definicja w linii 177 pliku simulation.\+hh.
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -261,20 +294,20 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a2e12616e089dd7f9742c25933bf630ef}{\index{simulation@{simulation}!init@{init}}
+\hypertarget{classsimulation_a2e12616e089dd7f9742c25933bf630ef}{}\index{simulation@{simulation}!init@{init}}
 \index{init@{init}!simulation@{simulation}}
-\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::init (
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::init (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a2e12616e089dd7f9742c25933bf630ef}
+)}\label{classsimulation_a2e12616e089dd7f9742c25933bf630ef}
+dodaje cząstki do symulacji i określa ich początkowe parametry dynamiczne 
+
+Definicja w linii 171 pliku simulation.\+cpp.
 
 
-Definicja w linii 171 pliku simulation.\-cpp.
 
-
-
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -285,29 +318,34 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{classsimulation_a2e12616e089dd7f9742c25933bf630ef_icgraph}
+\includegraphics[width=348pt]{classsimulation_a2e12616e089dd7f9742c25933bf630ef_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{classsimulation_a2b1ca39aee7b85ac2babecfd2784c459}{\index{simulation@{simulation}!integrate@{integrate}}
+\hypertarget{classsimulation_a2b1ca39aee7b85ac2babecfd2784c459}{}\index{simulation@{simulation}!integrate@{integrate}}
 \index{integrate@{integrate}!simulation@{simulation}}
-\subsubsection[{integrate}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::integrate (
+\subsubsection[{integrate}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::integrate (
 \begin{DoxyParamCaption}
 \item[{float}]{dt}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a2b1ca39aee7b85ac2babecfd2784c459}
+)}\label{classsimulation_a2b1ca39aee7b85ac2babecfd2784c459}
+odpowiada za realizację ruchu symulowanych cząstek 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em dt} & -\/ wartość skoku czasu symulacji \\
+\hline
+\end{DoxyParams}
 
 
-Definicja w linii 130 pliku simulation.\-cpp.
+Definicja w linii 130 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -318,7 +356,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -327,20 +365,25 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a300e67649652f2ae9337af3d5244e0f7}{\index{simulation@{simulation}!integration\-Init@{integration\-Init}}
-\index{integration\-Init@{integration\-Init}!simulation@{simulation}}
-\subsubsection[{integration\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::integration\-Init (
+\hypertarget{classsimulation_a300e67649652f2ae9337af3d5244e0f7}{}\index{simulation@{simulation}!integration\+Init@{integration\+Init}}
+\index{integration\+Init@{integration\+Init}!simulation@{simulation}}
+\subsubsection[{integration\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::integration\+Init (
 \begin{DoxyParamCaption}
 \item[{float}]{dt}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a300e67649652f2ae9337af3d5244e0f7}
+)}\label{classsimulation_a300e67649652f2ae9337af3d5244e0f7}
+zadaje początkowe parametry dynamiczne cząstek 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em dt} & -\/ wartość skoku czasu symulacji \\
+\hline
+\end{DoxyParams}
 
 
-Definicja w linii 122 pliku simulation.\-cpp.
+Definicja w linii 122 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -351,7 +394,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -360,54 +403,61 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a64eadae8e6523e419af971fc7c7d8690}{\index{simulation@{simulation}!place\-\_\-particles@{place\-\_\-particles}}
-\index{place\-\_\-particles@{place\-\_\-particles}!simulation@{simulation}}
-\subsubsection[{place\-\_\-particles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simulation} \& simulation\-::place\-\_\-particles (
+\hypertarget{classsimulation_a33ce66b2291920bd1ba29889ff7c0c75}{}\index{simulation@{simulation}!place\+Particles@{place\+Particles}}
+\index{place\+Particles@{place\+Particles}!simulation@{simulation}}
+\subsubsection[{place\+Particles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf simulation} \& simulation\+::place\+Particles (
 \begin{DoxyParamCaption}
-\item[{{\bf params\-\_\-t} $\ast$}]{params, }
-\item[{bool(simulation\-::$\ast$)(float x, float y)}]{container\-Indicator}
+\item[{{\bf params\+\_\+t} $\ast$}]{params, }
+\item[{bool(simulation\+::$\ast$)(float x, float y)}]{container\+Indicator}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a64eadae8e6523e419af971fc7c7d8690}
+)}\label{classsimulation_a33ce66b2291920bd1ba29889ff7c0c75}
+iteruje po siatce punktów wewnątrz zbiornika i dodaje do symulacji te, dla których warunek określony przez funkcję container\+Indicator jest spełniony 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em params} & -\/ parametry symulacji \\
+\hline
+\mbox{\tt in}  & {\em container\+Indicator} & -\/ warunek przynależności do obszaru \\
+\hline
+\end{DoxyParams}
 
 
-Definicja w linii 147 pliku simulation.\-cpp.
+Definicja w linii 147 pliku simulation.\+cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsimulation_a64eadae8e6523e419af971fc7c7d8690_cgraph}
+\includegraphics[width=350pt]{classsimulation_a33ce66b2291920bd1ba29889ff7c0c75_cgraph}
 \end{center}
 \end{figure}
 
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsimulation_a64eadae8e6523e419af971fc7c7d8690_icgraph}
+\includegraphics[width=350pt]{classsimulation_a33ce66b2291920bd1ba29889ff7c0c75_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}{\index{simulation@{simulation}!reflect\-Particles@{reflect\-Particles}}
-\index{reflect\-Particles@{reflect\-Particles}!simulation@{simulation}}
-\subsubsection[{reflect\-Particles}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::reflect\-Particles (
+\hypertarget{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}{}\index{simulation@{simulation}!reflect\+Particles@{reflect\+Particles}}
+\index{reflect\+Particles@{reflect\+Particles}!simulation@{simulation}}
+\subsubsection[{reflect\+Particles}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::reflect\+Particles (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}
+)}\label{classsimulation_a9cb3fe3f985ceb039736a666923a20b5}
+po wykryciu kolizji wywołuje damp\+Reflect z odpowiednimi parametrami 
+
+Definicja w linii 112 pliku simulation.\+cpp.
 
 
-Definicja w linii 112 pliku simulation.\-cpp.
 
-
-
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -418,7 +468,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -427,20 +477,20 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{classsimulation_a111e26e535d53ced834dbd52948b5d69}{\index{simulation@{simulation}!step@{step}}
+\hypertarget{classsimulation_a111e26e535d53ced834dbd52948b5d69}{}\index{simulation@{simulation}!step@{step}}
 \index{step@{step}!simulation@{simulation}}
-\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\-::step (
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void simulation\+::step (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classsimulation_a111e26e535d53ced834dbd52948b5d69}
+)}\label{classsimulation_a111e26e535d53ced834dbd52948b5d69}
+odpowiada za realizację ruchu symulowanych cząstek 
+
+Definicja w linii 180 pliku simulation.\+cpp.
 
 
-Definicja w linii 180 pliku simulation.\-cpp.
 
-
-
-Oto graf wywołań dla tej funkcji\-:\nopagebreak
+Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -451,7 +501,7 @@ Oto graf wywołań dla tej funkcji\-:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\-:\nopagebreak
+Oto graf wywoływań tej funkcji\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -463,80 +513,80 @@ Oto graf wywoływań tej funkcji\-:\nopagebreak
 
 
 \subsection{Dokumentacja przyjaciół i funkcji związanych}
-\hypertarget{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{\index{simulation@{simulation}!operator$<$$<$@{operator$<$$<$}}
+\hypertarget{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{}\index{simulation@{simulation}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!simulation@{simulation}}
-\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
 \begin{DoxyParamCaption}
-\item[{std\-::ostream \&}]{\-\_\-os, }
-\item[{const {\bf simulation} \&}]{\-\_\-s}
+\item[{std\+::ostream \&}]{\+\_\+os, }
+\item[{const {\bf simulation} \&}]{\+\_\+s}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}
 
 
-Definicja w linii 190 pliku simulation.\-cpp.
+Definicja w linii 190 pliku simulation.\+cpp.
 
-\hypertarget{classsimulation_a444a8643309d19294860a4ae144137fe}{\index{simulation@{simulation}!Zbiornik@{Zbiornik}}
+\hypertarget{classsimulation_a444a8643309d19294860a4ae144137fe}{}\index{simulation@{simulation}!Zbiornik@{Zbiornik}}
 \index{Zbiornik@{Zbiornik}!simulation@{simulation}}
-\subsubsection[{Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Zbiornik}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classsimulation_a444a8643309d19294860a4ae144137fe}
+\subsubsection[{Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Zbiornik}\hspace{0.3cm}{\ttfamily [friend]}}\label{classsimulation_a444a8643309d19294860a4ae144137fe}
 
 
-Definicja w linii 47 pliku simulation.\-hh.
+Definicja w linii 47 pliku simulation.\+hh.
 
 
 
 \subsection{Dokumentacja atrybutów składowych}
-\hypertarget{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{\index{simulation@{simulation}!a@{a}}
+\hypertarget{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}{}\index{simulation@{simulation}!a@{a}}
 \index{a@{a}!simulation@{simulation}}
-\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::a\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::a\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}
 
 
-Definicja w linii 54 pliku simulation.\-hh.
+Definicja w linii 54 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{\index{simulation@{simulation}!n@{n}}
+\hypertarget{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{}\index{simulation@{simulation}!n@{n}}
 \index{n@{n}!simulation@{simulation}}
-\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}unsigned simulation\-::n\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a22eb97765a5c60adf3d995f7a110da70}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}unsigned simulation\+::n\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a22eb97765a5c60adf3d995f7a110da70}
 
 
-Definicja w linii 49 pliku simulation.\-hh.
+Definicja w linii 49 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{\index{simulation@{simulation}!p@{p}}
+\hypertarget{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{}\index{simulation@{simulation}!p@{p}}
 \index{p@{p}!simulation@{simulation}}
-\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::p\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::p\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}
 
 
-Definicja w linii 51 pliku simulation.\-hh.
+Definicja w linii 51 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{\index{simulation@{simulation}!params@{params}}
+\hypertarget{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{}\index{simulation@{simulation}!params@{params}}
 \index{params@{params}!simulation@{simulation}}
-\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\-\_\-t}$\ast$ simulation\-::params\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}
+\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\+\_\+t}$\ast$ simulation\+::params\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}
 
 
-Definicja w linii 56 pliku simulation.\-hh.
+Definicja w linii 56 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_a44081d4edd92e17a3e1067b976031a00}{\index{simulation@{simulation}!rho@{rho}}
+\hypertarget{classsimulation_a44081d4edd92e17a3e1067b976031a00}{}\index{simulation@{simulation}!rho@{rho}}
 \index{rho@{rho}!simulation@{simulation}}
-\subsubsection[{rho}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ simulation\-::rho\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a44081d4edd92e17a3e1067b976031a00}
+\subsubsection[{rho}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ simulation\+::rho\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a44081d4edd92e17a3e1067b976031a00}
 
 
-Definicja w linii 50 pliku simulation.\-hh.
+Definicja w linii 50 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{\index{simulation@{simulation}!v@{v}}
+\hypertarget{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{}\index{simulation@{simulation}!v@{v}}
 \index{v@{v}!simulation@{simulation}}
-\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::v\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_a39dbad79b1b8667840638a35e839a3f7}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::v\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a39dbad79b1b8667840638a35e839a3f7}
 
 
-Definicja w linii 53 pliku simulation.\-hh.
+Definicja w linii 53 pliku simulation.\+hh.
 
-\hypertarget{classsimulation_ae6da1f15728f49be7b0793700866ede9}{\index{simulation@{simulation}!vh@{vh}}
+\hypertarget{classsimulation_ae6da1f15728f49be7b0793700866ede9}{}\index{simulation@{simulation}!vh@{vh}}
 \index{vh@{vh}!simulation@{simulation}}
-\subsubsection[{vh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\-::vh\hspace{0.3cm}{\ttfamily [private]}}}\label{classsimulation_ae6da1f15728f49be7b0793700866ede9}
+\subsubsection[{vh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::vh\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_ae6da1f15728f49be7b0793700866ede9}
 
 
-Definicja w linii 52 pliku simulation.\-hh.
+Definicja w linii 52 pliku simulation.\+hh.
 
 
 
-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{simulation_8hh}{simulation.\-hh}\item 
-\hyperlink{simulation_8cpp}{simulation.\-cpp}\end{DoxyCompactItemize}
+\hyperlink{simulation_8hh}{simulation.\+hh}\item 
+\hyperlink{simulation_8cpp}{simulation.\+cpp}\end{DoxyCompactItemize}
