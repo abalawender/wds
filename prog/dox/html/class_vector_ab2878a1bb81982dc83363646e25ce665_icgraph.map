@@ -1,0 +1,14 @@
+<map id="Vector::getX" name="Vector::getX">
+<area shape="rect" id="node2" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="simulation::reflectParticles" alt="" coords="185,121,361,148"/>
+<area shape="rect" id="node12" href="$class_zbiornik.html#af831a2751191eab54fb6438392ac6edb" title="Metoda rysujaca zbiornik wraz z czasteczkami. " alt="" coords="149,172,397,199"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a300e67649652f2ae9337af3d5244e0f7" title="simulation::integrationInit" alt="" coords="446,71,613,97"/>
+<area shape="rect" id="node7" href="$classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459" title="simulation::integrate" alt="" coords="460,121,599,148"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="665,71,772,97"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="829,5,1019,46"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="850,71,998,97"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="simulation::step" alt="" coords="661,121,776,148"/>
+<area shape="rect" id="node9" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="875,121,973,148"/>
+<area shape="rect" id="node10" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="825,172,1023,199"/>
+<area shape="rect" id="node11" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="1072,172,1195,199"/>
+<area shape="rect" id="node13" href="$class_zbiornik.html#af7a9c185e95b92de342c6dc69f020765" title="Wirtualna metoda paintEvent wyrysowujaca obiekt na ekranie. " alt="" coords="460,172,599,199"/>
+</map>

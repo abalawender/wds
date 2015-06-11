@@ -1,0 +1,14 @@
+<map id="vector.hh" name="vector.hh">
+<area shape="rect" id="node2" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="225,80,332,107"/>
+<area shape="rect" id="node11" href="$simulation_8hh.html" title="Plik z definicją klasy symulatora cieczy. " alt="" coords="356,80,455,107"/>
+<area shape="rect" id="node13" href="$vector_8cpp.html" title="vector.cpp" alt="" coords="479,80,560,107"/>
+<area shape="rect" id="node3" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="163,229,279,256"/>
+<area shape="rect" id="node7" href="$zbiornik_8hh.html" title="Zawiera definicję klasy Zbiornik i deklaracje jej metod. " alt="" coords="360,155,445,181"/>
+<area shape="rect" id="node10" href="$czasteczka_8cpp.html" title="Zawiera definicje metod klasy Czasteczka. " alt="" coords="221,155,336,181"/>
+<area shape="rect" id="node4" href="$moc__okno__glowne_8cpp.html" title="moc_okno_glowne.cpp" alt="" coords="5,304,159,331"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Zawiera ogolna strukture funkcji main. " alt="" coords="184,304,257,331"/>
+<area shape="rect" id="node6" href="$okno__glowne_8cpp.html" title="Zawiera definicje metod klasy OknoGlowne. " alt="" coords="283,304,405,331"/>
+<area shape="rect" id="node8" href="$moc__zbiornik_8cpp.html" title="moc_zbiornik.cpp" alt="" coords="322,229,445,256"/>
+<area shape="rect" id="node9" href="$zbiornik_8cpp.html" title="Zawiera definicje metod klasy Zbiornik. " alt="" coords="470,229,561,256"/>
+<area shape="rect" id="node12" href="$simulation_8cpp.html" title="Plik z kodem symulatora cieczy. " alt="" coords="469,155,576,181"/>
+</map>

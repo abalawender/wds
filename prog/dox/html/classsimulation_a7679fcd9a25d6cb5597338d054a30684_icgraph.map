@@ -1,0 +1,11 @@
+<map id="simulation::computeDensity" name="simulation::computeDensity">
+<area shape="rect" id="node2" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="239,121,411,148"/>
+<area shape="rect" id="node10" href="$classsimulation.html#a64eadae8e6523e419af971fc7c7d8690" title="simulation::place_particles" alt="" coords="237,71,413,97"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="465,71,572,97"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="simulation::step" alt="" coords="461,121,576,148"/>
+<area shape="rect" id="node4" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="629,5,819,46"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="650,71,798,97"/>
+<area shape="rect" id="node7" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="675,121,773,148"/>
+<area shape="rect" id="node8" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="625,172,823,199"/>
+<area shape="rect" id="node9" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="872,172,995,199"/>
+</map>

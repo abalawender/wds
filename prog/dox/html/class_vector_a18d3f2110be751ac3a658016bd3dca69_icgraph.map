@@ -1,0 +1,12 @@
+<map id="Vector::normSquared" name="Vector::normSquared">
+<area shape="rect" id="node2" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="200,115,384,141"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="434,64,606,91"/>
+<area shape="rect" id="node11" href="$classsimulation.html#a64eadae8e6523e419af971fc7c7d8690" title="simulation::place_particles" alt="" coords="432,115,608,141"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="simulation::init" alt="" coords="660,115,767,141"/>
+<area shape="rect" id="node7" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="simulation::step" alt="" coords="656,56,771,83"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="824,107,1013,149"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="845,173,993,200"/>
+<area shape="rect" id="node8" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="869,5,968,32"/>
+<area shape="rect" id="node9" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. . " alt="" coords="819,56,1018,83"/>
+<area shape="rect" id="node10" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="1067,56,1189,83"/>
+</map>

@@ -10,15 +10,19 @@
 
    \section etykieta-opis-projektu Opis projektu
    Projekt dotyczy komputerowej symulacji zachowania cieczy oraz wizualizacji jej stanu i rozkładu ciśnienia w zbiorniku z płynem.
+   
   Symulacja obejmuje ruch cieczy w przekroju 2D wybranego naczynia. Ciecz jest przedstawiona na płaszczyźnie jako zbiór oddziaływujących ze sobą cząsteczek. Jej zachowanie jest możliwie zbliżone do rzeczywistego dzięki modelowaniu ruchu płynu przy pomocy metody numerycznej SPH (smoothed particle hydrodynamics - wygładzona hydrodynamika cząstek). W programie modelowane są właściwości fizyczne cieczy: gęstość i lepkość. Dlatego też można badać zachowania płynów o różnych parametrach. Dodatkowo prowadzony jest pomiar ciśnienia cieczy. Ciśnienie wizualizowane jest jako odcień koloru płynu. Im jest on ciemniejszy, tym wyższe ciśnienie odzwierciedla.
+  
   Aplikacja została napisana w języku C++, przy użyciu biblioteki Qt.
    
    \section etykieta-funkcjonalnosci-aplikacji Funkcjonalnosci aplikacji
    Najistotniejsze funkcjonalności aplikacji to:
   - symulacja zachowania cieczy w zależności od zadanych warunków początkowych,
   - symulacja zachowania cieczy przy poruszaniu zbiornikiem,
-  - możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),
+  - symulacja zachowania cieczy na Ziemi lub w stanie nieważkości,
+  - programowa możliwość przedefiniowania parametrów cieczy (gęstości, lepkości),
+  - zmiana szybkości symulacji,
   - możliwość obserwacji wyniku symulacji (położenia cząsteczek i rozkładu ciśnień).
 
-Aplikacja umożliwia zasymulowanie zachowania cieczy zarówno od zadanych warunków początkowych, jak i poprzez interakcję użytkownika z programem (poruszanie zbiornikiem za pomocą slidera). Programowo dostępna jest zmiana wszystkich założonych parametrów cząsteczki cieczy. Podczas działania aplikacji w jej okienku obserwować można komputerowo zamodelowany ruch płynu wraz z rozkładem panujących w nim ciśnień.
+Aplikacja umożliwia zasymulowanie zachowania cieczy zarówno od zadanych warunków początkowych, jak i poprzez interakcję użytkownika z programem (poruszanie zbiornikiem za pomocą slidera). Symulacja odzwierciedla zachowanie cząsteczek na Ziemi lub w Kosmosie. Programowo dostępna jest zmiana wszystkich założonych parametrów cząsteczki cieczy. Podczas działania aplikacji w jej okienku obserwować można komputerowo zamodelowany ruch płynu wraz z rozkładem panujących w nim ciśnień. Symulacja może być zatrzymywana i ponownie uruchamiana, a jej szybkość zmieniana. Rysunek 2 przedstawia przykładowy zrzut ekranu działającej aplikacji.
  */

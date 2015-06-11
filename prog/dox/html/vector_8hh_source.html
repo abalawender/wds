@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>SymulacjaCieczy: Plik źródłowy vector.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SymulacjaCieczy
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">WizualizacjaRozkładuCiśnieniaCieczyNaPodstawieSymulacjiKomputerowej</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('vector_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">vector.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="vector_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VECTOR_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define VECTOR_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_vector.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vector.html">Vector</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_vector.html#a7973d0032b0df4c3ab89e1da167b86a9">operator&lt;&lt;</a>( std::ostream&amp; _os, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _s );</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">   12</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>, <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">   22</a></span>&#160;    <a class="code" href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">Vector</a>( <span class="keywordtype">float</span> _x=0, <span class="keywordtype">float</span> _y=0 ) : <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>(_x), <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>(_y) { }</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_vector.html#ab2878a1bb81982dc83363646e25ce665">   27</a></span>&#160;    <span class="keywordtype">float</span>  <a class="code" href="class_vector.html#ab2878a1bb81982dc83363646e25ce665">getX</a>()<span class="keyword"> const       </span>{ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_vector.html#a86293fe7a035979fd252be6071488b6a">   32</a></span>&#160;    <span class="keywordtype">float</span>  <a class="code" href="class_vector.html#a86293fe7a035979fd252be6071488b6a">getY</a>()<span class="keyword"> const       </span>{ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_vector.html#aeca06c929d4ab3078a828723a88621e6">   37</a></span>&#160;    <span class="keywordtype">float</span>&amp; <a class="code" href="class_vector.html#aeca06c929d4ab3078a828723a88621e6">getX</a>()                          { <span class="keywordflow">return</span> <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>; }</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_vector.html#ab0cc77ce300a60de0ab734555886ad5d">   42</a></span>&#160;    <span class="keywordtype">float</span>&amp; <a class="code" href="class_vector.html#ab0cc77ce300a60de0ab734555886ad5d">getY</a>()                          { <span class="keywordflow">return</span> <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_vector.html#a4eeab5be24ee846de3012e67a4e34820">   50</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_vector.html#a4eeab5be24ee846de3012e67a4e34820">operator+= </a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _v)       { <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> += _v.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>; <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> += _v.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_vector.html#aaaf87dbf15cd9492aa0c11874ae5afef">   58</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_vector.html#aaaf87dbf15cd9492aa0c11874ae5afef">operator-= </a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _v)       { <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> -= _v.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>; <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> -= _v.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_vector.html#a91ebac6d502ca1d54645e7c711549867">   66</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_vector.html#a91ebac6d502ca1d54645e7c711549867">operator*= </a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp;  _c)       { <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> *= _c; <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> *= _c; <span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_vector.html#aa78eb4c9e5ac236c89f0853eefa347ac">   74</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>  <a class="code" href="class_vector.html#aa78eb4c9e5ac236c89f0853eefa347ac">operator+  </a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _v)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">Vector</a>( <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>+_v.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>,  <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>+_v.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>); }</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_vector.html#a94b6fde82bef6532c00358a0af448fc1">   82</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>  <a class="code" href="class_vector.html#a94b6fde82bef6532c00358a0af448fc1">operator-  </a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _v)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">Vector</a>( <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>-_v.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>,  <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>-_v.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>); }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_vector.html#a8f0e64ee9a688803b1efce30fb0b2869">   90</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>  <a class="code" href="class_vector.html#a8f0e64ee9a688803b1efce30fb0b2869">operator*  </a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp;  _c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">Vector</a>( <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>*_c,  <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>*_c); }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_vector.html#ad44f6d9721d9584e7f847e449df73e11">   98</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>&amp; <a class="code" href="class_vector.html#ad44f6d9721d9584e7f847e449df73e11">operator=  </a>(<span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _v)       { <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> = _v.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>; <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> = _v.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_vector.html#a18d3f2110be751ac3a658016bd3dca69">  105</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_vector.html#a18d3f2110be751ac3a658016bd3dca69">normSquared</a>()                         { <span class="keywordflow">return</span> <a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a>*<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> + <a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>*<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_vector_html_a94b6fde82bef6532c00358a0af448fc1"><div class="ttname"><a href="class_vector.html#a94b6fde82bef6532c00358a0af448fc1">Vector::operator-</a></div><div class="ttdeci">Vector operator-(const Vector &amp;_v) const </div><div class="ttdoc">operator odejmowania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00082">vector.hh:82</a></div></div>
+<div class="ttc" id="class_vector_html_aca49165049a1e21ae47afcfc078819ed"><div class="ttname"><a href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">Vector::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00012">vector.hh:12</a></div></div>
+<div class="ttc" id="class_vector_html_a81be9102fca6d9beea3efef522c4c09d"><div class="ttname"><a href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">Vector::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00012">vector.hh:12</a></div></div>
+<div class="ttc" id="class_vector_html_aaaf87dbf15cd9492aa0c11874ae5afef"><div class="ttname"><a href="class_vector.html#aaaf87dbf15cd9492aa0c11874ae5afef">Vector::operator-=</a></div><div class="ttdeci">Vector &amp; operator-=(const Vector &amp;_v)</div><div class="ttdoc">operator odejmowania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00058">vector.hh:58</a></div></div>
+<div class="ttc" id="class_vector_html_aeca06c929d4ab3078a828723a88621e6"><div class="ttname"><a href="class_vector.html#aeca06c929d4ab3078a828723a88621e6">Vector::getX</a></div><div class="ttdeci">float &amp; getX()</div><div class="ttdoc">pobiera pierwszą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00037">vector.hh:37</a></div></div>
+<div class="ttc" id="class_vector_html_a7973d0032b0df4c3ab89e1da167b86a9"><div class="ttname"><a href="class_vector.html#a7973d0032b0df4c3ab89e1da167b86a9">Vector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;_os, const Vector &amp;_s)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00002">vector.cpp:2</a></div></div>
+<div class="ttc" id="class_vector_html_aa78eb4c9e5ac236c89f0853eefa347ac"><div class="ttname"><a href="class_vector.html#aa78eb4c9e5ac236c89f0853eefa347ac">Vector::operator+</a></div><div class="ttdeci">Vector operator+(const Vector &amp;_v) const </div><div class="ttdoc">operator dodawania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00074">vector.hh:74</a></div></div>
+<div class="ttc" id="class_vector_html_a18d3f2110be751ac3a658016bd3dca69"><div class="ttname"><a href="class_vector.html#a18d3f2110be751ac3a658016bd3dca69">Vector::normSquared</a></div><div class="ttdeci">float normSquared()</div><div class="ttdoc">kwadrat normy </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00105">vector.hh:105</a></div></div>
+<div class="ttc" id="class_vector_html_a91ebac6d502ca1d54645e7c711549867"><div class="ttname"><a href="class_vector.html#a91ebac6d502ca1d54645e7c711549867">Vector::operator*=</a></div><div class="ttdeci">Vector &amp; operator*=(const float &amp;_c)</div><div class="ttdoc">operator skalowania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00066">vector.hh:66</a></div></div>
+<div class="ttc" id="class_vector_html_af3c1b04bfbb10e29433842202365a6c4"><div class="ttname"><a href="class_vector.html#af3c1b04bfbb10e29433842202365a6c4">Vector::Vector</a></div><div class="ttdeci">Vector(float _x=0, float _y=0)</div><div class="ttdoc">Współrzędne wektora. </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00022">vector.hh:22</a></div></div>
+<div class="ttc" id="class_vector_html_a86293fe7a035979fd252be6071488b6a"><div class="ttname"><a href="class_vector.html#a86293fe7a035979fd252be6071488b6a">Vector::getY</a></div><div class="ttdeci">float getY() const </div><div class="ttdoc">pobiera drugą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00032">vector.hh:32</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00010">vector.hh:10</a></div></div>
+<div class="ttc" id="class_vector_html_a8f0e64ee9a688803b1efce30fb0b2869"><div class="ttname"><a href="class_vector.html#a8f0e64ee9a688803b1efce30fb0b2869">Vector::operator*</a></div><div class="ttdeci">Vector operator*(const float &amp;_c) const </div><div class="ttdoc">operator skalowania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00090">vector.hh:90</a></div></div>
+<div class="ttc" id="class_vector_html_ab2878a1bb81982dc83363646e25ce665"><div class="ttname"><a href="class_vector.html#ab2878a1bb81982dc83363646e25ce665">Vector::getX</a></div><div class="ttdeci">float getX() const </div><div class="ttdoc">zwraga pierwszą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00027">vector.hh:27</a></div></div>
+<div class="ttc" id="class_vector_html_a4eeab5be24ee846de3012e67a4e34820"><div class="ttname"><a href="class_vector.html#a4eeab5be24ee846de3012e67a4e34820">Vector::operator+=</a></div><div class="ttdeci">Vector &amp; operator+=(const Vector &amp;_v)</div><div class="ttdoc">operator dodawania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00050">vector.hh:50</a></div></div>
+<div class="ttc" id="class_vector_html_ab0cc77ce300a60de0ab734555886ad5d"><div class="ttname"><a href="class_vector.html#ab0cc77ce300a60de0ab734555886ad5d">Vector::getY</a></div><div class="ttdeci">float &amp; getY()</div><div class="ttdoc">pobiera drugą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00042">vector.hh:42</a></div></div>
+<div class="ttc" id="class_vector_html_ad44f6d9721d9584e7f847e449df73e11"><div class="ttname"><a href="class_vector.html#ad44f6d9721d9584e7f847e449df73e11">Vector::operator=</a></div><div class="ttdeci">Vector &amp; operator=(const Vector &amp;_v)</div><div class="ttdoc">operator przypisania </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00098">vector.hh:98</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="vector_8hh.html">vector.hh</a></li>
+    <li class="footer">Wygenerowano Cz, 11 cze 2015 18:06:04 dla SymulacjaCieczy programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

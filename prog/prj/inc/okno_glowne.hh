@@ -49,7 +49,7 @@
 #include "kolor.hh"
 #include "czasteczka.hh"
 #include "zbiornik.hh"
-#include "dmainwindow.h"
+//#include "dmainwindow.h"
 
 /*!
  * \file
