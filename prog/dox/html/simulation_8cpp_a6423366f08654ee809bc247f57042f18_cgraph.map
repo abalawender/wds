@@ -1,5 +1,5 @@
 <map id="funkcja_main" name="funkcja_main">
-<area shape="rect" id="node2" href="$simulation_8cpp.html#abf5adaaaf59fb394dd7b3c5d4bcaaa1a" title="setup" alt="" coords="189,5,245,32"/>
+<area shape="rect" id="node2" href="$simulation_8cpp.html#abf5adaaaf59fb394dd7b3c5d4bcaaa1a" title="Ustawia domyślne parametry symulacji. " alt="" coords="189,5,245,32"/>
 <area shape="rect" id="node3" href="$classsimulation.html#abe09252527aa58fbec8144063be3e950" title="zwraca liczbę cząstek użytych do symulacji " alt="" coords="157,56,277,83"/>
 <area shape="rect" id="node4" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="realizuje krok symulacji " alt="" coords="159,107,276,133"/>
 <area shape="rect" id="node5" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="325,81,503,108"/>

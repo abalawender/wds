@@ -26,21 +26,38 @@
  * sparametryzowanego modelu cieczy w zadanym środowisku od określonego warunku początkowego.
  */
 
+/*!
+ * \brief Parametry symulacji
+ *
+ * Struktura przechowuje parametry symulacji
+ */
 struct params_t {
-    unsigned nframes;       // Number of frames
-    unsigned npframe;       // Steps per frame
-    float h;                // Particle size
-    float dt;               // Time step
-    float rho0;             // Reference density
-    float k;                // Bulk modulus
-    float mu;               // Viscosity
-    float gx;               // Gravity on X-axis
-    float gy;               // Gravity on Y-axis
-    float mass;             // Particle mass
+    unsigned nframes;       // Liczba ramek (tylko w trybie stand-alone)
+    unsigned npframe;       // Liczba kroków na ramkę
+    float h;                // Rozmiar cząstki
+    float dt;               // Najmniejsza różnica czasu
+    float rho0;             // Gęstość cieczy
+    float k;                // Współczynnik K
+    float mu;               // Lepkość
+    float gx;               // Grawitacja w poziomie
+    float gy;               // Grawitacja w pionie
+    float mass;             // Masa cząstki
 };
 
+/*!
+ * \brief Ustawia domyślne parametry symulacji
+ *
+ * Alokuje pamięć na potrzeby przechowania stanu symulacji
+ * \param[in] params - wskaźnik na strukturę parametrów symulacji
+ * \return zmieniona struktura parametrów
+ */
 params_t* setup( params_t *params );
 
+/*!
+ * \brief backend symulacji
+ *
+ * klasa zawiera metody pozwalające na przeprowadzenie symulacji zachowania sparametryzowanego modelu cieczy metodą SPH
+ */
 class simulation {
     friend std::ostream& operator<<( std::ostream& _os, const simulation& _s );
 
@@ -53,7 +70,7 @@ class simulation {
     Vector* v;      //! Prędkości (full step)
     Vector* a;      //! Przyspieszenia
 
-    params_t* params;
+    params_t* params; //! Parametry symulacji
 
     public:
 

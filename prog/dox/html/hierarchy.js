@@ -10,7 +10,6 @@ var hierarchy =
       [ "Zbiornik", "class_zbiornik.html", null ]
     ] ],
     [ "simulation", "classsimulation.html", null ],
-    [ "state_t", "structstate__t.html", null ],
     [ "Ui_DMainWindow", "class_ui___d_main_window.html", [
       [ "Ui::DMainWindow", "class_ui_1_1_d_main_window.html", null ]
     ] ],

@@ -1,9 +1,7 @@
 <map id="vector.hh" name="vector.hh">
 <area shape="rect" id="node2" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="241,80,352,107"/>
 <area shape="rect" id="node11" href="$simulation_8hh.html" title="Plik z definicją klasy symulatora cieczy. " alt="" coords="376,80,479,107"/>
-<area shape="rect" id="node13" href="$simulation__alt_8hh.html" title="simulation_alt.hh" alt="" coords="503,80,629,107"/>
-<area shape="rect" id="node14" href="$simulation__alt_8cpp.html" title="simulation_alt.cpp" alt="" coords="654,80,787,107"/>
-<area shape="rect" id="node15" href="$vector_8cpp.html" title="vector.cpp" alt="" coords="812,80,899,107"/>
+<area shape="rect" id="node13" href="$vector_8cpp.html" title="vector.cpp" alt="" coords="503,80,589,107"/>
 <area shape="rect" id="node3" href="$okno__glowne_8hh.html" title="Zawiera definicje klasy OknoGlowne i deklaracje jej metod. " alt="" coords="173,229,298,256"/>
 <area shape="rect" id="node7" href="$zbiornik_8hh.html" title="Zawiera definicję klasy Zbiornik i deklaracje jej metod. " alt="" coords="380,155,469,181"/>
 <area shape="rect" id="node10" href="$czasteczka_8cpp.html" title="Zawiera definicje metod klasy Czasteczka. " alt="" coords="237,155,356,181"/>

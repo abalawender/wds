@@ -2,11 +2,17 @@
 \label{classsimulation}\index{simulation@{simulation}}
 
 
+backend symulacji  
+
+
+
+
 {\ttfamily \#include $<$simulation.\+hh$>$}
 
 
 
-Diagram współpracy dla simulation\+:\nopagebreak
+Diagram współpracy dla simulation\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +23,7 @@ Diagram współpracy dla simulation\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}{simulation} (const unsigned \&\+\_\+n, \hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+param)
-\begin{DoxyCompactList}\small\item\em konstruktor klasy \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parametry symulacji. \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a7679fcd9a25d6cb5597338d054a30684}{compute\+Density} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\+\_\+p)
 \begin{DoxyCompactList}\small\item\em wylicza przybliżenia gęstości \end{DoxyCompactList}\item 
 void \hyperlink{classsimulation_a16b945b81e27680a709fffd8663bf856}{compute\+Accel} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$\hyperlink{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{params})
@@ -69,9 +75,9 @@ std\+::ostream \& \hyperlink{classsimulation_a1f6414b078a2823f5cea77fc1235e1d9}{
 
 
 \subsection{Opis szczegółowy}
+klasa zawiera metody pozwalające na przeprowadzenie symulacji zachowania sparametryzowanego modelu cieczy metodą S\+P\+H 
 
-
-Definicja w linii 44 pliku simulation.\+hh.
+Definicja w linii 61 pliku simulation.\+hh.
 
 
 
@@ -84,6 +90,8 @@ Definicja w linii 44 pliku simulation.\+hh.
 \item[{{\bf params\+\_\+t} $\ast$}]{\+\_\+param}
 \end{DoxyParamCaption}
 )}\label{classsimulation_a30fdcc611ae9a656a3aebb8445e4607d}
+konstruktor klasy
+
 Alokuje pamięć na potrzeby przechowania stanu symulacji 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in}  & {\em \+\_\+n} & -\/ maksymalna liczba cząstek \\
@@ -133,7 +141,8 @@ Definicja w linii 139 pliku simulation.\+cpp.
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,7 +200,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,7 +237,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -260,7 +271,8 @@ Definicja w linii 100 pliku simulation.\+cpp.
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -281,7 +293,7 @@ liczba cząstek
 \end{DoxyReturn}
 
 
-Definicja w linii 177 pliku simulation.\+hh.
+Definicja w linii 194 pliku simulation.\+hh.
 
 
 
@@ -318,7 +330,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -394,7 +407,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -435,7 +449,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -468,7 +483,8 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -530,7 +546,7 @@ Definicja w linii 190 pliku simulation.\+cpp.
 \subsubsection[{Zbiornik}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Zbiornik}\hspace{0.3cm}{\ttfamily [friend]}}\label{classsimulation_a444a8643309d19294860a4ae144137fe}
 
 
-Definicja w linii 47 pliku simulation.\+hh.
+Definicja w linii 64 pliku simulation.\+hh.
 
 
 
@@ -540,49 +556,49 @@ Definicja w linii 47 pliku simulation.\+hh.
 \subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::a\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a7b5ca0e5fc096989be7966a73c360b7f}
 
 
-Definicja w linii 54 pliku simulation.\+hh.
+Definicja w linii 71 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_a22eb97765a5c60adf3d995f7a110da70}{}\index{simulation@{simulation}!n@{n}}
 \index{n@{n}!simulation@{simulation}}
 \subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}unsigned simulation\+::n\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a22eb97765a5c60adf3d995f7a110da70}
 
 
-Definicja w linii 49 pliku simulation.\+hh.
+Definicja w linii 66 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}{}\index{simulation@{simulation}!p@{p}}
 \index{p@{p}!simulation@{simulation}}
 \subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::p\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a5412fd01febe99f12ae38e30eb692ff0}
 
 
-Definicja w linii 51 pliku simulation.\+hh.
+Definicja w linii 68 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}{}\index{simulation@{simulation}!params@{params}}
 \index{params@{params}!simulation@{simulation}}
 \subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\+\_\+t}$\ast$ simulation\+::params\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a861b82cc3c0e7e58abfba464a133dae3}
 
 
-Definicja w linii 56 pliku simulation.\+hh.
+Definicja w linii 73 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_a44081d4edd92e17a3e1067b976031a00}{}\index{simulation@{simulation}!rho@{rho}}
 \index{rho@{rho}!simulation@{simulation}}
 \subsubsection[{rho}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ simulation\+::rho\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a44081d4edd92e17a3e1067b976031a00}
 
 
-Definicja w linii 50 pliku simulation.\+hh.
+Definicja w linii 67 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_a39dbad79b1b8667840638a35e839a3f7}{}\index{simulation@{simulation}!v@{v}}
 \index{v@{v}!simulation@{simulation}}
 \subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::v\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_a39dbad79b1b8667840638a35e839a3f7}
 
 
-Definicja w linii 53 pliku simulation.\+hh.
+Definicja w linii 70 pliku simulation.\+hh.
 
 \hypertarget{classsimulation_ae6da1f15728f49be7b0793700866ede9}{}\index{simulation@{simulation}!vh@{vh}}
 \index{vh@{vh}!simulation@{simulation}}
 \subsubsection[{vh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$\ast$ simulation\+::vh\hspace{0.3cm}{\ttfamily [private]}}\label{classsimulation_ae6da1f15728f49be7b0793700866ede9}
 
 
-Definicja w linii 52 pliku simulation.\+hh.
+Definicja w linii 69 pliku simulation.\+hh.
 
 
 

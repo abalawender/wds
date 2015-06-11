@@ -29,9 +29,9 @@ Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten 
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structparams__t}{params\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em Parametry symulacji. \end{DoxyCompactList}\item 
 class \hyperlink{classsimulation}{simulation}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em backend symulacji \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Definicje}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +41,7 @@ class \hyperlink{classsimulation}{simulation}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{structparams__t}{params\+\_\+t} $\ast$ \hyperlink{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{setup} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$params)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ustawia domyślne parametry symulacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
@@ -80,9 +80,17 @@ Definicja w linii 17 pliku simulation.\+hh.
 \item[{{\bf params\+\_\+t} $\ast$}]{params}
 \end{DoxyParamCaption}
 )}\label{simulation_8hh_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}
+Alokuje pamięć na potrzeby przechowania stanu symulacji 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em params} & -\/ wskaźnik na strukturę parametrów symulacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+zmieniona struktura parametrów 
+\end{DoxyReturn}
 
 
-Definicja w linii 125 pliku simulation\+\_\+alt.\+hh.
+Definicja w linii 23 pliku simulation.\+cpp.
 
 
 
