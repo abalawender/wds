@@ -85,10 +85,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     pauseButton->setObjectName("pauseButton"); // on_action
     stopButton = new QPushButton(horizontalLayoutWidget);
     stopButton->setObjectName("stopButton"); // on_action
-
-    gravTglButton = new QPushButton(horizontalLayoutWidget);
-    gravTglButton->setObjectName("gravTglButton"); // on_action
-
+    
     QIcon icon;
     icon.addFile(QString::fromUtf8("../../prog/prj/res/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
     stopButton->setIcon(icon);
@@ -96,12 +93,11 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     pauseButton->setIcon(icon);
     icon.addFile(QString::fromUtf8("../../prog/prj/res/play.png"), QSize(), QIcon::Normal, QIcon::Off);
     playButton->setIcon(icon);
+    
 
     horizontalLayout->addWidget(playButton);
     horizontalLayout->addWidget(pauseButton);
     horizontalLayout->addWidget(stopButton);
-
-    horizontalLayout->addWidget(gravTglButton);
 
     /* Slider kat obrotu */
     sliderKatObrotu = new QSlider(Qt::Horizontal, this);
@@ -146,10 +142,12 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     sliderSzybkoscSym->setMaximum(40);
     sliderSzybkoscSym->setValue(25);
 
-    /* Spacer */
-    //verticalSpacer = new QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    //verticalSpacer->setObjectName("verticalSpacer");
-    //addItem(verticalSpacer);
+    /* CheckBox */
+    gravTglButton = new QCheckBox(this);
+    gravTglButton->setObjectName("gravTglButton"); // on_action
+    gravTglButton->setText("Grawitacja");
+    gravTglButton->setGeometry(QRect(320, 50, 97, 22));
+    gravTglButton->setChecked(true);
 
     /* Wczytywanie, Zapis*/
     lineEdit = new QLineEdit(this);

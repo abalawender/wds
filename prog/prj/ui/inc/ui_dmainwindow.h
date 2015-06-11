@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dmainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created by: Qt User Interface Compiler version 4.8.6
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -13,6 +13,8 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
+#include <QtGui/QCommandLinkButton>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLCDNumber>
@@ -26,6 +28,7 @@
 #include <QtGui/QSpacerItem>
 #include <QtGui/QStatusBar>
 #include <QtGui/QToolBar>
+#include <QtGui/QToolButton>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -52,6 +55,10 @@ public:
     QLineEdit *lineLiczbaCzasteczek;
     QLCDNumber *lcdLiczbaCzasteczek;
     QLabel *label;
+    QCommandLinkButton *commandLinkButton;
+    QToolButton *toolButton;
+    QLineEdit *lineEdit;
+    QCheckBox *checkBox;
     QMenuBar *menuBar;
     QMenu *menu_File;
     QMenu *menu_Edit;
@@ -142,6 +149,18 @@ public:
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(40, 80, 67, 17));
+        commandLinkButton = new QCommandLinkButton(centralWidget);
+        commandLinkButton->setObjectName(QString::fromUtf8("commandLinkButton"));
+        commandLinkButton->setGeometry(QRect(340, 110, 187, 41));
+        toolButton = new QToolButton(centralWidget);
+        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+        toolButton->setGeometry(QRect(360, 170, 24, 25));
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(330, 40, 113, 27));
+        checkBox = new QCheckBox(centralWidget);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(50, 20, 97, 22));
         DMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(DMainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -188,6 +207,9 @@ public:
         lineCzasSym->setText(QApplication::translate("DMainWindow", "Czas symulacji", 0, QApplication::UnicodeUTF8));
         lineLiczbaCzasteczek->setText(QApplication::translate("DMainWindow", "Liczba cz\304\205steczek", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("DMainWindow", "TextLabel", 0, QApplication::UnicodeUTF8));
+        commandLinkButton->setText(QApplication::translate("DMainWindow", "CommandLinkButton", 0, QApplication::UnicodeUTF8));
+        toolButton->setText(QApplication::translate("DMainWindow", "...", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QApplication::translate("DMainWindow", "CheckBox", 0, QApplication::UnicodeUTF8));
         menu_File->setTitle(QApplication::translate("DMainWindow", "&File", 0, QApplication::UnicodeUTF8));
         menu_Edit->setTitle(QApplication::translate("DMainWindow", "&Edit", 0, QApplication::UnicodeUTF8));
         menu_Help->setTitle(QApplication::translate("DMainWindow", "&Help", 0, QApplication::UnicodeUTF8));

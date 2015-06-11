@@ -58,4 +58,12 @@ const int WYSOKOSC = 280;
  */
 const int GRUBOSC  = 8;
 
+/*! TODO
+ * \brief Grubosc krawedzi zbiornika [px].
+ * 
+ * Grubosc krawedzi zbiornika [px].
+ * Grubosc jest symetryczna wzgledem osi.
+ */
+const int PASKI = 8;
+
 #endif

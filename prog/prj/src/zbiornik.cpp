@@ -77,7 +77,7 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   {
       c.RysujCzasteczke(Rysownik, c.Promien(), c.RGB(),
                         _lewa_gora_xy.getX()+(_podstawa-2*GRUBOSC+2)*c.xy().getX(),
-                        _lewa_gora_xy.getY()+_wysokosc-2*(1+PROMIEN+GRUBOSC)-(_wysokosc-2*PROMIEN+2)*c.xy().getY());
+                        _lewa_gora_xy.getY()+_wysokosc-2*(1+PROMIEN+GRUBOSC)-(_wysokosc-2*PROMIEN+2)*c.xy().getY()+PASKI);
   }
 }
 

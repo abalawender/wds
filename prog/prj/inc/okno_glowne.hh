@@ -36,6 +36,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QLabel>
+#include <QCheckBox>
 
 #include <iostream>
 #include <sstream>
@@ -303,12 +304,13 @@ class OknoGlowne: public QMainWindow
      */
     QPushButton *stopButton;
 
+    
     /*!
-     * \brief Wskaznik na przycisk gravTgl.
+     * \brief Wskaznik na check box gravTgl.
      *
-     * Wskaznik na przycisk gravTgl. Zeruje wektor grawitacji.
+     * Wskaznik na check box gravTgl. Zeruje wektor grawitacji.
      */
-    QPushButton *gravTglButton;
+    QCheckBox *gravTglButton;
 
     /*!
      * \brief Wskaznik na przycisk Wczytaj.
