@@ -56,14 +56,6 @@ const int WYSOKOSC = 280;
  * Grubosc krawedzi zbiornika [px].
  * Grubosc jest symetryczna wzgledem osi.
  */
-const int GRUBOSC  = 10;
-
-/*!
- * \brief Suma grubosci paskow statusu itd. okienka [px].
- * 
- * Suma grubosci paskow statusu itd. okienka [px].
- * Potrzebne do liczenia pozycji.
- */
-const int PASKI = 11;
+const int GRUBOSC  = 8;
 
 #endif

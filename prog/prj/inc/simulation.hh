@@ -101,6 +101,7 @@ class simulation {
     void integrate( float dt );
 
     bool box_indicator( float x, float y );
+    bool circle_indicator( float x, float y );
 
     simulation& place_particles( params_t* params, bool (simulation::*containerIndicator)( float x, float y ) );
 
