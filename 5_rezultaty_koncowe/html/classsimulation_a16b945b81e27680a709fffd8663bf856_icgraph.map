@@ -1,0 +1,9 @@
+<map id="simulation::computeAccel" name="simulation::computeAccel">
+<area shape="rect" id="node2" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="inicjuje symulację " alt="" coords="235,71,343,98"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a111e26e535d53ced834dbd52948b5d69" title="realizuje krok symulacji " alt="" coords="231,122,348,149"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a63255adc6263a1ee6f67c96b91446b73" title="Slot odpowiadajacy za obsluge stanu stop. " alt="" coords="401,5,602,47"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d" title="konstruktor klasy " alt="" coords="425,71,577,98"/>
+<area shape="rect" id="node6" href="$simulation_8cpp.html#a6423366f08654ee809bc247f57042f18" title="funkcja_main" alt="" coords="449,122,553,149"/>
+<area shape="rect" id="node7" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="396,173,607,199"/>
+<area shape="rect" id="node8" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="655,173,783,199"/>
+</map>

@@ -70,7 +70,9 @@ class simulation {
     Vector* v;      //!< Prędkości (full step)
     Vector* a;      //!< Przyspieszenia
 
-    params_t* params; //!< Parametry symulacji
+    // TODO private
+    public: 
+      params_t* params; //!< Parametry symulacji
 
     public:
 

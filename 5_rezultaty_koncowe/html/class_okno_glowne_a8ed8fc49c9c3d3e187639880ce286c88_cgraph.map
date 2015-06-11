@@ -1,0 +1,5 @@
+<map id="OknoGlowne::on_action_Save_triggered" name="OknoGlowne::on_action_Save_triggered">
+<area shape="rect" id="node2" href="$class_okno_glowne.html#a6062f76fdf15ad8bc0543cfd2a2fe150" title="Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku. " alt="" coords="225,23,440,65"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="490,5,630,32"/>
+<area shape="rect" id="node4" href="$class_zbiornik.html#ab0a2ae2523139dadc52a9499a6c2ab98" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="488,56,632,83"/>
+</map>

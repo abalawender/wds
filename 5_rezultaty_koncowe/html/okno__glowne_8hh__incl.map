@@ -1,0 +1,8 @@
+<map id="okno_glowne.hh" name="okno_glowne.hh">
+<area shape="rect" id="node33" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="2413,155,2479,181"/>
+<area shape="rect" id="node34" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="2655,229,2727,256"/>
+<area shape="rect" id="node35" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="2504,155,2615,181"/>
+<area shape="rect" id="node38" href="$zbiornik_8hh.html" title="Zawiera definicję klasy Zbiornik i deklaracje jej metod. " alt="" coords="1483,80,1572,107"/>
+<area shape="rect" id="node37" href="$vector_8hh.html" title="vector.hh" alt="" coords="1698,229,1778,256"/>
+<area shape="rect" id="node41" href="$simulation_8hh.html" title="Plik z definicją klasy symulatora cieczy. " alt="" coords="1520,155,1623,181"/>
+</map>

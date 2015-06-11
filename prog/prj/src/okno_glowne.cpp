@@ -148,6 +148,23 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     gravTglButton->setText("Pionowa skladowa wektora grawitacji");
     gravTglButton->setGeometry(QRect(320, 50, 297, 22));
     gravTglButton->setChecked(true);
+    
+    /* Lepkosc */
+    labelLepkosc = new QLabel(tr("Lepkosc [?]"), this);
+    labelLepkosc->setObjectName("labelLepkosc");
+    labelLepkosc->setGeometry(QRect(20, 20+90, 180, 25));
+    
+    lcdLepkosc = new QLCDNumber(4, this); // 
+    lcdLepkosc->setObjectName("lcdLepkosc");
+    lcdLepkosc->setGeometry(QRect(200, 20+90, 64, 25));
+    lcdLepkosc->display(0.1);
+    
+    sliderLepkosc = new QSlider(Qt::Horizontal, this);
+    sliderLepkosc->setObjectName("sliderLepkosc");
+    sliderLepkosc->setGeometry(320, 110, 160, 25);
+    sliderLepkosc->setMinimum(-20);
+    sliderLepkosc->setMaximum(100);
+    sliderLepkosc->setValue(1.0);
 
     /* Wczytywanie, Zapis*/
     lineEdit = new QLineEdit(this);
@@ -230,6 +247,13 @@ void OknoGlowne::on_sliderSzybkoscSym_valueChanged(int a) {
     wZbiornik->odpowiedni_czas() = 1000.0/a; // Hz -> ms
     wZbiornik->_Stoper.setInterval(wZbiornik->odpowiedni_czas());
 }
+
+void OknoGlowne::on_sliderLepkosc_valueChanged(int a) {
+  double aa = static_cast<double>(a)/10.0; //int->float
+  wZbiornik->_Symulacja.params->mu = aa;
+  lcdLepkosc->display(aa);
+}
+
 
 int OknoGlowne::licznik_plikow;
 

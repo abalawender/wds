@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>SymulacjaCieczy: Plik źródłowy ui_dmainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SymulacjaCieczy
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">WizualizacjaRozkładuCiśnieniaCieczyNaPodstawieSymulacjiKomputerowej</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ui__dmainwindow_8h_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ui_dmainwindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ui__dmainwindow_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/********************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** Form generated from reading UI file &#39;dmainwindow.ui&#39;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** Created by: Qt User Interface Compiler version 4.8.6</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">** WARNING! All changes made in this file will be lost when recompiling UI file!</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">********************************************************************************/</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef UI_DMAINWINDOW_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define UI_DMAINWINDOW_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtGui/QAction&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QtGui/QApplication&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtGui/QButtonGroup&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtGui/QCheckBox&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QtGui/QCommandLinkButton&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QtGui/QHBoxLayout&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QtGui/QHeaderView&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QtGui/QLCDNumber&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QtGui/QLabel&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QtGui/QLineEdit&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QtGui/QMainWindow&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QtGui/QMenu&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QtGui/QMenuBar&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QtGui/QPushButton&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QtGui/QSlider&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QtGui/QSpacerItem&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QtGui/QStatusBar&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;QtGui/QToolBar&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;QtGui/QToolButton&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;QtGui/QWidget&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;QT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ui___d_main_window.html">Ui_DMainWindow</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a7ab98279e07bdd724a091ea06012c87b">   39</a></span>&#160;    QAction *<a class="code" href="class_ui___d_main_window.html#a7ab98279e07bdd724a091ea06012c87b">action_Save</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a00e6b795743b676bdf3ed853e91f7029">   40</a></span>&#160;    QAction *<a class="code" href="class_ui___d_main_window.html#a00e6b795743b676bdf3ed853e91f7029">action_Exit</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#ae1fa62a4d27fa0f4a5c63c7c60cfdad2">   41</a></span>&#160;    QAction *<a class="code" href="class_ui___d_main_window.html#ae1fa62a4d27fa0f4a5c63c7c60cfdad2">actionExit</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a6cfb6311ca1dd6e247d80255e2667ba7">   42</a></span>&#160;    QAction *<a class="code" href="class_ui___d_main_window.html#a6cfb6311ca1dd6e247d80255e2667ba7">actionPlay</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a94cf40cb4e645cfa2e80f36ffbf5018e">   43</a></span>&#160;    QWidget *<a class="code" href="class_ui___d_main_window.html#a94cf40cb4e645cfa2e80f36ffbf5018e">centralWidget</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a777a56f3b74aa5b5cd5ff2c62a2968a9">   44</a></span>&#160;    QWidget *<a class="code" href="class_ui___d_main_window.html#a777a56f3b74aa5b5cd5ff2c62a2968a9">horizontalLayoutWidget</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a4ab6ff85d8c5edef531b3f2111a04157">   45</a></span>&#160;    QHBoxLayout *<a class="code" href="class_ui___d_main_window.html#a4ab6ff85d8c5edef531b3f2111a04157">horizontalLayout</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#ad87cbf39ac14374923ed2a2b11e8b1bf">   46</a></span>&#160;    QPushButton *<a class="code" href="class_ui___d_main_window.html#ad87cbf39ac14374923ed2a2b11e8b1bf">playButton</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a476471e78bf431c7487fa9e0afadb76d">   47</a></span>&#160;    QSpacerItem *<a class="code" href="class_ui___d_main_window.html#a476471e78bf431c7487fa9e0afadb76d">verticalSpacer</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a70e142e35db4995a1fefa082406bdef3">   48</a></span>&#160;    QPushButton *<a class="code" href="class_ui___d_main_window.html#a70e142e35db4995a1fefa082406bdef3">pauseButton</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a1fe7797fff349a0f0d47d90c8438f386">   49</a></span>&#160;    QPushButton *<a class="code" href="class_ui___d_main_window.html#a1fe7797fff349a0f0d47d90c8438f386">stopButton</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a8d12f07935a52a597e57eddf50e5c98f">   50</a></span>&#160;    QSlider *<a class="code" href="class_ui___d_main_window.html#a8d12f07935a52a597e57eddf50e5c98f">sliderSzybkoscSym</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a4eb8e2a87080f4f314eb96c52a82e39d">   51</a></span>&#160;    QLCDNumber *<a class="code" href="class_ui___d_main_window.html#a4eb8e2a87080f4f314eb96c52a82e39d">lcdSzybkoscSym</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a73bafa5343a8e3cb7cd673a24be76008">   52</a></span>&#160;    QLineEdit *<a class="code" href="class_ui___d_main_window.html#a73bafa5343a8e3cb7cd673a24be76008">lineSzybkoscSym</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#aad165daf4686baecb2ccd6709c629579">   53</a></span>&#160;    QLineEdit *<a class="code" href="class_ui___d_main_window.html#aad165daf4686baecb2ccd6709c629579">lineCzasSym</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#af49335a21dc17e53674f8b62a640ca2d">   54</a></span>&#160;    QLCDNumber *<a class="code" href="class_ui___d_main_window.html#af49335a21dc17e53674f8b62a640ca2d">lcdCzasSym</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a49c95cda7e035087a4367514e5540298">   55</a></span>&#160;    QLineEdit *<a class="code" href="class_ui___d_main_window.html#a49c95cda7e035087a4367514e5540298">lineLiczbaCzasteczek</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a3d6afe29d882b3a9119b68d79c9b5e0f">   56</a></span>&#160;    QLCDNumber *<a class="code" href="class_ui___d_main_window.html#a3d6afe29d882b3a9119b68d79c9b5e0f">lcdLiczbaCzasteczek</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#aa528e417bc72cda19dfcea49f1617b2a">   57</a></span>&#160;    QLabel *<a class="code" href="class_ui___d_main_window.html#aa528e417bc72cda19dfcea49f1617b2a">label</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a0d790fbf37bac850b60a7cb42d100315">   58</a></span>&#160;    QCommandLinkButton *<a class="code" href="class_ui___d_main_window.html#a0d790fbf37bac850b60a7cb42d100315">commandLinkButton</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a97093acead8089d7f4b26fab4b1c8a65">   59</a></span>&#160;    QToolButton *<a class="code" href="class_ui___d_main_window.html#a97093acead8089d7f4b26fab4b1c8a65">toolButton</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a26b955a365ed5865f327921708f1a72f">   60</a></span>&#160;    QLineEdit *<a class="code" href="class_ui___d_main_window.html#a26b955a365ed5865f327921708f1a72f">lineEdit</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a41e765e074811602fbc5efecf07011ac">   61</a></span>&#160;    QCheckBox *<a class="code" href="class_ui___d_main_window.html#a41e765e074811602fbc5efecf07011ac">checkBox</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a788ef749d82ca070e467e55cca0d47dd">   62</a></span>&#160;    QMenuBar *<a class="code" href="class_ui___d_main_window.html#a788ef749d82ca070e467e55cca0d47dd">menuBar</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a991f4d15852faf04d8c12694b3e077ad">   63</a></span>&#160;    QMenu *<a class="code" href="class_ui___d_main_window.html#a991f4d15852faf04d8c12694b3e077ad">menu_File</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a8826a3e34a5aa75fca2b8e45b7010a8b">   64</a></span>&#160;    QMenu *<a class="code" href="class_ui___d_main_window.html#a8826a3e34a5aa75fca2b8e45b7010a8b">menu_Edit</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#ac2997077098614d72b21d29c7a48350c">   65</a></span>&#160;    QMenu *<a class="code" href="class_ui___d_main_window.html#ac2997077098614d72b21d29c7a48350c">menu_Help</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a2e1da3781ee1e5913b25b85f4c29b97f">   66</a></span>&#160;    QToolBar *<a class="code" href="class_ui___d_main_window.html#a2e1da3781ee1e5913b25b85f4c29b97f">mainToolBar</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#ac9e025e7279839dd7ab1686456d1ae21">   67</a></span>&#160;    QStatusBar *<a class="code" href="class_ui___d_main_window.html#ac9e025e7279839dd7ab1686456d1ae21">statusBar</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#abba1dae1dd835c7a7dd39da623cd4580">   68</a></span>&#160;    QToolBar *<a class="code" href="class_ui___d_main_window.html#abba1dae1dd835c7a7dd39da623cd4580">toolBar</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#aa53f3a89bf520704a3e79037df2fd451">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ui___d_main_window.html#aa53f3a89bf520704a3e79037df2fd451">setupUi</a>(QMainWindow *DMainWindow)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (DMainWindow-&gt;objectName().isEmpty())</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            DMainWindow-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;DMainWindow&quot;</span>));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        DMainWindow-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        DMainWindow-&gt;resize(516, 341);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        action_Save = <span class="keyword">new</span> QAction(DMainWindow);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        action_Save-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;action_Save&quot;</span>));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        action_Exit = <span class="keyword">new</span> QAction(DMainWindow);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        action_Exit-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;action_Exit&quot;</span>));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        actionExit = <span class="keyword">new</span> QAction(DMainWindow);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        actionExit-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;actionExit&quot;</span>));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        actionPlay = <span class="keyword">new</span> QAction(DMainWindow);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        actionPlay-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;actionPlay&quot;</span>));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        centralWidget = <span class="keyword">new</span> QWidget(DMainWindow);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        centralWidget-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;centralWidget&quot;</span>));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        centralWidget-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        sizePolicy.setHorizontalStretch(0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        sizePolicy.setVerticalStretch(0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        sizePolicy.setHeightForWidth(centralWidget-&gt;sizePolicy().hasHeightForWidth());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        centralWidget-&gt;setSizePolicy(sizePolicy);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        centralWidget-&gt;setMinimumSize(QSize(516, 0));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        centralWidget-&gt;setLayoutDirection(Qt::LeftToRight);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        horizontalLayoutWidget = <span class="keyword">new</span> QWidget(centralWidget);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        horizontalLayoutWidget-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayoutWidget&quot;</span>));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        horizontalLayoutWidget-&gt;setGeometry(QRect(120, 240, 295, 31));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        horizontalLayout = <span class="keyword">new</span> QHBoxLayout(horizontalLayoutWidget);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        horizontalLayout-&gt;setSpacing(6);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        horizontalLayout-&gt;setContentsMargins(11, 11, 11, 11);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        horizontalLayout-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;horizontalLayout&quot;</span>));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        horizontalLayout-&gt;setContentsMargins(0, 0, 0, 0);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        playButton = <span class="keyword">new</span> QPushButton(horizontalLayoutWidget);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        playButton-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;playButton&quot;</span>));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        horizontalLayout-&gt;addWidget(playButton);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        verticalSpacer = <span class="keyword">new</span> QSpacerItem(20, 18, QSizePolicy::Minimum, QSizePolicy::Expanding);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        horizontalLayout-&gt;addItem(verticalSpacer);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        pauseButton = <span class="keyword">new</span> QPushButton(horizontalLayoutWidget);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        pauseButton-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;pauseButton&quot;</span>));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        QIcon icon;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        icon.addFile(QString::fromUtf8(<span class="stringliteral">&quot;../../prog/prj/res/pause.png&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        pauseButton-&gt;setIcon(icon);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        horizontalLayout-&gt;addWidget(pauseButton);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        stopButton = <span class="keyword">new</span> QPushButton(horizontalLayoutWidget);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        stopButton-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;stopButton&quot;</span>));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        QIcon icon1;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        icon1.addFile(QString::fromUtf8(<span class="stringliteral">&quot;../../prog/prj/res/stop.png&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        stopButton-&gt;setIcon(icon1);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        horizontalLayout-&gt;addWidget(stopButton);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        sliderSzybkoscSym = <span class="keyword">new</span> QSlider(centralWidget);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        sliderSzybkoscSym-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;sliderSzybkoscSym&quot;</span>));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        sliderSzybkoscSym-&gt;setGeometry(QRect(320, 80, 160, 29));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        sliderSzybkoscSym-&gt;setOrientation(Qt::Horizontal);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        lcdSzybkoscSym = <span class="keyword">new</span> QLCDNumber(centralWidget);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        lcdSzybkoscSym-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lcdSzybkoscSym&quot;</span>));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        lcdSzybkoscSym-&gt;setGeometry(QRect(250, 80, 64, 23));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        lineSzybkoscSym = <span class="keyword">new</span> QLineEdit(centralWidget);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        lineSzybkoscSym-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineSzybkoscSym&quot;</span>));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        lineSzybkoscSym-&gt;setGeometry(QRect(120, 80, 113, 27));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        lineCzasSym = <span class="keyword">new</span> QLineEdit(centralWidget);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        lineCzasSym-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineCzasSym&quot;</span>));</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        lineCzasSym-&gt;setGeometry(QRect(120, 120, 113, 27));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        lcdCzasSym = <span class="keyword">new</span> QLCDNumber(centralWidget);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        lcdCzasSym-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lcdCzasSym&quot;</span>));</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        lcdCzasSym-&gt;setGeometry(QRect(250, 120, 64, 23));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        lineLiczbaCzasteczek = <span class="keyword">new</span> QLineEdit(centralWidget);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        lineLiczbaCzasteczek-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineLiczbaCzasteczek&quot;</span>));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        lineLiczbaCzasteczek-&gt;setGeometry(QRect(120, 150, 113, 27));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        lcdLiczbaCzasteczek = <span class="keyword">new</span> QLCDNumber(centralWidget);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        lcdLiczbaCzasteczek-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lcdLiczbaCzasteczek&quot;</span>));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        lcdLiczbaCzasteczek-&gt;setGeometry(QRect(250, 150, 64, 23));</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        label = <span class="keyword">new</span> QLabel(centralWidget);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        label-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;label&quot;</span>));</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        label-&gt;setGeometry(QRect(40, 80, 67, 17));</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        commandLinkButton = <span class="keyword">new</span> QCommandLinkButton(centralWidget);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        commandLinkButton-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;commandLinkButton&quot;</span>));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        commandLinkButton-&gt;setGeometry(QRect(340, 110, 187, 41));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        toolButton = <span class="keyword">new</span> QToolButton(centralWidget);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        toolButton-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;toolButton&quot;</span>));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        toolButton-&gt;setGeometry(QRect(360, 170, 24, 25));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        lineEdit = <span class="keyword">new</span> QLineEdit(centralWidget);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        lineEdit-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;lineEdit&quot;</span>));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        lineEdit-&gt;setGeometry(QRect(330, 40, 113, 27));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        checkBox = <span class="keyword">new</span> QCheckBox(centralWidget);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        checkBox-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;checkBox&quot;</span>));</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        checkBox-&gt;setGeometry(QRect(50, 20, 97, 22));</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        DMainWindow-&gt;setCentralWidget(centralWidget);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        menuBar = <span class="keyword">new</span> QMenuBar(DMainWindow);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        menuBar-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;menuBar&quot;</span>));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        menuBar-&gt;setGeometry(QRect(0, 0, 516, 25));</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        menu_File = <span class="keyword">new</span> QMenu(menuBar);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        menu_File-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;menu_File&quot;</span>));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        menu_Edit = <span class="keyword">new</span> QMenu(menuBar);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        menu_Edit-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;menu_Edit&quot;</span>));</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        menu_Help = <span class="keyword">new</span> QMenu(menuBar);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        menu_Help-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;menu_Help&quot;</span>));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        DMainWindow-&gt;setMenuBar(menuBar);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        mainToolBar = <span class="keyword">new</span> QToolBar(DMainWindow);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        mainToolBar-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;mainToolBar&quot;</span>));</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        DMainWindow-&gt;addToolBar(Qt::TopToolBarArea, mainToolBar);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        statusBar = <span class="keyword">new</span> QStatusBar(DMainWindow);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        statusBar-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;statusBar&quot;</span>));</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        DMainWindow-&gt;setStatusBar(statusBar);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        toolBar = <span class="keyword">new</span> QToolBar(DMainWindow);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        toolBar-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;toolBar&quot;</span>));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        DMainWindow-&gt;addToolBar(Qt::TopToolBarArea, toolBar);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        menuBar-&gt;addAction(menu_File-&gt;menuAction());</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        menuBar-&gt;addAction(menu_Edit-&gt;menuAction());</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        menuBar-&gt;addAction(menu_Help-&gt;menuAction());</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        menu_File-&gt;addAction(action_Save);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        menu_File-&gt;addAction(actionExit);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="class_ui___d_main_window.html#a406169c751ddfd205b89375c7542827c">retranslateUi</a>(DMainWindow);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        QMetaObject::connectSlotsByName(DMainWindow);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    } <span class="comment">// setupUi</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_ui___d_main_window.html#a406169c751ddfd205b89375c7542827c">  196</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ui___d_main_window.html#a406169c751ddfd205b89375c7542827c">retranslateUi</a>(QMainWindow *DMainWindow)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        DMainWindow-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;DMainWindow&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        action_Save-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;&amp;Save&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        action_Exit-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;&amp;Exit&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        actionExit-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Exit&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        actionPlay-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Play&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        playButton-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Play&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        pauseButton-&gt;setText(QString());</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        stopButton-&gt;setText(QString());</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        lineSzybkoscSym-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Szybkosc symulacji&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        lineCzasSym-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Czas symulacji&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        lineLiczbaCzasteczek-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;Liczba cz\304\205steczek&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        label-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;TextLabel&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        commandLinkButton-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;CommandLinkButton&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        toolButton-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;...&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        checkBox-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;CheckBox&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        menu_File-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;&amp;File&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        menu_Edit-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;&amp;Edit&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        menu_Help-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;&amp;Help&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        toolBar-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;DMainWindow&quot;</span>, <span class="stringliteral">&quot;toolBar&quot;</span>, 0, QApplication::UnicodeUTF8));</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    } <span class="comment">// retranslateUi</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;};</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="namespace_ui.html">  221</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_ui_1_1_d_main_window.html">  222</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ui_1_1_d_main_window.html">DMainWindow</a>: <span class="keyword">public</span> <a class="code" href="class_ui___d_main_window.html">Ui_DMainWindow</a> {};</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;} <span class="comment">// namespace Ui</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;QT_END_NAMESPACE</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#endif // UI_DMAINWINDOW_H</span></div>
+<div class="ttc" id="class_ui___d_main_window_html_a0d790fbf37bac850b60a7cb42d100315"><div class="ttname"><a href="class_ui___d_main_window.html#a0d790fbf37bac850b60a7cb42d100315">Ui_DMainWindow::commandLinkButton</a></div><div class="ttdeci">QCommandLinkButton * commandLinkButton</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00058">ui_dmainwindow.h:58</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a8d12f07935a52a597e57eddf50e5c98f"><div class="ttname"><a href="class_ui___d_main_window.html#a8d12f07935a52a597e57eddf50e5c98f">Ui_DMainWindow::sliderSzybkoscSym</a></div><div class="ttdeci">QSlider * sliderSzybkoscSym</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00050">ui_dmainwindow.h:50</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a73bafa5343a8e3cb7cd673a24be76008"><div class="ttname"><a href="class_ui___d_main_window.html#a73bafa5343a8e3cb7cd673a24be76008">Ui_DMainWindow::lineSzybkoscSym</a></div><div class="ttdeci">QLineEdit * lineSzybkoscSym</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00052">ui_dmainwindow.h:52</a></div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00221">ui_dmainwindow.h:221</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a97093acead8089d7f4b26fab4b1c8a65"><div class="ttname"><a href="class_ui___d_main_window.html#a97093acead8089d7f4b26fab4b1c8a65">Ui_DMainWindow::toolButton</a></div><div class="ttdeci">QToolButton * toolButton</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00059">ui_dmainwindow.h:59</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a476471e78bf431c7487fa9e0afadb76d"><div class="ttname"><a href="class_ui___d_main_window.html#a476471e78bf431c7487fa9e0afadb76d">Ui_DMainWindow::verticalSpacer</a></div><div class="ttdeci">QSpacerItem * verticalSpacer</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00047">ui_dmainwindow.h:47</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a406169c751ddfd205b89375c7542827c"><div class="ttname"><a href="class_ui___d_main_window.html#a406169c751ddfd205b89375c7542827c">Ui_DMainWindow::retranslateUi</a></div><div class="ttdeci">void retranslateUi(QMainWindow *DMainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00196">ui_dmainwindow.h:196</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_aad165daf4686baecb2ccd6709c629579"><div class="ttname"><a href="class_ui___d_main_window.html#aad165daf4686baecb2ccd6709c629579">Ui_DMainWindow::lineCzasSym</a></div><div class="ttdeci">QLineEdit * lineCzasSym</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00053">ui_dmainwindow.h:53</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a8826a3e34a5aa75fca2b8e45b7010a8b"><div class="ttname"><a href="class_ui___d_main_window.html#a8826a3e34a5aa75fca2b8e45b7010a8b">Ui_DMainWindow::menu_Edit</a></div><div class="ttdeci">QMenu * menu_Edit</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00064">ui_dmainwindow.h:64</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a4ab6ff85d8c5edef531b3f2111a04157"><div class="ttname"><a href="class_ui___d_main_window.html#a4ab6ff85d8c5edef531b3f2111a04157">Ui_DMainWindow::horizontalLayout</a></div><div class="ttdeci">QHBoxLayout * horizontalLayout</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00045">ui_dmainwindow.h:45</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a00e6b795743b676bdf3ed853e91f7029"><div class="ttname"><a href="class_ui___d_main_window.html#a00e6b795743b676bdf3ed853e91f7029">Ui_DMainWindow::action_Exit</a></div><div class="ttdeci">QAction * action_Exit</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00040">ui_dmainwindow.h:40</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a7ab98279e07bdd724a091ea06012c87b"><div class="ttname"><a href="class_ui___d_main_window.html#a7ab98279e07bdd724a091ea06012c87b">Ui_DMainWindow::action_Save</a></div><div class="ttdeci">QAction * action_Save</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00039">ui_dmainwindow.h:39</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_aa528e417bc72cda19dfcea49f1617b2a"><div class="ttname"><a href="class_ui___d_main_window.html#aa528e417bc72cda19dfcea49f1617b2a">Ui_DMainWindow::label</a></div><div class="ttdeci">QLabel * label</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00057">ui_dmainwindow.h:57</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a2e1da3781ee1e5913b25b85f4c29b97f"><div class="ttname"><a href="class_ui___d_main_window.html#a2e1da3781ee1e5913b25b85f4c29b97f">Ui_DMainWindow::mainToolBar</a></div><div class="ttdeci">QToolBar * mainToolBar</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00066">ui_dmainwindow.h:66</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a94cf40cb4e645cfa2e80f36ffbf5018e"><div class="ttname"><a href="class_ui___d_main_window.html#a94cf40cb4e645cfa2e80f36ffbf5018e">Ui_DMainWindow::centralWidget</a></div><div class="ttdeci">QWidget * centralWidget</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00043">ui_dmainwindow.h:43</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_ac2997077098614d72b21d29c7a48350c"><div class="ttname"><a href="class_ui___d_main_window.html#ac2997077098614d72b21d29c7a48350c">Ui_DMainWindow::menu_Help</a></div><div class="ttdeci">QMenu * menu_Help</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00065">ui_dmainwindow.h:65</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_aa53f3a89bf520704a3e79037df2fd451"><div class="ttname"><a href="class_ui___d_main_window.html#aa53f3a89bf520704a3e79037df2fd451">Ui_DMainWindow::setupUi</a></div><div class="ttdeci">void setupUi(QMainWindow *DMainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00070">ui_dmainwindow.h:70</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a777a56f3b74aa5b5cd5ff2c62a2968a9"><div class="ttname"><a href="class_ui___d_main_window.html#a777a56f3b74aa5b5cd5ff2c62a2968a9">Ui_DMainWindow::horizontalLayoutWidget</a></div><div class="ttdeci">QWidget * horizontalLayoutWidget</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00044">ui_dmainwindow.h:44</a></div></div>
+<div class="ttc" id="class_ui_1_1_d_main_window_html"><div class="ttname"><a href="class_ui_1_1_d_main_window.html">Ui::DMainWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00222">ui_dmainwindow.h:222</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html"><div class="ttname"><a href="class_ui___d_main_window.html">Ui_DMainWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00036">ui_dmainwindow.h:36</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_ad87cbf39ac14374923ed2a2b11e8b1bf"><div class="ttname"><a href="class_ui___d_main_window.html#ad87cbf39ac14374923ed2a2b11e8b1bf">Ui_DMainWindow::playButton</a></div><div class="ttdeci">QPushButton * playButton</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00046">ui_dmainwindow.h:46</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_ac9e025e7279839dd7ab1686456d1ae21"><div class="ttname"><a href="class_ui___d_main_window.html#ac9e025e7279839dd7ab1686456d1ae21">Ui_DMainWindow::statusBar</a></div><div class="ttdeci">QStatusBar * statusBar</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00067">ui_dmainwindow.h:67</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_abba1dae1dd835c7a7dd39da623cd4580"><div class="ttname"><a href="class_ui___d_main_window.html#abba1dae1dd835c7a7dd39da623cd4580">Ui_DMainWindow::toolBar</a></div><div class="ttdeci">QToolBar * toolBar</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00068">ui_dmainwindow.h:68</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a26b955a365ed5865f327921708f1a72f"><div class="ttname"><a href="class_ui___d_main_window.html#a26b955a365ed5865f327921708f1a72f">Ui_DMainWindow::lineEdit</a></div><div class="ttdeci">QLineEdit * lineEdit</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00060">ui_dmainwindow.h:60</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a4eb8e2a87080f4f314eb96c52a82e39d"><div class="ttname"><a href="class_ui___d_main_window.html#a4eb8e2a87080f4f314eb96c52a82e39d">Ui_DMainWindow::lcdSzybkoscSym</a></div><div class="ttdeci">QLCDNumber * lcdSzybkoscSym</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00051">ui_dmainwindow.h:51</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a41e765e074811602fbc5efecf07011ac"><div class="ttname"><a href="class_ui___d_main_window.html#a41e765e074811602fbc5efecf07011ac">Ui_DMainWindow::checkBox</a></div><div class="ttdeci">QCheckBox * checkBox</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00061">ui_dmainwindow.h:61</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a49c95cda7e035087a4367514e5540298"><div class="ttname"><a href="class_ui___d_main_window.html#a49c95cda7e035087a4367514e5540298">Ui_DMainWindow::lineLiczbaCzasteczek</a></div><div class="ttdeci">QLineEdit * lineLiczbaCzasteczek</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00055">ui_dmainwindow.h:55</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a1fe7797fff349a0f0d47d90c8438f386"><div class="ttname"><a href="class_ui___d_main_window.html#a1fe7797fff349a0f0d47d90c8438f386">Ui_DMainWindow::stopButton</a></div><div class="ttdeci">QPushButton * stopButton</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00049">ui_dmainwindow.h:49</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a991f4d15852faf04d8c12694b3e077ad"><div class="ttname"><a href="class_ui___d_main_window.html#a991f4d15852faf04d8c12694b3e077ad">Ui_DMainWindow::menu_File</a></div><div class="ttdeci">QMenu * menu_File</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00063">ui_dmainwindow.h:63</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_ae1fa62a4d27fa0f4a5c63c7c60cfdad2"><div class="ttname"><a href="class_ui___d_main_window.html#ae1fa62a4d27fa0f4a5c63c7c60cfdad2">Ui_DMainWindow::actionExit</a></div><div class="ttdeci">QAction * actionExit</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00041">ui_dmainwindow.h:41</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a6cfb6311ca1dd6e247d80255e2667ba7"><div class="ttname"><a href="class_ui___d_main_window.html#a6cfb6311ca1dd6e247d80255e2667ba7">Ui_DMainWindow::actionPlay</a></div><div class="ttdeci">QAction * actionPlay</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00042">ui_dmainwindow.h:42</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a3d6afe29d882b3a9119b68d79c9b5e0f"><div class="ttname"><a href="class_ui___d_main_window.html#a3d6afe29d882b3a9119b68d79c9b5e0f">Ui_DMainWindow::lcdLiczbaCzasteczek</a></div><div class="ttdeci">QLCDNumber * lcdLiczbaCzasteczek</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00056">ui_dmainwindow.h:56</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a788ef749d82ca070e467e55cca0d47dd"><div class="ttname"><a href="class_ui___d_main_window.html#a788ef749d82ca070e467e55cca0d47dd">Ui_DMainWindow::menuBar</a></div><div class="ttdeci">QMenuBar * menuBar</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00062">ui_dmainwindow.h:62</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_a70e142e35db4995a1fefa082406bdef3"><div class="ttname"><a href="class_ui___d_main_window.html#a70e142e35db4995a1fefa082406bdef3">Ui_DMainWindow::pauseButton</a></div><div class="ttdeci">QPushButton * pauseButton</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00048">ui_dmainwindow.h:48</a></div></div>
+<div class="ttc" id="class_ui___d_main_window_html_af49335a21dc17e53674f8b62a640ca2d"><div class="ttname"><a href="class_ui___d_main_window.html#af49335a21dc17e53674f8b62a640ca2d">Ui_DMainWindow::lcdCzasSym</a></div><div class="ttdeci">QLCDNumber * lcdCzasSym</div><div class="ttdef"><b>Definition:</b> <a href="ui__dmainwindow_8h_source.html#l00054">ui_dmainwindow.h:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_561d8df1c4759e3dbc33cf79ef24e0c8.html">ui</a></li><li class="navelem"><a class="el" href="dir_9caea7ce90da66ceff2b843c13809bae.html">inc</a></li><li class="navelem"><a class="el" href="ui__dmainwindow_8h.html">ui_dmainwindow.h</a></li>
+    <li class="footer">Wygenerowano Cz, 11 cze 2015 20:44:37 dla SymulacjaCieczy programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

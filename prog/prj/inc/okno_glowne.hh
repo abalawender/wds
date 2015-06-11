@@ -182,6 +182,9 @@ class OknoGlowne: public QMainWindow
      */
     void on_sliderKatObrotu_valueChanged(int a);
 
+    //TODO
+    void on_sliderLepkosc_valueChanged(int a);
+    
     /*!
     * \brief Slot odpowiadajacy za przycisniecie przycisku Save.
     *
@@ -339,6 +342,11 @@ class OknoGlowne: public QMainWindow
      * Wskaznik na slider. Steruje szybkoscia symulacji.
      */
     QSlider *sliderSzybkoscSym;
+    
+    //TODO
+    QSlider *sliderLepkosc;
+    QLabel *labelLepkosc;
+    QLCDNumber *lcdLepkosc;
 
     /*!
      * \brief Wskaznik na LCD z szybkoscia symulacji.
