@@ -50,7 +50,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     action_Exit->setObjectName("action_Exit"); // on_action
 
     menuBar->addAction(menu_File->menuAction());
-    menu_File->addAction(action_Save);
+    //menu_File->addAction(action_Save);
     menu_File->addAction(action_Exit);
     //menuBar->addAction(menu_Edit->menuAction());
     //menuBar->addAction(menu_Help->menuAction());

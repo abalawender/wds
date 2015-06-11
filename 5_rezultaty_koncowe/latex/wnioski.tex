@@ -1,8 +1,18 @@
 %wnioski i podsumowanie  
 %TODO
 \section{Wnioski}
-Pisanie aplikacji przy użyciu biblioteki \textsf{Qt} pozwala na osiągnięcie dobrych efektów przy stosunkowo małym nakładzie pracy. Po zaznajomieniu się z biblioteką oraz aplikacją \textsf{designer} programy można pisać w efektywny sposób. Duża ilość gotowych elementów umożliwia projektowanie aplikacji bez potrzeby implementacji podstawowych składników każdego programu graficznego.
+Pisanie aplikacji przy użyciu biblioteki \textsf{Qt} pozwala na osiągnięcie dobrych efektów przy stosunkowo małym nakładzie pracy. Po zaznajomieniu się z ww. biblioteką oraz aplikacją \textsf{designer} programy można pisać w efektywny sposób. Duża ilość gotowych elementów umożliwia projektowanie aplikacji bez potrzeby ponownej implementacji podstawowych składników każdego programu graficznego.
 
-W \textsf{Qt} używany jest mechanizm slotów i sygnałów. Pozwala on na wywoływanie funkcji w odpowiednich momentach jako efekt jakiegoś wydarzenia. Dzięki temu możliwa jest interakcja użytkownika z aplikacją.
+Dzięki hierarchii elementów graficznych możliwe jest ich łatwe wykorzystanie w~aplikacji. Ponadto mechanizm dziedziczenia dostarcza wielu wspólnych atrybutów i metod dla różnych elementów, co znacząco poprawia komfort pisania kodu programu.
 
-Metoda SPH w sposób realistyczny modeluje zachowanie cząsteczek i pozwala na ich sparametryzowanie. Okazała się być ona dobrym wyborem dla komputerowej realizacji symulacji cieczy.
+W \textsf{Qt} używany jest mechanizm slotów i sygnałów. Pozwala on na wywoływanie metod w~odpowiednich momentach w~odpowiedzi na jakieś wydarzenia. Dzięki temu możliwa jest interakcja użytkownika z~aplikacją, a~także synchronizacja obiektów w~programie.
+
+Zastosowanie metody \texttt{QObject::tr} pozwoli na ewentualną internacjonalizację aplikacji. 
+
+Metoda SPH w sposób realistyczny modeluje zachowanie cząsteczek i pozwala na ich sparametryzowanie. Okazała się być ona bardzo dobrym wyborem dla komputerowej realizacji symulacji cieczy.
+
+W każdym projekcie bardzo ważna jest faza analizy i planowania. Dzięki niej możliwe jest dobre zaplanowanie harmonogramu działań, co pozwala na późniejsze realizowanie projektu zgodnie z założenieniami.
+
+Praca w dwuosobowym zespole jest bardzo dobrym pomysłem. Umożliwia to podział zadań i pozwala na wzajemną pomoc, a także umożliwia naukę od drugiej osoby.
+
+Dokumentowanie kodu na bieżąco pozwala na łatwiejszą pracę nad projektem. Dodatkowo dobra dokumentacja znacząco poprawia czytelność kodu i umożliwia postronnym osobom na jego lepsze zrozumienie i wykorzystanie. Za dobry przykład może posłużyć dokumentacja \textsf{Qt}, \cite{website:qt} , która jest bardzo szczegółowa. Dzięki temu mogliśmy w miarę bezproblemowo nauczyć się pisania aplikacji graficznych z wykorzystaniem tej biblioteki.

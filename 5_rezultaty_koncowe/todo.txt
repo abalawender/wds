@@ -2,13 +2,13 @@
 │                                                         
 │ + temat projektu, 
 │ + opis rozwiazywanego problemu,
-│ -+ opis funkcjonalnosci aplikacji
-│ -+ opis interfejsu graficznego aplikacji, 
-│ -+ diagram klas w jezyku UML,
+│ + opis funkcjonalnosci aplikacji
+│ + opis interfejsu graficznego aplikacji, 
+│ + diagram klas w jezyku UML,
 │ + diagram przeplywu sterowania lub schemat blokowy.
-│ -- przyklady uzyskiwanych efektow pracy aplikacji 
+│ + przyklady uzyskiwanych efektow pracy aplikacji 
 │   (wyniki eksperymentow)   
-│ -- wnioski i podsumowanie 
+│ -+ wnioski i podsumowanie 
 │                                               
 │ -+ dokumentacja aplikacji wygenerowana w postaci html
 │   za pmoca programu doxygen. Dokumentacja powinna 

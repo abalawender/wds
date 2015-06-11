@@ -68,6 +68,7 @@ void Zbiornik::RysujZbiornikZCzasteczkami( QPainter& Rysownik )
   QTime Czas;
   Czas.start();
   // triki z gruboscia i promieniem, zeby latwiej umieszczac czasteczki w zbiorniku
+
   RysujZbiornik(Rysownik,
                 _podstawa+GRUBOSC, // szerokosc pustej przestrzeni w zbiorniku == _podstawa
                 _wysokosc+GRUBOSC,
