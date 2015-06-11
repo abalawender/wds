@@ -24,7 +24,7 @@ params_t* setup( params_t *params ) {
     params->nframes	= 300;      // Number of frames
     params->npframe	= 100;      // Steps per frame
     params->h	    = 0.04;     // Particle size
-    params->dt	    = 0.0004;   // Time step
+    params->dt	    = 0.0003;   // Time step
     params->rho0	= 1000;     // Reference density
     params->k	    = 1000;     // Bulk modulus
     params->mu	    = 0.1;      // Viscosity
@@ -167,14 +167,20 @@ simulation& simulation::place_particles( params_t* params, bool (simulation::*co
     return *this;
 }
 
+float integrationTime;
 void simulation::init() {
-    //place_particles( params, &simulation::box_indicator );
-    place_particles( params, &simulation::circle_indicator );
+    integrationTime = 0;
+    LOG( "placing particles" );
+    place_particles( params, &simulation::box_indicator );
+    //place_particles( params, &simulation::circle_indicator );
     computeAccel( params );
     integrationInit( params->dt );
 }
 
 void simulation::step() {
+    integrationTime += params->npframe*params->dt;
+    //if( integrationTime > 3 ) params->gy = 0;
+    LOG( "simulating state after " << integrationTime << " seconds" );
     for( unsigned j = 0; j < params->npframe; ++j ) {
         computeAccel( params );
         integrate( params->dt );

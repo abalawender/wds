@@ -275,13 +275,18 @@ public:
    * Miernik czasu zbiornika. Sluzy do odswiezania ekranu.
    */
   QTimer _Stoper;
-  
   /*!
    * \brief Symulacja cieczy.
    *
    * Pozwala wykonać krok symulacji metodą SPH.
    */
   simulation _Symulacja;
+  /*!
+   * \brief Użycie grawitacji w parametryzowaniu symulacji;
+   *
+   * Pozwala symulować zachowanie cząstek w stanie nieważkości.
+   */
+  bool useGravity;
 
 private:
   /*!
