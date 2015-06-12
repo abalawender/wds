@@ -3,14 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.9.1"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>SymulacjaCieczy: Plik źródłowy simulation.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
@@ -35,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
@@ -80,7 +79,7 @@ $(document).ready(function(){initNavTree('simulation_8cpp_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="simulation_8cpp.html#a0312cb6d6cbc719075d4e5380c387ab3">    8</a></span>&#160;<span class="preprocessor">#define XMAX 1.0  </span></div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="simulation_8cpp.html#a610d6ad95b18966b70b6845de2a9c56b">    9</a></span>&#160;<span class="preprocessor">#define YMAX 1.0  </span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//std::ostream&amp; operator&lt;&lt;( std::ostream&amp; _os, const Vector&amp; _s )  {</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//    return _os &lt;&lt; &quot;( &quot; &lt;&lt; _s.x &lt;&lt; &quot;, &quot; &lt;&lt; _s.y &lt;&lt; &quot; )&quot;;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//}</span></div>
@@ -281,7 +280,7 @@ $(document).ready(function(){initNavTree('simulation_8cpp_source.html','');});
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#ifdef MAIN</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor"></span><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="simulation_8cpp.html#a6423366f08654ee809bc247f57042f18">funkcja_main</a>();</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
@@ -304,7 +303,7 @@ $(document).ready(function(){initNavTree('simulation_8cpp_source.html','');});
 <div class="ttc" id="classsimulation_html_a2b1ca39aee7b85ac2babecfd2784c459"><div class="ttname"><a href="classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459">simulation::integrate</a></div><div class="ttdeci">void integrate(float dt)</div><div class="ttdoc">całkuje przyspieszenia i prędkości </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00130">simulation.cpp:130</a></div></div>
 <div class="ttc" id="classsimulation_html_a9cb3fe3f985ceb039736a666923a20b5"><div class="ttname"><a href="classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5">simulation::reflectParticles</a></div><div class="ttdeci">void reflectParticles()</div><div class="ttdoc">szuka kolizji cząstek ze ścianami naczynia </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00112">simulation.cpp:112</a></div></div>
 <div class="ttc" id="classsimulation_html_a16b945b81e27680a709fffd8663bf856"><div class="ttname"><a href="classsimulation.html#a16b945b81e27680a709fffd8663bf856">simulation::computeAccel</a></div><div class="ttdeci">void computeAccel(params_t *params)</div><div class="ttdoc">wylicza przyspieszenia cząstek </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00061">simulation.cpp:61</a></div></div>
-<div class="ttc" id="class_vector_html_a18d3f2110be751ac3a658016bd3dca69"><div class="ttname"><a href="class_vector.html#a18d3f2110be751ac3a658016bd3dca69">Vector::normSquared</a></div><div class="ttdeci">float normSquared()</div><div class="ttdoc">kwadrat normy </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00105">vector.hh:105</a></div></div>
+<div class="ttc" id="class_vector_html_a18d3f2110be751ac3a658016bd3dca69"><div class="ttname"><a href="class_vector.html#a18d3f2110be751ac3a658016bd3dca69">Vector::normSquared</a></div><div class="ttdeci">float normSquared()</div><div class="ttdoc">kwadrat normy </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00114">vector.hh:114</a></div></div>
 <div class="ttc" id="classsimulation_html_a44081d4edd92e17a3e1067b976031a00"><div class="ttname"><a href="classsimulation.html#a44081d4edd92e17a3e1067b976031a00">simulation::rho</a></div><div class="ttdeci">float * rho</div><div class="ttdoc">Gęstości. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00067">simulation.hh:67</a></div></div>
 <div class="ttc" id="structparams__t_html_a9f3f70c0cdedcb053c9d45c2e41e67b6"><div class="ttname"><a href="structparams__t.html#a9f3f70c0cdedcb053c9d45c2e41e67b6">params_t::gx</a></div><div class="ttdeci">float gx</div><div class="ttdoc">Grawitacja w poziomie. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00042">simulation.hh:42</a></div></div>
 <div class="ttc" id="structparams__t_html_a971359c29b2f946b477e4a1b3605fa3f"><div class="ttname"><a href="structparams__t.html#a971359c29b2f946b477e4a1b3605fa3f">params_t::mu</a></div><div class="ttdeci">float mu</div><div class="ttdoc">Lepkość </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00041">simulation.hh:41</a></div></div>
@@ -313,17 +312,17 @@ $(document).ready(function(){initNavTree('simulation_8cpp_source.html','');});
 <div class="ttc" id="structparams__t_html_a2eb309edb681d0a998f23fc692a73781"><div class="ttname"><a href="structparams__t.html#a2eb309edb681d0a998f23fc692a73781">params_t::rho0</a></div><div class="ttdeci">float rho0</div><div class="ttdoc">Gęstość cieczy. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00039">simulation.hh:39</a></div></div>
 <div class="ttc" id="classsimulation_html_a3c90f4d96f7cfbafc0ef8caf4927ae2d"><div class="ttname"><a href="classsimulation.html#a3c90f4d96f7cfbafc0ef8caf4927ae2d">simulation::circleIndicator</a></div><div class="ttdeci">bool circleIndicator(float x, float y)</div><div class="ttdoc">sprawdza przynależność punku do obszaru początkowego </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00143">simulation.cpp:143</a></div></div>
 <div class="ttc" id="structparams__t_html_afe4a59fe43565a71a0a7a155714e2af1"><div class="ttname"><a href="structparams__t.html#afe4a59fe43565a71a0a7a155714e2af1">params_t::mass</a></div><div class="ttdeci">float mass</div><div class="ttdoc">Masa cząstki. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00044">simulation.hh:44</a></div></div>
-<div class="ttc" id="class_vector_html_a86293fe7a035979fd252be6071488b6a"><div class="ttname"><a href="class_vector.html#a86293fe7a035979fd252be6071488b6a">Vector::getY</a></div><div class="ttdeci">float getY() const </div><div class="ttdoc">pobiera drugą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00032">vector.hh:32</a></div></div>
-<div class="ttc" id="classsimulation_html_abe09252527aa58fbec8144063be3e950"><div class="ttname"><a href="classsimulation.html#abe09252527aa58fbec8144063be3e950">simulation::getN</a></div><div class="ttdeci">const unsigned &amp; getN() const </div><div class="ttdoc">zwraca liczbę cząstek użytych do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00194">simulation.hh:194</a></div></div>
+<div class="ttc" id="class_vector_html_a86293fe7a035979fd252be6071488b6a"><div class="ttname"><a href="class_vector.html#a86293fe7a035979fd252be6071488b6a">Vector::getY</a></div><div class="ttdeci">float getY() const </div><div class="ttdoc">pobiera drugą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00041">vector.hh:41</a></div></div>
+<div class="ttc" id="classsimulation_html_abe09252527aa58fbec8144063be3e950"><div class="ttname"><a href="classsimulation.html#abe09252527aa58fbec8144063be3e950">simulation::getN</a></div><div class="ttdeci">const unsigned &amp; getN() const </div><div class="ttdoc">zwraca liczbę cząstek użytych do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00196">simulation.hh:196</a></div></div>
 <div class="ttc" id="structparams__t_html_a2cecc28f4ca024657cf567047e2aba59"><div class="ttname"><a href="structparams__t.html#a2cecc28f4ca024657cf567047e2aba59">params_t::nframes</a></div><div class="ttdeci">unsigned nframes</div><div class="ttdoc">Liczba ramek - tylko w trybie standalone. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00035">simulation.hh:35</a></div></div>
 <div class="ttc" id="classsimulation_html_a33ce66b2291920bd1ba29889ff7c0c75"><div class="ttname"><a href="classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75">simulation::placeParticles</a></div><div class="ttdeci">simulation &amp; placeParticles(params_t *params, bool(simulation::*containerIndicator)(float x, float y))</div><div class="ttdoc">dodaje cząsteczki do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00147">simulation.cpp:147</a></div></div>
 <div class="ttc" id="simulation_8cpp_html_a4a7f832046abc7485b490da096b1f083"><div class="ttname"><a href="simulation_8cpp.html#a4a7f832046abc7485b490da096b1f083">integrationTime</a></div><div class="ttdeci">float integrationTime</div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00170">simulation.cpp:170</a></div></div>
 <div class="ttc" id="simulation_8hh_html_acbd91a8a9a62657e2252a0a1f7c876e1"><div class="ttname"><a href="simulation_8hh.html#acbd91a8a9a62657e2252a0a1f7c876e1">LOG</a></div><div class="ttdeci">#define LOG(MSG)</div><div class="ttdoc">makro do logowania </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00017">simulation.hh:17</a></div></div>
 <div class="ttc" id="simulation_8cpp_html_abf5adaaaf59fb394dd7b3c5d4bcaaa1a"><div class="ttname"><a href="simulation_8cpp.html#abf5adaaaf59fb394dd7b3c5d4bcaaa1a">setup</a></div><div class="ttdeci">params_t * setup(params_t *params)</div><div class="ttdoc">Ustawia domyślne parametry symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00023">simulation.cpp:23</a></div></div>
 <div class="ttc" id="classsimulation_html_a39dbad79b1b8667840638a35e839a3f7"><div class="ttname"><a href="classsimulation.html#a39dbad79b1b8667840638a35e839a3f7">simulation::v</a></div><div class="ttdeci">Vector * v</div><div class="ttdoc">Prędkości (full step) </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00070">simulation.hh:70</a></div></div>
-<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00010">vector.hh:10</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00019">vector.hh:19</a></div></div>
 <div class="ttc" id="structparams__t_html_a81fc6596e9b1446442ebf3eef2c3fb01"><div class="ttname"><a href="structparams__t.html#a81fc6596e9b1446442ebf3eef2c3fb01">params_t::dt</a></div><div class="ttdeci">float dt</div><div class="ttdoc">Najmniejsza różnica czasu. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00038">simulation.hh:38</a></div></div>
-<div class="ttc" id="class_vector_html_ab2878a1bb81982dc83363646e25ce665"><div class="ttname"><a href="class_vector.html#ab2878a1bb81982dc83363646e25ce665">Vector::getX</a></div><div class="ttdeci">float getX() const </div><div class="ttdoc">zwraga pierwszą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00027">vector.hh:27</a></div></div>
+<div class="ttc" id="class_vector_html_ab2878a1bb81982dc83363646e25ce665"><div class="ttname"><a href="class_vector.html#ab2878a1bb81982dc83363646e25ce665">Vector::getX</a></div><div class="ttdeci">float getX() const </div><div class="ttdoc">zwraga pierwszą współrzędną wektora </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00036">vector.hh:36</a></div></div>
 <div class="ttc" id="simulation_8cpp_html_a484c60de5b8ebd1bbce3ca8a60074186"><div class="ttname"><a href="simulation_8cpp.html#a484c60de5b8ebd1bbce3ca8a60074186">DAMP</a></div><div class="ttdeci">#define DAMP</div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00007">simulation.cpp:7</a></div></div>
 <div class="ttc" id="main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
 <div class="ttc" id="simulation_8cpp_html_a1f6414b078a2823f5cea77fc1235e1d9"><div class="ttname"><a href="simulation_8cpp.html#a1f6414b078a2823f5cea77fc1235e1d9">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;_os, const simulation &amp;_s)</div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00190">simulation.cpp:190</a></div></div>
@@ -337,9 +336,9 @@ $(document).ready(function(){initNavTree('simulation_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="simulation_8cpp.html">simulation.cpp</a></li>
-    <li class="footer">Wygenerowano Cz, 11 cze 2015 20:44:37 dla SymulacjaCieczy programem
+    <li class="footer">Wygenerowano Pt, 12 cze 2015 09:21:41 dla SymulacjaCieczy programem
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
 </div>
 </body>

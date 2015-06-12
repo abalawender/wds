@@ -3,6 +3,15 @@
 #include <iostream>
 
 /*!
+ * \file
+ * \brief Zawiera definicje klasy Vector i deklaracje jej metod.
+ *
+ * W pliku znajduja sie:
+ * - definicja klasy Vector (modeluje pojecie wektora),
+ * - deklaracje konstruktorow oraz metod ww. klasy.
+ */
+
+/*!
  * \brief klasa Vector
  *
  * Posiada metody do obsługi dwuelementowych wektorów o współrzędnych typu float

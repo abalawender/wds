@@ -1,6 +1,6 @@
 <map id="Zbiornik::kat_obrotu" name="Zbiornik::kat_obrotu">
-<area shape="rect" id="node2" href="$class_okno_glowne.html#a13edcaa9e3c75c793db2b147b2ffd12b" title="Slot odpowiadajacy za zmiane wartosci slidera. " alt="" coords="214,5,403,47"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a6062f76fdf15ad8bc0543cfd2a2fe150" title="Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku. " alt="" coords="201,71,416,112"/>
-<area shape="rect" id="node5" href="$class_okno_glowne.html#a1b8098c27e9656235bb056aeb79a8ece" title="Metoda wczytujaca z wybranego pliku stan symulacji. " alt="" coords="197,136,420,177"/>
-<area shape="rect" id="node4" href="$class_okno_glowne.html#a8ed8fc49c9c3d3e187639880ce286c88" title="Slot odpowiadajacy za przycisniecie przycisku Save. " alt="" coords="468,71,640,112"/>
+<area shape="rect" id="node2" href="$class_okno_glowne.html#a13edcaa9e3c75c793db2b147b2ffd12b" title="Slot odpowiadajacy za zmiane wartosci slidera. " alt="" coords="211,5,389,46"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a6062f76fdf15ad8bc0543cfd2a2fe150" title="Metoda zapisujaca aktualny stan symulacji do automatycznie generowanego pliku. " alt="" coords="197,70,403,111"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#a1b8098c27e9656235bb056aeb79a8ece" title="Metoda wczytujaca z wybranego pliku stan symulacji. " alt="" coords="193,135,407,177"/>
+<area shape="rect" id="node4" href="$class_okno_glowne.html#a8ed8fc49c9c3d3e187639880ce286c88" title="Slot odpowiadajacy za przycisniecie przycisku Save. " alt="" coords="457,70,618,111"/>
 </map>

@@ -1,18 +1,14 @@
 \documentclass[twoside]{book}
 
 % Packages required by doxygen
-\usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
-\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
-\PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
-\usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
 
 % NLS support packages
@@ -21,6 +17,7 @@
 
 % Font selection
 \usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
@@ -34,7 +31,6 @@
   \fontseries{bc}\selectfont%
   \color{darkgray}%
 }
-\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
 
 % Page & text layout
 \usepackage{geometry}
@@ -75,8 +71,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 20\+:44\+:37 dla Symulacja\+Cieczy programem Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Cz, 11 cze 2015 20\+:44\+:37 dla Symulacja\+Cieczy programem Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 12 cze 2015 09\-:21\-:41 dla Symulacja\-Cieczy programem Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Pt, 12 cze 2015 09\-:21\-:41 dla Symulacja\-Cieczy programem Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -119,20 +115,16 @@
 \begin{document}
 
 % Titlepage & ToC
-\hypersetup{pageanchor=false,
-             bookmarks=true,
-             bookmarksnumbered=true,
-             pdfencoding=unicode
-            }
+\hypersetup{pageanchor=false}
 \pagenumbering{roman}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large Symulacja\+Cieczy \\[1ex]\large 1.\+0 }\\
+{\Large Symulacja\-Cieczy \\[1ex]\large 1.\-0 }\\
 \vspace*{1cm}
-{\large Wygenerowano przez Doxygen 1.8.9.1}\\
+{\large Wygenerowano przez Doxygen 1.8.6}\\
 \vspace*{0.5cm}
-{\small Cz, 11 cze 2015 20:44:37}\\
+{\small Pt, 12 cze 2015 09:21:41}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -185,10 +177,8 @@
 %--- End generated contents ---
 
 % Index
-\backmatter
 \newpage
 \phantomsection
-\clearemptydoublepage
 \addcontentsline{toc}{chapter}{Indeks}
 \printindex
 

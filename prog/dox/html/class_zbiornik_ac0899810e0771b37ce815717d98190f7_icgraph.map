@@ -1,6 +1,6 @@
 <map id="Zbiornik::odpowiedni_czas" name="Zbiornik::odpowiedni_czas">
-<area shape="rect" id="node2" href="$class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="257,5,449,32"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a726ce3fbe89c3fb7364c39e99c0ad658" title="Slot odpowiadajacy za wczytanie danych z pliku. " alt="" coords="240,57,467,98"/>
-<area shape="rect" id="node4" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="248,123,459,149"/>
-<area shape="rect" id="node5" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="515,123,643,149"/>
+<area shape="rect" id="node2" href="$class_okno_glowne.html#a8dcfe4e0f18dfaf0c535c4549991b550" title="Konstruktor. " alt="" coords="247,5,427,32"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a726ce3fbe89c3fb7364c39e99c0ad658" title="Slot odpowiadajacy za wczytanie danych z pliku. " alt="" coords="230,57,445,98"/>
+<area shape="rect" id="node4" href="$class_zbiornik.html#aa07ceb0fcbf307f0aa1eb75c32f3f47e" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="238,123,437,149"/>
+<area shape="rect" id="node5" href="$class_zbiornik.html#a11d5608bafb33c6bdb0b9710492b1554" title="Konstruktor parametryczny. " alt="" coords="493,123,616,149"/>
 </map>

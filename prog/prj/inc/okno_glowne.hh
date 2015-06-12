@@ -182,7 +182,12 @@ class OknoGlowne: public QMainWindow
      */
     void on_sliderKatObrotu_valueChanged(int a);
 
-    //TODO
+    /*!
+     * \brief Slot odpowiadajacy za zmiane wartosci slidera.
+     *
+     * Odpowiada za wykonanie odpowiednich czynnosci zwiazanych
+     * ze zmiana lepkosci czasteczek po zmianie wartosci slidera.
+     */
     void on_sliderLepkosc_valueChanged(int a);
     
     /*!
@@ -343,9 +348,25 @@ class OknoGlowne: public QMainWindow
      */
     QSlider *sliderSzybkoscSym;
     
-    //TODO
+    /*!
+     * \brief Wskaznik na slider.
+     *
+     * Wskaznik na slider. Steruje lepkoscia czasteczek.
+     */
     QSlider *sliderLepkosc;
+    
+    /*!
+     * \brief Wskaznik na etykiete z lepkoscia czasteczek.
+     *
+     * Wskaznik na etykiete z lepkoscia czasteczek. Wyswietla ich lepkosc.
+     */
     QLabel *labelLepkosc;
+    
+    /*!
+     * \brief Wskaznik na LCD z lepkoscia czasteczek.
+     *
+     * Wskaznik na LCD z lepkoscia czasteczek. Wyswietla ich lepkosc.
+     */
     QLCDNumber *lcdLepkosc;
 
     /*!

@@ -1,5 +1,5 @@
 <map id="Zbiornik::RysujZbiornikZCzasteczkami" name="Zbiornik::RysujZbiornikZCzasteczkami">
-<area shape="rect" id="node2" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="312,5,475,32"/>
-<area shape="rect" id="node3" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="344,56,443,83"/>
-<area shape="rect" id="node4" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="344,107,443,133"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#ad15f40d418d9ebf261de0eabe8cc2906" title="Metoda rysujaca zbiornik. " alt="" coords="302,5,458,32"/>
+<area shape="rect" id="node3" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="333,56,427,83"/>
+<area shape="rect" id="node4" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="333,107,427,133"/>
 </map>

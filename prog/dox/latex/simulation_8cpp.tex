@@ -1,5 +1,6 @@
-\hypertarget{simulation_8cpp}{}\section{Dokumentacja pliku simulation.\+cpp}
-\label{simulation_8cpp}\index{simulation.\+cpp@{simulation.\+cpp}}
+\hypertarget{simulation_8cpp}{\section{Dokumentacja pliku simulation.\-cpp}
+\label{simulation_8cpp}\index{simulation.\-cpp@{simulation.\-cpp}}
+}
 
 
 Plik z kodem symulatora cieczy.  
@@ -10,8 +11,8 @@ Plik z kodem symulatora cieczy.
 {\ttfamily \#include $<$cstring$>$}\\*
 {\ttfamily \#include $<$cmath$>$}\\*
 {\ttfamily \#include $<$cassert$>$}\\*
-{\ttfamily \#include \char`\"{}simulation.\+hh\char`\"{}}\\*
-Wykres zależności załączania dla simulation.\+cpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}simulation.\-hh\char`\"{}}\\*
+Wykres zależności załączania dla simulation.\-cpp\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,70 +22,74 @@ Wykres zależności załączania dla simulation.\+cpp\+:\nopagebreak
 \subsection*{Definicje}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}{D\+A\+M\+P}~(0.\+75f)
+\#define \hyperlink{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}{D\-A\-M\-P}~(0.\-75f)
 \item 
-\#define \hyperlink{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}{X\+M\+A\+X}~1.\+0
+\#define \hyperlink{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}{X\-M\-A\-X}~1.\-0
 \item 
-\#define \hyperlink{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}{Y\+M\+A\+X}~1.\+0
+\#define \hyperlink{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}{Y\-M\-A\-X}~1.\-0
 \end{DoxyCompactItemize}
 \subsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structparams__t}{params\+\_\+t} $\ast$ \hyperlink{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{setup} (\hyperlink{structparams__t}{params\+\_\+t} $\ast$params)
+\hyperlink{structparams__t}{params\-\_\-t} $\ast$ \hyperlink{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{setup} (\hyperlink{structparams__t}{params\-\_\-t} $\ast$params)
 \begin{DoxyCompactList}\small\item\em Ustawia domyślne parametry symulacji. \end{DoxyCompactList}\item 
-std\+::ostream \& \hyperlink{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}{operator$<$$<$} (std\+::ostream \&\+\_\+os, const \hyperlink{classsimulation}{simulation} \&\+\_\+s)
+std\-::ostream \& \hyperlink{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}{operator$<$$<$} (std\-::ostream \&\-\_\-os, const \hyperlink{classsimulation}{simulation} \&\-\_\-s)
 \item 
-int \hyperlink{simulation_8cpp_a6423366f08654ee809bc247f57042f18}{funkcja\+\_\+main} ()
+int \hyperlink{simulation_8cpp_a6423366f08654ee809bc247f57042f18}{funkcja\-\_\-main} ()
 \end{DoxyCompactItemize}
 \subsection*{Zmienne}
 \begin{DoxyCompactItemize}
 \item 
-float \hyperlink{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}{integration\+Time}
+float \hyperlink{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}{integration\-Time}
 \end{DoxyCompactItemize}
 
 
 \subsection{Opis szczegółowy}
 Zawiera definicje klas i funkcji pozwalających na przeprowadzenie symulacji zachowania sparametryzowanego modelu cieczy w zadanym środowisku od określonego warunku początkowego. 
 
+Definicja w pliku \hyperlink{simulation_8cpp_source}{simulation.\-cpp}.
+
+
+
 \subsection{Dokumentacja definicji}
-\hypertarget{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}{}\index{simulation.\+cpp@{simulation.\+cpp}!D\+A\+M\+P@{D\+A\+M\+P}}
-\index{D\+A\+M\+P@{D\+A\+M\+P}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{D\+A\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+M\+P~(0.\+75f)}\label{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}
+\hypertarget{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}{\index{simulation.\-cpp@{simulation.\-cpp}!D\-A\-M\-P@{D\-A\-M\-P}}
+\index{D\-A\-M\-P@{D\-A\-M\-P}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{D\-A\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-M\-P~(0.\-75f)}}\label{simulation_8cpp_a484c60de5b8ebd1bbce3ca8a60074186}
 
 
-Definicja w linii 7 pliku simulation.\+cpp.
+Definicja w linii 7 pliku simulation.\-cpp.
 
-\hypertarget{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}{}\index{simulation.\+cpp@{simulation.\+cpp}!X\+M\+A\+X@{X\+M\+A\+X}}
-\index{X\+M\+A\+X@{X\+M\+A\+X}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{X\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+M\+A\+X~1.\+0}\label{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}
-
-
-Definicja w linii 8 pliku simulation.\+cpp.
-
-\hypertarget{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}{}\index{simulation.\+cpp@{simulation.\+cpp}!Y\+M\+A\+X@{Y\+M\+A\+X}}
-\index{Y\+M\+A\+X@{Y\+M\+A\+X}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{Y\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+M\+A\+X~1.\+0}\label{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}
+\hypertarget{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}{\index{simulation.\-cpp@{simulation.\-cpp}!X\-M\-A\-X@{X\-M\-A\-X}}
+\index{X\-M\-A\-X@{X\-M\-A\-X}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{X\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\-M\-A\-X~1.\-0}}\label{simulation_8cpp_a0312cb6d6cbc719075d4e5380c387ab3}
 
 
-Definicja w linii 9 pliku simulation.\+cpp.
+Definicja w linii 8 pliku simulation.\-cpp.
+
+\hypertarget{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}{\index{simulation.\-cpp@{simulation.\-cpp}!Y\-M\-A\-X@{Y\-M\-A\-X}}
+\index{Y\-M\-A\-X@{Y\-M\-A\-X}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{Y\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-M\-A\-X~1.\-0}}\label{simulation_8cpp_a610d6ad95b18966b70b6845de2a9c56b}
+
+
+Definicja w linii 9 pliku simulation.\-cpp.
 
 
 
 \subsection{Dokumentacja funkcji}
-\hypertarget{simulation_8cpp_a6423366f08654ee809bc247f57042f18}{}\index{simulation.\+cpp@{simulation.\+cpp}!funkcja\+\_\+main@{funkcja\+\_\+main}}
-\index{funkcja\+\_\+main@{funkcja\+\_\+main}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{funkcja\+\_\+main}]{\setlength{\rightskip}{0pt plus 5cm}int funkcja\+\_\+main (
+\hypertarget{simulation_8cpp_a6423366f08654ee809bc247f57042f18}{\index{simulation.\-cpp@{simulation.\-cpp}!funkcja\-\_\-main@{funkcja\-\_\-main}}
+\index{funkcja\-\_\-main@{funkcja\-\_\-main}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{funkcja\-\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}int funkcja\-\_\-main (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{simulation_8cpp_a6423366f08654ee809bc247f57042f18}
+)}}\label{simulation_8cpp_a6423366f08654ee809bc247f57042f18}
 
 
-Definicja w linii 198 pliku simulation.\+cpp.
+Definicja w linii 198 pliku simulation.\-cpp.
 
 
 
-Oto graf wywołań dla tej funkcji\+:\nopagebreak
+Oto graf wywołań dla tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -93,25 +98,25 @@ Oto graf wywołań dla tej funkcji\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}{}\index{simulation.\+cpp@{simulation.\+cpp}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\hypertarget{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}{\index{simulation.\-cpp@{simulation.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
 \begin{DoxyParamCaption}
-\item[{std\+::ostream \&}]{\+\_\+os, }
-\item[{const {\bf simulation} \&}]{\+\_\+s}
+\item[{std\-::ostream \&}]{\-\_\-os, }
+\item[{const {\bf simulation} \&}]{\-\_\-s}
 \end{DoxyParamCaption}
-)}\label{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}
+)}}\label{simulation_8cpp_a1f6414b078a2823f5cea77fc1235e1d9}
 
 
-Definicja w linii 190 pliku simulation.\+cpp.
+Definicja w linii 190 pliku simulation.\-cpp.
 
-\hypertarget{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{}\index{simulation.\+cpp@{simulation.\+cpp}!setup@{setup}}
-\index{setup@{setup}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\+\_\+t}$\ast$ setup (
+\hypertarget{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}{\index{simulation.\-cpp@{simulation.\-cpp}!setup@{setup}}
+\index{setup@{setup}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf params\-\_\-t}$\ast$ setup (
 \begin{DoxyParamCaption}
-\item[{{\bf params\+\_\+t} $\ast$}]{params}
+\item[{{\bf params\-\_\-t} $\ast$}]{params}
 \end{DoxyParamCaption}
-)}\label{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}
+)}}\label{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a}
 Alokuje pamięć na potrzeby przechowania stanu symulacji 
 \begin{DoxyParams}[1]{Parametry}
 \mbox{\tt in}  & {\em params} & -\/ wskaźnik na strukturę parametrów symulacji \\
@@ -122,15 +127,15 @@ zmieniona struktura parametrów
 \end{DoxyReturn}
 
 
-Definicja w linii 23 pliku simulation.\+cpp.
+Definicja w linii 23 pliku simulation.\-cpp.
 
 
 
-Oto graf wywoływań tej funkcji\+:\nopagebreak
+Oto graf wywoływań tej funkcji\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a_icgraph}
+\includegraphics[width=232pt]{simulation_8cpp_abf5adaaaf59fb394dd7b3c5d4bcaaa1a_icgraph}
 \end{center}
 \end{figure}
 
@@ -138,10 +143,10 @@ Oto graf wywoływań tej funkcji\+:\nopagebreak
 
 
 \subsection{Dokumentacja zmiennych}
-\hypertarget{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}{}\index{simulation.\+cpp@{simulation.\+cpp}!integration\+Time@{integration\+Time}}
-\index{integration\+Time@{integration\+Time}!simulation.\+cpp@{simulation.\+cpp}}
-\subsubsection[{integration\+Time}]{\setlength{\rightskip}{0pt plus 5cm}float integration\+Time}\label{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}
+\hypertarget{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}{\index{simulation.\-cpp@{simulation.\-cpp}!integration\-Time@{integration\-Time}}
+\index{integration\-Time@{integration\-Time}!simulation.cpp@{simulation.\-cpp}}
+\subsubsection[{integration\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float integration\-Time}}\label{simulation_8cpp_a4a7f832046abc7485b490da096b1f083}
 
 
-Definicja w linii 170 pliku simulation.\+cpp.
+Definicja w linii 170 pliku simulation.\-cpp.
 

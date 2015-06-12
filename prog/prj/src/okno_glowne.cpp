@@ -150,7 +150,7 @@ OknoGlowne::OknoGlowne(QWidget *wRodzic): QMainWindow(wRodzic)
     gravTglButton->setChecked(true);
     
     /* Lepkosc */
-    labelLepkosc = new QLabel(tr("Lepkosc [?]"), this);
+    labelLepkosc = new QLabel(tr("Lepkosc [mPa*s]"), this);
     labelLepkosc->setObjectName("labelLepkosc");
     labelLepkosc->setGeometry(QRect(20, 20+90, 180, 25));
     

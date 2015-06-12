@@ -1,12 +1,12 @@
 <map id="simulation::init" name="simulation::init">
-<area shape="rect" id="node2" href="$classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75" title="dodaje cząsteczki do symulacji " alt="" coords="161,5,340,32"/>
-<area shape="rect" id="node5" href="$classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e" title="sprawdza przynależność punku do obszaru początkowego " alt="" coords="167,56,334,83"/>
-<area shape="rect" id="node6" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="162,107,339,133"/>
-<area shape="rect" id="node7" href="$classsimulation.html#a300e67649652f2ae9337af3d5244e0f7" title="inicjalizuje integrator " alt="" coords="163,157,339,184"/>
-<area shape="rect" id="node3" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="388,56,579,83"/>
-<area shape="rect" id="node4" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="634,56,789,83"/>
-<area shape="rect" id="node8" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="392,157,575,184"/>
-<area shape="rect" id="node9" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="627,107,796,133"/>
-<area shape="rect" id="node10" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="662,157,761,184"/>
-<area shape="rect" id="node11" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="662,208,761,235"/>
+<area shape="rect" id="node2" href="$classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75" title="dodaje cząsteczki do symulacji " alt="" coords="161,5,332,32"/>
+<area shape="rect" id="node5" href="$classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e" title="sprawdza przynależność punku do obszaru początkowego " alt="" coords="167,56,327,83"/>
+<area shape="rect" id="node6" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="161,107,333,133"/>
+<area shape="rect" id="node7" href="$classsimulation.html#a300e67649652f2ae9337af3d5244e0f7" title="inicjalizuje integrator " alt="" coords="163,157,330,184"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="381,56,565,83"/>
+<area shape="rect" id="node4" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="622,56,767,83"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="385,157,561,184"/>
+<area shape="rect" id="node9" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="613,107,776,133"/>
+<area shape="rect" id="node10" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="647,157,742,184"/>
+<area shape="rect" id="node11" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="647,208,742,235"/>
 </map>

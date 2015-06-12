@@ -1,7 +1,7 @@
 <map id="zbiornik.hh" name="zbiornik.hh">
-<area shape="rect" id="node20" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="2109,80,2175,107"/>
-<area shape="rect" id="node21" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="275,80,385,107"/>
-<area shape="rect" id="node25" href="$simulation_8hh.html" title="Plik z definicją klasy symulatora cieczy. " alt="" coords="461,80,564,107"/>
-<area shape="rect" id="node23" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="210,155,282,181"/>
-<area shape="rect" id="node24" href="$vector_8hh.html" title="vector.hh" alt="" coords="306,155,386,181"/>
+<area shape="rect" id="node20" href="$flagi_8hh.html" title="Zawiera globalne zmienne opisujace symulacje. " alt="" coords="2031,80,2095,107"/>
+<area shape="rect" id="node21" href="$czasteczka_8hh.html" title="Zawiera definicje klasy Czasteczka oraz deklaracje jej metod. " alt="" coords="264,80,371,107"/>
+<area shape="rect" id="node25" href="$simulation_8hh.html" title="Plik z definicją klasy symulatora cieczy. " alt="" coords="445,80,544,107"/>
+<area shape="rect" id="node23" href="$kolor_8hh.html" title="Zawiera definicje klasy Kolor oraz deklaracje jej metod. " alt="" coords="202,155,269,181"/>
+<area shape="rect" id="node24" href="$vector_8hh.html" title="Zawiera definicje klasy Vector i deklaracje jej metod. " alt="" coords="294,155,369,181"/>
 </map>

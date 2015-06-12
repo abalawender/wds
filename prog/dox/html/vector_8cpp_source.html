@@ -3,14 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.9.1"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>SymulacjaCieczy: Plik źródłowy vector.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
@@ -35,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
@@ -71,24 +70,25 @@ $(document).ready(function(){initNavTree('vector_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="vector_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vector_8hh.html">vector.hh</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">    2</a></span>&#160;std::ostream&amp; <a class="code" href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">operator&lt;&lt;</a>( std::ostream&amp; _os, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _s ) {</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordflow">return</span> _os &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; _s.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; _s.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;}</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="ttc" id="class_vector_html_aca49165049a1e21ae47afcfc078819ed"><div class="ttname"><a href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">Vector::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00012">vector.hh:12</a></div></div>
-<div class="ttc" id="class_vector_html_a81be9102fca6d9beea3efef522c4c09d"><div class="ttname"><a href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">Vector::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00012">vector.hh:12</a></div></div>
-<div class="ttc" id="vector_8hh_html"><div class="ttname"><a href="vector_8hh.html">vector.hh</a></div></div>
-<div class="ttc" id="vector_8cpp_html_a7973d0032b0df4c3ab89e1da167b86a9"><div class="ttname"><a href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;_os, const Vector &amp;_s)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00002">vector.cpp:2</a></div></div>
-<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00010">vector.hh:10</a></div></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">   11</a></span>&#160;std::ostream&amp; <a class="code" href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">operator&lt;&lt;</a>( std::ostream&amp; _os, <span class="keyword">const</span> <a class="code" href="class_vector.html">Vector</a>&amp; _s ) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> _os &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; _s.<a class="code" href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">x</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; _s.<a class="code" href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">y</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="ttc" id="class_vector_html_aca49165049a1e21ae47afcfc078819ed"><div class="ttname"><a href="class_vector.html#aca49165049a1e21ae47afcfc078819ed">Vector::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00021">vector.hh:21</a></div></div>
+<div class="ttc" id="class_vector_html_a81be9102fca6d9beea3efef522c4c09d"><div class="ttname"><a href="class_vector.html#a81be9102fca6d9beea3efef522c4c09d">Vector::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00021">vector.hh:21</a></div></div>
+<div class="ttc" id="vector_8hh_html"><div class="ttname"><a href="vector_8hh.html">vector.hh</a></div><div class="ttdoc">Zawiera definicje klasy Vector i deklaracje jej metod. </div></div>
+<div class="ttc" id="vector_8cpp_html_a7973d0032b0df4c3ab89e1da167b86a9"><div class="ttname"><a href="vector_8cpp.html#a7973d0032b0df4c3ab89e1da167b86a9">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;_os, const Vector &amp;_s)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8cpp_source.html#l00011">vector.cpp:11</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00019">vector.hh:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="vector_8cpp.html">vector.cpp</a></li>
-    <li class="footer">Wygenerowano Cz, 11 cze 2015 20:44:37 dla SymulacjaCieczy programem
+    <li class="footer">Wygenerowano Pt, 12 cze 2015 09:21:41 dla SymulacjaCieczy programem
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
 </div>
 </body>

@@ -57,6 +57,7 @@ public:
    * \param[in] podstawa - dlugosc podstawy zbiornika
    * \param[in] wysokosc - wysokosc zbiornika
    * \param[in] grubosc - grubosc sciany zbiornika
+   * \param[in] kat_obrotu - kat obrotu zbiornika w stopniach
    */
   Zbiornik(QWidget *wRodzic, const Vector& lewa_gora_xy,
            const double podstawa, const double wysokosc, const double grubosc, const int kat_obrotu);
@@ -230,7 +231,7 @@ public:
 
 public slots:
   /*!
-   * \brief Slot odpowiadajacy za aktualizacje danych. .
+   * \brief Slot odpowiadajacy za aktualizacje danych.
    *
    * Odpowiada za uaktualnienie zbiornika w odpowiednich momentach.
    */

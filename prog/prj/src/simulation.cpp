@@ -9,10 +9,10 @@
 #define YMAX 1.0  //! rozmiar naczynia Y
 
 /*!
- * \file simulation.cpp
+ * \file
  * \brief Plik z kodem symulatora cieczy
  *
- * \TODO Zawiera definicje klas i funkcji pozwalających na przeprowadzenie symulacji zachowania
+ * Zawiera definicje klas i funkcji pozwalających na przeprowadzenie symulacji zachowania
  * sparametryzowanego modelu cieczy w zadanym środowisku od określonego warunku początkowego.
  */
 

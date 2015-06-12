@@ -3,14 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.9.1"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>SymulacjaCieczy: Plik źródłowy simulation.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
@@ -35,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.8.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
@@ -71,7 +70,7 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="simulation_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
@@ -80,7 +79,7 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="simulation_8hh.html#acbd91a8a9a62657e2252a0a1f7c876e1">   17</a></span>&#160;<span class="preprocessor">#define LOG( MSG) do { std::cerr &lt;&lt; &quot;\e[32m&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;\e[31m:\e[33m&quot; &lt;&lt; __LINE__ \</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    &lt;&lt; &quot;\e[35m:\e[34m&quot; &lt;&lt; std::setw(16) &lt;&lt; __FUNCTION__ &lt;&lt; &quot;\e[36m : \e[37m&quot; &lt;&lt; MSG &lt;&lt; &quot;\e[0m\n&quot;; } while( false )</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structparams__t.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structparams__t.html">params_t</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structparams__t.html#a2cecc28f4ca024657cf567047e2aba59">   35</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="structparams__t.html#a2cecc28f4ca024657cf567047e2aba59">nframes</a>;       </div>
@@ -109,37 +108,39 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classsimulation.html#a39dbad79b1b8667840638a35e839a3f7">   70</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>* <a class="code" href="classsimulation.html#a39dbad79b1b8667840638a35e839a3f7">v</a>;      </div>
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classsimulation.html#a7b5ca0e5fc096989be7966a73c360b7f">   71</a></span>&#160;    <a class="code" href="class_vector.html">Vector</a>* <a class="code" href="classsimulation.html#a7b5ca0e5fc096989be7966a73c360b7f">a</a>;      </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">   73</a></span>&#160;    <a class="code" href="structparams__t.html">params_t</a>* <a class="code" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">params</a>; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// TODO private</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">   75</a></span>&#160;      <a class="code" href="structparams__t.html">params_t</a>* <a class="code" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">params</a>; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d">simulation</a> ( <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; _n, <a class="code" href="structparams__t.html">params_t</a>* _param  );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;   <span class="comment">// : n(_n),</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="comment">//             rho(new float[n]), p(new Vector[n]), vh(new Vector[n]), v(new Vector[n]), a(new Vector[n]), params( _param ) { init(); }</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a7679fcd9a25d6cb5597338d054a30684">computeDensity</a>( <a class="code" href="structparams__t.html">params_t</a>* _p );</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a16b945b81e27680a709fffd8663bf856">computeAccel</a>( <a class="code" href="structparams__t.html">params_t</a>* params);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b">dampReflect</a>( <span class="keywordtype">float</span> _barrier, <span class="keywordtype">unsigned</span> i, <span class="keywordtype">float</span>&amp; (<a class="code" href="class_vector.html">Vector</a>::*getter)() );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5">reflectParticles</a>( );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a300e67649652f2ae9337af3d5244e0f7">integrationInit</a>( <span class="keywordtype">float</span> dt );</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459">integrate</a>( <span class="keywordtype">float</span> dt );</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e">boxIndicator</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsimulation.html#a3c90f4d96f7cfbafc0ef8caf4927ae2d">circleIndicator</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classsimulation.html">simulation</a>&amp; <a class="code" href="classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75">placeParticles</a>( <a class="code" href="structparams__t.html">params_t</a>* params, <span class="keywordtype">bool</span> (<a class="code" href="classsimulation.html">simulation</a>::*containerIndicator)( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y ) );</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a2e12616e089dd7f9742c25933bf630ef">init</a>();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a111e26e535d53ced834dbd52948b5d69">step</a>();</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classsimulation.html#abe09252527aa58fbec8144063be3e950">  194</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; <a class="code" href="classsimulation.html#abe09252527aa58fbec8144063be3e950">getN</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsimulation.html#a22eb97765a5c60adf3d995f7a110da70">n</a>; }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d">simulation</a> ( <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; _n, <a class="code" href="structparams__t.html">params_t</a>* _param  );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;   <span class="comment">// : n(_n),</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;   <span class="comment">//             rho(new float[n]), p(new Vector[n]), vh(new Vector[n]), v(new Vector[n]), a(new Vector[n]), params( _param ) { init(); }</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a7679fcd9a25d6cb5597338d054a30684">computeDensity</a>( <a class="code" href="structparams__t.html">params_t</a>* _p );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a16b945b81e27680a709fffd8663bf856">computeAccel</a>( <a class="code" href="structparams__t.html">params_t</a>* <a class="code" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">params</a>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b">dampReflect</a>( <span class="keywordtype">float</span> _barrier, <span class="keywordtype">unsigned</span> i, <span class="keywordtype">float</span>&amp; (<a class="code" href="class_vector.html">Vector</a>::*getter)() );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5">reflectParticles</a>( );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a300e67649652f2ae9337af3d5244e0f7">integrationInit</a>( <span class="keywordtype">float</span> dt );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a2b1ca39aee7b85ac2babecfd2784c459">integrate</a>( <span class="keywordtype">float</span> dt );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e">boxIndicator</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsimulation.html#a3c90f4d96f7cfbafc0ef8caf4927ae2d">circleIndicator</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classsimulation.html">simulation</a>&amp; <a class="code" href="classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75">placeParticles</a>( <a class="code" href="structparams__t.html">params_t</a>* <a class="code" href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">params</a>, <span class="keywordtype">bool</span> (<a class="code" href="classsimulation.html">simulation</a>::*containerIndicator)( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y ) );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a2e12616e089dd7f9742c25933bf630ef">init</a>();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsimulation.html#a111e26e535d53ced834dbd52948b5d69">step</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classsimulation.html#abe09252527aa58fbec8144063be3e950">  196</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span>&amp; <a class="code" href="classsimulation.html#abe09252527aa58fbec8144063be3e950">getN</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsimulation.html#a22eb97765a5c60adf3d995f7a110da70">n</a>; }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
 <div class="ttc" id="structparams__t_html_a27d76064f2ae0cb93a0956027cfcc19b"><div class="ttname"><a href="structparams__t.html#a27d76064f2ae0cb93a0956027cfcc19b">params_t::h</a></div><div class="ttdeci">float h</div><div class="ttdoc">Rozmiar cząstki. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00037">simulation.hh:37</a></div></div>
 <div class="ttc" id="classsimulation_html_a300e67649652f2ae9337af3d5244e0f7"><div class="ttname"><a href="classsimulation.html#a300e67649652f2ae9337af3d5244e0f7">simulation::integrationInit</a></div><div class="ttdeci">void integrationInit(float dt)</div><div class="ttdoc">inicjalizuje integrator </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00122">simulation.cpp:122</a></div></div>
 <div class="ttc" id="structparams__t_html"><div class="ttname"><a href="structparams__t.html">params_t</a></div><div class="ttdoc">Parametry symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00034">simulation.hh:34</a></div></div>
@@ -148,7 +149,7 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 <div class="ttc" id="classsimulation_html_ae6da1f15728f49be7b0793700866ede9"><div class="ttname"><a href="classsimulation.html#ae6da1f15728f49be7b0793700866ede9">simulation::vh</a></div><div class="ttdeci">Vector * vh</div><div class="ttdoc">Prędkości (half step) </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00069">simulation.hh:69</a></div></div>
 <div class="ttc" id="classsimulation_html_a2e12616e089dd7f9742c25933bf630ef"><div class="ttname"><a href="classsimulation.html#a2e12616e089dd7f9742c25933bf630ef">simulation::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">inicjuje symulację </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00171">simulation.cpp:171</a></div></div>
 <div class="ttc" id="classsimulation_html_a111e26e535d53ced834dbd52948b5d69"><div class="ttname"><a href="classsimulation.html#a111e26e535d53ced834dbd52948b5d69">simulation::step</a></div><div class="ttdeci">void step()</div><div class="ttdoc">realizuje krok symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00180">simulation.cpp:180</a></div></div>
-<div class="ttc" id="vector_8hh_html"><div class="ttname"><a href="vector_8hh.html">vector.hh</a></div></div>
+<div class="ttc" id="vector_8hh_html"><div class="ttname"><a href="vector_8hh.html">vector.hh</a></div><div class="ttdoc">Zawiera definicje klasy Vector i deklaracje jej metod. </div></div>
 <div class="ttc" id="structparams__t_html_a06a1a567fd5ba13905514227e2bb710a"><div class="ttname"><a href="structparams__t.html#a06a1a567fd5ba13905514227e2bb710a">params_t::npframe</a></div><div class="ttdeci">unsigned npframe</div><div class="ttdoc">Liczba kroków na ramkę </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00036">simulation.hh:36</a></div></div>
 <div class="ttc" id="classsimulation_html_a7b5ca0e5fc096989be7966a73c360b7f"><div class="ttname"><a href="classsimulation.html#a7b5ca0e5fc096989be7966a73c360b7f">simulation::a</a></div><div class="ttdeci">Vector * a</div><div class="ttdoc">Przyspieszenia. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00071">simulation.hh:71</a></div></div>
 <div class="ttc" id="classsimulation_html_a30fdcc611ae9a656a3aebb8445e4607d"><div class="ttname"><a href="classsimulation.html#a30fdcc611ae9a656a3aebb8445e4607d">simulation::simulation</a></div><div class="ttdeci">simulation(const unsigned &amp;_n, params_t *_param)</div><div class="ttdoc">konstruktor klasy </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00037">simulation.cpp:37</a></div></div>
@@ -168,12 +169,12 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 <div class="ttc" id="structparams__t_html_a2eb309edb681d0a998f23fc692a73781"><div class="ttname"><a href="structparams__t.html#a2eb309edb681d0a998f23fc692a73781">params_t::rho0</a></div><div class="ttdeci">float rho0</div><div class="ttdoc">Gęstość cieczy. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00039">simulation.hh:39</a></div></div>
 <div class="ttc" id="classsimulation_html_a3c90f4d96f7cfbafc0ef8caf4927ae2d"><div class="ttname"><a href="classsimulation.html#a3c90f4d96f7cfbafc0ef8caf4927ae2d">simulation::circleIndicator</a></div><div class="ttdeci">bool circleIndicator(float x, float y)</div><div class="ttdoc">sprawdza przynależność punku do obszaru początkowego </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00143">simulation.cpp:143</a></div></div>
 <div class="ttc" id="structparams__t_html_afe4a59fe43565a71a0a7a155714e2af1"><div class="ttname"><a href="structparams__t.html#afe4a59fe43565a71a0a7a155714e2af1">params_t::mass</a></div><div class="ttdeci">float mass</div><div class="ttdoc">Masa cząstki. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00044">simulation.hh:44</a></div></div>
-<div class="ttc" id="classsimulation_html_abe09252527aa58fbec8144063be3e950"><div class="ttname"><a href="classsimulation.html#abe09252527aa58fbec8144063be3e950">simulation::getN</a></div><div class="ttdeci">const unsigned &amp; getN() const </div><div class="ttdoc">zwraca liczbę cząstek użytych do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00194">simulation.hh:194</a></div></div>
-<div class="ttc" id="classsimulation_html_a861b82cc3c0e7e58abfba464a133dae3"><div class="ttname"><a href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">simulation::params</a></div><div class="ttdeci">params_t * params</div><div class="ttdoc">Parametry symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00073">simulation.hh:73</a></div></div>
+<div class="ttc" id="classsimulation_html_abe09252527aa58fbec8144063be3e950"><div class="ttname"><a href="classsimulation.html#abe09252527aa58fbec8144063be3e950">simulation::getN</a></div><div class="ttdeci">const unsigned &amp; getN() const </div><div class="ttdoc">zwraca liczbę cząstek użytych do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00196">simulation.hh:196</a></div></div>
+<div class="ttc" id="classsimulation_html_a861b82cc3c0e7e58abfba464a133dae3"><div class="ttname"><a href="classsimulation.html#a861b82cc3c0e7e58abfba464a133dae3">simulation::params</a></div><div class="ttdeci">params_t * params</div><div class="ttdoc">Parametry symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00075">simulation.hh:75</a></div></div>
 <div class="ttc" id="structparams__t_html_a2cecc28f4ca024657cf567047e2aba59"><div class="ttname"><a href="structparams__t.html#a2cecc28f4ca024657cf567047e2aba59">params_t::nframes</a></div><div class="ttdeci">unsigned nframes</div><div class="ttdoc">Liczba ramek - tylko w trybie standalone. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00035">simulation.hh:35</a></div></div>
 <div class="ttc" id="classsimulation_html_a33ce66b2291920bd1ba29889ff7c0c75"><div class="ttname"><a href="classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75">simulation::placeParticles</a></div><div class="ttdeci">simulation &amp; placeParticles(params_t *params, bool(simulation::*containerIndicator)(float x, float y))</div><div class="ttdoc">dodaje cząsteczki do symulacji </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00147">simulation.cpp:147</a></div></div>
 <div class="ttc" id="classsimulation_html_a39dbad79b1b8667840638a35e839a3f7"><div class="ttname"><a href="classsimulation.html#a39dbad79b1b8667840638a35e839a3f7">simulation::v</a></div><div class="ttdeci">Vector * v</div><div class="ttdoc">Prędkości (full step) </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00070">simulation.hh:70</a></div></div>
-<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00010">vector.hh:10</a></div></div>
+<div class="ttc" id="class_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">klasa Vector </div><div class="ttdef"><b>Definition:</b> <a href="vector_8hh_source.html#l00019">vector.hh:19</a></div></div>
 <div class="ttc" id="structparams__t_html_a81fc6596e9b1446442ebf3eef2c3fb01"><div class="ttname"><a href="structparams__t.html#a81fc6596e9b1446442ebf3eef2c3fb01">params_t::dt</a></div><div class="ttdeci">float dt</div><div class="ttdoc">Najmniejsza różnica czasu. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00038">simulation.hh:38</a></div></div>
 <div class="ttc" id="structparams__t_html_a0da484b4cc6a542875aa7b92e200f507"><div class="ttname"><a href="structparams__t.html#a0da484b4cc6a542875aa7b92e200f507">params_t::gy</a></div><div class="ttdeci">float gy</div><div class="ttdoc">Grawitacja w pionie. </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8hh_source.html#l00043">simulation.hh:43</a></div></div>
 <div class="ttc" id="classsimulation_html_a353d4dd3a66197360e882bc29a6fef0b"><div class="ttname"><a href="classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b">simulation::dampReflect</a></div><div class="ttdeci">void dampReflect(float _barrier, unsigned i, float &amp;(Vector::*getter)())</div><div class="ttdoc">odbija cząstkę od powierzchni </div><div class="ttdef"><b>Definition:</b> <a href="simulation_8cpp_source.html#l00100">simulation.cpp:100</a></div></div>
@@ -183,9 +184,9 @@ $(document).ready(function(){initNavTree('simulation_8hh_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="simulation_8hh.html">simulation.hh</a></li>
-    <li class="footer">Wygenerowano Cz, 11 cze 2015 20:44:37 dla SymulacjaCieczy programem
+    <li class="footer">Wygenerowano Pt, 12 cze 2015 09:21:41 dla SymulacjaCieczy programem
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
 </div>
 </body>

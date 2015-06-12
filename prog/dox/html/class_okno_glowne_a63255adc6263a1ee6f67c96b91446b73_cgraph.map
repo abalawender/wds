@@ -1,14 +1,14 @@
 <map id="OknoGlowne::on_stopButton_clicked" name="OknoGlowne::on_stopButton_clicked">
-<area shape="rect" id="node2" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="255,31,395,57"/>
-<area shape="rect" id="node3" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="inicjuje symulację " alt="" coords="271,81,379,108"/>
-<area shape="rect" id="node4" href="$classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75" title="dodaje cząsteczki do symulacji " alt="" coords="443,5,621,32"/>
-<area shape="rect" id="node7" href="$classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e" title="sprawdza przynależność punku do obszaru początkowego " alt="" coords="449,56,615,83"/>
-<area shape="rect" id="node8" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="443,107,621,133"/>
-<area shape="rect" id="node9" href="$classsimulation.html#a300e67649652f2ae9337af3d5244e0f7" title="inicjalizuje integrator " alt="" coords="444,157,620,184"/>
-<area shape="rect" id="node5" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="669,56,860,83"/>
-<area shape="rect" id="node6" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="915,56,1070,83"/>
-<area shape="rect" id="node10" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="673,157,856,184"/>
-<area shape="rect" id="node11" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="908,107,1077,133"/>
-<area shape="rect" id="node12" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="943,157,1042,184"/>
-<area shape="rect" id="node13" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="943,208,1042,235"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="243,31,379,57"/>
+<area shape="rect" id="node3" href="$classsimulation.html#a2e12616e089dd7f9742c25933bf630ef" title="inicjuje symulację " alt="" coords="257,81,364,108"/>
+<area shape="rect" id="node4" href="$classsimulation.html#a33ce66b2291920bd1ba29889ff7c0c75" title="dodaje cząsteczki do symulacji " alt="" coords="428,5,599,32"/>
+<area shape="rect" id="node7" href="$classsimulation.html#acd02ace3dc0db98c4c85cba7d75fa46e" title="sprawdza przynależność punku do obszaru początkowego " alt="" coords="433,56,593,83"/>
+<area shape="rect" id="node8" href="$classsimulation.html#a16b945b81e27680a709fffd8663bf856" title="wylicza przyspieszenia cząstek " alt="" coords="427,107,599,133"/>
+<area shape="rect" id="node9" href="$classsimulation.html#a300e67649652f2ae9337af3d5244e0f7" title="inicjalizuje integrator " alt="" coords="430,157,597,184"/>
+<area shape="rect" id="node5" href="$classsimulation.html#a7679fcd9a25d6cb5597338d054a30684" title="wylicza przybliżenia gęstości " alt="" coords="648,56,832,83"/>
+<area shape="rect" id="node6" href="$class_vector.html#a18d3f2110be751ac3a658016bd3dca69" title="kwadrat normy " alt="" coords="889,56,1034,83"/>
+<area shape="rect" id="node10" href="$classsimulation.html#a9cb3fe3f985ceb039736a666923a20b5" title="szuka kolizji cząstek ze ścianami naczynia " alt="" coords="652,157,828,184"/>
+<area shape="rect" id="node11" href="$classsimulation.html#a353d4dd3a66197360e882bc29a6fef0b" title="odbija cząstkę od powierzchni " alt="" coords="880,107,1043,133"/>
+<area shape="rect" id="node12" href="$class_vector.html#ab2878a1bb81982dc83363646e25ce665" title="zwraga pierwszą współrzędną wektora " alt="" coords="914,157,1009,184"/>
+<area shape="rect" id="node13" href="$class_vector.html#a86293fe7a035979fd252be6071488b6a" title="pobiera drugą współrzędną wektora " alt="" coords="914,208,1009,235"/>
 </map>

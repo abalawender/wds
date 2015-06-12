@@ -1,6 +1,6 @@
 <map id="OknoGlowne::OknoGlowne" name="OknoGlowne::OknoGlowne">
-<area shape="rect" id="node2" href="$class_zbiornik.html#ac0899810e0771b37ce815717d98190f7" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="273,5,460,32"/>
-<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="245,56,488,83"/>
-<area shape="rect" id="node5" href="$class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="281,107,453,133"/>
-<area shape="rect" id="node4" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="536,56,676,83"/>
+<area shape="rect" id="node2" href="$class_zbiornik.html#ac0899810e0771b37ce815717d98190f7" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="261,5,437,32"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#a2a49d3696ef8a42325313842768f2c92" title="Slot odpowiadajacy za aktualizacje danych. " alt="" coords="235,56,463,83"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#a2a59f13292adfead4ac821780220044a" title="Slot odpowiadajacy za wyswietlenie napisu po otrzymaniu sygnalu. " alt="" coords="268,107,431,133"/>
+<area shape="rect" id="node4" href="$class_zbiornik.html#a94a4b32ae64aab4836be8c536358f612" title="Interfejs pozwalajacy na odczyt prywatnych danych. " alt="" coords="512,56,648,83"/>
 </map>

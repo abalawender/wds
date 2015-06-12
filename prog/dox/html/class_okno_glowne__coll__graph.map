@@ -1,6 +1,6 @@
 <map id="OknoGlowne" name="OknoGlowne">
-<area shape="rect" id="node3" href="$class_zbiornik.html" title="Klasa modelująca zbiornik. " alt="" coords="144,228,216,255"/>
-<area shape="rect" id="node5" href="$class_vector.html" title="klasa Vector " alt="" coords="195,5,258,32"/>
-<area shape="rect" id="node6" href="$classsimulation.html" title="backend symulacji " alt="" coords="306,139,390,165"/>
-<area shape="rect" id="node7" href="$structparams__t.html" title="Parametry symulacji. " alt="" coords="307,5,389,32"/>
+<area shape="rect" id="node3" href="$class_zbiornik.html" title="Klasa modelująca zbiornik. " alt="" coords="137,229,204,256"/>
+<area shape="rect" id="node5" href="$class_vector.html" title="klasa Vector " alt="" coords="173,5,232,32"/>
+<area shape="rect" id="node6" href="$classsimulation.html" title="backend symulacji " alt="" coords="287,139,368,165"/>
+<area shape="rect" id="node7" href="$structparams__t.html" title="Parametry symulacji. " alt="" coords="290,5,365,32"/>
 </map>
