@@ -153,9 +153,13 @@ void Zbiornik::GdyOdpowiedniCzas()
 
     _Symulacja.params->gx = gx0 * cos(alpha) + gy0  * sin(alpha);
     _Symulacja.params->gy = (useGravity ? gx0 * sin(alpha) + gy0  * cos(alpha) : 0 );
+
+    //_Symulacja.params->dt = (float)odpowiedni_czas() / 1000 / 100;
+    //LOG( "dt = " << _Symulacja.params->dt );
+
     _Symulacja.step();
   }
-  else if(STAN == eSTOP) 
+  else if(STAN == eSTOP)
   {
     update(); // -> paintEvent
 
