@@ -9,8 +9,7 @@ INCLUDEPATH+=./
 INCLUDEPATH+=./ui/inc
 MOC_DIR=./moc
 RCC_DIR=./rcc
-QT+=widgets
-QMAKE_CXXFLAGS+=-std=c++11
+QT+=core gui widgets
 TEMPLATE = app
 TARGET = symulacja_cieczy
 DEPENDPATH += src src src src src src inc inc inc inc inc inc inc ui
